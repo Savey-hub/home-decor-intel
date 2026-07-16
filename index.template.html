@@ -13,18 +13,33 @@
   --tag-jiaju:#e879f9; --tag-zhuangxiu:#60a5fa; --tag-jiancai:#f59e0b;
   --tag-weiyu:#22d3ee; --tag-zhineng:#a78bfa; --tag-dingzhi:#f472b6;
   --tag-dengju:#fbbf24; --tag-wujin:#94a3b8;
+  --nav-w:232px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.55;font-size:13.5px}
-.hdr{background:linear-gradient(135deg,#1f2937 0%,#111827 100%);padding:22px 32px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
-.hdr h1{font-size:22px;font-weight:700;margin-bottom:4px;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hdr .meta{color:var(--muted);font-size:12.5px;display:flex;gap:18px;flex-wrap:wrap}
+/* ===== 左侧目录导航 ===== */
+.sidenav{position:fixed;top:0;left:0;width:var(--nav-w);height:100vh;background:linear-gradient(180deg,#12161d 0%,#0d1117 100%);border-right:1px solid var(--border);padding:20px 0 24px;overflow-y:auto;z-index:200}
+.sidenav::-webkit-scrollbar{width:6px}
+.sidenav::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
+.sidenav .brand{padding:0 18px 16px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.sidenav .brand .logo{font-size:14px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.4}
+.sidenav .brand .sub{font-size:11px;color:var(--muted);margin-top:4px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:9px 18px;color:var(--muted);font-size:13px;cursor:pointer;border-left:3px solid transparent;transition:all .15s;text-decoration:none}
+.nav-item:hover{background:var(--panel);color:var(--text)}
+.nav-item.active{color:var(--accent);border-left-color:var(--accent);background:rgba(68,147,248,.08);font-weight:600}
+.nav-item .ico{font-size:15px;width:18px;text-align:center}
+.nav-group{font-size:10.5px;color:#5c6370;text-transform:uppercase;letter-spacing:.06em;padding:12px 18px 5px;margin-top:4px}
+/* ===== 主体 ===== */
+.main{margin-left:var(--nav-w)}
+.hdr{background:linear-gradient(135deg,#1f2937 0%,#111827 100%);padding:20px 32px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.hdr h1{font-size:21px;font-weight:700;margin-bottom:4px;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hdr .meta{color:var(--muted);font-size:12px;display:flex;gap:16px;flex-wrap:wrap}
 .hdr .meta b{color:#e6edf3}
-.container{max-width:1440px;margin:0 auto;padding:20px 24px 60px}
-.section{margin-bottom:26px}
-.section-title{font-size:15px;font-weight:600;margin-bottom:10px;padding-left:8px;border-left:3px solid var(--accent);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.container{max-width:1320px;margin:0 auto;padding:20px 24px 60px}
+.section{margin-bottom:30px;scroll-margin-top:78px}
+.section-title{font-size:16px;font-weight:600;margin-bottom:12px;padding-left:9px;border-left:3px solid var(--accent);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .section-title .tip{color:var(--muted);font-size:12px;font-weight:400;margin-left:auto}
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:12px}
 .kpi{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:all .18s}
 .kpi:hover{border-color:var(--accent);transform:translateY(-1px)}
 .kpi .k{font-size:11.5px;color:var(--muted);margin-bottom:6px;line-height:1.3}
@@ -110,40 +125,121 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .cat-chip[data-cat=通用]{background:var(--muted);color:#111}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:6px}
 .legend b{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+/* ===== 本月要闻 ===== */
+.month-banner{background:linear-gradient(135deg,#7c2d12 0%,#1c232d 55%);border:1px solid #a3550d;border-radius:12px;padding:16px 20px;margin-bottom:18px}
+.month-banner .mb-label{display:inline-block;background:#f59e0b;color:#111;font-size:11px;font-weight:700;padding:2px 10px;border-radius:12px;margin-bottom:8px}
+.month-banner .mb-title{font-size:15px;font-weight:700;margin-bottom:6px}
+.month-banner .mb-sum{font-size:12.8px;color:#e6c07b;line-height:1.7}
+.mh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.mh-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:13px 15px;border-top:3px solid var(--accent)}
+.mh-card.h-high{border-top-color:var(--danger)}
+.mh-card.h-mid{border-top-color:var(--warn)}
+.mh-card .mh-top{display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap}
+.mh-card .mh-date{font-size:11.5px;color:var(--muted);font-weight:600}
+.mh-card .mh-imp{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:4px}
+.mh-card.h-high .mh-imp{background:rgba(248,81,73,.16);color:#f85149}
+.mh-card.h-mid .mh-imp{background:rgba(210,153,34,.16);color:#d29922}
+.mh-card h3{font-size:13.5px;font-weight:600;margin-bottom:5px;line-height:1.45}
+.mh-card p{font-size:12px;color:var(--muted);line-height:1.55}
+.mh-card .src{margin-top:6px;font-size:11px}
+.mh-card .src a{color:var(--accent);text-decoration:none}
+.mh-sub{font-size:12.5px;color:var(--muted);font-weight:600;margin:14px 0 8px;padding-left:8px;border-left:2px solid var(--muted)}
+/* ===== 抖店罗盘 ===== */
+.dc-note{font-size:11.5px;color:var(--warn);background:rgba(210,153,34,.08);border-radius:6px;padding:7px 10px;margin-bottom:12px;line-height:1.5}
+.dc-table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--panel);border-radius:8px;overflow:hidden}
+.dc-table th{background:var(--panel-2);color:var(--muted);text-align:left;padding:8px 10px;font-weight:600;font-size:11.5px;border-bottom:1px solid var(--border)}
+.dc-table td{padding:7px 10px;border-bottom:1px solid var(--border)}
+.dc-table tr:hover td{background:rgba(68,147,248,.05)}
+.dc-table .up{color:#3fb950}.dc-table .dn{color:#f85149}
+.dc-rank{display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:5px;background:var(--panel-2);font-size:11px;font-weight:700;margin-right:4px}
+.dc-rank.top{background:var(--accent);color:#fff}
+/* ===== 数据源采集深度 ===== */
+.src-table{width:100%;border-collapse:collapse;font-size:12px;background:var(--panel);border-radius:8px;overflow:hidden}
+.src-table th{background:var(--panel-2);color:var(--muted);text-align:left;padding:8px 9px;font-weight:600;font-size:11px;border-bottom:1px solid var(--border)}
+.src-table td{padding:7px 9px;border-bottom:1px solid var(--border);vertical-align:top}
+.src-table a{color:var(--accent);text-decoration:none}
+.depth-badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700}
+.depth-3{background:rgba(63,185,80,.16);color:#3fb950}
+.depth-2{background:rgba(68,147,248,.16);color:#4493f8}
+.depth-1{background:rgba(210,153,34,.16);color:#d29922}
+.depth-0{background:rgba(248,81,73,.16);color:#f85149}
+.layer-tag{display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;border-radius:4px;font-size:10.5px;font-weight:700;background:var(--panel-2);color:var(--muted)}
+.src-summary{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.src-stat{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px}
+.src-stat b{font-size:18px;display:block;color:var(--text)}
+@media(max-width:820px){.sidenav{display:none}.main{margin-left:0}}
 </style>
 </head>
 <body>
+
+<!-- ===== 左侧目录导航 ===== -->
+<nav class="sidenav" id="sidenav">
+  <div class="brand">
+    <div class="logo">家装建材家具<br>行业竞争情报看板</div>
+    <div class="sub">天猫行业运营 · 8大子行业</div>
+  </div>
+  <div class="nav-group">本月焦点</div>
+  <a class="nav-item" data-target="sec-month"><span class="ico">🔥</span>本月要闻（7月）</a>
+  <div class="nav-group">核心结论</div>
+  <a class="nav-item" data-target="sec-insight"><span class="ico">📌</span>本期核心洞察</a>
+  <div class="nav-group">大盘数据</div>
+  <a class="nav-item" data-target="sec-macro"><span class="ico">🌐</span>宏观维度</a>
+  <a class="nav-item" data-target="sec-realestate"><span class="ico">🏗</span>房地产维度</a>
+  <a class="nav-item" data-target="sec-chart"><span class="ico">📊</span>需求 vs 供给</a>
+  <div class="nav-group">竞争与内容</div>
+  <a class="nav-item" data-target="sec-doudian"><span class="ico">🎯</span>抖店罗盘·社媒竞争</a>
+  <a class="nav-item" data-target="sec-platform"><span class="ico">🛒</span>电商平台动态</a>
+  <div class="nav-group">政策·商家</div>
+  <a class="nav-item" data-target="sec-policy"><span class="ico">📜</span>政策·标准·行业</a>
+  <a class="nav-item" data-target="sec-merchant"><span class="ico">🏢</span>头部商家动态</a>
+  <div class="nav-group">数据治理</div>
+  <a class="nav-item" data-target="sec-gaps"><span class="ico">⚠️</span>缺口与矛盾</a>
+  <a class="nav-item" data-target="sec-sources"><span class="ico">🗂</span>数据源采集深度</a>
+</nav>
+
+<div class="main">
 <div class="hdr">
   <h1>家装建材家具行业竞争情报看板</h1>
   <div class="meta">
-    <span>数据窗口：<b>近30天（2026-06-17 ~ 2026-07-16）</b> + 本月标记</span>
+    <span>本月区间：<b>2026-07-01 ~ 2026-07-16</b></span>
+    <span>滚动窗口：<b>近30天（06-17~07-16）</b></span>
     <span>数据截止：<b id="asOfDate">2026-07-16</b></span>
-    <span>更新频率：<b>每周四 12:00 前</b></span>
-    <span>子行业范围：<b>家具 · 装修 · 建材 · 卫浴厨房 · 全屋智能 · 全屋定制 · 灯具光源 · 电工五金</b></span>
+    <span>更新：<b>每周四 12:00 前</b></span>
+    <span>子行业：<b>家具·装修·建材·卫浴厨房·全屋智能·全屋定制·灯具光源·电工五金</b></span>
   </div>
 </div>
 <div class="container">
 
+<!-- 本月要闻 -->
+<div class="section" id="sec-month">
+  <div class="section-title">🔥 本月要闻 · 自然月焦点 <span class="tip" id="monthLabelTip"></span></div>
+  <div class="month-banner">
+    <span class="mb-label">本月核心基调</span>
+    <div class="mb-sum" id="monthSummary"></div>
+  </div>
+  <div id="monthHighlights"></div>
+</div>
+
 <!-- 核心洞察 -->
-<div class="section">
+<div class="section" id="sec-insight">
   <div class="section-title">📌 本期核心洞察 <span class="tip">基于国家统计局+克而瑞+平台披露交叉验证</span></div>
   <div class="insight" id="insightBlock"></div>
 </div>
 
 <!-- 宏观维度 -->
-<div class="section">
+<div class="section" id="sec-macro">
   <div class="section-title">🌐 宏观维度 · 社零/供给/信心 <span class="tip">来源：国家统计局 · 数据发布日 2026-07-15</span></div>
   <div class="kpi-grid" id="macroKpis"></div>
 </div>
 
 <!-- 房地产维度 -->
-<div class="section">
+<div class="section" id="sec-realestate">
   <div class="section-title">🏗 房地产维度 · 销售/投资/开工/竣工 <span class="tip">竣工端-23.7% 是家装建材需求最关键的负向变量</span></div>
   <div class="kpi-grid" id="realEstateKpis"></div>
 </div>
 
 <!-- 图表：需求 vs 供给 -->
-<div class="section">
+<div class="section" id="sec-chart">
   <div class="section-title">📊 需求侧 vs 供给侧 · 同比对比图</div>
   <div class="two-col">
     <div class="chart-wrap">
@@ -159,8 +255,37 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   </div>
 </div>
 
+<!-- 抖店罗盘·社媒竞争 -->
+<div class="section" id="sec-doudian">
+  <div class="section-title">🎯 抖店罗盘 · 抖音家居家装社媒竞争 <span class="tip" id="dcCoverageTip"></span></div>
+  <div class="dc-note" id="dcNote"></div>
+  <div class="kpi-grid" id="dcCoreMetrics" style="margin-bottom:16px"></div>
+  <div class="two-col">
+    <div class="chart-wrap">
+      <h3>子类目 GMV 结构（TOP10）</h3>
+      <div class="sub">占大盘比例，件单价见表</div>
+      <div style="overflow-x:auto"><table class="dc-table" id="dcSubCatTable"></table></div>
+    </div>
+    <div>
+      <div class="chart-wrap" style="margin-bottom:16px">
+        <h3>带货载体分布</h3>
+        <canvas id="chartCarrier" height="150"></canvas>
+      </div>
+      <div class="chart-wrap">
+        <h3>价格带分布</h3>
+        <canvas id="chartPriceBand" height="150"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="chart-wrap" style="margin-top:16px">
+    <h3>TOP15 热销单品（39元以上价格带）· 与天猫竞品追踪重叠预警</h3>
+    <div style="overflow-x:auto"><table class="dc-table" id="dcTopProdTable"></table></div>
+  </div>
+  <div class="insight" id="dcInsights" style="margin-top:16px"></div>
+</div>
+
 <!-- 电商平台动态 -->
-<div class="section">
+<div class="section" id="sec-platform">
   <div class="section-title">🛒 电商平台当月动态 <span class="tip" id="platCountTip"></span></div>
   <div class="tabs" id="platTabs"></div>
   <div class="filter-bar">
@@ -180,7 +305,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 </div>
 
 <!-- 政策与标准 -->
-<div class="section">
+<div class="section" id="sec-policy">
   <div class="section-title">📜 政策 · 标准 · 行业动态时间轴 <span class="tip">红点=强影响 · 黄点=中影响 · 蓝点=一般</span></div>
   <div class="two-col">
     <div>
@@ -193,13 +318,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 </div>
 
 <!-- 商家动态 -->
-<div class="section">
+<div class="section" id="sec-merchant">
   <div class="section-title">🏢 头部商家当月动态 <span class="tip">上市公司公告 + 头部品牌大事件</span></div>
   <div class="event-list" id="merchantList"></div>
 </div>
 
 <!-- Gaps + Conflicts -->
-<div class="section">
+<div class="section" id="sec-gaps">
   <div class="section-title">⚠️ 数据缺口与需人工核实 <span class="tip">遵循「不编造」原则，透明标注</span></div>
   <div class="two-col">
     <div class="gap-warn"><h3>📭 数据缺口（Gaps）</h3><ul id="gapList"></ul></div>
@@ -207,25 +332,39 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   </div>
 </div>
 
+<!-- 数据源采集深度报告 -->
+<div class="section" id="sec-sources">
+  <div class="section-title">🗂 数据源采集深度报告 <span class="tip">每源披露采集深度/条数/时间戳/阻塞</span></div>
+  <div class="src-summary" id="srcSummary"></div>
+  <div class="dc-note" id="srcNote"></div>
+  <div style="overflow-x:auto"><table class="src-table" id="srcTable"></table></div>
+</div>
+
 <div class="foot">
-  <div>信源分层：<span style="color:#3fb950">■</span> 权威官方 · <span style="color:#4493f8">■</span> 头部媒体 · <span style="color:#d29922">■</span> 待核实</div>
+  <div>信源分层：<span style="color:#3fb950">■</span> 权威官方 · <span style="color:#4493f8">■</span> 头部媒体 · <span style="color:#d29922">■</span> 待核实　|　采集深度：<span class="depth-badge depth-3">3深层</span> <span class="depth-badge depth-2">2中层</span> <span class="depth-badge depth-1">1浅层</span> <span class="depth-badge depth-0">0阻塞</span></div>
   <div style="margin-top:6px">生成脚本 · 数据文件 · 本地仓库位于 <code>home-decor-intel/</code>；下周四将迁移至 GitHub Pages 提供公网URL访问</div>
 </div>
 
-</div>
+</div><!-- /container -->
+</div><!-- /main -->
 
 <!-- 数据 JSON 内嵌（由 scripts/build_html.sh 构建时注入） -->
 <script id="dataMacro" type="application/json">__MACRO_JSON__</script>
 <script id="dataPlatform" type="application/json">__PLATFORM_JSON__</script>
 <script id="dataPolicy" type="application/json">__POLICY_JSON__</script>
+<script id="dataHighlights" type="application/json">__HIGHLIGHTS_JSON__</script>
+<script id="dataDoudian" type="application/json">__DOUDIAN_JSON__</script>
+<script id="dataSources" type="application/json">__SOURCES_JSON__</script>
 
 <script>
 function init(){
 const macro = JSON.parse(document.getElementById('dataMacro').textContent);
 const platform = JSON.parse(document.getElementById('dataPlatform').textContent);
 const policy = JSON.parse(document.getElementById('dataPolicy').textContent);
+const highlights = JSON.parse(document.getElementById('dataHighlights').textContent);
+const doudian = JSON.parse(document.getElementById('dataDoudian').textContent);
+const sources = JSON.parse(document.getElementById('dataSources').textContent);
 
-// asOf
 document.getElementById('asOfDate').textContent = macro.asOf || '2026-07-16';
 
 // helpers
@@ -236,19 +375,44 @@ const yoyClass = v => {
 };
 const yoyText = v => v || '待核实';
 const linkify = (label,url) => url && url !== '待核实' ? `<a href="${url}" target="_blank">${label}</a>` : `<span>${label}</span>`;
+const catColor = c => ({家具:'#e879f9',装修:'#60a5fa',建材:'#f59e0b',卫浴厨房:'#22d3ee',全屋智能:'#a78bfa',全屋定制:'#f472b6',灯具光源:'#fbbf24',电工五金:'#94a3b8',通用:'#8b949e'}[c]||'#8b949e');
 
-// insights
+// ===== 本月要闻 =====
+document.getElementById('monthLabelTip').textContent = highlights.monthLabel || '';
+document.getElementById('monthSummary').textContent = highlights.monthlySummary || '';
+const mhOrder = [['macro','宏观数据'],['platform','平台大事'],['policy','政策标准'],['merchant','头部商家']];
+const impMap = {'高':'h-high','中':'h-mid','低':''};
+let mhHtml = '';
+mhOrder.forEach(([key,label])=>{
+  const arr = (highlights.highlights&&highlights.highlights[key])||[];
+  if(!arr.length) return;
+  mhHtml += `<div class="mh-sub">${label}（${arr.length}）</div><div class="mh-grid">`;
+  mhHtml += arr.map(it=>`
+    <div class="mh-card ${impMap[it.impact]||''}">
+      <div class="mh-top">
+        <span class="mh-date">${it.date}</span>
+        <span class="cat-chip" data-cat="${it.cat||'通用'}">${it.cat||'通用'}</span>
+        <span class="mh-imp">影响：${it.impact||'—'}</span>
+      </div>
+      <h3>${it.title}</h3>
+      <p>${it.detail}</p>
+      <div class="src">${linkify(it.source||'源', it.url)}</div>
+    </div>`).join('');
+  mhHtml += `</div>`;
+});
+document.getElementById('monthHighlights').innerHTML = mhHtml;
+
+// ===== insights =====
 document.getElementById('insightBlock').innerHTML =
   '<ol>' + (macro.keyInsightsForBoard||[]).map(x => `<li>${x}</li>`).join('') + '</ol>';
 
-// macro KPI
-const macroKpiEl = document.getElementById('macroKpis');
+// ===== macro KPI =====
 const macroKpis = [
   ...macro.macro.retailSales.filter(x=>x.metric.includes('6月单月')||x.metric.includes('社零')),
   ...macro.macro.wholesale.filter(x=>x.value !== '待核实'),
   ...macro.macro.supplyChain.filter(x=>x.value !== '待核实').slice(0,3)
 ];
-macroKpiEl.innerHTML = macroKpis.map(k => `
+document.getElementById('macroKpis').innerHTML = macroKpis.map(k => `
   <div class="kpi">
     <div class="k">${k.metric}</div>
     <div class="v">${k.value}</div>
@@ -257,8 +421,7 @@ macroKpiEl.innerHTML = macroKpis.map(k => `
     <div class="src">${linkify(k.source, k.url)}  · ${k.publishDate||''}</div>
   </div>`).join('');
 
-// real estate KPI
-const reEl = document.getElementById('realEstateKpis');
+// ===== real estate KPI =====
 const reKpis = [
   ...macro.realEstate.sales.slice(0,3),
   ...macro.realEstate.investment,
@@ -266,7 +429,7 @@ const reKpis = [
   macro.realEstate.pricing[0],
   macro.realEstate.pricing[1]
 ].filter(Boolean);
-reEl.innerHTML = reKpis.map(k => `
+document.getElementById('realEstateKpis').innerHTML = reKpis.map(k => `
   <div class="kpi">
     <div class="k">${k.metric}</div>
     <div class="v" style="font-size:${(k.value||'').length>16?'15px':'22px'}">${k.value}</div>
@@ -275,45 +438,82 @@ reEl.innerHTML = reKpis.map(k => `
     <div class="src">${linkify(k.source, k.url)}  · ${k.publishDate||''}</div>
   </div>`).join('');
 
-// charts
+// ===== charts =====
 Chart.defaults.color = '#e6edf3';
 Chart.defaults.borderColor = '#30363d';
 new Chart(document.getElementById('chartRetail'),{
   type:'bar',
-  data:{
-    labels:['家具类','建材类','家电类','社零大盘'],
-    datasets:[{
-      label:'2026年6月同比 (%)',
-      data:[-6.6,-10.5,-8.7,1.0],
-      backgroundColor:v=>{const val=v.raw;return val>=0?'#3fb950':'#f85149'}
-    }]
-  },
+  data:{labels:['家具类','建材类','家电类','社零大盘'],
+    datasets:[{label:'2026年6月同比 (%)',data:[-6.6,-10.5,-8.7,1.0],
+      backgroundColor:v=>{const val=v.raw;return val>=0?'#3fb950':'#f85149'}}]},
   options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
 });
 new Chart(document.getElementById('chartUpstream'),{
-  type:'bar',
-  indexAxis:'y',
-  data:{
-    labels:['非金属矿物制品业(6月)','金属制品业(6月)','水泥产量(6月)','平板玻璃(6月)','制造业PMI(6月)','建筑业PMI(6月)','房地产投资(1-6月)','新开工面积(1-6月)','竣工面积(1-6月)'],
-    datasets:[{
-      label:'同比 / 值',
-      data:[-2.3,7.8,-5.6,-5.3,50.3,49.0,-18.0,-23.4,-23.7],
-      backgroundColor:function(ctx){const v=ctx.raw;const l=ctx.chart.data.labels[ctx.dataIndex];if(l.includes('PMI'))return v>=50?'#3fb950':'#d29922';return v>=0?'#3fb950':'#f85149'}
-    }]
-  },
+  type:'bar',indexAxis:'y',
+  data:{labels:['非金属矿物制品业(6月)','金属制品业(6月)','水泥产量(6月)','平板玻璃(6月)','制造业PMI(6月)','建筑业PMI(6月)','房地产投资(1-6月)','新开工面积(1-6月)','竣工面积(1-6月)'],
+    datasets:[{label:'同比 / 值',data:[-2.3,7.8,-5.6,-5.3,50.3,49.0,-18.0,-23.4,-23.7],
+      backgroundColor:function(ctx){const v=ctx.raw;const l=ctx.chart.data.labels[ctx.dataIndex];if(l.includes('PMI'))return v>=50?'#3fb950':'#d29922';return v>=0?'#3fb950':'#f85149'}}]},
   options:{plugins:{legend:{display:false}},scales:{x:{ticks:{callback:v=>v}}}}
 });
 
-// platform tabs
+// ===== 抖店罗盘 =====
+document.getElementById('dcCoverageTip').textContent = `${doudian.coverage.industry} · ${doudian.coverage.dateRange} · ${doudian.coverage.granularity}`;
+document.getElementById('dcNote').textContent = '⚠ ' + doudian.note;
+const cm = doudian.coreMetrics;
+const cmDefs = [
+  ['支付GMV', cm.payGmv],['销量', cm.itemsSold],['支付人数', cm.buyers],['订单数', cm.orders],
+  ['在线商品数', cm.onlineSku],['动销商品数', cm.activeSku],['件单价', cm.pricePerItem],['客单价', cm.arpu]
+];
+document.getElementById('dcCoreMetrics').innerHTML = cmDefs.map(([label,m])=>{
+  if(!m) return '';
+  return `<div class="kpi"><div class="k">${label}</div><div class="v" style="font-size:17px">${m.range||m.value||'—'}</div><div class="yoy ${yoyClass(m.wow)}">较上周期 ${m.wow||'—'}</div></div>`;
+}).join('');
+
+// 子类目 TOP10
+const subs = (doudian.subCategories||[]).slice(0,10);
+document.getElementById('dcSubCatTable').innerHTML =
+  '<thead><tr><th>#</th><th>子类目</th><th>GMV区间</th><th>占比</th><th>件单价</th></tr></thead><tbody>' +
+  subs.map((s,i)=>`<tr><td><span class="dc-rank ${i<3?'top':''}">${i+1}</span></td><td>${s.name}</td><td>${s.gmvRange||'—'}</td><td>${s.share||'—'}</td><td>${s.pricePerItem||'—'}</td></tr>`).join('') +
+  '</tbody>';
+
+// 带货载体饼图
+const carriers = doudian.carriers||[];
+new Chart(document.getElementById('chartCarrier'),{
+  type:'doughnut',
+  data:{labels:carriers.map(c=>c.name),datasets:[{data:carriers.map(c=>parseFloat(String(c.share).replace('%',''))||0),
+    backgroundColor:['#4493f8','#a78bfa','#3fb950','#d29922','#f85149']}]},
+  options:{plugins:{legend:{position:'right',labels:{font:{size:10.5},boxWidth:12}}}}
+});
+// 价格带柱图
+const bands = doudian.priceBands||[];
+new Chart(document.getElementById('chartPriceBand'),{
+  type:'bar',
+  data:{labels:bands.map(b=>b.range),datasets:[{label:'GMV占比',data:bands.map(b=>parseFloat(String(b.share).split('-')[1]||b.share)||0),
+    backgroundColor:'#a78bfa'}]},
+  options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
+});
+
+// TOP15 单品
+const prods = doudian.topProducts_39plusBand||[];
+document.getElementById('dcTopProdTable').innerHTML =
+  '<thead><tr><th>#</th><th>单品</th><th>销售额区间</th></tr></thead><tbody>' +
+  prods.map((p,i)=>`<tr><td><span class="dc-rank ${i<3?'top':''}">${i+1}</span></td><td>${p.name}</td><td>${p.gmvRange||p.gmv||'—'}</td></tr>`).join('') +
+  '</tbody>';
+
+document.getElementById('dcInsights').innerHTML =
+  '<ol>' + (doudian.insights||[]).map(x=>`<li>${x}</li>`).join('') + '</ol>';
+
+// ===== platform tabs =====
 const platMeta = {jd:'京东',douyin:'抖音',pdd:'拼多多',xhs:'小红书',shipinhao:'视频号',kuaishou:'快手',tmall_taobao:'淘宝天猫',cross:'跨平台'};
 const platEntries = Object.entries(platform.platforms).map(([k,v])=>({key:k,name:platMeta[k]||k,items:Array.isArray(v)?v:[]}));
-// merge cross-platform items if exists in platform_dynamics
-if(platform.platforms.cross){/* ok */}
+// 追加 crossPlatform
+if(platform.crossPlatform&&platform.crossPlatform.length){
+  platEntries.push({key:'cross',name:'跨平台',items:platform.crossPlatform});
+}
 const tabsEl = document.getElementById('platTabs');
 const panelsEl = document.getElementById('platPanels');
 tabsEl.innerHTML = platEntries.map((p,i)=>`<button class="tab ${i===0?'active':''}" data-plat="${p.key}" onclick="switchPlat('${p.key}')">${p.name} <span class="cnt">${p.items.length}</span></button>`).join('');
 document.getElementById('platCountTip').textContent = `共 ${platEntries.reduce((s,p)=>s+p.items.length,0)} 条·来自 ${platEntries.filter(p=>p.items.length>0).length} 个平台`;
-
 panelsEl.innerHTML = platEntries.map((p,i)=>`
   <div class="tab-panel ${i===0?'active':''}" data-plat="${p.key}">
     ${p.items.length===0?`<div class="gap-warn"><h3>暂无近30天数据</h3><ul><li>${p.name} 平台在窗口内未获取到可公开链接的家装建材家具品类动态；下期扩展信源</li></ul></div>`:`
@@ -332,8 +532,6 @@ panelsEl.innerHTML = platEntries.map((p,i)=>`
     </div>`}
   </div>`).join('');
 
-function catColor(c){const m={家具:'#e879f9',装修:'#60a5fa',建材:'#f59e0b',卫浴厨房:'#22d3ee',全屋智能:'#a78bfa',全屋定制:'#f472b6',灯具光源:'#fbbf24',电工五金:'#94a3b8',通用:'#8b949e'};return m[c]||'#8b949e'}
-
 window.switchPlat = k => {
   document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.plat===k));
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.dataset.plat===k));
@@ -344,16 +542,11 @@ window.filterCat = el => {
   const cat = el.dataset.cat;
   document.querySelectorAll('.event').forEach(ev=>{
     if(cat==='全部') ev.style.display='';
-    else{
-      const c = ev.dataset.cat;
-      // support array
-      const arr = c.split(/[,，]/).map(s=>s.trim());
-      ev.style.display = arr.includes(cat) ? '' : 'none';
-    }
+    else{const arr=(ev.dataset.cat||'').split(/[,，]/).map(s=>s.trim());ev.style.display=arr.includes(cat)?'':'none';}
   });
 };
 
-// policy timeline
+// ===== policy timeline =====
 const policyImpact = it => {
   const s = (it.impact||it.summary||'')+'';
   if(/强|直接|硬性|正式实施|不合规|停业/.test(s)) return 'critical';
@@ -368,7 +561,6 @@ document.getElementById('policyTL').innerHTML = '<h3 style="color:#f85149;margin
     ${p.impact?`<div class="impact">👉 ${p.impact}</div>`:''}
     <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>
   </div>`).join('');
-
 document.getElementById('industryTL').innerHTML = '<h3 style="color:#4493f8;margin:0 0 8px 4px;font-size:13.5px">行业 · 展会 · 协会</h3>' + (policy.industry||[]).map(p=>`
   <div class="tl-item">
     <h3>${p.title}</h3>
@@ -377,7 +569,7 @@ document.getElementById('industryTL').innerHTML = '<h3 style="color:#4493f8;marg
     <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>
   </div>`).join('');
 
-// merchant
+// ===== merchant =====
 document.getElementById('merchantList').innerHTML = (policy.merchant||[]).map(m=>`
   <div class="event">
     <div class="top">
@@ -389,19 +581,54 @@ document.getElementById('merchantList').innerHTML = (policy.merchant||[]).map(m=
     <div class="src">${linkify(m.source||'源', m.url)}</div>
   </div>`).join('');
 
-// gaps + conflicts (merged from 3 files)
+// ===== gaps + conflicts =====
+const normConf = c => typeof c==='string'?c:(c.item?`【${c.item}】${c.detail||''}`:JSON.stringify(c));
 const allGaps = [
   ...(macro.gaps||[]).map(x=>'[宏观/房产] '+x),
   ...(platform.gaps||[]).map(x=>'[电商平台] '+x),
   ...(policy.gaps||[]).map(x=>'[政策/商家] '+x)
 ];
 const allConflicts = [
-  ...(macro.conflicts||[]).map(x=>'[宏观/房产] '+x),
-  ...(platform.conflicts||[]).map(x=>'[电商平台] '+x),
-  ...(policy.conflicts||[]).map(x=>'[政策/商家] '+x)
+  ...(macro.conflicts||[]).map(x=>'[宏观/房产] '+normConf(x)),
+  ...(platform.conflicts||[]).map(x=>'[电商平台] '+normConf(x)),
+  ...(policy.conflicts||[]).map(x=>'[政策/商家] '+normConf(x))
 ];
 document.getElementById('gapList').innerHTML = allGaps.map(g=>`<li>${g}</li>`).join('');
 document.getElementById('conflictList').innerHTML = allConflicts.map(c=>`<li>${c}</li>`).join('');
+
+// ===== 数据源采集深度 =====
+const sm = sources.summary||{};
+document.getElementById('srcSummary').innerHTML = [
+  ['信源总数', sm.totalSources],['深层(3)', sm.depth3],['中层(2)', sm.depth2],['浅层(1)', sm.depth1],['阻塞(0)', sm.depth0_blocked]
+].map(([l,v])=>`<div class="src-stat"><b>${v!=null?v:'—'}</b>${l}</div>`).join('');
+document.getElementById('srcNote').textContent = '说明：' + (sources.note||'');
+document.getElementById('srcTable').innerHTML =
+  '<thead><tr><th>信源</th><th>层</th><th>登录</th><th>深度</th><th>已采条数/时间戳</th><th>阻塞原因</th></tr></thead><tbody>' +
+  (sources.sources||[]).map(s=>`<tr>
+    <td>${linkify(s.name, s.url)}</td>
+    <td><span class="layer-tag">${s.layer}</span></td>
+    <td>${s.login||'—'}</td>
+    <td><span class="depth-badge depth-${s.depth}">${s.depth}</span></td>
+    <td>${s.count||'—'}<br><span style="color:var(--muted);font-size:11px">${s.timestamp||''}</span></td>
+    <td style="color:var(--muted);max-width:340px">${s.blocker||'无'}</td>
+  </tr>`).join('') + '</tbody>';
+
+// ===== 目录导航滚动高亮 =====
+const navItems = [...document.querySelectorAll('.nav-item')];
+navItems.forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  const el = document.getElementById(a.dataset.target);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+const sections = navItems.map(a=>document.getElementById(a.dataset.target)).filter(Boolean);
+const spy = ()=>{
+  let cur = sections[0];
+  const top = 90;
+  for(const s of sections){ if(s.getBoundingClientRect().top <= top) cur = s; }
+  navItems.forEach(a=>a.classList.toggle('active', a.dataset.target===(cur&&cur.id)));
+};
+window.addEventListener('scroll', spy, {passive:true});
+spy();
 }
 try { init(); } catch(e){ document.body.insertAdjacentHTML('afterbegin','<div style="background:#f85149;color:#fff;padding:10px 16px">加载数据失败: '+e.message+'</div>'); console.error(e); }
 </script>

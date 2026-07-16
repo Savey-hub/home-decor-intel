@@ -1,0 +1,26 @@
+{
+  "collectDate": "2026-07-16",
+  "sources": [
+    {
+      "source": "京麦（京东商家后台 jmw.jd.com）",
+      "url": "https://jmw.jd.com/",
+      "layer": "C",
+      "collectionDepth": 0,
+      "status": "阻塞-无开店权限",
+      "loginAccount": "买家号 jd_LVopFIdFlDaa（已扫码登录，但账号拦截）",
+      "blocker": "扫码登录的为京东买家账号，jmw.jd.com/pc/accountIntercept 提示『该账号暂不支持开店』。京麦商家数据需 POP 商家账号。用户表示有商家账号将换号扫码，截至采集时点尚未完成，故本源家居家装商家数据未取。",
+      "nextAction": "用户以 POP 商家账号重新扫码登录后，进入京麦『商智/生意参谋』提取家居家装类目行业数据。"
+    },
+    {
+      "source": "京准通（京东数字营销平台 jzt.jd.com）",
+      "url": "https://jzt.jd.com/",
+      "layer": "C",
+      "collectionDepth": 0,
+      "status": "阻塞-未登录",
+      "loginAccount": "无",
+      "blocker": "页面停留在登录页（URL 参数 code=-3011 表示未登录会话），需京东广告主/商家账号登录。用户尚未完成登录，家居家装广告投放/行业大盘数据未取。",
+      "nextAction": "用户以京东广告主账号登录后，提取京准通『行业洞察』家居家装类目投放与流量数据。"
+    }
+  ],
+  "note": "两源均因账号权限/登录状态未就绪而阻塞，非采集能力问题；已按硬数据规则如实标记，不做任何推测填充。待用户提供有效账号后可即时补采。"
+}

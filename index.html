@@ -13,18 +13,33 @@
   --tag-jiaju:#e879f9; --tag-zhuangxiu:#60a5fa; --tag-jiancai:#f59e0b;
   --tag-weiyu:#22d3ee; --tag-zhineng:#a78bfa; --tag-dingzhi:#f472b6;
   --tag-dengju:#fbbf24; --tag-wujin:#94a3b8;
+  --nav-w:232px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.55;font-size:13.5px}
-.hdr{background:linear-gradient(135deg,#1f2937 0%,#111827 100%);padding:22px 32px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
-.hdr h1{font-size:22px;font-weight:700;margin-bottom:4px;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hdr .meta{color:var(--muted);font-size:12.5px;display:flex;gap:18px;flex-wrap:wrap}
+/* ===== 左侧目录导航 ===== */
+.sidenav{position:fixed;top:0;left:0;width:var(--nav-w);height:100vh;background:linear-gradient(180deg,#12161d 0%,#0d1117 100%);border-right:1px solid var(--border);padding:20px 0 24px;overflow-y:auto;z-index:200}
+.sidenav::-webkit-scrollbar{width:6px}
+.sidenav::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
+.sidenav .brand{padding:0 18px 16px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.sidenav .brand .logo{font-size:14px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.4}
+.sidenav .brand .sub{font-size:11px;color:var(--muted);margin-top:4px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:9px 18px;color:var(--muted);font-size:13px;cursor:pointer;border-left:3px solid transparent;transition:all .15s;text-decoration:none}
+.nav-item:hover{background:var(--panel);color:var(--text)}
+.nav-item.active{color:var(--accent);border-left-color:var(--accent);background:rgba(68,147,248,.08);font-weight:600}
+.nav-item .ico{font-size:15px;width:18px;text-align:center}
+.nav-group{font-size:10.5px;color:#5c6370;text-transform:uppercase;letter-spacing:.06em;padding:12px 18px 5px;margin-top:4px}
+/* ===== 主体 ===== */
+.main{margin-left:var(--nav-w)}
+.hdr{background:linear-gradient(135deg,#1f2937 0%,#111827 100%);padding:20px 32px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.hdr h1{font-size:21px;font-weight:700;margin-bottom:4px;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hdr .meta{color:var(--muted);font-size:12px;display:flex;gap:16px;flex-wrap:wrap}
 .hdr .meta b{color:#e6edf3}
-.container{max-width:1440px;margin:0 auto;padding:20px 24px 60px}
-.section{margin-bottom:26px}
-.section-title{font-size:15px;font-weight:600;margin-bottom:10px;padding-left:8px;border-left:3px solid var(--accent);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.container{max-width:1320px;margin:0 auto;padding:20px 24px 60px}
+.section{margin-bottom:30px;scroll-margin-top:78px}
+.section-title{font-size:16px;font-weight:600;margin-bottom:12px;padding-left:9px;border-left:3px solid var(--accent);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .section-title .tip{color:var(--muted);font-size:12px;font-weight:400;margin-left:auto}
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:12px}
 .kpi{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:all .18s}
 .kpi:hover{border-color:var(--accent);transform:translateY(-1px)}
 .kpi .k{font-size:11.5px;color:var(--muted);margin-bottom:6px;line-height:1.3}
@@ -110,40 +125,121 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .cat-chip[data-cat=通用]{background:var(--muted);color:#111}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:6px}
 .legend b{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+/* ===== 本月要闻 ===== */
+.month-banner{background:linear-gradient(135deg,#7c2d12 0%,#1c232d 55%);border:1px solid #a3550d;border-radius:12px;padding:16px 20px;margin-bottom:18px}
+.month-banner .mb-label{display:inline-block;background:#f59e0b;color:#111;font-size:11px;font-weight:700;padding:2px 10px;border-radius:12px;margin-bottom:8px}
+.month-banner .mb-title{font-size:15px;font-weight:700;margin-bottom:6px}
+.month-banner .mb-sum{font-size:12.8px;color:#e6c07b;line-height:1.7}
+.mh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.mh-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:13px 15px;border-top:3px solid var(--accent)}
+.mh-card.h-high{border-top-color:var(--danger)}
+.mh-card.h-mid{border-top-color:var(--warn)}
+.mh-card .mh-top{display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap}
+.mh-card .mh-date{font-size:11.5px;color:var(--muted);font-weight:600}
+.mh-card .mh-imp{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:4px}
+.mh-card.h-high .mh-imp{background:rgba(248,81,73,.16);color:#f85149}
+.mh-card.h-mid .mh-imp{background:rgba(210,153,34,.16);color:#d29922}
+.mh-card h3{font-size:13.5px;font-weight:600;margin-bottom:5px;line-height:1.45}
+.mh-card p{font-size:12px;color:var(--muted);line-height:1.55}
+.mh-card .src{margin-top:6px;font-size:11px}
+.mh-card .src a{color:var(--accent);text-decoration:none}
+.mh-sub{font-size:12.5px;color:var(--muted);font-weight:600;margin:14px 0 8px;padding-left:8px;border-left:2px solid var(--muted)}
+/* ===== 抖店罗盘 ===== */
+.dc-note{font-size:11.5px;color:var(--warn);background:rgba(210,153,34,.08);border-radius:6px;padding:7px 10px;margin-bottom:12px;line-height:1.5}
+.dc-table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--panel);border-radius:8px;overflow:hidden}
+.dc-table th{background:var(--panel-2);color:var(--muted);text-align:left;padding:8px 10px;font-weight:600;font-size:11.5px;border-bottom:1px solid var(--border)}
+.dc-table td{padding:7px 10px;border-bottom:1px solid var(--border)}
+.dc-table tr:hover td{background:rgba(68,147,248,.05)}
+.dc-table .up{color:#3fb950}.dc-table .dn{color:#f85149}
+.dc-rank{display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:5px;background:var(--panel-2);font-size:11px;font-weight:700;margin-right:4px}
+.dc-rank.top{background:var(--accent);color:#fff}
+/* ===== 数据源采集深度 ===== */
+.src-table{width:100%;border-collapse:collapse;font-size:12px;background:var(--panel);border-radius:8px;overflow:hidden}
+.src-table th{background:var(--panel-2);color:var(--muted);text-align:left;padding:8px 9px;font-weight:600;font-size:11px;border-bottom:1px solid var(--border)}
+.src-table td{padding:7px 9px;border-bottom:1px solid var(--border);vertical-align:top}
+.src-table a{color:var(--accent);text-decoration:none}
+.depth-badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700}
+.depth-3{background:rgba(63,185,80,.16);color:#3fb950}
+.depth-2{background:rgba(68,147,248,.16);color:#4493f8}
+.depth-1{background:rgba(210,153,34,.16);color:#d29922}
+.depth-0{background:rgba(248,81,73,.16);color:#f85149}
+.layer-tag{display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;border-radius:4px;font-size:10.5px;font-weight:700;background:var(--panel-2);color:var(--muted)}
+.src-summary{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.src-stat{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px}
+.src-stat b{font-size:18px;display:block;color:var(--text)}
+@media(max-width:820px){.sidenav{display:none}.main{margin-left:0}}
 </style>
 </head>
 <body>
+
+<!-- ===== 左侧目录导航 ===== -->
+<nav class="sidenav" id="sidenav">
+  <div class="brand">
+    <div class="logo">家装建材家具<br>行业竞争情报看板</div>
+    <div class="sub">天猫行业运营 · 8大子行业</div>
+  </div>
+  <div class="nav-group">本月焦点</div>
+  <a class="nav-item" data-target="sec-month"><span class="ico">🔥</span>本月要闻（7月）</a>
+  <div class="nav-group">核心结论</div>
+  <a class="nav-item" data-target="sec-insight"><span class="ico">📌</span>本期核心洞察</a>
+  <div class="nav-group">大盘数据</div>
+  <a class="nav-item" data-target="sec-macro"><span class="ico">🌐</span>宏观维度</a>
+  <a class="nav-item" data-target="sec-realestate"><span class="ico">🏗</span>房地产维度</a>
+  <a class="nav-item" data-target="sec-chart"><span class="ico">📊</span>需求 vs 供给</a>
+  <div class="nav-group">竞争与内容</div>
+  <a class="nav-item" data-target="sec-doudian"><span class="ico">🎯</span>抖店罗盘·社媒竞争</a>
+  <a class="nav-item" data-target="sec-platform"><span class="ico">🛒</span>电商平台动态</a>
+  <div class="nav-group">政策·商家</div>
+  <a class="nav-item" data-target="sec-policy"><span class="ico">📜</span>政策·标准·行业</a>
+  <a class="nav-item" data-target="sec-merchant"><span class="ico">🏢</span>头部商家动态</a>
+  <div class="nav-group">数据治理</div>
+  <a class="nav-item" data-target="sec-gaps"><span class="ico">⚠️</span>缺口与矛盾</a>
+  <a class="nav-item" data-target="sec-sources"><span class="ico">🗂</span>数据源采集深度</a>
+</nav>
+
+<div class="main">
 <div class="hdr">
   <h1>家装建材家具行业竞争情报看板</h1>
   <div class="meta">
-    <span>数据窗口：<b>近30天（2026-06-17 ~ 2026-07-16）</b> + 本月标记</span>
+    <span>本月区间：<b>2026-07-01 ~ 2026-07-16</b></span>
+    <span>滚动窗口：<b>近30天（06-17~07-16）</b></span>
     <span>数据截止：<b id="asOfDate">2026-07-16</b></span>
-    <span>更新频率：<b>每周四 12:00 前</b></span>
-    <span>子行业范围：<b>家具 · 装修 · 建材 · 卫浴厨房 · 全屋智能 · 全屋定制 · 灯具光源 · 电工五金</b></span>
+    <span>更新：<b>每周四 12:00 前</b></span>
+    <span>子行业：<b>家具·装修·建材·卫浴厨房·全屋智能·全屋定制·灯具光源·电工五金</b></span>
   </div>
 </div>
 <div class="container">
 
+<!-- 本月要闻 -->
+<div class="section" id="sec-month">
+  <div class="section-title">🔥 本月要闻 · 自然月焦点 <span class="tip" id="monthLabelTip"></span></div>
+  <div class="month-banner">
+    <span class="mb-label">本月核心基调</span>
+    <div class="mb-sum" id="monthSummary"></div>
+  </div>
+  <div id="monthHighlights"></div>
+</div>
+
 <!-- 核心洞察 -->
-<div class="section">
+<div class="section" id="sec-insight">
   <div class="section-title">📌 本期核心洞察 <span class="tip">基于国家统计局+克而瑞+平台披露交叉验证</span></div>
   <div class="insight" id="insightBlock"></div>
 </div>
 
 <!-- 宏观维度 -->
-<div class="section">
+<div class="section" id="sec-macro">
   <div class="section-title">🌐 宏观维度 · 社零/供给/信心 <span class="tip">来源：国家统计局 · 数据发布日 2026-07-15</span></div>
   <div class="kpi-grid" id="macroKpis"></div>
 </div>
 
 <!-- 房地产维度 -->
-<div class="section">
+<div class="section" id="sec-realestate">
   <div class="section-title">🏗 房地产维度 · 销售/投资/开工/竣工 <span class="tip">竣工端-23.7% 是家装建材需求最关键的负向变量</span></div>
   <div class="kpi-grid" id="realEstateKpis"></div>
 </div>
 
 <!-- 图表：需求 vs 供给 -->
-<div class="section">
+<div class="section" id="sec-chart">
   <div class="section-title">📊 需求侧 vs 供给侧 · 同比对比图</div>
   <div class="two-col">
     <div class="chart-wrap">
@@ -159,8 +255,37 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   </div>
 </div>
 
+<!-- 抖店罗盘·社媒竞争 -->
+<div class="section" id="sec-doudian">
+  <div class="section-title">🎯 抖店罗盘 · 抖音家居家装社媒竞争 <span class="tip" id="dcCoverageTip"></span></div>
+  <div class="dc-note" id="dcNote"></div>
+  <div class="kpi-grid" id="dcCoreMetrics" style="margin-bottom:16px"></div>
+  <div class="two-col">
+    <div class="chart-wrap">
+      <h3>子类目 GMV 结构（TOP10）</h3>
+      <div class="sub">占大盘比例，件单价见表</div>
+      <div style="overflow-x:auto"><table class="dc-table" id="dcSubCatTable"></table></div>
+    </div>
+    <div>
+      <div class="chart-wrap" style="margin-bottom:16px">
+        <h3>带货载体分布</h3>
+        <canvas id="chartCarrier" height="150"></canvas>
+      </div>
+      <div class="chart-wrap">
+        <h3>价格带分布</h3>
+        <canvas id="chartPriceBand" height="150"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="chart-wrap" style="margin-top:16px">
+    <h3>TOP15 热销单品（39元以上价格带）· 与天猫竞品追踪重叠预警</h3>
+    <div style="overflow-x:auto"><table class="dc-table" id="dcTopProdTable"></table></div>
+  </div>
+  <div class="insight" id="dcInsights" style="margin-top:16px"></div>
+</div>
+
 <!-- 电商平台动态 -->
-<div class="section">
+<div class="section" id="sec-platform">
   <div class="section-title">🛒 电商平台当月动态 <span class="tip" id="platCountTip"></span></div>
   <div class="tabs" id="platTabs"></div>
   <div class="filter-bar">
@@ -180,7 +305,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 </div>
 
 <!-- 政策与标准 -->
-<div class="section">
+<div class="section" id="sec-policy">
   <div class="section-title">📜 政策 · 标准 · 行业动态时间轴 <span class="tip">红点=强影响 · 黄点=中影响 · 蓝点=一般</span></div>
   <div class="two-col">
     <div>
@@ -193,13 +318,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 </div>
 
 <!-- 商家动态 -->
-<div class="section">
+<div class="section" id="sec-merchant">
   <div class="section-title">🏢 头部商家当月动态 <span class="tip">上市公司公告 + 头部品牌大事件</span></div>
   <div class="event-list" id="merchantList"></div>
 </div>
 
 <!-- Gaps + Conflicts -->
-<div class="section">
+<div class="section" id="sec-gaps">
   <div class="section-title">⚠️ 数据缺口与需人工核实 <span class="tip">遵循「不编造」原则，透明标注</span></div>
   <div class="two-col">
     <div class="gap-warn"><h3>📭 数据缺口（Gaps）</h3><ul id="gapList"></ul></div>
@@ -207,12 +332,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   </div>
 </div>
 
+<!-- 数据源采集深度报告 -->
+<div class="section" id="sec-sources">
+  <div class="section-title">🗂 数据源采集深度报告 <span class="tip">每源披露采集深度/条数/时间戳/阻塞</span></div>
+  <div class="src-summary" id="srcSummary"></div>
+  <div class="dc-note" id="srcNote"></div>
+  <div style="overflow-x:auto"><table class="src-table" id="srcTable"></table></div>
+</div>
+
 <div class="foot">
-  <div>信源分层：<span style="color:#3fb950">■</span> 权威官方 · <span style="color:#4493f8">■</span> 头部媒体 · <span style="color:#d29922">■</span> 待核实</div>
+  <div>信源分层：<span style="color:#3fb950">■</span> 权威官方 · <span style="color:#4493f8">■</span> 头部媒体 · <span style="color:#d29922">■</span> 待核实　|　采集深度：<span class="depth-badge depth-3">3深层</span> <span class="depth-badge depth-2">2中层</span> <span class="depth-badge depth-1">1浅层</span> <span class="depth-badge depth-0">0阻塞</span></div>
   <div style="margin-top:6px">生成脚本 · 数据文件 · 本地仓库位于 <code>home-decor-intel/</code>；下周四将迁移至 GitHub Pages 提供公网URL访问</div>
 </div>
 
-</div>
+</div><!-- /container -->
+</div><!-- /main -->
 
 <!-- 数据 JSON 内嵌（由 scripts/build_html.sh 构建时注入） -->
 <script id="dataMacro" type="application/json">{
@@ -714,11 +848,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
         "source": "央广网"
       },
       {
-        "title": "抖音床垫类目冠军喜临门618战报：全网13.5亿；M__PLATFORM_JSON__D CASA真皮沙发登顶抖音沙发人气榜TOP1",
+        "title": "抖音床垫类目冠军喜临门618战报：全网13.5亿；M&D CASA真皮沙发登顶抖音沙发人气榜TOP1",
         "date": "2026-06-24",
         "category": "家具",
         "type": "营销活动",
-        "summary": "喜临门618全网GMV超13.5亿元，包揽天猫/京东/抖音床垫冠军；子品牌城市爱情+191%、呼噜噜+213%、意大利真皮沙发M__PLATFORM_JSON__D CASA登顶抖音沙发人气榜TOP1。",
+        "summary": "喜临门618全网GMV超13.5亿元，包揽天猫/京东/抖音床垫冠军；子品牌城市爱情+191%、呼噜噜+213%、意大利真皮沙发M&D CASA登顶抖音沙发人气榜TOP1。",
         "url": "https://m.lejucaijing.com/news-7475436916797273685.html",
         "source": "乐居财经"
       },
@@ -883,7 +1017,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   "keyBrandMoves": [
     {
       "brand": "九牧",
-      "event": "全球卫浴电商直播销量第一 __PLATFORM_JSON__ 618京东/天猫/抖音卫浴品牌销售冠军",
+      "event": "全球卫浴电商直播销量第一 & 618京东/天猫/抖音卫浴品牌销售冠军",
       "date": "2026-06-24",
       "url": "https://m.rccaijing.com/news-7475350495143065215.html"
     },
@@ -1231,14 +1365,197 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
     }
   ]
 }</script>
+<script id="dataHighlights" type="application/json">{
+  "asOf": "2026-07-16",
+  "monthLabel": "2026年7月（自然月：2026-07-01 至 2026-07-16）",
+  "intro": "本区块聚焦当前自然月（7月）内发生的高优先级信号，独立于近30天滚动窗口，供管理层快速把握本月最新动向。共 4 个维度：宏观数据、平台大事、政策标准、头部商家。",
+  "highlights": {
+    "macro": [
+      {"date": "2026-07-15", "title": "上半年经济数据出炉：家装建材需求端全面深跌", "detail": "国家统计局发布6月及上半年数据。6月单月家具类零售-6.6%、建材类-10.5%、家电类-8.7%，全部大幅跑输社零大盘+1.0%；上半年房地产开发投资-18.0%、新开工-23.4%、竣工-23.7%。竣工端深跌是压制精装家居/软装/建材需求的最关键负向变量。", "impact": "高", "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html", "source": "国家统计局", "cat": "建材"},
+      {"date": "2026-07-15", "title": "6月70城房价：新房环比上涨面扩至20城，二手房仍全线同比下跌", "detail": "6月70城新建商品住宅环比上涨20城（较5月扩大），上海/杭州/深圳/广州环比+0.2%~+0.3%温和企稳；但二手房70城全部同比下降，二次装修需求持续承压。", "impact": "中", "url": "https://www.stats.gov.cn/sj/zxfbhjd/202607/t20260715_1964115.html", "source": "国家统计局", "cat": "装修"},
+      {"date": "2026-07-15", "title": "6月全国建材家居景气指数BHI 113.34，环比大跌16.34进入淡季", "detail": "CBMCA数据：6月BHI环比-16.34、同比-2.80；规模以上卖场销售额1155.41亿元（环比-10.22%、同比-6.14%）；1-6月累计6640.37亿元（同比-4.39%）。高温多雨叠加五一需求前置，进入传统家装淡季。", "impact": "高", "url": "https://www.bjnews.com.cn/detail/1784171412168316.html", "source": "中国建材流通协会CBMCA", "cat": "建材"}
+    ],
+    "platform": [
+      {"date": "2026-07-14", "title": "京东家装H1整装GMV突破25亿元、同比+140%，3年冲30亿", "detail": "京东家装2026H1整装GMV约25亿(+140%)、累计服务1.28万家庭，7家分公司净签破亿，6月部分城市同比增超700%；京东家装整体GMV超45亿，2026年将覆盖30城并入驻京东MALL。", "impact": "高", "url": "https://m.lejucaijing.com/news-7482723588144559603.html", "source": "乐居财经", "cat": "装修"},
+      {"date": "2026-07-15", "title": "国补第三批625亿下达，京东7月家电国补最高单件立减1500元", "detail": "第三批625亿国补资金下达，京东开通空调/冰箱/洗衣机/热水器等入口，覆盖29省，综合让利最高45%，美的/格力/海尔/方太/老板等参与，无需强制回收旧机。", "impact": "中", "url": "https://finance.sina.com.cn/tech/roll/2026-07-15/doc-inihwrre1243327.shtml", "source": "新浪科技", "cat": "全屋智能"},
+      {"date": "2026-07-16", "title": "抖音电商密集发布商家资质违规处置细则及服务商管理规范", "detail": "7月15-16日抖音电商学习中心发布运营类服务商管理规范、CPS结算分成能力管理规则、《商家主体资质违规处置细则》修订意见征集，家居家装商家同样适用。", "impact": "中", "url": "https://school.jinritemai.com/doudian/web/article/aJmzRe57GR2d", "source": "抖音电商学习中心", "cat": "通用"},
+      {"date": "2026-07-03", "title": "京东MALL落地南京河西，全国门店突破30家向40家迈进", "detail": "京东MALL与金盛国际家居签约落地南京河西建邺，激活近3万㎡空间，聚焦3C/智能家居/全屋家居沉浸式体验；截至6月全国已开30家。", "impact": "中", "url": "https://www.njjy.gov.cn/jyyw/202607/t20260706_5871656.html", "source": "南京建邺区政府", "cat": "家具"}
+    ],
+    "policy": [
+      {"date": "2026-07-10", "title": "智能卫浴首个可靠性国标GB/T 24986.7-2026发布（九牧牵头）", "detail": "由九牧作为第一牵头单位主导编制，是智能卫浴行业首个可靠性国家标准，2027-02-01实施。推动行业从功能竞争转向可靠性/质量竞争，利好研发投入高的头部品牌，加速中小品牌出清。", "impact": "高", "url": "http://www.news.cn/finance/20260710/af2aaf48c2cf4ec690c4455c30bb1cca/c.html", "source": "新华网", "cat": "卫浴厨房"},
+      {"date": "2026-07-06", "title": "国内首部《住宅全案整装服务标准》T/CREA 056-2026召开宣贯会", "detail": "中国房地产业协会主导，14章覆盖营销到售后全流程。八大亮点含固定总价、银行三方资金存管、360°施工摄像头、投诉2小时响应、装修最低质保2年防水5年。首批22家试点含圣都整装、绿城确幸家等。", "impact": "高", "url": "https://news.qq.com/rain/a/20260710A04NCY00", "source": "腾讯新闻(转中国财富网)", "cat": "装修"}
+    ],
+    "merchant": [
+      {"date": "2026-07-14", "title": "欧派家居H1净利预降50%-60%，定制家居龙头承压", "detail": "欧派预计2026H1归母净利4.07亿-5.09亿元，同比减少50%-60%（去年同期10.18亿）。原因：地产深度调整、终端复苏乏力、竞争激烈、上年同期以旧换新高基数。", "impact": "高", "url": "https://paper.cnstock.com/html/2026-07/15/content_2244238.htm", "source": "上海证券报", "cat": "全屋定制"},
+      {"date": "2026-07-13", "title": "志邦家居H1由盈转亏，预亏1.26亿-1.89亿元", "detail": "志邦预计2026H1归母净利-1.89亿至-1.26亿（去年同期+1.38亿），零售与大宗业务双承压，海外推进放缓，上年同期以物抵债高基数。", "impact": "高", "url": "https://news.qq.com/rain/a/20260713A0A21500", "source": "证券时报", "cat": "全屋定制"},
+      {"date": "2026-07-14", "title": "索菲亚H1净利预降78%-85%", "detail": "索菲亚预计2026H1归母净利4790万-7026万元，同比-78%--85%。地产周期下行、消费信心不足、竞争加剧、毛利率下滑，另有国联证券股票公允价值变动拖累。", "impact": "中", "url": "http://news.10jqka.com.cn/20260714/c678172788.shtml", "source": "同花顺", "cat": "全屋定制"},
+      {"date": "2026-07-15", "title": "红星美凯龙H1扭亏为盈，预计净利5000万-7500万元", "detail": "红星美凯龙预计H1归母净利5000万-7500万（上年同期-19亿），自营商场出租率企稳、费用大幅降低、减值损失同比收窄，实现扭亏。", "impact": "中", "url": "https://paper.cnstock.com/html/2026-07/15/content_2244325.htm", "source": "上海证券报", "cat": "家具"},
+      {"date": "2026-07-09", "title": "兔宝宝参与项目获2025年度国家科学技术进步奖二等奖", "detail": "兔宝宝作为主要完成单位参与项目荣获国家科学技术进步奖二等奖，为历史第二次获此奖，涉及绿色/健康家居核心技术。", "impact": "中", "url": "https://www.news.cn/jiaju/20260713/c1c4a8c27aa2426599bf9ca0d10fcce6/c.html", "source": "新华网", "cat": "建材"}
+    ]
+  },
+  "monthlySummary": "7月核心基调是『需求端全面深跌 + 供给端加速出清 + 头部业绩集中承压』：上半年宏观数据确认家装建材需求端（家具-6.6%/建材-10.5%）大幅跑输社零大盘，地产竣工-23.7%持续压制下游；定制家居三巨头（欧派预降50-60%、志邦预亏、索菲亚预降78-85%）业绩集体探底，印证行业寒冬。政策端两大标准（智能卫浴可靠性国标、住宅全案整装服务标准）同步推高质量与合规门槛，利好头部、加速中小出清。平台端京东家装以整装+140%逆势高增、国补第三批625亿续力成为为数不多的结构性亮点。天猫家装运营应重点关注：卫浴（国标+国补双驱动）、整装（京东抢跑）两条赛道的竞品动向。"
+}</script>
+<script id="dataDoudian" type="application/json">{
+  "source": "抖店罗盘 · 类目概览 (compass.jinritemai.com)",
+  "sourceUrl": "https://compass.jinritemai.com/shop/chance/category-overview",
+  "loginRequired": true,
+  "loginMethod": "陪跑扫码 · 章鹏潮玩账号",
+  "scrapeMethod": "浏览器自动化 · innerText DOM 抽取",
+  "scrapedAt": "2026-07-16 07:30 CST",
+  "coverage": {
+    "industry": "智能家居 / 家装建材",
+    "dateRange": "2026/07/09 - 2026/07/15",
+    "granularity": "近7天",
+    "subCategoryCount": 30,
+    "priceBandCount": 5,
+    "topProductCount": 15,
+    "channelCount": 9,
+    "carrierCount": 5
+  },
+  "note": "抖店罗盘对市场类目只公开数量级区间（如 ¥1亿-¥1.5亿），不显示精确值；文中区间原样保留。较上周期百分比为口径公开的精确 YoW。",
+  "coreMetrics": {
+    "payGmv": {"range": "¥4.5亿 - ¥5亿", "wow": "+1.51%"},
+    "itemsSold": {"range": "1,000万 - 2,500万", "wow": "+5.80%"},
+    "buyers": {"range": "500万 - 750万", "wow": "+4.89%"},
+    "orders": {"range": "750万 - 1,000万", "wow": "+7.00%"},
+    "onlineSku": {"range": "7亿 - 7.5亿", "wow": "+0.75%"},
+    "activeSku": {"range": "25万 - 50万", "wow": "+1.98%"},
+    "pricePerItem": {"range": "¥10 - ¥50", "wow": "+6.91%"},
+    "arpu": {"range": "¥50 - ¥100", "wow": "+6.10%"}
+  },
+  "subCategories": [
+    {"rank": 1, "name": "全屋智能", "gmvRange": "¥1亿-¥1.5亿", "share": "25%-30%", "items": "50万-75万", "buyers": "25万-50万", "orders": "50万-75万", "activeSku": "1万-2.5万", "unitPrice": "¥200-¥300", "arpu": "¥300-¥400"},
+    {"rank": 2, "name": "卫浴建材", "gmvRange": "¥1亿-¥1.5亿", "share": "20%-25%", "items": "75万-100万", "buyers": "75万-100万", "orders": "75万-100万", "activeSku": "2.5万-5万", "unitPrice": "¥100-¥200", "arpu": "¥100-¥200"},
+    {"rank": 3, "name": "卫浴五金", "gmvRange": "¥2,500万-¥5,000万", "share": "5%-7.5%", "items": "75万-100万", "buyers": "50万-75万", "orders": "75万-100万", "activeSku": "2.5万-5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 4, "name": "水槽与龙头", "gmvRange": "¥2,500万-¥5,000万", "share": "5%-7.5%", "items": "25万-50万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥50-¥100", "arpu": "¥100-¥200"},
+    {"rank": 5, "name": "胶粘剂", "gmvRange": "¥1,000万-¥2,500万", "share": "5%-7.5%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 6, "name": "防护材料", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "100万-250万", "buyers": "75万-100万", "orders": "100万-250万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 7, "name": "油漆及辅料", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "50万-75万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 8, "name": "卫浴配件", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "100万-250万", "buyers": "75万-100万", "orders": "100万-250万", "activeSku": "2.5万-5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 9, "name": "涂料辅料", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "25万-50万", "buyers": "10万-25万", "orders": "25万-50万", "activeSku": "2,500-5,000", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 10, "name": "门及配件", "gmvRange": "¥1,000万-¥2,500万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 11, "name": "墙面材料", "gmvRange": "¥1,000万-¥2,500万", "share": "1%-2.5%", "items": "25万-50万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "7,500-1万", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 12, "name": "厨房功能五金", "gmvRange": "¥750万-¥1,000万", "share": "1%-2.5%", "items": "7.5万-10万", "buyers": "5万-7.5万", "orders": "7.5万-10万", "activeSku": "5,000-7,500", "unitPrice": "¥50-¥100", "arpu": "¥100-¥200"},
+    {"rank": 13, "name": "其他家装建材", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "7.5万-10万", "orders": "10万-25万", "activeSku": "7,500-1万", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 14, "name": "家具五金", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "50万-75万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "2.5万-5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 15, "name": "水泥砂石", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "2.5万-5万", "orders": "7.5万-10万", "activeSku": "1,000-2,500", "unitPrice": "¥50-¥100", "arpu": "¥100-¥200"},
+    {"rank": 16, "name": "板材", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "2.5万-5万", "orders": "7.5万-10万", "activeSku": "7,500-1万", "unitPrice": "¥10-¥50", "arpu": "¥100-¥200"},
+    {"rank": 17, "name": "水电管材", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "25万-50万", "buyers": "10万-25万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 18, "name": "隔音保温", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "7.5万-10万", "orders": "10万-25万", "activeSku": "2,500-5,000", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 19, "name": "阳台", "gmvRange": "¥250万-¥500万", "share": "0%-1%", "items": "25万-50万", "buyers": "5万-7.5万", "orders": "25万-50万", "activeSku": "2,500-5,000", "unitPrice": "¥0-¥10", "arpu": "¥50-¥100"},
+    {"rank": 20, "name": "窗及配件", "gmvRange": "¥250万-¥500万", "share": "0%-1%", "items": "10万-25万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 21, "name": "石材", "gmvRange": "¥250万-¥500万", "share": "0%-1%", "items": "1万-2.5万", "buyers": "5,000-7,500", "orders": "1万-2.5万", "activeSku": "2,500-5,000", "unitPrice": "¥100-¥200", "arpu": "¥400-¥500"},
+    {"rank": 22, "name": "地板及附件", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "5万-7.5万", "buyers": "1万-2.5万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥10-¥50", "arpu": "¥100-¥200"},
+    {"rank": 23, "name": "瓷砖/砖", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "5万-7.5万", "buyers": "1万-2.5万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥10-¥50", "arpu": "¥100-¥200"},
+    {"rank": 24, "name": "家用阀门", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "2.5万-5万", "buyers": "1万-2.5万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥50-¥100", "arpu": "¥50-¥100"},
+    {"rank": 25, "name": "水处理", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "7,500-1万", "buyers": "7,500-1万", "orders": "7,500-1万", "activeSku": "500-750", "unitPrice": "¥100-¥200", "arpu": "¥100-¥200"},
+    {"rank": 26, "name": "建筑五金", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "7.5万-10万", "buyers": "2.5万-5万", "orders": "2.5万-5万", "activeSku": "5,000-7,500", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 27, "name": "线条", "gmvRange": "¥75万-¥100万", "share": "0%-1%", "items": "2.5万-5万", "buyers": "2.5万-5万", "orders": "2.5万-5万", "activeSku": "500-750", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 28, "name": "垃圾处理", "gmvRange": "¥50万-¥75万", "share": "0%-1%", "items": "2.5万-5万", "buyers": "1万-2.5万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 29, "name": "玻璃", "gmvRange": "¥25万-¥50万", "share": "0%-1%", "items": "2.5万-5万", "buyers": "7,500-1万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 30, "name": "楼梯及配件", "gmvRange": "¥25万-¥50万", "share": "0%-1%", "items": "2,500-5,000", "buyers": "1,000-2,500", "orders": "1,000-2,500", "activeSku": "250-500", "unitPrice": "¥50-¥100", "arpu": "¥200-¥300"},
+    {"rank": 31, "name": "地暖/暖气片/散热器", "gmvRange": "¥10万-¥25万", "share": "0%-1%", "items": "1,000-2,500", "buyers": "500-750", "orders": "750-1,000", "activeSku": "250-500", "unitPrice": "¥100-¥200", "arpu": "¥300-¥400"}
+  ],
+  "priceBands": [
+    {"rank": 1, "band": "39以上", "gmvRange": "¥3.5亿-¥4亿", "share": "75%-80%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "10万-25万", "unitPrice": "¥100-¥200", "arpu": "¥200-¥300"},
+    {"rank": 2, "band": "19-39", "gmvRange": "¥5,000万-¥7,500万", "share": "10%-15%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "5万-7.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 3, "band": "10-19", "gmvRange": "¥2,500万-¥5,000万", "share": "5%-7.5%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "5万-7.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 4, "band": "6-10", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "2.5万-5万", "unitPrice": "¥0-¥10", "arpu": "¥10-¥50"},
+    {"rank": 5, "band": "0-6", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "5万-7.5万", "unitPrice": "¥0-¥10", "arpu": "¥0-¥10"}
+  ],
+  "topProducts_39plusBand": [
+    {"rank": 1, "title": "科氧仕智能家居设备配件生态小粒径亿级负氧离子发生器净化ED2", "gmvRange": "¥500万-¥750万"},
+    {"rank": 2, "title": "【明星同款】新款掌静脉3D人脸识别远程可视密码锁防盗门家用指纹锁", "gmvRange": "¥250万-¥500万"},
+    {"rank": 3, "title": "步猎鹰【自带网络/1600W超清】4G三画面太阳能全彩夜视摄像旋转对话", "gmvRange": "¥100万-¥250万"},
+    {"rank": 4, "title": "神眸【爆款AI智能监控摄像头】人形检测室内外家用日夜全彩高清BC4", "gmvRange": "¥100万-¥250万"},
+    {"rank": 5, "title": "【升级】阿尔法极光 P14FVR三摄像头无线充电夜视人脸掌静脉智能锁", "gmvRange": "¥100万-¥250万"},
+    {"rank": 6, "title": "Sacon/帅康一体压铸SUS304双滑轨小米粒厨房水槽大单槽", "gmvRange": "¥100万-¥250万"},
+    {"rank": 7, "title": "【因硕】R8双子星密码锁双摄版猫眼大屏3D人脸识别掌静脉智能门锁", "gmvRange": "¥100万-¥250万"},
+    {"rank": 8, "title": "JOMOW卫浴淋浴花洒套装智能恒温钢琴增压沐浴器全铜浴室洗澡淋浴", "gmvRange": "¥100万-¥250万"},
+    {"rank": 9, "title": "【斯麦特】2026新款4G免流量监控摄像头家用360旋转全彩夜视彩彩彩", "gmvRange": "¥100万-¥250万"},
+    {"rank": 10, "title": "九牧万家用坐便器全功能顶配智能马桶有翻盖泡沫盾无水压限制语音", "gmvRange": "¥100万-¥250万"},
+    {"rank": 11, "title": "AUX/奥克斯2026新款4G免流量家用高清监控摄像头360旋转全彩夜视", "gmvRange": "¥100万-¥250万"},
+    {"rank": 12, "title": "Blaupunkt/蓝宝T9 全智能马桶自动翻盖静音虹吸无水压加热座圈", "gmvRange": "¥100万-¥250万"},
+    {"rank": 13, "title": "【1号】沃特浦顶不漏防水涂料屋顶防水胶雨季漏水补漏耐晒新型材料", "gmvRange": "¥100万-¥250万"},
+    {"rank": 14, "title": "【免费安装】联想新品人脸识别T30pro智能锁灵电不断电家用门锁", "gmvRange": "¥100万-¥250万"},
+    {"rank": 15, "title": "HOTATA/好太太小天舱晾衣超薄折叠家用电动阳台晾衣架", "gmvRange": "¥100万-¥250万"}
+  ],
+  "carriers": [
+    {"name": "直播", "share": 54.80, "gmvRange": "¥2.5亿-¥3亿"},
+    {"name": "商品卡", "share": 21.87, "gmvRange": "¥1亿-¥1.5亿"},
+    {"name": "短视频", "share": 19.70, "gmvRange": "¥7,500万-¥1亿"},
+    {"name": "其他", "share": 3.54, "gmvRange": "¥1,000万-¥2,500万"},
+    {"name": "图文", "share": 0.10, "gmvRange": "¥25万-¥50万"}
+  ],
+  "channels": [
+    {"name": "短视频引流", "gmvRange": "¥7,500万-¥1亿", "share": "25%-30%", "items": "75万-100万", "buyers": "50万-75万", "orders": "50万-75万", "activeSku": "7,500-1万", "unitPrice": "¥50-¥100", "arpu": "¥100-¥200"},
+    {"name": "直播推荐", "gmvRange": "¥5,000万-¥7,500万", "share": "20%-25%", "items": "25万-50万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥100-¥200", "arpu": "¥100-¥200"},
+    {"name": "搜索", "gmvRange": "¥2,500万-¥5,000万", "share": "15%-20%", "items": "25万-50万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "1万-2.5万", "unitPrice": "¥100-¥200", "arpu": "¥200-¥300"},
+    {"name": "其他", "gmvRange": "¥2,500万-¥5,000万", "share": "10%-15%", "items": "25万-50万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥50-¥100", "arpu": "¥50-¥100"},
+    {"name": "抖音商城推荐", "gmvRange": "¥1,000万-¥2,500万", "share": "7.5%-10%", "items": "10万-25万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "1万-2.5万", "unitPrice": "¥100-¥200", "arpu": "¥100-¥200"},
+    {"name": "个人主页&店铺&橱窗", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "2.5万-5万", "buyers": "2.5万-5万", "orders": "2.5万-5万", "activeSku": "7,500-1万", "unitPrice": "¥200-¥300", "arpu": "¥300-¥400"},
+    {"name": "关注来源", "gmvRange": "¥750万-¥1,000万", "share": "2.5%-5%", "items": "2.5万-5万", "buyers": "2.5万-5万", "orders": "2.5万-5万", "activeSku": "5,000-7,500", "unitPrice": "¥200-¥300", "arpu": "¥300-¥400"},
+    {"name": "头条西瓜", "gmvRange": "¥500万-¥750万", "share": "2.5%-5%", "items": "7.5万-10万", "buyers": "7.5万-10万", "orders": "7.5万-10万", "activeSku": "5,000-7,500", "unitPrice": "¥50-¥100", "arpu": "¥50-¥100"},
+    {"name": "活动页", "gmvRange": "¥10万-¥25万", "share": "0%-1%", "items": "500-750", "buyers": "500-750", "orders": "500-750", "activeSku": "250-500", "unitPrice": "¥200-¥300", "arpu": "¥200-¥300"}
+  ],
+  "insights": [
+    "抖音家装建材大盘 7/9-7/15 GMV ¥4.5-5亿，环比+1.5%；订单+7%、买家+4.9%，说明客单价（¥50-100 区间上端）在拉动，非纯流量红利。",
+    "TOP2 子类目 全屋智能(25-30%) + 卫浴建材(20-25%) 合计 ~50% 大盘，注意全屋智能件单价¥200-300 vs 卫浴建材¥100-200：智能硬件在抖音已进入高价心智，卫浴走走量。",
+    "价格带极度头重脚轻：¥39以上占 75-80% GMV，说明抖音家装建材不再是低价白牌天下，中高端已跑起来。",
+    "载体：直播 54.8% + 商品卡 21.87% + 短视频 19.7% = 96.4%，图文仅 0.1%——图文种草模型在这个类目失效，直播和货架是主战场。",
+    "渠道 TOP3：短视频引流(25-30%) + 直播推荐(20-25%) + 搜索(15-20%) = 60-70% GMV，搜索占比不低，说明用户\"抖音搜家装\"心智已成型。",
+    "TOP15 单品中，智能锁 4 席（掌静脉/掌静脉/双子星/联想T30pro）、监控摄像头 4 席（步猎鹰/神眸/斯麦特/AUX），共 8 席，与用户跟的 AI 锁/AI 监控摄像头 2 大赛道高度重叠——这些品牌应立即加入天猫竞品追踪清单。"
+  ]
+}</script>
+<script id="dataSources" type="application/json">{
+  "asOf": "2026-07-16 20:10",
+  "note": "本表逐源披露采集深度、条数、时间戳与阻塞原因，遵循『不编造、可追溯、阻塞透明』原则。采集深度分级：0=未取到/阻塞，1=浅层（仅标题/目录），2=中层（关键指标/结构化摘要），3=深层（完整明细/多页/可下载表）。",
+  "layers": {
+    "A": "免登录公开源（政府/协会/上市公司公告/权威媒体）",
+    "B": "免费注册可读源",
+    "C": "强登录·陪跑采集源（平台商家/营销后台）",
+    "D": "阿里内网源",
+    "E": "微信/腾讯文档类源"
+  },
+  "sources": [
+    {"name": "国家统计局（社零/工业增加值/房地产/70城房价/PMI）", "layer": "A", "url": "https://www.stats.gov.cn/sj/zxfb/", "login": "免登录", "depth": 3, "count": "24项指标", "timestamp": "2026-07-16", "blocker": "无。家具制造业分行业工业增加值未单独公开，已标待核实"},
+    {"name": "中指研究院（百城房价/成交）", "layer": "A", "url": "https://wap.stockstar.com/detail/IG2026070300009079", "login": "免登录", "depth": 2, "count": "4项指标", "timestamp": "2026-07-16", "blocker": "完整月报需付费下载，公开摘要已取核心均价与同环比"},
+    {"name": "克而瑞（百强房企销售榜）", "layer": "A", "url": "https://finance.sina.com.cn/stock/estate/integration/2026-07-01/doc-iniffyta1117203.shtml", "login": "免登录", "depth": 2, "count": "5项指标", "timestamp": "2026-07-16", "blocker": "6月单月同比%与TOP200完整榜需付费下载"},
+    {"name": "中国建材工业协会 CBMF（建材运行/MPI景气）", "layer": "A", "url": "https://www.cbmf.org/", "login": "免登录", "depth": 2, "count": "4条", "timestamp": "2026-07-16", "blocker": "CBMI具体数值需订阅刊物；MPI仅公开定性描述"},
+    {"name": "中国建材流通协会 CBMCA（BHI建材家居景气指数）", "layer": "A", "url": "https://www.bjnews.com.cn/detail/1784171412168316.html", "login": "免登录", "depth": 3, "count": "6月BHI 113.34等5项", "timestamp": "2026-07-16", "blocker": "官网反爬，经新京报权威转载交叉印证获取"},
+    {"name": "中国建筑装饰协会 CBDA（行业会议/展会）", "layer": "A", "url": "http://www.cbda.cn/html/tzgg/", "login": "免登录", "depth": 1, "count": "2条", "timestamp": "2026-07-16", "blocker": "cbda.cn 主域301重定向循环，仅tzgg子路径可读，其余靠第三方印证"},
+    {"name": "权威媒体门户（新华网/央广网/乐居/搜狐焦点/OFweek等）", "layer": "A", "url": "https://www.100ec.cn/", "login": "免登录", "depth": 3, "count": "35条平台/品牌动态", "timestamp": "2026-07-16", "blocker": "无"},
+    {"name": "研究与财经源（上证报/同花顺/东方财富/新浪财经上市公司公告）", "layer": "A", "url": "https://paper.cnstock.com/", "login": "免登录", "depth": 3, "count": "22条（含14条商家公告）", "timestamp": "2026-07-16", "blocker": "无"},
+    {"name": "Layer B 免费注册源探测（网经社/星图/艾瑞等）", "layer": "B", "url": "https://www.100ec.cn/", "login": "免费注册", "depth": 2, "count": "探测记录若干", "timestamp": "2026-07-16", "blocker": "部分报告需付费会员，已取公开引用部分"},
+    {"name": "抖店罗盘·类目概览（抖音电商后台）", "layer": "C", "url": "https://compass.jinritemai.com/shop/chance/category-overview", "login": "强登录（已陪跑登录）", "depth": 3, "count": "8核心指标+31子类目+5价格带+TOP15单品+9渠道+5载体", "timestamp": "2026-07-16 近7天(07/09-07/15)", "blocker": "罗盘对市场类目仅公开数量级区间（如¥1亿-1.5亿），不显示精确值，区间已原样保留"},
+    {"name": "抖店罗盘·榜单/趋势/竞争分析（其余3页）", "layer": "C", "url": "https://compass.jinritemai.com/shop/chance/", "login": "强登录（已登录）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "本期时间所限未展开，下期补采（能力可达）"},
+    {"name": "小红书种草学（官方营销学习平台）", "layer": "C", "url": "https://xue.xiaohongshu.com/home", "login": "强登录（已陪跑登录）", "depth": 2, "count": "定性：行业分类/讲师/直播/方法论6+项", "timestamp": "2026-07-16", "blocker": "家居家装量化流量大盘在千帆/蒲公英后台，需对应商业产品账号权限，未开通"},
+    {"name": "千瓜数据·行业流量大盘（小红书第三方）", "layer": "C", "url": "https://app.qian-gua.com/#/data/category", "login": "强登录（已登录Savey）", "depth": 0, "count": "0（家居家装）", "timestamp": "—", "blocker": "切换『家居家装』行业为尊享版会员功能（会员墙），当前账号仅默认展示护肤大盘，家装数据未取，已跳过"},
+    {"name": "京麦（京东商家后台·商智）", "layer": "C", "url": "https://jmw.jd.com/", "login": "强登录（阻塞）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "扫码为买家号 jd_LVopFIdFlDaa，提示『该账号暂不支持开店』，需POP商家账号，待用户换号扫码"},
+    {"name": "京准通（京东数字营销平台）", "layer": "C", "url": "https://jzt.jd.com/", "login": "强登录（阻塞）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "会话未登录（code=-3011），需京东广告主/商家账号登录，待用户授权"},
+    {"name": "蝉妈妈（抖音电商第三方榜单）", "layer": "C", "url": "https://www.chanmama.com/", "login": "强登录（待入口）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "chanmama.com 为营销页，真实后台榜单入口需点『立即使用』且要求会员登录，待用户提供其后台书签URL或在夸克打开后截图陪跑"},
+    {"name": "微信文档（家装行业协作文档，如有）", "layer": "E", "url": "https://doc.weixin.qq.com/", "login": "强登录（阻塞）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "公司网络DLP拦截：doc.weixin.qq.com 302跳转 office-sec.alibaba-inc.com/dialog，需用手机/非阿里网络访问"}
+  ],
+  "summary": {
+    "totalSources": 17,
+    "depth3": 6,
+    "depth2": 5,
+    "depth1": 1,
+    "depth0_blocked": 5,
+    "publicItemsCollected": "约79条（Layer A/B）+ 抖店罗盘完整类目盘",
+    "blockedNote": "5个强登录源因账号权限/会员墙/网络DLP阻塞，均已按规则透明标注，非采集能力问题；待用户提供有效账号或后台URL后可即时补采。"
+  }
+}</script>
 
 <script>
 function init(){
 const macro = JSON.parse(document.getElementById('dataMacro').textContent);
 const platform = JSON.parse(document.getElementById('dataPlatform').textContent);
 const policy = JSON.parse(document.getElementById('dataPolicy').textContent);
+const highlights = JSON.parse(document.getElementById('dataHighlights').textContent);
+const doudian = JSON.parse(document.getElementById('dataDoudian').textContent);
+const sources = JSON.parse(document.getElementById('dataSources').textContent);
 
-// asOf
 document.getElementById('asOfDate').textContent = macro.asOf || '2026-07-16';
 
 // helpers
@@ -1249,19 +1566,44 @@ const yoyClass = v => {
 };
 const yoyText = v => v || '待核实';
 const linkify = (label,url) => url && url !== '待核实' ? `<a href="${url}" target="_blank">${label}</a>` : `<span>${label}</span>`;
+const catColor = c => ({家具:'#e879f9',装修:'#60a5fa',建材:'#f59e0b',卫浴厨房:'#22d3ee',全屋智能:'#a78bfa',全屋定制:'#f472b6',灯具光源:'#fbbf24',电工五金:'#94a3b8',通用:'#8b949e'}[c]||'#8b949e');
 
-// insights
+// ===== 本月要闻 =====
+document.getElementById('monthLabelTip').textContent = highlights.monthLabel || '';
+document.getElementById('monthSummary').textContent = highlights.monthlySummary || '';
+const mhOrder = [['macro','宏观数据'],['platform','平台大事'],['policy','政策标准'],['merchant','头部商家']];
+const impMap = {'高':'h-high','中':'h-mid','低':''};
+let mhHtml = '';
+mhOrder.forEach(([key,label])=>{
+  const arr = (highlights.highlights&&highlights.highlights[key])||[];
+  if(!arr.length) return;
+  mhHtml += `<div class="mh-sub">${label}（${arr.length}）</div><div class="mh-grid">`;
+  mhHtml += arr.map(it=>`
+    <div class="mh-card ${impMap[it.impact]||''}">
+      <div class="mh-top">
+        <span class="mh-date">${it.date}</span>
+        <span class="cat-chip" data-cat="${it.cat||'通用'}">${it.cat||'通用'}</span>
+        <span class="mh-imp">影响：${it.impact||'—'}</span>
+      </div>
+      <h3>${it.title}</h3>
+      <p>${it.detail}</p>
+      <div class="src">${linkify(it.source||'源', it.url)}</div>
+    </div>`).join('');
+  mhHtml += `</div>`;
+});
+document.getElementById('monthHighlights').innerHTML = mhHtml;
+
+// ===== insights =====
 document.getElementById('insightBlock').innerHTML =
   '<ol>' + (macro.keyInsightsForBoard||[]).map(x => `<li>${x}</li>`).join('') + '</ol>';
 
-// macro KPI
-const macroKpiEl = document.getElementById('macroKpis');
+// ===== macro KPI =====
 const macroKpis = [
   ...macro.macro.retailSales.filter(x=>x.metric.includes('6月单月')||x.metric.includes('社零')),
   ...macro.macro.wholesale.filter(x=>x.value !== '待核实'),
   ...macro.macro.supplyChain.filter(x=>x.value !== '待核实').slice(0,3)
 ];
-macroKpiEl.innerHTML = macroKpis.map(k => `
+document.getElementById('macroKpis').innerHTML = macroKpis.map(k => `
   <div class="kpi">
     <div class="k">${k.metric}</div>
     <div class="v">${k.value}</div>
@@ -1270,8 +1612,7 @@ macroKpiEl.innerHTML = macroKpis.map(k => `
     <div class="src">${linkify(k.source, k.url)}  · ${k.publishDate||''}</div>
   </div>`).join('');
 
-// real estate KPI
-const reEl = document.getElementById('realEstateKpis');
+// ===== real estate KPI =====
 const reKpis = [
   ...macro.realEstate.sales.slice(0,3),
   ...macro.realEstate.investment,
@@ -1279,7 +1620,7 @@ const reKpis = [
   macro.realEstate.pricing[0],
   macro.realEstate.pricing[1]
 ].filter(Boolean);
-reEl.innerHTML = reKpis.map(k => `
+document.getElementById('realEstateKpis').innerHTML = reKpis.map(k => `
   <div class="kpi">
     <div class="k">${k.metric}</div>
     <div class="v" style="font-size:${(k.value||'').length>16?'15px':'22px'}">${k.value}</div>
@@ -1288,45 +1629,82 @@ reEl.innerHTML = reKpis.map(k => `
     <div class="src">${linkify(k.source, k.url)}  · ${k.publishDate||''}</div>
   </div>`).join('');
 
-// charts
+// ===== charts =====
 Chart.defaults.color = '#e6edf3';
 Chart.defaults.borderColor = '#30363d';
 new Chart(document.getElementById('chartRetail'),{
   type:'bar',
-  data:{
-    labels:['家具类','建材类','家电类','社零大盘'],
-    datasets:[{
-      label:'2026年6月同比 (%)',
-      data:[-6.6,-10.5,-8.7,1.0],
-      backgroundColor:v=>{const val=v.raw;return val>=0?'#3fb950':'#f85149'}
-    }]
-  },
+  data:{labels:['家具类','建材类','家电类','社零大盘'],
+    datasets:[{label:'2026年6月同比 (%)',data:[-6.6,-10.5,-8.7,1.0],
+      backgroundColor:v=>{const val=v.raw;return val>=0?'#3fb950':'#f85149'}}]},
   options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
 });
 new Chart(document.getElementById('chartUpstream'),{
-  type:'bar',
-  indexAxis:'y',
-  data:{
-    labels:['非金属矿物制品业(6月)','金属制品业(6月)','水泥产量(6月)','平板玻璃(6月)','制造业PMI(6月)','建筑业PMI(6月)','房地产投资(1-6月)','新开工面积(1-6月)','竣工面积(1-6月)'],
-    datasets:[{
-      label:'同比 / 值',
-      data:[-2.3,7.8,-5.6,-5.3,50.3,49.0,-18.0,-23.4,-23.7],
-      backgroundColor:function(ctx){const v=ctx.raw;const l=ctx.chart.data.labels[ctx.dataIndex];if(l.includes('PMI'))return v>=50?'#3fb950':'#d29922';return v>=0?'#3fb950':'#f85149'}
-    }]
-  },
+  type:'bar',indexAxis:'y',
+  data:{labels:['非金属矿物制品业(6月)','金属制品业(6月)','水泥产量(6月)','平板玻璃(6月)','制造业PMI(6月)','建筑业PMI(6月)','房地产投资(1-6月)','新开工面积(1-6月)','竣工面积(1-6月)'],
+    datasets:[{label:'同比 / 值',data:[-2.3,7.8,-5.6,-5.3,50.3,49.0,-18.0,-23.4,-23.7],
+      backgroundColor:function(ctx){const v=ctx.raw;const l=ctx.chart.data.labels[ctx.dataIndex];if(l.includes('PMI'))return v>=50?'#3fb950':'#d29922';return v>=0?'#3fb950':'#f85149'}}]},
   options:{plugins:{legend:{display:false}},scales:{x:{ticks:{callback:v=>v}}}}
 });
 
-// platform tabs
+// ===== 抖店罗盘 =====
+document.getElementById('dcCoverageTip').textContent = `${doudian.coverage.industry} · ${doudian.coverage.dateRange} · ${doudian.coverage.granularity}`;
+document.getElementById('dcNote').textContent = '⚠ ' + doudian.note;
+const cm = doudian.coreMetrics;
+const cmDefs = [
+  ['支付GMV', cm.payGmv],['销量', cm.itemsSold],['支付人数', cm.buyers],['订单数', cm.orders],
+  ['在线商品数', cm.onlineSku],['动销商品数', cm.activeSku],['件单价', cm.pricePerItem],['客单价', cm.arpu]
+];
+document.getElementById('dcCoreMetrics').innerHTML = cmDefs.map(([label,m])=>{
+  if(!m) return '';
+  return `<div class="kpi"><div class="k">${label}</div><div class="v" style="font-size:17px">${m.range||m.value||'—'}</div><div class="yoy ${yoyClass(m.wow)}">较上周期 ${m.wow||'—'}</div></div>`;
+}).join('');
+
+// 子类目 TOP10
+const subs = (doudian.subCategories||[]).slice(0,10);
+document.getElementById('dcSubCatTable').innerHTML =
+  '<thead><tr><th>#</th><th>子类目</th><th>GMV区间</th><th>占比</th><th>件单价</th></tr></thead><tbody>' +
+  subs.map((s,i)=>`<tr><td><span class="dc-rank ${i<3?'top':''}">${i+1}</span></td><td>${s.name}</td><td>${s.gmvRange||'—'}</td><td>${s.share||'—'}</td><td>${s.pricePerItem||'—'}</td></tr>`).join('') +
+  '</tbody>';
+
+// 带货载体饼图
+const carriers = doudian.carriers||[];
+new Chart(document.getElementById('chartCarrier'),{
+  type:'doughnut',
+  data:{labels:carriers.map(c=>c.name),datasets:[{data:carriers.map(c=>parseFloat(String(c.share).replace('%',''))||0),
+    backgroundColor:['#4493f8','#a78bfa','#3fb950','#d29922','#f85149']}]},
+  options:{plugins:{legend:{position:'right',labels:{font:{size:10.5},boxWidth:12}}}}
+});
+// 价格带柱图
+const bands = doudian.priceBands||[];
+new Chart(document.getElementById('chartPriceBand'),{
+  type:'bar',
+  data:{labels:bands.map(b=>b.range),datasets:[{label:'GMV占比',data:bands.map(b=>parseFloat(String(b.share).split('-')[1]||b.share)||0),
+    backgroundColor:'#a78bfa'}]},
+  options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
+});
+
+// TOP15 单品
+const prods = doudian.topProducts_39plusBand||[];
+document.getElementById('dcTopProdTable').innerHTML =
+  '<thead><tr><th>#</th><th>单品</th><th>销售额区间</th></tr></thead><tbody>' +
+  prods.map((p,i)=>`<tr><td><span class="dc-rank ${i<3?'top':''}">${i+1}</span></td><td>${p.name}</td><td>${p.gmvRange||p.gmv||'—'}</td></tr>`).join('') +
+  '</tbody>';
+
+document.getElementById('dcInsights').innerHTML =
+  '<ol>' + (doudian.insights||[]).map(x=>`<li>${x}</li>`).join('') + '</ol>';
+
+// ===== platform tabs =====
 const platMeta = {jd:'京东',douyin:'抖音',pdd:'拼多多',xhs:'小红书',shipinhao:'视频号',kuaishou:'快手',tmall_taobao:'淘宝天猫',cross:'跨平台'};
 const platEntries = Object.entries(platform.platforms).map(([k,v])=>({key:k,name:platMeta[k]||k,items:Array.isArray(v)?v:[]}));
-// merge cross-platform items if exists in platform_dynamics
-if(platform.platforms.cross){/* ok */}
+// 追加 crossPlatform
+if(platform.crossPlatform&&platform.crossPlatform.length){
+  platEntries.push({key:'cross',name:'跨平台',items:platform.crossPlatform});
+}
 const tabsEl = document.getElementById('platTabs');
 const panelsEl = document.getElementById('platPanels');
 tabsEl.innerHTML = platEntries.map((p,i)=>`<button class="tab ${i===0?'active':''}" data-plat="${p.key}" onclick="switchPlat('${p.key}')">${p.name} <span class="cnt">${p.items.length}</span></button>`).join('');
 document.getElementById('platCountTip').textContent = `共 ${platEntries.reduce((s,p)=>s+p.items.length,0)} 条·来自 ${platEntries.filter(p=>p.items.length>0).length} 个平台`;
-
 panelsEl.innerHTML = platEntries.map((p,i)=>`
   <div class="tab-panel ${i===0?'active':''}" data-plat="${p.key}">
     ${p.items.length===0?`<div class="gap-warn"><h3>暂无近30天数据</h3><ul><li>${p.name} 平台在窗口内未获取到可公开链接的家装建材家具品类动态；下期扩展信源</li></ul></div>`:`
@@ -1345,8 +1723,6 @@ panelsEl.innerHTML = platEntries.map((p,i)=>`
     </div>`}
   </div>`).join('');
 
-function catColor(c){const m={家具:'#e879f9',装修:'#60a5fa',建材:'#f59e0b',卫浴厨房:'#22d3ee',全屋智能:'#a78bfa',全屋定制:'#f472b6',灯具光源:'#fbbf24',电工五金:'#94a3b8',通用:'#8b949e'};return m[c]||'#8b949e'}
-
 window.switchPlat = k => {
   document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.plat===k));
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.dataset.plat===k));
@@ -1357,16 +1733,11 @@ window.filterCat = el => {
   const cat = el.dataset.cat;
   document.querySelectorAll('.event').forEach(ev=>{
     if(cat==='全部') ev.style.display='';
-    else{
-      const c = ev.dataset.cat;
-      // support array
-      const arr = c.split(/[,，]/).map(s=>s.trim());
-      ev.style.display = arr.includes(cat) ? '' : 'none';
-    }
+    else{const arr=(ev.dataset.cat||'').split(/[,，]/).map(s=>s.trim());ev.style.display=arr.includes(cat)?'':'none';}
   });
 };
 
-// policy timeline
+// ===== policy timeline =====
 const policyImpact = it => {
   const s = (it.impact||it.summary||'')+'';
   if(/强|直接|硬性|正式实施|不合规|停业/.test(s)) return 'critical';
@@ -1381,7 +1752,6 @@ document.getElementById('policyTL').innerHTML = '<h3 style="color:#f85149;margin
     ${p.impact?`<div class="impact">👉 ${p.impact}</div>`:''}
     <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>
   </div>`).join('');
-
 document.getElementById('industryTL').innerHTML = '<h3 style="color:#4493f8;margin:0 0 8px 4px;font-size:13.5px">行业 · 展会 · 协会</h3>' + (policy.industry||[]).map(p=>`
   <div class="tl-item">
     <h3>${p.title}</h3>
@@ -1390,7 +1760,7 @@ document.getElementById('industryTL').innerHTML = '<h3 style="color:#4493f8;marg
     <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>
   </div>`).join('');
 
-// merchant
+// ===== merchant =====
 document.getElementById('merchantList').innerHTML = (policy.merchant||[]).map(m=>`
   <div class="event">
     <div class="top">
@@ -1402,19 +1772,54 @@ document.getElementById('merchantList').innerHTML = (policy.merchant||[]).map(m=
     <div class="src">${linkify(m.source||'源', m.url)}</div>
   </div>`).join('');
 
-// gaps + conflicts (merged from 3 files)
+// ===== gaps + conflicts =====
+const normConf = c => typeof c==='string'?c:(c.item?`【${c.item}】${c.detail||''}`:JSON.stringify(c));
 const allGaps = [
   ...(macro.gaps||[]).map(x=>'[宏观/房产] '+x),
   ...(platform.gaps||[]).map(x=>'[电商平台] '+x),
   ...(policy.gaps||[]).map(x=>'[政策/商家] '+x)
 ];
 const allConflicts = [
-  ...(macro.conflicts||[]).map(x=>'[宏观/房产] '+x),
-  ...(platform.conflicts||[]).map(x=>'[电商平台] '+x),
-  ...(policy.conflicts||[]).map(x=>'[政策/商家] '+x)
+  ...(macro.conflicts||[]).map(x=>'[宏观/房产] '+normConf(x)),
+  ...(platform.conflicts||[]).map(x=>'[电商平台] '+normConf(x)),
+  ...(policy.conflicts||[]).map(x=>'[政策/商家] '+normConf(x))
 ];
 document.getElementById('gapList').innerHTML = allGaps.map(g=>`<li>${g}</li>`).join('');
 document.getElementById('conflictList').innerHTML = allConflicts.map(c=>`<li>${c}</li>`).join('');
+
+// ===== 数据源采集深度 =====
+const sm = sources.summary||{};
+document.getElementById('srcSummary').innerHTML = [
+  ['信源总数', sm.totalSources],['深层(3)', sm.depth3],['中层(2)', sm.depth2],['浅层(1)', sm.depth1],['阻塞(0)', sm.depth0_blocked]
+].map(([l,v])=>`<div class="src-stat"><b>${v!=null?v:'—'}</b>${l}</div>`).join('');
+document.getElementById('srcNote').textContent = '说明：' + (sources.note||'');
+document.getElementById('srcTable').innerHTML =
+  '<thead><tr><th>信源</th><th>层</th><th>登录</th><th>深度</th><th>已采条数/时间戳</th><th>阻塞原因</th></tr></thead><tbody>' +
+  (sources.sources||[]).map(s=>`<tr>
+    <td>${linkify(s.name, s.url)}</td>
+    <td><span class="layer-tag">${s.layer}</span></td>
+    <td>${s.login||'—'}</td>
+    <td><span class="depth-badge depth-${s.depth}">${s.depth}</span></td>
+    <td>${s.count||'—'}<br><span style="color:var(--muted);font-size:11px">${s.timestamp||''}</span></td>
+    <td style="color:var(--muted);max-width:340px">${s.blocker||'无'}</td>
+  </tr>`).join('') + '</tbody>';
+
+// ===== 目录导航滚动高亮 =====
+const navItems = [...document.querySelectorAll('.nav-item')];
+navItems.forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  const el = document.getElementById(a.dataset.target);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+const sections = navItems.map(a=>document.getElementById(a.dataset.target)).filter(Boolean);
+const spy = ()=>{
+  let cur = sections[0];
+  const top = 90;
+  for(const s of sections){ if(s.getBoundingClientRect().top <= top) cur = s; }
+  navItems.forEach(a=>a.classList.toggle('active', a.dataset.target===(cur&&cur.id)));
+};
+window.addEventListener('scroll', spy, {passive:true});
+spy();
 }
 try { init(); } catch(e){ document.body.insertAdjacentHTML('afterbegin','<div style="background:#f85149;color:#fff;padding:10px 16px">加载数据失败: '+e.message+'</div>'); console.error(e); }
 </script>

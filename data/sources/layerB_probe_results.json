@@ -1,0 +1,132 @@
+{
+  "probeDate": "2026-07-16",
+  "dateRangeFilter": "2026-06-17 to 2026-07-16",
+  "keywords": ["家装", "建材", "家具", "卫浴", "智能家居", "全屋定制", "灯具", "电工五金"],
+  "sources": [
+    {
+      "site": "发现报告",
+      "url": "https://www.fxbaogao.com/",
+      "loginRequired": false,
+      "loginRequiredForFullReport": true,
+      "accessLevel": 2,
+      "relevantItems": [],
+      "notes": "首页返回内容，游客可见报告标题+AI生成摘要+页数+发布日期+分类+热度指数，无需登录。但在采样时段（2026-06-17至07-16）首页热门榜未出现家装/建材/家具/卫浴/智能家居/全屋定制/灯具/电工五金相关报告，主要为AI、IT硬件、商业航天、储能、机器人、化妆品等主题。'建筑建材'行业分类入口存在但列表为空。完整PDF下载、Excel数据、收藏需登录，可能需付费会员（登录方式:微信扫码/手机验证码/账密）。建议通过站内搜索关键词而非首页获取相关报告。"
+    },
+    {
+      "site": "三个皮匠",
+      "url": "https://www.sgpjbg.com.cn/Search.html?q=%E5%AE%B6%E8%A3%85",
+      "loginRequired": false,
+      "loginRequiredForFullReport": true,
+      "accessLevel": 2,
+      "relevantItems": [
+        {
+          "title": "2026年家装报告合集（共28套打包）",
+          "date": "2026-07-15",
+          "source": "三个皮匠",
+          "type": "报告合集",
+          "note": "28份家装报告打包，采样时段内唯一命中2026年新品"
+        }
+      ],
+      "notes": "游客可见：标题、页数、发布日期、分类标签、热度指数、部分报告的AI摘要预览、报告目录预览按钮。搜索'家装'命中大量历史报告（2021-2026），采样时段（2026-06-17至07-16）内仅1条明确命中——'2026年家装报告合集'（2026-07-15发布，源自三个皮匠自制）。其他匹配（如2026-01月的树懒生活报告）超出30天窗口。下载完整PDF/Excel需登录（微信/手机/账密），可能需付费会员（Recharge.aspx）。数据丰富但需注意搜索结果按相关性而非日期排序。"
+    },
+    {
+      "site": "慧博投研",
+      "url": "http://www.hibor.com.cn/",
+      "loginRequired": false,
+      "loginRequiredForFullReport": "unknown",
+      "accessLevel": 2,
+      "relevantItems": [
+        {
+          "title": "财信证券-统计局1~6月房地产行业数据点评：6月销售降幅扩大，新开工持续走弱",
+          "date": "2026-07-16",
+          "source": "财信证券",
+          "type": "行业点评",
+          "relevance": "间接相关（房地产为家装建材上游）"
+        }
+      ],
+      "notes": "自称'免费的研报分享平台'，用户上传超2000万份文档。首页游客可见报告标题+来源+发布日期，无强制登录墙。'个人中心'含收藏/上传功能提示存在注册体系。采样时段首页无家装/建材/家具/卫浴/智能家居/全屋定制/灯具/电工五金直接命中报告，主流为医药、机器人、汽车L4、半导体、金融、宏观数据。仅有1条间接相关（房地产上游数据）。需通过'行业分析'分类页深入查询才能定位家居建材报告。整站JavaScript重度渲染，WebFetch可能未完整取到子页面。"
+    },
+    {
+      "site": "东方研报（洞见研报）",
+      "url": "https://www.djyanbao.com/index",
+      "loginRequired": "unknown",
+      "loginRequiredForFullReport": "unknown",
+      "accessLevel": 0,
+      "relevantItems": [],
+      "notes": "首页完全依赖JavaScript动态渲染（Vite/System.import），WebFetch返回内容仅有加载器脚本、Clarity/360统计代码、PDF查看器初始化，无任何报告标题、目录、元数据。页面明示'本页面需要浏览器支持（启用）JavaScript'。站点自我定位为'专业实时研报分享，行业研究报告，行业分析报告，券商研报，行业智库'（洞见研报品牌）。当前采集方式无法从首页获取任何内容——建议改用浏览器渲染方案（Playwright/Selenium）或直接调用其后端API/走搜索详情页URL才能拿到实际数据，登录墙情况亦无法从首页判定。"
+    },
+    {
+      "site": "亿欧智库",
+      "url": "https://www.iyiou.com/reportList/xiaofeishenghuo",
+      "loginRequired": false,
+      "loginRequiredForFullReport": true,
+      "accessLevel": 2,
+      "relevantItems": [],
+      "notes": "消费生活合集页面共标注90份报告，首屏返回10份，采样时段（2026-06-17至07-16）无直接命中家装/建材/家具/卫浴/智能家居/全屋定制/灯具/电工五金报告。相关但非专题：'2026中国十大消费品行业GEO现状及趋势研究报告'（2026-01-07，含家电成熟度指数62.9）、'2025中国新消费发展洞察'（2025-12-10，列'家居'为十大赛道之一）——均超出30天窗口且非专题。游客可见：标题、summary、核心数据点、发布日期、标签、封面。不可见：完整报告正文、目录（catalogList空）、图表（reportChart空）——需登录/会员。metadata标注needPay=0/hasBuy=false，暗示分级访问。首屏之外80份未展示，可能包含更多命中，建议按'家居/家装'关键词深入检索。"
+    },
+    {
+      "site": "艾媒咨询",
+      "url": "https://www.iimedia.cn/c1081",
+      "loginRequired": false,
+      "loginRequiredForFullReport": true,
+      "accessLevel": 2,
+      "relevantItems": [
+        {
+          "title": "2026-2027年中国小家电行业运行数据监测及消费需求洞察报告",
+          "date": "2026-07-07",
+          "source": "艾媒网",
+          "type": "行业报告",
+          "relevance": "间接相关—将小家电定位为'智能家居生态体系中的关键组成部分'"
+        },
+        {
+          "title": "2026-2027年中国消费电子市场状况及标杆企业研究报告",
+          "date": "2026-07-04",
+          "source": "艾媒网",
+          "type": "行业报告",
+          "relevance": "间接相关—核心品类含'智能家居'"
+        }
+      ],
+      "sidebarLibraryHits": [
+        "全球及中国家居市场发展状况及典型品牌研究",
+        "中国智能床行业发展状况与消费行为洞察",
+        "《2026-2027年中国服装家纺产业链市场状况及标杆企业经营数据分析报告》",
+        "中国家纺行业发展状况及进出口宏观数据",
+        "中国蹲便器（蹲厕）vs 坐便器（马桶）用户行为调研数据"
+      ],
+      "notes": "游客可见：文章标题、发布日期、来源、摘要段落。侧边栏报告库带'付费报告'/'VIP报告'标签，暗示分级访问。采样时段内命中2份间接相关报告（智能家居/小家电+消费电子）。侧边栏另有多份家居/智能床/家纺/卫浴（蹲便器vs马桶）主题报告但无日期标注，需进入详情页确认。完整PDF需通过'文章底部报告下载按钮'下载，可能触发登录/付费。"
+    },
+    {
+      "site": "QuestMobile",
+      "url": "https://www.questmobile.com.cn/",
+      "loginRequired": false,
+      "loginRequiredForFullReport": true,
+      "accessLevel": 2,
+      "relevantItems": [],
+      "notes": "首页仅展示3篇报告，采样时段命中：'AI应用市场发展半年报'（2026-07-14）、'下沉市场用户洞察报告'（2026-07-07）、'夜经济洞察报告'（2026-06-30）——均与家居/家装/建材无关。产业标签涵盖食品饮料、手机、移动购物、生活服务，未见家居/家装标签。游客可见：标题、发布日期、行业标签、简短介绍。完整报告content字段为null，需通过'产品服务与报告申请'入口申请（登录/商务通道）。'查看更多报告'链接未在首屏展开——若要获取家居App用户数据洞察，需通过报告归档页深挖。"
+    },
+    {
+      "site": "Frost China（沙利文中国）",
+      "url": "https://www.frostchina.com/",
+      "loginRequired": false,
+      "loginRequiredForFullReport": "unknown",
+      "accessLevel": 1,
+      "relevantItems": [],
+      "categoryLinks": [
+        {"name": "智能家居", "url": "/content/industry/detail/67909f0428f34fda970e48ec"},
+        {"name": "建筑科技与装饰装潢", "url": "/content/industry/detail/678f65b8fb897b31af070ef6"},
+        {"name": "地产与物业", "url": "/content/industry/detail/62b5537a0cee2bc62a2037d5"}
+      ],
+      "notes": "无强制登录墙，首页可自由浏览。游客可见：文章标题、发布日期、标签（行业研究/市场动态/公司动态/媒体报道）、缩略图、行业导航链接。首页精选文章覆盖物流机器人、储能、生物医药、AI、港股IPO，无家装/建材/家具/卫浴/智能家居/全屋定制/灯具/电工五金直接命中。存在3条相关行业专题入口——智能家居、建筑科技与装饰装潢、地产与物业——需分别进入子页面才能获得该分类下的具体研究文章列表和采样时段命中项。'立即咨询'为商务表单而非登录门槛。深度报告PDF下载权限从首页无法判定。"
+    }
+  ],
+  "summary": {
+    "sitesAccessibleWithoutLogin": 7,
+    "sitesRequireJavaScriptRendering": 1,
+    "sitesWithGuestReportSummaries": 6,
+    "sitesWithGuestTitleOnly": 1,
+    "sitesFullyBlocked": 0,
+    "directHitsInDateRange": 1,
+    "indirectHitsInDateRange": 3,
+    "recommendation": "从首页/搜索首屏直接命中家居家装建材主题的报告很少。建议下一步：(1) 三个皮匠—通过'2026年家装报告合集（07-15）'解压提取合集内28份报告清单；(2) 亿欧智库—展开消费生活合集剩余80份及按'家居/家装'关键词专项检索；(3) 艾媒咨询—深入侧边栏报告库的家居/智能床/家纺/卫浴条目获取日期；(4) 沙利文—抓取智能家居/建筑科技与装饰装潢/地产与物业3个行业详情页；(5) 东方研报—改用浏览器渲染工具重取；(6) 慧博投研—通过'行业分析'分类页深入。'发现报告'与'QuestMobile'首页短期内命中概率低，可用站内搜索接口再探。"
+  }
+}
