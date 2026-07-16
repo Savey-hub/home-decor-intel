@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>家装建材家具行业竞争情报看板</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1c232d; --border:#30363d;
+  --text:#e6edf3; --muted:#8b949e; --accent:#4493f8; --accent-2:#3fb950;
+  --warn:#d29922; --danger:#f85149; --info:#a371f7;
+  --tag-jiaju:#e879f9; --tag-zhuangxiu:#60a5fa; --tag-jiancai:#f59e0b;
+  --tag-weiyu:#22d3ee; --tag-zhineng:#a78bfa; --tag-dingzhi:#f472b6;
+  --tag-dengju:#fbbf24; --tag-wujin:#94a3b8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.55;font-size:13.5px}
+.hdr{background:linear-gradient(135deg,#1f2937 0%,#111827 100%);padding:22px 32px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.hdr h1{font-size:22px;font-weight:700;margin-bottom:4px;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hdr .meta{color:var(--muted);font-size:12.5px;display:flex;gap:18px;flex-wrap:wrap}
+.hdr .meta b{color:#e6edf3}
+.container{max-width:1440px;margin:0 auto;padding:20px 24px 60px}
+.section{margin-bottom:26px}
+.section-title{font-size:15px;font-weight:600;margin-bottom:10px;padding-left:8px;border-left:3px solid var(--accent);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.section-title .tip{color:var(--muted);font-size:12px;font-weight:400;margin-left:auto}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:all .18s}
+.kpi:hover{border-color:var(--accent);transform:translateY(-1px)}
+.kpi .k{font-size:11.5px;color:var(--muted);margin-bottom:6px;line-height:1.3}
+.kpi .v{font-size:22px;font-weight:700;line-height:1.15;margin-bottom:2px}
+.kpi .yoy{font-size:13px;font-weight:600;display:inline-block;padding:1px 8px;border-radius:12px}
+.kpi .yoy.up{color:#3fb950;background:rgba(63,185,80,.13)}
+.kpi .yoy.dn{color:#f85149;background:rgba(248,81,73,.13)}
+.kpi .yoy.na{color:var(--warn);background:rgba(210,153,34,.15)}
+.kpi .n{color:var(--muted);font-size:11.5px;margin-top:6px;line-height:1.4}
+.kpi .src{margin-top:6px;font-size:11px}
+.kpi .src a{color:var(--accent);text-decoration:none}
+.kpi .src a:hover{text-decoration:underline}
+.tabs{display:flex;gap:6px;margin-bottom:14px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.tab{padding:9px 16px;background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:13px;font-weight:500;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab:hover{color:var(--text)}
+.tab .cnt{background:var(--panel-2);color:var(--muted);padding:1px 7px;border-radius:10px;font-size:11px;margin-left:5px}
+.tab.active .cnt{background:var(--accent);color:#fff}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.event-list{display:flex;flex-direction:column;gap:10px}
+.event{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.event:hover{border-color:var(--accent)}
+.event .top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.event .date{color:var(--muted);font-size:12px;font-weight:600;min-width:82px}
+.event .cat-badge{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;color:#fff}
+.event .type-badge{padding:1px 7px;border-radius:4px;font-size:11px;font-weight:500;color:var(--muted);border:1px solid var(--border);background:var(--panel-2)}
+.event h3{font-size:14.5px;font-weight:600;margin-bottom:5px;line-height:1.4}
+.event p{color:var(--muted);font-size:12.5px;line-height:1.55}
+.event .src{margin-top:6px;font-size:11.5px}
+.event .src a{color:var(--accent);text-decoration:none;margin-right:12px}
+.event .src a:hover{text-decoration:underline}
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;padding:10px 12px;background:var(--panel-2);border-radius:8px}
+.filter-bar .lbl{color:var(--muted);font-size:12px;line-height:22px;margin-right:6px}
+.chip{padding:3px 10px;background:var(--panel);border:1px solid var(--border);border-radius:14px;color:var(--muted);font-size:12px;cursor:pointer;user-select:none}
+.chip.active{color:#fff;border-color:transparent}
+.chip.active[data-cat=家具]{background:var(--tag-jiaju)}
+.chip.active[data-cat=装修]{background:var(--tag-zhuangxiu)}
+.chip.active[data-cat=建材]{background:var(--tag-jiancai)}
+.chip.active[data-cat=卫浴厨房]{background:var(--tag-weiyu)}
+.chip.active[data-cat=全屋智能]{background:var(--tag-zhineng)}
+.chip.active[data-cat=全屋定制]{background:var(--tag-dingzhi)}
+.chip.active[data-cat=灯具光源]{background:var(--tag-dengju);color:#111}
+.chip.active[data-cat=电工五金]{background:var(--tag-wujin)}
+.chip.active[data-cat=通用]{background:var(--muted);color:#111}
+.chip.active[data-cat=全部]{background:var(--accent)}
+.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+@media(max-width:1024px){.two-col{grid-template-columns:1fr}}
+.chart-wrap{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px}
+.chart-wrap h3{font-size:13.5px;color:var(--text);margin-bottom:8px}
+.chart-wrap .sub{font-size:11.5px;color:var(--muted);margin-bottom:8px}
+.tl{position:relative;padding-left:22px;border-left:2px solid var(--border)}
+.tl-item{position:relative;margin-bottom:12px;padding:10px 14px;background:var(--panel);border:1px solid var(--border);border-radius:8px}
+.tl-item::before{content:"";position:absolute;left:-30px;top:14px;width:12px;height:12px;background:var(--accent);border-radius:50%;border:3px solid var(--bg)}
+.tl-item.critical::before{background:var(--danger)}
+.tl-item.moderate::before{background:var(--warn)}
+.tl-item h3{font-size:14px;font-weight:600;margin-bottom:4px}
+.tl-item .meta{font-size:11.5px;color:var(--muted);margin-bottom:4px}
+.tl-item p{font-size:12.5px;color:var(--muted);line-height:1.55}
+.tl-item .impact{margin-top:5px;font-size:12px;padding:5px 8px;background:rgba(68,147,248,.08);border-left:2px solid var(--accent);border-radius:0 4px 4px 0}
+.gap-warn{background:rgba(210,153,34,.09);border:1px solid rgba(210,153,34,.35);border-radius:10px;padding:14px 16px;margin-bottom:12px}
+.gap-warn h3{font-size:13.5px;color:var(--warn);margin-bottom:8px}
+.gap-warn ul{list-style:none;padding-left:0}
+.gap-warn li{padding:4px 0 4px 16px;position:relative;font-size:12.5px;color:var(--muted)}
+.gap-warn li::before{content:"○";position:absolute;left:0;color:var(--warn)}
+.gap-warn.conflict{background:rgba(248,81,73,.07);border-color:rgba(248,81,73,.35)}
+.gap-warn.conflict h3{color:var(--danger)}
+.gap-warn.conflict li::before{color:var(--danger)}
+.insight{background:linear-gradient(135deg,rgba(68,147,248,.08),rgba(163,113,247,.06));border:1px solid rgba(68,147,248,.25);border-radius:10px;padding:14px 18px;margin-bottom:8px}
+.insight ol{padding-left:20px}
+.insight ol li{margin-bottom:6px;font-size:13px;line-height:1.6}
+.foot{margin-top:32px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;line-height:1.7;text-align:center}
+.foot a{color:var(--accent);text-decoration:none}
+.cat-chip{display:inline-block;padding:1px 7px;margin-right:4px;border-radius:4px;font-size:11px;color:#fff}
+.cat-chip[data-cat=家具]{background:var(--tag-jiaju)}
+.cat-chip[data-cat=装修]{background:var(--tag-zhuangxiu)}
+.cat-chip[data-cat=建材]{background:var(--tag-jiancai)}
+.cat-chip[data-cat=卫浴厨房]{background:var(--tag-weiyu)}
+.cat-chip[data-cat=全屋智能]{background:var(--tag-zhineng)}
+.cat-chip[data-cat=全屋定制]{background:var(--tag-dingzhi)}
+.cat-chip[data-cat=灯具光源]{background:var(--tag-dengju);color:#111}
+.cat-chip[data-cat=电工五金]{background:var(--tag-wujin)}
+.cat-chip[data-cat=通用]{background:var(--muted);color:#111}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:6px}
+.legend b{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>家装建材家具行业竞争情报看板</h1>
+  <div class="meta">
+    <span>数据窗口：<b>近30天（2026-06-17 ~ 2026-07-16）</b> + 本月标记</span>
+    <span>数据截止：<b id="asOfDate">2026-07-16</b></span>
+    <span>更新频率：<b>每周四 12:00 前</b></span>
+    <span>子行业范围：<b>家具 · 装修 · 建材 · 卫浴厨房 · 全屋智能 · 全屋定制 · 灯具光源 · 电工五金</b></span>
+  </div>
+</div>
+<div class="container">
+
+<!-- 核心洞察 -->
+<div class="section">
+  <div class="section-title">📌 本期核心洞察 <span class="tip">基于国家统计局+克而瑞+平台披露交叉验证</span></div>
+  <div class="insight" id="insightBlock"></div>
+</div>
+
+<!-- 宏观维度 -->
+<div class="section">
+  <div class="section-title">🌐 宏观维度 · 社零/供给/信心 <span class="tip">来源：国家统计局 · 数据发布日 2026-07-15</span></div>
+  <div class="kpi-grid" id="macroKpis"></div>
+</div>
+
+<!-- 房地产维度 -->
+<div class="section">
+  <div class="section-title">🏗 房地产维度 · 销售/投资/开工/竣工 <span class="tip">竣工端-23.7% 是家装建材需求最关键的负向变量</span></div>
+  <div class="kpi-grid" id="realEstateKpis"></div>
+</div>
+
+<!-- 图表：需求 vs 供给 -->
+<div class="section">
+  <div class="section-title">📊 需求侧 vs 供给侧 · 同比对比图</div>
+  <div class="two-col">
+    <div class="chart-wrap">
+      <h3>零售端 · 家装相关品类同比</h3>
+      <div class="sub">2026年6月单月，限额以上单位商品零售额同比</div>
+      <canvas id="chartRetail" height="220"></canvas>
+    </div>
+    <div class="chart-wrap">
+      <h3>上游端 · 建材/地产核心指标</h3>
+      <div class="sub">2026年6月/1-6月同比，红=拖累，绿=支撑</div>
+      <canvas id="chartUpstream" height="220"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- 电商平台动态 -->
+<div class="section">
+  <div class="section-title">🛒 电商平台当月动态 <span class="tip" id="platCountTip"></span></div>
+  <div class="tabs" id="platTabs"></div>
+  <div class="filter-bar">
+    <span class="lbl">按子行业筛选：</span>
+    <span class="chip active" data-cat="全部" onclick="filterCat(this)">全部</span>
+    <span class="chip" data-cat="家具" onclick="filterCat(this)">家具</span>
+    <span class="chip" data-cat="装修" onclick="filterCat(this)">装修</span>
+    <span class="chip" data-cat="建材" onclick="filterCat(this)">建材</span>
+    <span class="chip" data-cat="卫浴厨房" onclick="filterCat(this)">卫浴厨房</span>
+    <span class="chip" data-cat="全屋智能" onclick="filterCat(this)">全屋智能</span>
+    <span class="chip" data-cat="全屋定制" onclick="filterCat(this)">全屋定制</span>
+    <span class="chip" data-cat="灯具光源" onclick="filterCat(this)">灯具光源</span>
+    <span class="chip" data-cat="电工五金" onclick="filterCat(this)">电工五金</span>
+    <span class="chip" data-cat="通用" onclick="filterCat(this)">通用/跨类</span>
+  </div>
+  <div id="platPanels"></div>
+</div>
+
+<!-- 政策与标准 -->
+<div class="section">
+  <div class="section-title">📜 政策 · 标准 · 行业动态时间轴 <span class="tip">红点=强影响 · 黄点=中影响 · 蓝点=一般</span></div>
+  <div class="two-col">
+    <div>
+      <div class="tl" id="policyTL"></div>
+    </div>
+    <div>
+      <div class="tl" id="industryTL"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 商家动态 -->
+<div class="section">
+  <div class="section-title">🏢 头部商家当月动态 <span class="tip">上市公司公告 + 头部品牌大事件</span></div>
+  <div class="event-list" id="merchantList"></div>
+</div>
+
+<!-- Gaps + Conflicts -->
+<div class="section">
+  <div class="section-title">⚠️ 数据缺口与需人工核实 <span class="tip">遵循「不编造」原则，透明标注</span></div>
+  <div class="two-col">
+    <div class="gap-warn"><h3>📭 数据缺口（Gaps）</h3><ul id="gapList"></ul></div>
+    <div class="gap-warn conflict"><h3>⚡ 矛盾信息 · 需人工判断（Conflicts）</h3><ul id="conflictList"></ul></div>
+  </div>
+</div>
+
+<div class="foot">
+  <div>信源分层：<span style="color:#3fb950">■</span> 权威官方 · <span style="color:#4493f8">■</span> 头部媒体 · <span style="color:#d29922">■</span> 待核实</div>
+  <div style="margin-top:6px">生成脚本 · 数据文件 · 本地仓库位于 <code>home-decor-intel/</code>；下周四将迁移至 GitHub Pages 提供公网URL访问</div>
+</div>
+
+</div>
+
+<!-- 数据 JSON 内嵌（由 scripts/build_html.sh 构建时注入） -->
+<script id="dataMacro" type="application/json">__MACRO_JSON__</script>
+<script id="dataPlatform" type="application/json">__PLATFORM_JSON__</script>
+<script id="dataPolicy" type="application/json">__POLICY_JSON__</script>
+
+<script>
+function init(){
+const macro = JSON.parse(document.getElementById('dataMacro').textContent);
+const platform = JSON.parse(document.getElementById('dataPlatform').textContent);
+const policy = JSON.parse(document.getElementById('dataPolicy').textContent);
+
+// asOf
+document.getElementById('asOfDate').textContent = macro.asOf || '2026-07-16';
+
+// helpers
+const yoyClass = v => {
+  if(!v || v==='待核实') return 'na';
+  const num = parseFloat(String(v).replace(/[^\-\d.]/g,''));
+  return isNaN(num) ? 'na' : (num >= 0 ? 'up' : 'dn');
+};
+const yoyText = v => v || '待核实';
+const linkify = (label,url) => url && url !== '待核实' ? `<a href="${url}" target="_blank">${label}</a>` : `<span>${label}</span>`;
+
+// insights
+document.getElementById('insightBlock').innerHTML =
+  '<ol>' + (macro.keyInsightsForBoard||[]).map(x => `<li>${x}</li>`).join('') + '</ol>';
+
+// macro KPI
+const macroKpiEl = document.getElementById('macroKpis');
+const macroKpis = [
+  ...macro.macro.retailSales.filter(x=>x.metric.includes('6月单月')||x.metric.includes('社零')),
+  ...macro.macro.wholesale.filter(x=>x.value !== '待核实'),
+  ...macro.macro.supplyChain.filter(x=>x.value !== '待核实').slice(0,3)
+];
+macroKpiEl.innerHTML = macroKpis.map(k => `
+  <div class="kpi">
+    <div class="k">${k.metric}</div>
+    <div class="v">${k.value}</div>
+    <div class="yoy ${yoyClass(k.yoy)}">${yoyText(k.yoy)}</div>
+    ${k.note ? `<div class="n">${k.note}</div>` : ''}
+    <div class="src">${linkify(k.source, k.url)}  · ${k.publishDate||''}</div>
+  </div>`).join('');
+
+// real estate KPI
+const reEl = document.getElementById('realEstateKpis');
+const reKpis = [
+  ...macro.realEstate.sales.slice(0,3),
+  ...macro.realEstate.investment,
+  ...macro.realEstate.newStart,
+  macro.realEstate.pricing[0],
+  macro.realEstate.pricing[1]
+].filter(Boolean);
+reEl.innerHTML = reKpis.map(k => `
+  <div class="kpi">
+    <div class="k">${k.metric}</div>
+    <div class="v" style="font-size:${(k.value||'').length>16?'15px':'22px'}">${k.value}</div>
+    <div class="yoy ${yoyClass(k.yoy)}">${yoyText(k.yoy)}</div>
+    ${k.note ? `<div class="n">${k.note}</div>` : ''}
+    <div class="src">${linkify(k.source, k.url)}  · ${k.publishDate||''}</div>
+  </div>`).join('');
+
+// charts
+Chart.defaults.color = '#e6edf3';
+Chart.defaults.borderColor = '#30363d';
+new Chart(document.getElementById('chartRetail'),{
+  type:'bar',
+  data:{
+    labels:['家具类','建材类','家电类','社零大盘'],
+    datasets:[{
+      label:'2026年6月同比 (%)',
+      data:[-6.6,-10.5,-8.7,1.0],
+      backgroundColor:v=>{const val=v.raw;return val>=0?'#3fb950':'#f85149'}
+    }]
+  },
+  options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
+});
+new Chart(document.getElementById('chartUpstream'),{
+  type:'bar',
+  indexAxis:'y',
+  data:{
+    labels:['非金属矿物制品业(6月)','金属制品业(6月)','水泥产量(6月)','平板玻璃(6月)','制造业PMI(6月)','建筑业PMI(6月)','房地产投资(1-6月)','新开工面积(1-6月)','竣工面积(1-6月)'],
+    datasets:[{
+      label:'同比 / 值',
+      data:[-2.3,7.8,-5.6,-5.3,50.3,49.0,-18.0,-23.4,-23.7],
+      backgroundColor:function(ctx){const v=ctx.raw;const l=ctx.chart.data.labels[ctx.dataIndex];if(l.includes('PMI'))return v>=50?'#3fb950':'#d29922';return v>=0?'#3fb950':'#f85149'}
+    }]
+  },
+  options:{plugins:{legend:{display:false}},scales:{x:{ticks:{callback:v=>v}}}}
+});
+
+// platform tabs
+const platMeta = {jd:'京东',douyin:'抖音',pdd:'拼多多',xhs:'小红书',shipinhao:'视频号',kuaishou:'快手',tmall_taobao:'淘宝天猫',cross:'跨平台'};
+const platEntries = Object.entries(platform.platforms).map(([k,v])=>({key:k,name:platMeta[k]||k,items:Array.isArray(v)?v:[]}));
+// merge cross-platform items if exists in platform_dynamics
+if(platform.platforms.cross){/* ok */}
+const tabsEl = document.getElementById('platTabs');
+const panelsEl = document.getElementById('platPanels');
+tabsEl.innerHTML = platEntries.map((p,i)=>`<button class="tab ${i===0?'active':''}" data-plat="${p.key}" onclick="switchPlat('${p.key}')">${p.name} <span class="cnt">${p.items.length}</span></button>`).join('');
+document.getElementById('platCountTip').textContent = `共 ${platEntries.reduce((s,p)=>s+p.items.length,0)} 条·来自 ${platEntries.filter(p=>p.items.length>0).length} 个平台`;
+
+panelsEl.innerHTML = platEntries.map((p,i)=>`
+  <div class="tab-panel ${i===0?'active':''}" data-plat="${p.key}">
+    ${p.items.length===0?`<div class="gap-warn"><h3>暂无近30天数据</h3><ul><li>${p.name} 平台在窗口内未获取到可公开链接的家装建材家具品类动态；下期扩展信源</li></ul></div>`:`
+    <div class="event-list">
+      ${p.items.map(it=>`
+        <div class="event" data-cat="${it.category||'通用'}">
+          <div class="top">
+            <span class="date">${it.date||''}</span>
+            <span class="cat-badge" style="background:${catColor(it.category)}">${it.category||'通用'}</span>
+            <span class="type-badge">${it.type||''}</span>
+            <h3 style="flex:1 1 100%;margin-top:4px">${it.title||''}</h3>
+          </div>
+          <p>${it.summary||''}</p>
+          <div class="src">${linkify(it.source||'链接', it.url)}</div>
+        </div>`).join('')}
+    </div>`}
+  </div>`).join('');
+
+function catColor(c){const m={家具:'#e879f9',装修:'#60a5fa',建材:'#f59e0b',卫浴厨房:'#22d3ee',全屋智能:'#a78bfa',全屋定制:'#f472b6',灯具光源:'#fbbf24',电工五金:'#94a3b8',通用:'#8b949e'};return m[c]||'#8b949e'}
+
+window.switchPlat = k => {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.plat===k));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.dataset.plat===k));
+};
+window.filterCat = el => {
+  document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  const cat = el.dataset.cat;
+  document.querySelectorAll('.event').forEach(ev=>{
+    if(cat==='全部') ev.style.display='';
+    else{
+      const c = ev.dataset.cat;
+      // support array
+      const arr = c.split(/[,，]/).map(s=>s.trim());
+      ev.style.display = arr.includes(cat) ? '' : 'none';
+    }
+  });
+};
+
+// policy timeline
+const policyImpact = it => {
+  const s = (it.impact||it.summary||'')+'';
+  if(/强|直接|硬性|正式实施|不合规|停业/.test(s)) return 'critical';
+  if(/团标|试点|宣贯|规范|地方/.test(s)) return 'moderate';
+  return '';
+};
+document.getElementById('policyTL').innerHTML = '<h3 style="color:#f85149;margin:0 0 8px 4px;font-size:13.5px">政策 · 标准</h3>' + (policy.policy||[]).map(p=>`
+  <div class="tl-item ${policyImpact(p)}">
+    <h3>${p.title}</h3>
+    <div class="meta">${p.issueDate} · ${p.issuer} · ${p.category||''} · ${p.scope||'全国'} ${(p.subIndustry||[]).map(x=>`<span class="cat-chip" data-cat="${x}">${x}</span>`).join('')}</div>
+    <p>${p.summary||''}</p>
+    ${p.impact?`<div class="impact">👉 ${p.impact}</div>`:''}
+    <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>
+  </div>`).join('');
+
+document.getElementById('industryTL').innerHTML = '<h3 style="color:#4493f8;margin:0 0 8px 4px;font-size:13.5px">行业 · 展会 · 协会</h3>' + (policy.industry||[]).map(p=>`
+  <div class="tl-item">
+    <h3>${p.title}</h3>
+    <div class="meta">${p.date} · ${p.issuer} · ${p.topic||''}</div>
+    <p>${p.summary||''}</p>
+    <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>
+  </div>`).join('');
+
+// merchant
+document.getElementById('merchantList').innerHTML = (policy.merchant||[]).map(m=>`
+  <div class="event">
+    <div class="top">
+      <span class="date">${m.date||''}</span>
+      <span class="cat-badge" style="background:#4493f8">${m.brand||''}</span>
+      <span class="type-badge">${m.type||''}</span>
+      <h3 style="flex:1 1 100%;margin-top:4px">${m.summary||''}</h3>
+    </div>
+    <div class="src">${linkify(m.source||'源', m.url)}</div>
+  </div>`).join('');
+
+// gaps + conflicts (merged from 3 files)
+const allGaps = [
+  ...(macro.gaps||[]).map(x=>'[宏观/房产] '+x),
+  ...(platform.gaps||[]).map(x=>'[电商平台] '+x),
+  ...(policy.gaps||[]).map(x=>'[政策/商家] '+x)
+];
+const allConflicts = [
+  ...(macro.conflicts||[]).map(x=>'[宏观/房产] '+x),
+  ...(platform.conflicts||[]).map(x=>'[电商平台] '+x),
+  ...(policy.conflicts||[]).map(x=>'[政策/商家] '+x)
+];
+document.getElementById('gapList').innerHTML = allGaps.map(g=>`<li>${g}</li>`).join('');
+document.getElementById('conflictList').innerHTML = allConflicts.map(c=>`<li>${c}</li>`).join('');
+}
+try { init(); } catch(e){ document.body.insertAdjacentHTML('afterbegin','<div style="background:#f85149;color:#fff;padding:10px 16px">加载数据失败: '+e.message+'</div>'); console.error(e); }
+</script>
+</body>
+</html>
