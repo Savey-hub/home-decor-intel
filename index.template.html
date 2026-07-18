@@ -167,6 +167,29 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .src-summary{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
 .src-stat{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px}
 .src-stat b{font-size:18px;display:block;color:var(--text)}
+/* ===== 历史存档 ===== */
+.arch-note{font-size:12px;color:var(--muted);background:var(--panel-2);border-radius:8px;padding:10px 14px;margin-bottom:14px;line-height:1.6}
+.arch-list{display:flex;flex-direction:column;gap:12px}
+.arch-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:15px 18px;border-left:4px solid var(--accent);transition:all .18s}
+.arch-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.arch-card.latest{border-left-color:var(--accent-2);background:linear-gradient(135deg,rgba(63,185,80,.06),var(--panel))}
+.arch-card .ac-top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.arch-card .ac-label{font-size:15px;font-weight:700;color:var(--text)}
+.arch-card .ac-type{font-size:11px;font-weight:600;padding:1px 9px;border-radius:12px;background:var(--panel-2);color:var(--muted)}
+.arch-card .ac-latest{font-size:11px;font-weight:700;padding:1px 9px;border-radius:12px;background:rgba(63,185,80,.16);color:var(--accent-2)}
+.arch-card .ac-range{font-size:11.5px;color:var(--muted);margin-left:auto}
+.arch-card .ac-sum{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:8px}
+.arch-card .ac-hl{list-style:none;padding:0;margin:0 0 10px}
+.arch-card .ac-hl li{font-size:12px;color:var(--muted);padding:2px 0 2px 15px;position:relative;line-height:1.5}
+.arch-card .ac-hl li::before{content:"▪";position:absolute;left:0;color:var(--accent)}
+.arch-card .ac-links{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.arch-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:8px;font-size:12.5px;font-weight:600;text-decoration:none;border:1px solid var(--border);transition:all .15s}
+.arch-btn.html{background:rgba(68,147,248,.12);color:var(--accent);border-color:rgba(68,147,248,.35)}
+.arch-btn.html:hover{background:rgba(68,147,248,.22)}
+.arch-btn.doc{background:var(--panel-2);color:var(--text)}
+.arch-btn.doc:hover{border-color:var(--accent)}
+.arch-btn .ico{font-size:14px}
+.arch-card .ac-stat{font-size:11px;color:#5c6370;margin-left:auto}
 @media(max-width:820px){.sidenav{display:none}.main{margin-left:0}}
 </style>
 </head>
@@ -178,6 +201,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
     <div class="logo">家装建材家具<br>行业竞争情报看板</div>
     <div class="sub">天猫行业运营 · 8大子行业</div>
   </div>
+  <div class="nav-group">历史存档</div>
+  <a class="nav-item" data-target="sec-archive"><span class="ico">🗄</span>往期报告目录</a>
   <div class="nav-group">本月焦点</div>
   <a class="nav-item" data-target="sec-month"><span class="ico">🔥</span>本月要闻（7月）</a>
   <div class="nav-group">核心结论</div>
@@ -209,6 +234,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   </div>
 </div>
 <div class="container">
+
+<!-- 历史存档 · 往期报告目录 -->
+<div class="section" id="sec-archive">
+  <div class="section-title">🗄 历史存档 · 往期报告目录 <span class="tip" id="archCountTip"></span></div>
+  <div class="arch-note" id="archNote"></div>
+  <div class="arch-list" id="archiveList"></div>
+</div>
 
 <!-- 本月要闻 -->
 <div class="section" id="sec-month">
@@ -355,6 +387,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 <script id="dataHighlights" type="application/json">__HIGHLIGHTS_JSON__</script>
 <script id="dataDoudian" type="application/json">__DOUDIAN_JSON__</script>
 <script id="dataSources" type="application/json">__SOURCES_JSON__</script>
+<script id="dataArchive" type="application/json">__ARCHIVE_JSON__</script>
 
 <script>
 function init(){
@@ -364,6 +397,7 @@ const policy = JSON.parse(document.getElementById('dataPolicy').textContent);
 const highlights = JSON.parse(document.getElementById('dataHighlights').textContent);
 const doudian = JSON.parse(document.getElementById('dataDoudian').textContent);
 const sources = JSON.parse(document.getElementById('dataSources').textContent);
+const archive = JSON.parse(document.getElementById('dataArchive').textContent);
 
 document.getElementById('asOfDate').textContent = macro.asOf || '2026-07-16';
 
@@ -376,6 +410,34 @@ const yoyClass = v => {
 const yoyText = v => v || '待核实';
 const linkify = (label,url) => url && url !== '待核实' ? `<a href="${url}" target="_blank">${label}</a>` : `<span>${label}</span>`;
 const catColor = c => ({家具:'#e879f9',装修:'#60a5fa',建材:'#f59e0b',卫浴厨房:'#22d3ee',全屋智能:'#a78bfa',全屋定制:'#f472b6',灯具光源:'#fbbf24',电工五金:'#94a3b8',通用:'#8b949e'}[c]||'#8b949e');
+
+// ===== 历史存档目录 =====
+const editions = (archive.editions||[]).slice().sort((a,b)=>String(b.id).localeCompare(String(a.id)));
+document.getElementById('archCountTip').textContent = `共 ${editions.length} 期 · 最新 ${archive.latest||(editions[0]&&editions[0].id)||'—'}`;
+document.getElementById('archNote').textContent = archive.note || '每期报告归档保留，可随时回看，永不覆盖。';
+document.getElementById('archiveList').innerHTML = editions.map(ed=>{
+  const isLatest = ed.id === (archive.latest||editions[0].id);
+  const ss = ed.sourceStats||{};
+  const hl = (ed.highlights||[]).map(h=>`<li>${h}</li>`).join('');
+  const statTxt = ss.totalSources!=null ? `信源 ${ss.totalSources} · 深层 ${ss.depth3||0} · 阻塞 ${ss.depth0_blocked||0}` : '';
+  const btn = (cls,ico,label,href)=> href ? `<a class="arch-btn ${cls}" href="${href}" target="_blank"><span class="ico">${ico}</span>${label}</a>` : '';
+  return `<div class="arch-card ${isLatest?'latest':''}">
+    <div class="ac-top">
+      <span class="ac-label">${ed.label||ed.id}</span>
+      ${ed.type?`<span class="ac-type">${ed.type}</span>`:''}
+      ${isLatest?'<span class="ac-latest">最新</span>':''}
+      <span class="ac-range">${ed.dataRange||''}</span>
+    </div>
+    ${ed.summary?`<div class="ac-sum">${ed.summary}</div>`:''}
+    ${hl?`<ul class="ac-hl">${hl}</ul>`:''}
+    <div class="ac-links">
+      ${btn('html','📊','在线看板',ed.html)}
+      ${btn('doc','📄','汇报稿 Word',ed.brief)}
+      ${btn('doc','📑','详报 Word',ed.detail)}
+      ${statTxt?`<span class="ac-stat">${statTxt} · 截止 ${ed.asOf||ed.publishDate||''}</span>`:''}
+    </div>
+  </div>`;
+}).join('');
 
 // ===== 本月要闻 =====
 document.getElementById('monthLabelTip').textContent = highlights.monthLabel || '';
