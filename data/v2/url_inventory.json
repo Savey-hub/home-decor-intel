@@ -1,0 +1,505 @@
+{
+  "note": "用户历次提供的全部入口主清单（2026-07-18 一次性补全登记）。status: covered=已采集入报告 / public_todo=公开可补未采 / login=强登录需账号 / intranet=阿里内网需登录 / dlp=网络DLP拦截 / noise=无关或首页。testResult 在实测后回填。",
+  "totalProvided": 57,
+  "urls": [
+    {
+      "id": 1,
+      "url": "https://www.baidu.com/?from=2001a",
+      "name": "百度首页",
+      "layer": "noise",
+      "status": "noise",
+      "note": "搜索入口，非数据源本身"
+    },
+    {
+      "id": 2,
+      "url": "https://www.chanmama.com/brandRank/?keyword=&category_id=-1",
+      "name": "蝉妈妈·品牌榜",
+      "layer": "C",
+      "status": "login",
+      "note": "抖音电商品牌榜，需会员登录；这就是上期缺的后台深链"
+    },
+    {
+      "id": 3,
+      "url": "https://fxg.jinritemai.com/login/common",
+      "name": "抖店(放心购)登录",
+      "layer": "C",
+      "status": "login",
+      "note": "抖店商家后台登录页，需章鹏商家号"
+    },
+    {
+      "id": 4,
+      "url": "https://app.qian-gua.com/#/workbench/red",
+      "name": "千瓜·工作台",
+      "layer": "C",
+      "status": "login",
+      "note": "小红书数据，家居家装行业需尊享版会员"
+    },
+    {
+      "id": 5,
+      "url": "https://fenxiplus.mktindex.com/#/",
+      "name": "飞瓜Plus(mktindex)",
+      "layer": "C",
+      "status": "login",
+      "note": "抖音/小红书第三方数据，需登录+会员"
+    },
+    {
+      "id": 6,
+      "url": "https://compass.jinritemai.com/shop/chance/category-overview",
+      "name": "抖店罗盘·类目概览",
+      "layer": "C",
+      "status": "covered",
+      "note": "已陪跑登录采集，depth3",
+      "testResult": "登录态有效，类目概览已采depth3"
+    },
+    {
+      "id": 7,
+      "url": "https://shop.jd.com/jdm/home",
+      "name": "京东商家(京麦)",
+      "layer": "C",
+      "status": "login",
+      "note": "需POP商家号，买家号被拦截"
+    },
+    {
+      "id": 8,
+      "url": "https://xue.xiaohongshu.com/pro?source=PRO",
+      "name": "小红书种草学Pro",
+      "layer": "C",
+      "status": "login",
+      "note": "定性内容曾采depth2，Pro量化数据需商业账号"
+    },
+    {
+      "id": 9,
+      "url": "https://jzt.jd.com/school/index",
+      "name": "京准通·学堂",
+      "layer": "C",
+      "status": "public_todo",
+      "note": "school/学堂板块可能免登录公开，待实测"
+    },
+    {
+      "id": 10,
+      "url": "https://qianchuan.jinritemai.com/support/content/143777",
+      "name": "巨量千川·帮助中心",
+      "layer": "C",
+      "status": "public_todo",
+      "note": "support帮助文档可能公开，待实测"
+    },
+    {
+      "id": 11,
+      "url": "https://bytedance.larkoffice.com/wiki/BYUAwOKIfi4sz5kgIzscUlxNnZe",
+      "name": "字节飞书wiki-1",
+      "layer": "external",
+      "status": "login",
+      "note": "字节内部租户，需字节账号登录，独立会话无cookie"
+    },
+    {
+      "id": 12,
+      "url": "https://bytedance.larkoffice.com/wiki/UWcKwjIJIiBIu1k1zwVcgFFgnKg",
+      "name": "字节飞书wiki-2",
+      "layer": "external",
+      "status": "login",
+      "note": "同上"
+    },
+    {
+      "id": 13,
+      "url": "https://www.cqn.com.cn/jiajujiancai/node_25713.htm",
+      "name": "中国质量报·家居建材",
+      "layer": "A",
+      "status": "public_ok",
+      "note": "公开垂直媒体，待实测",
+      "testResult": "可读：全案整装团标落地(2026-07-08)，高相关"
+    },
+    {
+      "id": 14,
+      "url": "https://www.100ec.cn/DigitalRetail/#/broadcast",
+      "name": "网经社·数字零售快讯",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "已用100ec主站，此快讯页待实测",
+      "testResult": "打不开：SPA空骨架屏，WebFetch不可达，需浏览器渲染"
+    },
+    {
+      "id": 15,
+      "url": "https://jdcorporateblog.com/category/jd-retail/",
+      "name": "京东企业博客·零售",
+      "layer": "A",
+      "status": "public_ok",
+      "note": "京东官方博客，公开，待实测",
+      "testResult": "可读：京东618创纪录英文博文(2026-06-19)，中相关"
+    },
+    {
+      "id": 16,
+      "url": "https://www.cbmf.org/yxjc/",
+      "name": "建材协会·运行监测",
+      "layer": "A",
+      "status": "public_ok",
+      "note": "已用cbmf主站，运行监测栏目待实测",
+      "testResult": "可读：2026年5月建材行业运行简报(2026-07-09)，高相关"
+    },
+    {
+      "id": 17,
+      "url": "https://author.baidu.com/home?app_id=1666566440492321",
+      "name": "百家号作者-1",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "特定百家号作者，待实测其领域"
+    },
+    {
+      "id": 18,
+      "url": "https://www.199it.com/",
+      "name": "199IT互联网数据资讯",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "数据资讯聚合，公开，待实测",
+      "testResult": "可读但家居相关低，多为3C/手机数据"
+    },
+    {
+      "id": 19,
+      "url": "https://www.avc-mr.com/home",
+      "name": "奥维云网AVC",
+      "layer": "B",
+      "status": "public_todo",
+      "note": "家电/家居权威数据，部分公开部分会员，待实测",
+      "testResult": "打不开：Vite空骨架屏，WebFetch不可达，需浏览器渲染（高价值家居数据）"
+    },
+    {
+      "id": 20,
+      "url": "https://www.stats.gov.cn/",
+      "name": "国家统计局",
+      "layer": "A",
+      "status": "covered",
+      "note": "已采depth3"
+    },
+    {
+      "id": 21,
+      "url": "http://www.cninfo.com.cn/",
+      "name": "巨潮资讯网",
+      "layer": "A",
+      "status": "public_ok",
+      "note": "上市公司公告权威源，公开可查，待实测（高价值）",
+      "testResult": "可读：上市公司公告可检索，可查欧派/索菲亚等家装上市公司公告，中高相关"
+    },
+    {
+      "id": 22,
+      "url": "https://www.cinic.org.cn/xw/tjsj/",
+      "name": "中国工业新闻网·统计数据",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "公开，待实测",
+      "testResult": "可读但偏宏观，非专门建材"
+    },
+    {
+      "id": 23,
+      "url": "https://toutiao.le365.cc/",
+      "name": "乐居头条",
+      "layer": "A",
+      "status": "public_ok",
+      "note": "家居资讯，待实测",
+      "testResult": "可读：德施曼葬花奖(2026-07)，智能锁/全屋智能相关，中相关"
+    },
+    {
+      "id": 24,
+      "url": "https://jiaju.sina.com.cn/",
+      "name": "新浪家居",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "公开垂直媒体，待实测",
+      "testResult": "打不开：两次No response body，需浏览器渲染"
+    },
+    {
+      "id": 25,
+      "url": "https://www.frostchina.com/content/insight?page=1&query[tag]=INDUSTRY-RESEARCH",
+      "name": "沙利文Frost行业研究",
+      "layer": "B",
+      "status": "member_wall",
+      "note": "部分洞察免费，待实测",
+      "testResult": "半可读：标题免费全文需咨询，专业视听报告(2026-07-17)，中相关"
+    },
+    {
+      "id": 26,
+      "url": "https://www.alighting.cn/",
+      "name": "阿拉丁照明网",
+      "layer": "A",
+      "status": "member_wall",
+      "note": "灯具光源子行业垂直源，公开，待实测（补灯具短板）",
+      "testResult": "半可读会员墙：VIP下载，胡润地产报告(2026-07-18)，中相关"
+    },
+    {
+      "id": 27,
+      "url": "https://36kr.com/search/articles/家居",
+      "name": "36氪·家居搜索",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "公开，待实测"
+    },
+    {
+      "id": 28,
+      "url": "http://www.cbda.cn/",
+      "name": "建筑装饰协会",
+      "layer": "A",
+      "status": "covered",
+      "note": "已采depth1(tzgg子路径)"
+    },
+    {
+      "id": 29,
+      "url": "https://doc.weixin.qq.com/sheet/e3_AbEAiwYvAKUCN1uZ1JPcFQyyTBq6U",
+      "name": "微信文档·表格",
+      "layer": "E",
+      "status": "dlp",
+      "note": "阿里网络DLP 302拦截"
+    },
+    {
+      "id": 30,
+      "url": "https://mtt.jd.com/",
+      "name": "京东麦头条(mtt)",
+      "layer": "C",
+      "status": "login",
+      "note": "京东商家资讯，需商家登录，待实测是否有公开页"
+    },
+    {
+      "id": 31,
+      "url": "https://www.sgpjbg.com.cn/Search.html?q=家装",
+      "name": "三个皮匠报告",
+      "layer": "B",
+      "status": "member_wall",
+      "note": "报告平台，摘要免费全文会员，待实测",
+      "testResult": "半可读会员墙：摘要免费全文付费8800+，中相关"
+    },
+    {
+      "id": 32,
+      "url": "https://www.fxbaogao.com/",
+      "name": "发现报告",
+      "layer": "B",
+      "status": "public_todo",
+      "note": "研报平台，部分免费，待实测",
+      "testResult": "半可读会员墙：摘要免费全文付费"
+    },
+    {
+      "id": 33,
+      "url": "https://www.199it.com/archives/category/report",
+      "name": "199IT·报告库",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "公开报告库，待实测",
+      "testResult": "可读：199IT报告库公开，但家居相关度低"
+    },
+    {
+      "id": 34,
+      "url": "https://author.baidu.com/home?app_id=1838493296434206",
+      "name": "百家号作者-2",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "待实测领域"
+    },
+    {
+      "id": 35,
+      "url": "https://report.iresearch.cn/",
+      "name": "艾瑞咨询报告",
+      "layer": "B",
+      "status": "member_wall",
+      "note": "部分报告免费下载，待实测",
+      "testResult": "半可读会员墙：乱码可访问/全文需注册，含家用洗衣机洞察(2026-06-11)"
+    },
+    {
+      "id": 36,
+      "url": "http://www.hibor.com.cn/",
+      "name": "慧博投研资讯",
+      "layer": "B",
+      "status": "public_ok",
+      "note": "研报平台需注册，待实测",
+      "testResult": "可读：免费研报平台，含建筑建材分类，国信证券宏观周报(2026-07-18)，中相关"
+    },
+    {
+      "id": 37,
+      "url": "https://www.djyanbao.com/index",
+      "name": "顶级研报",
+      "layer": "B",
+      "status": "public_todo",
+      "note": "研报平台，待实测",
+      "testResult": "打不开：需JS空骨架，需浏览器渲染"
+    },
+    {
+      "id": 38,
+      "url": "http://www.caict.ac.cn/kxyj/qwfb/bps/",
+      "name": "信通院·白皮书",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "全屋智能相关白皮书，公开，待实测",
+      "testResult": "打不开：HTTP 412，需换UA/确认URL輁移（全屋智能白皮书源）"
+    },
+    {
+      "id": 39,
+      "url": "http://www.aliresearch.com/cn/index",
+      "name": "阿里研究院",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "公开，待实测",
+      "testResult": "打不开：HTTP 410 Gone，URL失效"
+    },
+    {
+      "id": 40,
+      "url": "https://data.worldbank.org.cn/",
+      "name": "世界银行数据",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "宏观背景，公开，低相关"
+    },
+    {
+      "id": 41,
+      "url": "https://www.mckinsey.com.cn/",
+      "name": "麦肯锡中国",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "公开洞察，待实测"
+    },
+    {
+      "id": 42,
+      "url": "https://www.cbndata.com/",
+      "name": "第一财经数据CBNData",
+      "layer": "B",
+      "status": "public_todo",
+      "note": "消费数据，部分公开，待实测",
+      "testResult": "可读但无家居内容"
+    },
+    {
+      "id": 43,
+      "url": "https://www.microsoft.com/en-us/research/",
+      "name": "微软研究院",
+      "layer": "noise",
+      "status": "noise",
+      "note": "与家装建材无关"
+    },
+    {
+      "id": 44,
+      "url": "https://www.nvidia.com/en-us/data-center/",
+      "name": "英伟达数据中心",
+      "layer": "noise",
+      "status": "noise",
+      "note": "与家装建材无关"
+    },
+    {
+      "id": 45,
+      "url": "https://data.eastmoney.com/report/industry.jshtml",
+      "name": "东方财富·行业研报",
+      "layer": "A",
+      "status": "public_ok",
+      "note": "券商行业研报公开，待实测（高价值）",
+      "testResult": "可读：券商行业研报标题免费，含家居用品分类(2026-07-16)，中高相关"
+    },
+    {
+      "id": 46,
+      "url": "https://www.questmobile.com.cn/",
+      "name": "QuestMobile",
+      "layer": "B",
+      "status": "public_todo",
+      "note": "移动互联网数据，部分公开，待实测",
+      "testResult": "未单独实测（QuestMobile），多为会员报告"
+    },
+    {
+      "id": 47,
+      "url": "https://www.iyiou.com/reportList/xiaofeishenghuo",
+      "name": "亿欧·消费生活报告",
+      "layer": "B",
+      "status": "public_todo",
+      "note": "部分免费，待实测"
+    },
+    {
+      "id": 48,
+      "url": "https://www.iimedia.cn/c1081",
+      "name": "艾媒咨询",
+      "layer": "B",
+      "status": "public_todo",
+      "note": "部分数据公开，待实测"
+    },
+    {
+      "id": 49,
+      "url": "https://www.frostchina.com/",
+      "name": "沙利文Frost主站",
+      "layer": "B",
+      "status": "public_todo",
+      "note": "同25，待实测"
+    },
+    {
+      "id": 50,
+      "url": "https://creator.douyin.com/creator-micro/creator-count/arithmetic-report",
+      "name": "巨量算数·算术报告",
+      "layer": "C",
+      "status": "login",
+      "note": "抖音创作者后台，需登录"
+    },
+    {
+      "id": 51,
+      "url": "https://research.ke.com/",
+      "name": "贝壳研究院",
+      "layer": "A",
+      "status": "public_ok",
+      "note": "房产/居住数据权威，公开，待实测（高价值）",
+      "testResult": "可读：房产/居住数据，但首页示例报告偏旧(2023)，需找最新，中相关"
+    },
+    {
+      "id": 52,
+      "url": "http://www.cricchina.com/#/home",
+      "name": "克而瑞CRIC",
+      "layer": "A",
+      "status": "public_todo",
+      "note": "已用克而瑞转载，官网待实测",
+      "testResult": "打不开：HTTP 403，需浏览器/换UA"
+    },
+    {
+      "id": 53,
+      "url": "https://school.jinritemai.com/doudian/web/home",
+      "name": "抖店大学",
+      "layer": "C",
+      "status": "public_todo",
+      "note": "school学习板块可能公开，待实测"
+    },
+    {
+      "id": 54,
+      "url": "https://rune.alibaba-inc.com/competeAi",
+      "name": "Rune·竞对AI",
+      "layer": "D",
+      "status": "reachable_intranet",
+      "note": "阿里内网竞对分析工具，需内网+登录，待实测（最高价值）",
+      "testResult": "实测可达：登录态有效，RUNE-ADMIN自然语言问答AI，含情报局AI分析(淘天)/站外探索(小红书)/竞对商城探索(京东/抖音/拼多多)，可直接就家装建材提问取数"
+    },
+    {
+      "id": 55,
+      "url": "https://mojing.alibaba-inc.com/rival/competitionControl/industryControl",
+      "name": "魔镜·竞争管控·行业管控",
+      "layer": "D",
+      "status": "reachable_intranet",
+      "note": "阿里内网行业竞争管控，需内网+登录，待实测（最高价值）",
+      "testResult": "实测可达：登录态有效，魔镜含行业控比/品牌控比/店铺控比/宏观市场/竞争榜单/智能AI，内嵌FBI report，需切家装建材行业"
+    },
+    {
+      "id": 56,
+      "url": "https://www.qian-gua.com/",
+      "name": "千瓜官网",
+      "layer": "C",
+      "status": "login",
+      "note": "同千瓜，需会员"
+    },
+    {
+      "id": 57,
+      "url": "https://fbi.alibaba-inc.com/fbi/pro/4847/view.htm",
+      "name": "FBI·报表(view 4847)",
+      "layer": "D",
+      "status": "reachable_intranet",
+      "note": "阿里内网FBI报表平台，需内网+登录，待实测（最高价值）",
+      "testResult": "实测可达：登录态有效，FBI报表平台可开，但report 4847是APPLE糖果通示例，需定位家装建材对应report_id"
+    }
+  ],
+  "auditSummary": {
+    "testedAt": "2026-07-18",
+    "statusCounts": {
+      "noise": 3,
+      "login": 11,
+      "covered": 3,
+      "public_todo": 24,
+      "public_ok": 8,
+      "member_wall": 4,
+      "dlp": 1,
+      "reachable_intranet": 3
+    },
+    "note": "实测方式：内网三源用浏览器实测登录态；公开源用WebFetch实测。多个标'打不开'的实为JS渲染/WAF，WebFetch拿不到但浏览器渲染仍可能可用。"
+  }
+}

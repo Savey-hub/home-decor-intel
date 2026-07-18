@@ -1,0 +1,15 @@
+{
+  "collectedAt": "2026-07-18",
+  "method": "WebFetch（首页级），多数为JS渲染/需登录/需站内检索，浅层depth",
+  "note": "本批为公开源首页级探测，遵循不编造原则：WebFetch仅达首页，未见目标品类结构化数据的均标待核实并记录blocker；高价值目标（cninfo家居上市公司公告、cbmf运行简报正文）改用浏览器深钻，见 browser_deep_* 文件。",
+  "sources": [
+    {"id": 1, "name": "中国质量报", "url": "https://www.cqn.com.cn/", "depth": 1, "publishDate": "2026-07-17", "items": [{"metric": "家居建材栏目存在但无带指标抽查文章", "value": "待核实", "date": "2026-07-17", "note": "首页抽查数据均为食品类，家装建材家具类需进栏目深钻"}, {"metric": "市场监管总局批准发布一批重要国家标准", "value": "待核实", "date": "2026-07-16", "note": "未指明家装建材家具品类"}], "blocker": null},
+    {"id": 2, "name": "中国建材工业协会·运行监测", "url": "https://www.cbmf.org/", "depth": 1, "publishDate": "2026-07-02", "items": [{"metric": "2026年5月建筑材料行业运行情况简报", "value": "待核实（标题链接，需进正文取景气指数/产量/营收/利润）", "date": "2026-05", "note": "发布日2026-07-02"}], "blocker": null},
+    {"id": 3, "name": "巨潮资讯·公告", "url": "http://www.cninfo.com.cn/", "depth": 1, "publishDate": "2026-07-18", "items": [{"metric": "家居建材上市公司公告", "value": "待核实", "date": "待核实", "note": "首页最新公告为其他行业，需站内个股定向检索欧派/索菲亚/顾家/东鹏/箭牌"}], "blocker": null},
+    {"id": 4, "name": "乐居·家居头条", "url": "https://home.leju.com/", "depth": 0, "publishDate": "待核实", "items": [], "blocker": "WebFetch连续两次fetch failed，源不可达；待浏览器重试"},
+    {"id": 5, "name": "慧博投研", "url": "https://www.hibor.com.cn/", "depth": 1, "publishDate": "2026-07-18", "items": [{"metric": "华福证券·轻工制造行业研报", "value": "标题：扩大消费十五五规划出台，关注下半年边际改善", "date": "2026-07-18", "note": "无评级/指标；建筑建材栏目存在但无家居专门摘要"}], "blocker": null},
+    {"id": 6, "name": "东方财富·研报中心", "url": "https://data.eastmoney.com/report/", "depth": 1, "publishDate": "待核实", "items": [{"metric": "家居/轻工/建材研报", "value": "待核实", "date": "待核实", "note": "首页研报列表为其他行业，需站内按行业筛选，JS渲染"}], "blocker": null},
+    {"id": 7, "name": "京东企业博客", "url": "https://jdcorporateblog.com/", "depth": 0, "publishDate": "待核实", "items": [], "blocker": "2025-2026文章无京东家居/家装专门内容，无相关指标"},
+    {"id": 8, "name": "贝壳研究院", "url": "https://research.ke.com/", "depth": 2, "publishDate": "2023-10-20", "items": [{"metric": "北京整装市场：选择整装的家装消费者占比", "value": "超65%", "date": "2023-04-28", "note": "《北京整装市场白皮书》2023年，非2026最新，标待核实时效"}, {"metric": "2023家装消费品质报告", "value": "待核实", "date": "2023-05-19", "note": "正文数值未在页面展示"}], "blocker": "最新家装报告为2023年，2026新报告未见，时效偏旧"}
+  ]
+}
