@@ -1,47 +1,273 @@
 {
-  "asOf": "2026-07-18 14:35",
-  "note": "本表逐源披露采集深度、条数、时间戳与阻塞原因，遵循『不编造、可追溯、阻塞透明』原则。采集深度分级：0=未取到/阻塞，1=浅层（仅标题/目录），2=中层（关键指标/结构化摘要），3=深层（完整明细/多页/可下载表）。",
-  "layers": {
-    "A": "免登录公开源（政府/协会/上市公司公告/权威媒体）",
-    "B": "免费注册可读源",
-    "C": "强登录·陪跑采集源（平台商家/营销后台）",
-    "D": "阿里内网源",
-    "E": "微信/腾讯文档类源"
+ "asOf": "2026-07-19 10:30",
+ "note": "本表逐源披露采集深度、条数、时间戳与阻塞原因，遵循『不编造、可追溯、阻塞透明』原则。采集深度分级：0=未取到/阻塞，1=浅层（仅标题/目录），2=中层（关键指标/结构化摘要），3=深层（完整明细/多页/可下载表）。",
+ "layers": {
+  "A": "免登录公开源（政府/协会/上市公司公告/权威媒体）",
+  "B": "免费注册可读源",
+  "C": "强登录·陪跑采集源（平台商家/营销后台）",
+  "D": "阿里内网源",
+  "E": "微信/腾讯文档类源"
+ },
+ "sources": [
+  {
+   "name": "国家统计局（社零/工业增加值/房地产/70城房价/PMI）",
+   "layer": "A",
+   "url": "https://www.stats.gov.cn/sj/zxfb/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "24项指标",
+   "timestamp": "2026-07-16",
+   "blocker": "无。家具制造业分行业工业增加值未单独公开，已标待核实"
   },
-  "sources": [
-    {"name": "国家统计局（社零/工业增加值/房地产/70城房价/PMI）", "layer": "A", "url": "https://www.stats.gov.cn/sj/zxfb/", "login": "免登录", "depth": 3, "count": "24项指标", "timestamp": "2026-07-16", "blocker": "无。家具制造业分行业工业增加值未单独公开，已标待核实"},
-    {"name": "中指研究院（百城房价/成交）", "layer": "A", "url": "https://wap.stockstar.com/detail/IG2026070300009079", "login": "免登录", "depth": 2, "count": "4项指标", "timestamp": "2026-07-16", "blocker": "完整月报需付费下载，公开摘要已取核心均价与同环比"},
-    {"name": "克而瑞（百强房企销售榜）", "layer": "A", "url": "https://finance.sina.com.cn/stock/estate/integration/2026-07-01/doc-iniffyta1117203.shtml", "login": "免登录", "depth": 2, "count": "5项指标", "timestamp": "2026-07-16", "blocker": "6月单月同比%与TOP200完整榜需付费下载"},
-    {"name": "中国建材工业协会 CBMF（建材运行/MPI景气）", "layer": "A", "url": "https://www.cbmf.org/", "login": "免登录", "depth": 2, "count": "4条", "timestamp": "2026-07-16", "blocker": "CBMI具体数值需订阅刊物；MPI仅公开定性描述"},
-    {"name": "中国建材流通协会 CBMCA（BHI建材家居景气指数）", "layer": "A", "url": "https://www.bjnews.com.cn/detail/1784171412168316.html", "login": "免登录", "depth": 3, "count": "6月BHI 113.34等5项", "timestamp": "2026-07-16", "blocker": "官网反爬，经新京报权威转载交叉印证获取"},
-    {"name": "中国建筑装饰协会 CBDA（行业会议/展会）", "layer": "A", "url": "http://www.cbda.cn/html/tzgg/", "login": "免登录", "depth": 1, "count": "2条", "timestamp": "2026-07-16", "blocker": "cbda.cn 主域301重定向循环，仅tzgg子路径可读，其余靠第三方印证"},
-    {"name": "权威媒体门户（新华网/央广网/乐居/搜狐焦点/OFweek等）", "layer": "A", "url": "https://www.100ec.cn/", "login": "免登录", "depth": 3, "count": "35条平台/品牌动态", "timestamp": "2026-07-16", "blocker": "无"},
-    {"name": "研究与财经源（上证报/同花顺/东方财富/新浪财经上市公司公告）", "layer": "A", "url": "https://paper.cnstock.com/", "login": "免登录", "depth": 3, "count": "22条（含14条商家公告）", "timestamp": "2026-07-16", "blocker": "无"},
-    {"name": "Layer B 免费注册源探测（网经社/星图/艾瑞等）", "layer": "B", "url": "https://www.100ec.cn/", "login": "免费注册", "depth": 2, "count": "探测记录若干", "timestamp": "2026-07-16", "blocker": "部分报告需付费会员，已取公开引用部分"},
-    {"name": "抖店罗盘·类目概览（抖音电商后台）", "layer": "C", "url": "https://compass.jinritemai.com/shop/chance/category-overview", "login": "强登录（已陪跑登录）", "depth": 3, "count": "8核心指标+31子类目+5价格带+TOP15单品+9渠道+5载体", "timestamp": "2026-07-16 近7天(07/09-07/15)", "blocker": "罗盘对市场类目仅公开数量级区间（如¥1亿-1.5亿），不显示精确值，区间已原样保留"},
-    {"name": "抖店罗盘·榜单/趋势/竞争分析（其余3页）", "layer": "C", "url": "https://compass.jinritemai.com/shop/chance/", "login": "强登录（已登录）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "本期时间所限未展开，下期补采（能力可达）"},
-    {"name": "小红书种草学（官方营销学习平台）", "layer": "C", "url": "https://xue.xiaohongshu.com/home", "login": "强登录（已陪跑登录）", "depth": 2, "count": "定性：行业分类/讲师/直播/方法论6+项", "timestamp": "2026-07-16", "blocker": "家居家装量化流量大盘在千帆/蒲公英后台，需对应商业产品账号权限，未开通"},
-    {"name": "千瓜数据·行业流量大盘（小红书第三方）", "layer": "C", "url": "https://app.qian-gua.com/#/data/category", "login": "强登录（已登录Savey）", "depth": 0, "count": "0（家居家装）", "timestamp": "—", "blocker": "切换『家居家装』行业为尊享版会员功能（会员墙），当前账号仅默认展示护肤大盘，家装数据未取，已跳过"},
-    {"name": "京麦（京东商家后台·商智）", "layer": "C", "url": "https://jmw.jd.com/", "login": "强登录（阻塞）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "扫码为买家号 jd_LVopFIdFlDaa，提示『该账号暂不支持开店』，需POP商家账号，待用户换号扫码"},
-    {"name": "京准通（京东数字营销平台）", "layer": "C", "url": "https://jzt.jd.com/", "login": "强登录（阻塞）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "会话未登录（code=-3011），需京东广告主/商家账号登录，待用户授权"},
-    {"name": "蝉妈妈（抖音电商第三方榜单）", "layer": "C", "url": "https://www.chanmama.com/", "login": "强登录（待入口）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "chanmama.com 为营销页，真实后台榜单入口需点『立即使用』且要求会员登录，待用户提供其后台书签URL或在夸克打开后截图陪跑"},
-    {"name": "微信文档（家装行业协作文档，如有）", "layer": "E", "url": "https://doc.weixin.qq.com/", "login": "强登录（阻塞）", "depth": 0, "count": "0", "timestamp": "—", "blocker": "公司网络DLP拦截：doc.weixin.qq.com 302跳转 office-sec.alibaba-inc.com/dialog，需用手机/非阿里网络访问"},
-    {"name": "Rune 竞对AI（阿里内网·自然语言直查小红书笔记表）", "layer": "D", "url": "https://rune.alibaba-inc.com/competeAi", "login": "内网已登录", "depth": 3, "count": "小红书家装/全屋定制/卫浴/灯具4大领域趋势+高增长关键词表", "timestamp": "2026-07-18", "blocker": "回退口径：请求近一月(6/18-7/18)但该窗口数据稀疏，agent自动取库内最新完整窗口2026-02-18~03-28，已如实标注；内网源外部不可校验，属TOP互动抽样"},
-    {"name": "巨潮资讯网 CNINFO（深交所法定披露平台·上市公司业绩预告）", "layer": "A", "url": "http://www.cninfo.com.cn/", "login": "免登录", "depth": 3, "count": "欧派/索菲亚/箭牌/大亚圣象4家2026半年度业绩预告原文数值+另4家已披露待补", "timestamp": "2026-07-18", "blocker": "无。API检索+PDF原文提取，每条附公告直链可校验"},
-    {"name": "中国建筑材料联合会 CBMF·2026年5月运行简报（正文深钻）", "layer": "A", "url": "https://www.cbmf.org/c/2026/07/02/23820.shtml", "login": "免登录", "depth": 3, "count": "14项运行指标（增加值/水泥玻璃产量/出厂价/营收利润/固投/进出口）", "timestamp": "2026-07-18", "blocker": "无。正文页静态可读，本期已从depth2升级至depth3"},
-    {"name": "奥维云网 AVC（家电+家居7大部品罗盘·免登录资讯）", "layer": "A", "url": "https://www.avc-mr.com/home", "login": "免登录（资讯）", "depth": 2, "count": "吸顶灯/智能晾衣架/空调排产等4条半年报标题+日期+阅读量", "timestamp": "2026-07-18", "blocker": "浏览器渲染可取标题；报告正文销额/份额需付费罗盘账号，量化值标待核实"},
-    {"name": "36氪·家居建材（浏览器渲染搜索）", "layer": "A", "url": "https://36kr.com/search/articles/家居建材", "login": "免登录", "depth": 2, "count": "7条家居行业观点/研报标题+日期（卖场转型/破产潮/出海ManoMano等）", "timestamp": "2026-07-18", "blocker": "SPA需浏览器渲染（WebFetch失败），观点性内容无标准量化指标"},
-    {"name": "新浪家居 jiaju.sina.com.cn", "layer": "A", "url": "https://jiaju.sina.com.cn/", "login": "免登录", "depth": 0, "count": "0", "timestamp": "2026-07-18", "blocker": "已失效：HTTP 204空站/停更，home.sina 301跳主站，浏览器渲染about:blank，剔除出信源池"},
-    {"name": "阿拉丁照明网 alighting.cn（灯具专业源）", "layer": "A", "url": "https://www.alighting.cn/", "login": "免登录", "depth": 0, "count": "0", "timestamp": "2026-07-18", "blocker": "curl HTTP=000连接失败，疑似迁移/需特定网络，灯具专业数据暂缺，下期换入口重试"}
-  ],
-  "summary": {
-    "totalSources": 24,
-    "depth3": 9,
-    "depth2": 7,
-    "depth1": 1,
-    "depth0_blocked": 7,
-    "publicItemsCollected": "约79条(Layer A/B) + 抖店罗盘完整类目盘 + 本次新增：Rune小红书4领域趋势、巨潮4家上市公司业绩预告原文、CBMF 5月14项运行指标、奥维/36氪家居动态11条",
-    "newThisRound": "本轮针对用户57个URL全量审计后补采：①内网Rune竞对AI(depth3，小红书趋势) ②巨潮4家头部家居上市公司2026H1业绩预告(depth3，全部大幅下滑/转亏) ③CBMF 5月运行简报正文升级至depth3 ④浏览器攻克36氪+奥维云网SPA ⑤确认新浪家居失效、阿拉丁不可达",
-    "blockedNote": "内网FBI/魔镜需用户在界面切到家装建材行业后采数；4个强登录源(蝉妈妈/千瓜尊享/京麦/京准通)待用户扫码陪跑；均按『阻塞透明』规则标注，非采集能力问题。"
+  {
+   "name": "中指研究院（百城房价/成交）",
+   "layer": "A",
+   "url": "https://wap.stockstar.com/detail/IG2026070300009079",
+   "login": "免登录",
+   "depth": 2,
+   "count": "4项指标",
+   "timestamp": "2026-07-16",
+   "blocker": "完整月报需付费下载，公开摘要已取核心均价与同环比"
+  },
+  {
+   "name": "克而瑞（百强房企销售榜）",
+   "layer": "A",
+   "url": "https://finance.sina.com.cn/stock/estate/integration/2026-07-01/doc-iniffyta1117203.shtml",
+   "login": "免登录",
+   "depth": 2,
+   "count": "5项指标",
+   "timestamp": "2026-07-16",
+   "blocker": "6月单月同比%与TOP200完整榜需付费下载"
+  },
+  {
+   "name": "中国建材工业协会 CBMF（建材运行/MPI景气）",
+   "layer": "A",
+   "url": "https://www.cbmf.org/",
+   "login": "免登录",
+   "depth": 2,
+   "count": "4条",
+   "timestamp": "2026-07-16",
+   "blocker": "CBMI具体数值需订阅刊物；MPI仅公开定性描述"
+  },
+  {
+   "name": "中国建材流通协会 CBMCA（BHI建材家居景气指数）",
+   "layer": "A",
+   "url": "https://www.bjnews.com.cn/detail/1784171412168316.html",
+   "login": "免登录",
+   "depth": 3,
+   "count": "6月BHI 113.34等5项",
+   "timestamp": "2026-07-16",
+   "blocker": "官网反爬，经新京报权威转载交叉印证获取"
+  },
+  {
+   "name": "中国建筑装饰协会 CBDA（行业会议/展会）",
+   "layer": "A",
+   "url": "http://www.cbda.cn/html/tzgg/",
+   "login": "免登录",
+   "depth": 1,
+   "count": "2条",
+   "timestamp": "2026-07-16",
+   "blocker": "cbda.cn 主域301重定向循环，仅tzgg子路径可读，其余靠第三方印证"
+  },
+  {
+   "name": "权威媒体门户（新华网/央广网/乐居/搜狐焦点/OFweek等）",
+   "layer": "A",
+   "url": "https://www.100ec.cn/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "35条平台/品牌动态",
+   "timestamp": "2026-07-16",
+   "blocker": "无"
+  },
+  {
+   "name": "研究与财经源（上证报/同花顺/东方财富/新浪财经上市公司公告）",
+   "layer": "A",
+   "url": "https://paper.cnstock.com/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "22条（含14条商家公告）",
+   "timestamp": "2026-07-16",
+   "blocker": "无"
+  },
+  {
+   "name": "Layer B 免费注册源探测（网经社/星图/艾瑞等）",
+   "layer": "B",
+   "url": "https://www.100ec.cn/",
+   "login": "免费注册",
+   "depth": 2,
+   "count": "探测记录若干",
+   "timestamp": "2026-07-16",
+   "blocker": "部分报告需付费会员，已取公开引用部分"
+  },
+  {
+   "name": "抖店罗盘·类目概览（抖音电商后台）",
+   "layer": "C",
+   "url": "https://compass.jinritemai.com/shop/chance/category-overview",
+   "login": "强登录（已陪跑登录）",
+   "depth": 3,
+   "count": "8核心指标+31子类目+5价格带+TOP15单品+9渠道+5载体",
+   "timestamp": "2026-07-16 近7天(07/09-07/15)",
+   "blocker": "罗盘对市场类目仅公开数量级区间（如¥1亿-1.5亿），不显示精确值，区间已原样保留"
+  },
+  {
+   "name": "抖店罗盘·榜单/趋势/竞争分析（其余3页）",
+   "layer": "C",
+   "url": "https://compass.jinritemai.com/shop/chance/",
+   "login": "强登录（已登录）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "本期时间所限未展开，下期补采（能力可达）"
+  },
+  {
+   "name": "小红书种草学（官方营销学习平台）",
+   "layer": "C",
+   "url": "https://xue.xiaohongshu.com/home",
+   "login": "强登录（已陪跑登录）",
+   "depth": 2,
+   "count": "定性：行业分类/讲师/直播/方法论6+项",
+   "timestamp": "2026-07-16",
+   "blocker": "家居家装量化流量大盘在千帆/蒲公英后台，需对应商业产品账号权限，未开通"
+  },
+  {
+   "name": "千瓜数据·行业流量大盘（小红书第三方）",
+   "layer": "C",
+   "url": "https://app.qian-gua.com/#/data/category",
+   "login": "强登录（已登录Savey）",
+   "depth": 0,
+   "count": "0（家居家装）",
+   "timestamp": "—",
+   "blocker": "切换『家居家装』行业为尊享版会员功能（会员墙），当前账号仅默认展示护肤大盘，家装数据未取，已跳过"
+  },
+  {
+   "name": "京麦（京东商家后台·商智）",
+   "layer": "C",
+   "url": "https://jmw.jd.com/",
+   "login": "强登录（阻塞）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "扫码为买家号 jd_LVopFIdFlDaa，提示『该账号暂不支持开店』，需POP商家账号，待用户换号扫码"
+  },
+  {
+   "name": "京准通（京东数字营销平台）",
+   "layer": "C",
+   "url": "https://jzt.jd.com/",
+   "login": "强登录（阻塞）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "会话未登录（code=-3011），需京东广告主/商家账号登录，待用户授权"
+  },
+  {
+   "name": "蝉妈妈（抖音电商第三方榜单）",
+   "layer": "C",
+   "url": "https://www.chanmama.com/",
+   "login": "强登录（待入口）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "chanmama.com 为营销页，真实后台榜单入口需点『立即使用』且要求会员登录，待用户提供其后台书签URL或在夸克打开后截图陪跑"
+  },
+  {
+   "name": "微信文档（家装行业协作文档，如有）",
+   "layer": "E",
+   "url": "https://doc.weixin.qq.com/",
+   "login": "强登录（阻塞）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "公司网络DLP拦截：doc.weixin.qq.com 302跳转 office-sec.alibaba-inc.com/dialog，需用手机/非阿里网络访问"
+  },
+  {
+   "name": "Rune 竞对AI（阿里内网·自然语言直查小红书笔记表）",
+   "layer": "D",
+   "url": "https://rune.alibaba-inc.com/competeAi",
+   "login": "内网已登录",
+   "depth": 3,
+   "count": "小红书家装/全屋定制/卫浴/灯具4大领域趋势+高增长关键词表",
+   "timestamp": "2026-07-18",
+   "blocker": "回退口径：请求近一月(6/18-7/18)但该窗口数据稀疏，agent自动取库内最新完整窗口2026-02-18~03-28，已如实标注；内网源外部不可校验，属TOP互动抽样"
+  },
+  {
+   "name": "巨潮资讯网 CNINFO（深交所法定披露平台·上市公司业绩预告）",
+   "layer": "A",
+   "url": "http://www.cninfo.com.cn/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "欧派/索菲亚/箭牌/大亚圣象4家2026半年度业绩预告原文数值+另4家已披露待补",
+   "timestamp": "2026-07-18",
+   "blocker": "无。API检索+PDF原文提取，每条附公告直链可校验"
+  },
+  {
+   "name": "中国建筑材料联合会 CBMF·2026年5月运行简报（正文深钻）",
+   "layer": "A",
+   "url": "https://www.cbmf.org/c/2026/07/02/23820.shtml",
+   "login": "免登录",
+   "depth": 3,
+   "count": "14项运行指标（增加值/水泥玻璃产量/出厂价/营收利润/固投/进出口）",
+   "timestamp": "2026-07-18",
+   "blocker": "无。正文页静态可读，本期已从depth2升级至depth3"
+  },
+  {
+   "name": "奥维云网 AVC（家电+家居7大部品罗盘·免登录资讯）",
+   "layer": "A",
+   "url": "https://www.avc-mr.com/home",
+   "login": "免登录（资讯）",
+   "depth": 2,
+   "count": "吸顶灯/智能晾衣架/空调排产等4条半年报标题+日期+阅读量",
+   "timestamp": "2026-07-18",
+   "blocker": "浏览器渲染可取标题；报告正文销额/份额需付费罗盘账号，量化值标待核实"
+  },
+  {
+   "name": "36氪·家居建材（浏览器渲染搜索）",
+   "layer": "A",
+   "url": "https://36kr.com/search/articles/家居建材",
+   "login": "免登录",
+   "depth": 2,
+   "count": "7条家居行业观点/研报标题+日期（卖场转型/破产潮/出海ManoMano等）",
+   "timestamp": "2026-07-18",
+   "blocker": "SPA需浏览器渲染（WebFetch失败），观点性内容无标准量化指标"
+  },
+  {
+   "name": "新浪家居 jiaju.sina.com.cn",
+   "layer": "A",
+   "url": "https://jiaju.sina.com.cn/",
+   "login": "免登录",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "2026-07-18",
+   "blocker": "已失效：HTTP 204空站/停更，home.sina 301跳主站，浏览器渲染about:blank，剔除出信源池"
+  },
+  {
+   "name": "阿拉丁照明网 alighting.cn（灯具专业源）",
+   "layer": "A",
+   "url": "https://www.alighting.cn/",
+   "login": "免登录",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "2026-07-18",
+   "blocker": "curl HTTP=000连接失败，疑似迁移/需特定网络，灯具专业数据暂缺，下期换入口重试"
+  },
+  {
+   "name": "巨潮资讯网cninfo(第二批:志邦/海南发展/皮阿诺业绩预告)",
+   "layer": "B",
+   "url": "http://www.cninfo.com.cn/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "3家+1份装修装饰经营简报",
+   "timestamp": "2026-07-19",
+   "blocker": "无。志邦转亏/皮阿诺扣非亏损扩大/海南发展减亏,均附PDF直链可核验"
   }
+ ],
+ "summary": {
+  "totalSources": 25,
+  "depth3": 10,
+  "depth2": 7,
+  "depth1": 1,
+  "depth0_blocked": 7,
+  "publicItemsCollected": "约79条(Layer A/B) + 抖店罗盘完整类目盘 + 本次新增：Rune小红书4领域趋势、巨潮4家上市公司业绩预告原文、CBMF 5月14项运行指标、奥维/36氪家居动态11条",
+  "newThisRound": "本轮针对用户57个URL全量审计后补采：①内网Rune竞对AI(depth3，小红书趋势) ②巨潮4家头部家居上市公司2026H1业绩预告(depth3，全部大幅下滑/转亏) ③CBMF 5月运行简报正文升级至depth3 ④浏览器攻克36氪+奥维云网SPA ⑤确认新浪家居失效、阿拉丁不可达",
+  "blockedNote": "内网FBI/魔镜需用户在界面切到家装建材行业后采数；4个强登录源(蝉妈妈/千瓜尊享/京麦/京准通)待用户扫码陪跑；均按『阻塞透明』规则标注，非采集能力问题。"
+ }
 }
