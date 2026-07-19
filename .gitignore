@@ -2,3 +2,6 @@
 *.bak
 *.tmp
 .trash/
+
+# build helper scripts (local only)
+add_batch2.py
