@@ -1706,7 +1706,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   ]
 }</script>
 <script id="dataSources" type="application/json">{
- "asOf": "2026-07-19 10:30",
+ "asOf": "2026-07-19 10:45",
  "note": "本表逐源披露采集深度、条数、时间戳与阻塞原因，遵循『不编造、可追溯、阻塞透明』原则。采集深度分级：0=未取到/阻塞，1=浅层（仅标题/目录），2=中层（关键指标/结构化摘要），3=深层（完整明细/多页/可下载表）。",
  "layers": {
   "A": "免登录公开源（政府/协会/上市公司公告/权威媒体）",
@@ -1741,10 +1741,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
    "layer": "A",
    "url": "https://finance.sina.com.cn/stock/estate/integration/2026-07-01/doc-iniffyta1117203.shtml",
    "login": "免登录",
-   "depth": 2,
+   "depth": 1,
    "count": "5项指标",
    "timestamp": "2026-07-16",
-   "blocker": "6月单月同比%与TOP200完整榜需付费下载"
+   "blocker": "浏览器二次渲染成功但首页数值全0占位,真实数据需登录CRIC系统;内容以房地产为主,家装相关性低"
   },
   {
    "name": "中国建材工业协会 CBMF（建材运行/MPI景气）",
@@ -1944,7 +1944,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
    "depth": 0,
    "count": "0",
    "timestamp": "2026-07-18",
-   "blocker": "已失效：HTTP 204空站/停更，home.sina 301跳主站，浏览器渲染about:blank，剔除出信源池"
+   "blocker": "确认死站:HTTP204 No Content,浏览器访问301跳阿拉丁,域名疑停运,永久剔除"
   },
   {
    "name": "阿拉丁照明网 alighting.cn（灯具专业源）",
@@ -1954,7 +1954,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
    "depth": 0,
    "count": "0",
    "timestamp": "2026-07-18",
-   "blocker": "curl HTTP=000连接失败，疑似迁移/需特定网络，灯具专业数据暂缺，下期换入口重试"
+   "blocker": "本轮站点恢复但被堡塔云WAF滑块验证拦截,需人工过验证码,暂无法自动采集"
   },
   {
    "name": "巨潮资讯网cninfo(第二批:志邦/海南发展/皮阿诺业绩预告)",
