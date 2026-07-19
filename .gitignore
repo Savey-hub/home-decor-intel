@@ -5,3 +5,5 @@
 
 # build helper scripts (local only)
 add_batch2.py
+add_supp.py
+_audit.json
