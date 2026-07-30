@@ -1,0 +1,55 @@
+{
+  "source": "千瓜数据尊享版 · 品牌排行榜(小红书) (app.qian-gua.com)",
+  "sourceUrl": "https://app.qian-gua.com/#/blogger/brand",
+  "platform": "小红书",
+  "loginRequired": true,
+  "loginMethod": "夸克浏览器 · 尊享版(豪华版)账号 · 本期扫码登录后接管",
+  "scrapeMethod": "夸克浏览器 · Computer Use 桌面自动化 · 截图逐屏读数",
+  "scrapedAt": "2026-07-30 17:30 CST",
+  "carryForward": false,
+  "board": {
+    "name": "商单笔记榜",
+    "category": "家居家装",
+    "period": "月榜 (2026-06)",
+    "updateTime": "2026-07-30 08:00",
+    "metricNote": "商业笔记识别更新存在24-48小时延迟(平台口径原样保留)",
+    "metrics": ["互动总量", "商单笔记数", "合作达人数"]
+  },
+  "note": "【数据来源与口径】本区块为2026-07-30经夸克浏览器登录千瓜尊享版现采。榜单为『家居家装』品类『商单笔记榜』月榜(2026-06),按互动总量降序。互动总量单位为『万』(平台原样展示)。第9名(六神)与第14名(源氏木语)因页面吸顶表头遮挡致互动总量数字被截断,按数据真实性纪律标注『待核实』,不臆测填充。榜单口径为小红书商业合作笔记(品牌投放),非自然种草;该品类榜单被日化/个护品牌(德佑湿巾/碧浪/汰渍/立白/金纺/维达/六神/当妮/奥妙/超能/得宝纸巾)大量占据,真正家居建材家具品牌较少。",
+  "brandRanking_commercialNotes_monthly": [
+    {"rank": 1, "brand": "京东商城", "category": "综合零售平台", "interactionTotal": "89.25万", "commercialNotes": 789, "cooperatedKOL": 763, "homeDecorRelevant": true},
+    {"rank": 2, "brand": "德佑", "category": "湿巾/个护(日化)", "interactionTotal": "68.11万", "commercialNotes": 407, "cooperatedKOL": 268, "homeDecorRelevant": false},
+    {"rank": 3, "brand": "三棵树", "category": "涂料/墙面漆(建材)", "interactionTotal": "40.53万", "commercialNotes": 111, "cooperatedKOL": 104, "homeDecorRelevant": true},
+    {"rank": 4, "brand": "碧浪", "category": "洗衣液(日化)", "interactionTotal": "33.29万", "commercialNotes": 347, "cooperatedKOL": 340, "homeDecorRelevant": false},
+    {"rank": 5, "brand": "维达", "category": "纸品(日化)", "interactionTotal": "31.17万", "commercialNotes": 226, "cooperatedKOL": 183, "homeDecorRelevant": false},
+    {"rank": 6, "brand": "汰渍", "category": "洗衣液(日化)", "interactionTotal": "30.08万", "commercialNotes": 244, "cooperatedKOL": 240, "homeDecorRelevant": false},
+    {"rank": 7, "brand": "金纺", "category": "衣物护理(日化)", "interactionTotal": "24.53万", "commercialNotes": 138, "cooperatedKOL": 128, "homeDecorRelevant": false},
+    {"rank": 8, "brand": "立白", "category": "洗涤(日化)", "interactionTotal": "22.96万", "commercialNotes": 348, "cooperatedKOL": 287, "homeDecorRelevant": false},
+    {"rank": 9, "brand": "六神", "category": "花露水/沐浴(日化·上海家化)", "interactionTotal": "待核实", "commercialNotes": "待核实", "cooperatedKOL": "待核实", "homeDecorRelevant": false, "captureNote": "吸顶表头遮挡,互动总量介于第8名22.96万与第10名20.75万之间"},
+    {"rank": 10, "brand": "当妮(Downy)", "category": "衣物柔顺(日化)", "interactionTotal": "20.75万", "commercialNotes": 287, "cooperatedKOL": 270, "homeDecorRelevant": false},
+    {"rank": 11, "brand": "全友", "category": "定制家居/全屋定制(家具)", "interactionTotal": "19.39万", "commercialNotes": 409, "cooperatedKOL": 352, "homeDecorRelevant": true},
+    {"rank": 12, "brand": "奥妙(OMO)", "category": "洗衣液(日化)", "interactionTotal": "17.34万", "commercialNotes": 193, "cooperatedKOL": 186, "homeDecorRelevant": false},
+    {"rank": 13, "brand": "超能", "category": "洗涤(日化·纳爱斯)", "interactionTotal": "16.18万", "commercialNotes": 96, "cooperatedKOL": 91, "homeDecorRelevant": false},
+    {"rank": 14, "brand": "源氏木语", "category": "实木家具(家具)", "interactionTotal": "待核实", "commercialNotes": "待核实", "cooperatedKOL": "待核实", "homeDecorRelevant": true, "captureNote": "吸顶表头遮挡,互动总量介于第13名16.18万与第15名15.75万之间(约15-16万)"},
+    {"rank": 15, "brand": "三千金", "category": "窗帘(家装软装)", "interactionTotal": "15.75万", "commercialNotes": 184, "cooperatedKOL": 149, "homeDecorRelevant": true},
+    {"rank": 16, "brand": "蔬果园", "category": "洗涤/清洁(日化)", "interactionTotal": "15.55万", "commercialNotes": 683, "cooperatedKOL": 647, "homeDecorRelevant": false},
+    {"rank": 17, "brand": "得宝(Tempo)", "category": "纸巾(日化·德国)", "interactionTotal": "13.14万", "commercialNotes": 200, "cooperatedKOL": 145, "homeDecorRelevant": false},
+    {"rank": 18, "brand": "亚朵星球", "category": "睡眠场景生活方式(亚朵集团)", "interactionTotal": "13.03万", "commercialNotes": 217, "cooperatedKOL": 120, "homeDecorRelevant": false},
+    {"rank": 19, "brand": "东方雨虹", "category": "防水材料(建材)", "interactionTotal": "12.74万", "commercialNotes": 118, "cooperatedKOL": 114, "homeDecorRelevant": true}
+  ],
+  "homeDecorBrandsInBoard": [
+    {"rank": 1, "brand": "京东商城", "note": "综合零售平台,居首"},
+    {"rank": 3, "brand": "三棵树", "note": "涂料建材,月榜最高的纯建材品牌"},
+    {"rank": 11, "brand": "全友", "note": "定制家居/全屋定制"},
+    {"rank": 14, "brand": "源氏木语", "note": "实木家具(互动总量待核实)"},
+    {"rank": 15, "brand": "三千金", "note": "窗帘软装"},
+    {"rank": 19, "brand": "东方雨虹", "note": "防水建材"}
+  ],
+  "insights": [
+    "千瓜『家居家装』商单笔记榜(小红书·月榜)被日化/个护品牌大量占据:TOP19中日化占13席(德佑/碧浪/维达/汰渍/金纺/立白/六神/当妮/奥妙/超能/蔬果园/得宝等),真正家居建材家具品牌仅6席(京东商城/三棵树/全友/源氏木语/三千金/东方雨虹)。说明小红书『家居家装』标签下的商业投放,大量是日化品牌借『家居清洁/居家场景』蹭家装流量,家装建材家具品牌的商单投放密度反而偏低。",
+    "纯建材家具品牌里,三棵树(涂料,#3,40.53万)投放效率最高——111篇商单/104达人即达40万互动,篇均互动约3,651,远高于头部日化品牌(如碧浪347篇仅33万,篇均约960);说明涂料品类在小红书的单篇种草效率显著优于日化。",
+    "全友(#11,定制家居)以409篇商单/352达人换19.39万互动,篇均仅约474,呈现『铺量型』投放特征;家具/定制赛道在小红书更依赖达人数量堆叠而非单篇爆发。",
+    "东方雨虹(#19,防水)进入TOP20,是防水辅材品牌切入C端家装种草的信号,值得天猫端关注其站外内容打法。",
+    "对天猫家装运营的含义:小红书家居家装心智被日化品牌『场景化』分流,家装建材品牌需以『高单篇效率品类(涂料/软装)』为种草突破口,并警惕日化品牌对『家居』标签流量的持续挤占。"
+  ]
+}

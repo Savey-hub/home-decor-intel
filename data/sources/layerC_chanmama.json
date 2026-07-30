@@ -1,0 +1,44 @@
+{
+  "source": "蝉妈妈 · 品牌库(抖音电商) (chanmama.com)",
+  "sourceUrl": "https://www.chanmama.com/brandRank/?category_id=7",
+  "platform": "抖音电商",
+  "loginRequired": true,
+  "loginMethod": "夸克浏览器 · 蝉妈妈品牌版账号(已登录会话，本期无需扫码)",
+  "scrapeMethod": "夸克浏览器 · Computer Use 桌面自动化 · 截图逐屏读数",
+  "scrapedAt": "2026-07-30 18:12 CST",
+  "carryForward": false,
+  "board": {
+    "name": "品牌库 · 类目销售额榜",
+    "带货分类": "家具建材 (category_id=7)",
+    "period": "近30天 (滚动窗口，采集日回溯30天)",
+    "sort": "按『类目销售额』降序",
+    "columns": ["品牌", "主营类目", "类目商品数", "类目销量", "类目销售额", "关联达人", "关联视频", "关联直播", "关联小店"],
+    "metricNote": "类目销量与类目销售额为区间口径(平台以区间+估算中位数展示，如『2.5w~5w』下方给出估算值7,510)；『总GMV1000w+』为品牌全类目总GMV分层标签，与『类目销售额』(仅家具建材类目内)口径不同，不可混用。"
+  },
+  "note": "【数据来源与口径】本区块为2026-07-30经夸克浏览器登录蝉妈妈品牌版现采。榜单为『品牌库』下『带货分类=家具建材』近30天，按『类目销售额』降序。类目销售额=该品牌在家具建材类目内的抖音电商销售额(元)；类目销量为平台区间口径(括号内为平台估算中位值)；『总GMV1000w+』为品牌全域GMV分层标签。品牌版账号该视图渲染至第17名(奥普)后滚动吸附回锚点、无法继续下翻，故本期采集TOP17，未臆测补充第18名及以后。AUX/奥克斯主营标注为『厨卫家电』，其余均标注『家具建材』。所有数值均按平台展示原样记录。",
+  "brandRanking_categorySales_last30d": [
+    {"rank": 1, "brand": "全友家居", "mainCategory": "家具建材", "categoryItems": 914, "categorySalesVolumeRange": "2.5w~5w", "categorySalesVolumeEst": 7510, "categorySalesAmount": 7314848, "totalGmvTier": "1000w+", "linkedKOL": 42, "linkedVideos": 40, "linkedLives": 982, "linkedShops": 6},
+    {"rank": 2, "brand": "林氏家居", "mainCategory": "家具建材", "categoryItems": 1649, "categorySalesVolumeRange": "1w~2.5w", "categorySalesVolumeEst": 4575, "categorySalesAmount": 4205024, "totalGmvTier": "1000w+", "linkedKOL": 46, "linkedVideos": 60, "linkedLives": 642, "linkedShops": 8},
+    {"rank": 3, "brand": "YESWOOD/源氏木语", "mainCategory": "家具建材", "categoryItems": 1047, "categorySalesVolumeRange": "1w~2.5w", "categorySalesVolumeEst": 4528, "categorySalesAmount": 4065344, "totalGmvTier": "1000w+", "linkedKOL": 23, "linkedVideos": 21, "linkedLives": 1079, "linkedShops": 5},
+    {"rank": 4, "brand": "JOMOO/九牧", "mainCategory": "家具建材", "categoryItems": 745, "categorySalesVolumeRange": "5w~10w", "categorySalesVolumeEst": 11722, "categorySalesAmount": 3751266, "totalGmvTier": "1000w+", "linkedKOL": 80, "linkedVideos": 314, "linkedLives": 1518, "linkedShops": 40},
+    {"rank": 5, "brand": "AUX/奥克斯", "mainCategory": "厨卫家电", "categoryItems": 308, "categorySalesVolumeRange": "1w~2.5w", "categorySalesVolumeEst": 4822, "categorySalesAmount": 3719283, "totalGmvTier": "1000w+", "linkedKOL": 191, "linkedVideos": 587, "linkedLives": 670, "linkedShops": 73},
+    {"rank": 6, "brand": "Micoe/四季沐歌", "mainCategory": "家具建材", "categoryItems": 501, "categorySalesVolumeRange": "25w~50w", "categorySalesVolumeEst": 51867, "categorySalesAmount": 3668434, "totalGmvTier": "1000w+", "linkedKOL": 538, "linkedVideos": 2015, "linkedLives": 1069, "linkedShops": 43},
+    {"rank": 7, "brand": "DESSMANN/德施曼", "mainCategory": "家具建材", "categoryItems": 160, "categorySalesVolumeRange": "2.5w~5w", "categorySalesVolumeEst": 8284, "categorySalesAmount": 3597899, "totalGmvTier": "1000w+", "linkedKOL": 28, "linkedVideos": 79, "linkedLives": 452, "linkedShops": 5},
+    {"rank": 8, "brand": "爱果乐", "mainCategory": "家具建材", "categoryItems": 235, "categorySalesVolumeRange": "5w~10w", "categorySalesVolumeEst": 10671, "categorySalesAmount": 3492481, "totalGmvTier": "1000w+", "linkedKOL": 202, "linkedVideos": 429, "linkedLives": 904, "linkedShops": 7},
+    {"rank": 9, "brand": "BULLSHERIFF/牛警长", "mainCategory": "家具建材", "categoryItems": 31, "categorySalesVolumeRange": "5w~10w", "categorySalesVolumeEst": 10127, "categorySalesAmount": 3472078, "totalGmvTier": "1000w+", "linkedKOL": 45, "linkedVideos": 683, "linkedLives": 66, "linkedShops": 2},
+    {"rank": 10, "brand": "kubide/酷比得", "mainCategory": "家具建材", "categoryItems": 62, "categorySalesVolumeRange": "5000~1w", "categorySalesVolumeEst": 2144, "categorySalesAmount": 2923952, "totalGmvTier": "1000w+", "linkedKOL": 15, "linkedVideos": 3, "linkedLives": 231, "linkedShops": 2},
+    {"rank": 11, "brand": "MONA LISA/蒙娜丽莎", "mainCategory": "家具建材", "categoryItems": 204, "categorySalesVolumeRange": "1w~2.5w", "categorySalesVolumeEst": 5297, "categorySalesAmount": 2917613, "totalGmvTier": "1000w+", "linkedKOL": 41, "linkedVideos": 23, "linkedLives": 552, "linkedShops": 22},
+    {"rank": 12, "brand": "submarine/潜水艇", "mainCategory": "家具建材", "categoryItems": 1568, "categorySalesVolumeRange": "10w~25w", "categorySalesVolumeEst": 36956, "categorySalesAmount": 2853206, "totalGmvTier": "1000w+", "linkedKOL": 609, "linkedVideos": 3082, "linkedLives": 1240, "linkedShops": 61},
+    {"rank": 13, "brand": "DeRUCCI/慕思", "mainCategory": "家具建材", "categoryItems": 316, "categorySalesVolumeRange": "2500~5000", "categorySalesVolumeEst": 1174, "categorySalesAmount": 2748122, "totalGmvTier": "1000w+", "linkedKOL": 22, "linkedVideos": 17, "linkedLives": 715, "linkedShops": 11},
+    {"rank": 14, "brand": "SLEEMON/喜临门", "mainCategory": "家具建材", "categoryItems": 202, "categorySalesVolumeRange": "1w~2.5w", "categorySalesVolumeEst": 2549, "categorySalesAmount": 2607812, "totalGmvTier": "1000w+", "linkedKOL": 20, "linkedVideos": 12, "linkedLives": 740, "linkedShops": 9},
+    {"rank": 15, "brand": "DELIXI ELECTRIC/德力西电气", "mainCategory": "家具建材", "categoryItems": 2916, "categorySalesVolumeRange": "100w+", "categorySalesVolumeEst": 218516, "categorySalesAmount": 2575937, "totalGmvTier": "1000w+", "linkedKOL": 4466, "linkedVideos": 17000, "linkedVideosNote": "页面展示为『1.7w』", "linkedLives": 3210, "linkedShops": 93},
+    {"rank": 16, "brand": "GREENER/绿林", "mainCategory": "家具建材", "categoryItems": 663, "categorySalesVolumeRange": "25w~50w", "categorySalesVolumeEst": 76072, "categorySalesAmount": 2526980, "totalGmvTier": "1000w+", "linkedKOL": 2113, "linkedVideos": 5403, "linkedLives": 2205, "linkedShops": 7},
+    {"rank": 17, "brand": "AUPU/奥普", "mainCategory": "家具建材", "categoryItems": 211, "categorySalesVolumeRange": "1w~2.5w", "categorySalesVolumeEst": 4974, "categorySalesAmount": 2466560, "totalGmvTier": "1000w+", "linkedKOL": 53, "linkedVideos": 13, "linkedLives": 867, "linkedShops": 9}
+  ],
+  "insights": [
+    "抖音电商『家具建材』类目近30天销售额榜TOP17全部为『总GMV1000w+』品牌，头部集中在成品家具与卫浴：全友家居(#1,731万)、林氏家居(#2,421万)、源氏木语(#3,407万)三家成品/实木家具领跑，九牧(#4)、四季沐歌(#6,热水器/厨卫)、德施曼(#7,智能锁)紧随，显示抖音家装成交心智仍以『看得见、可展示、客单适中的成品家居+卫浴电器』为主，重型建材(瓷砖/板材)较少进入头部。",
+    "投放结构分化明显：submarine/潜水艇(#12)以609达人/3,082视频/1,240直播的超高投放密度换2,853万类目销售额，属典型『内容铺量型』；而德施曼(#7,智能锁)仅28达人/79视频即达3,598万，牛警长(#9)仅45达人/31商品即达3,472万，呈『高客单低铺量』的精准打法。天猫端可据此判断各品牌抖音打法差异——成品家具靠达人矩阵走量，智能锁/高单价品类靠少量强达人+品牌自播。",
+    "德力西电气(#15)以2,916商品/4,466关联达人/1.7w视频/218,516件销量的极致铺量特征居销量榜之首，但类目销售额(2,576万)仅排第15，说明电工五金走的是『高频低客单』模式，件单价显著低于家具卫浴，与销售额排名背离。",
+    "对天猫家装运营的含义：抖音家具建材头部品牌(全友/林氏/源氏木语/九牧/四季沐歌/慕思/喜临门)与天猫同类目头部高度重合，属跨平台全渠道品牌，需重点监测其抖音内容打法向天猫站内的溢出；而牛警长/酷比得/绿林等抖音原生高增品牌，是天猫招商与新品类培育值得关注的增量信号。"
+  ]
+}

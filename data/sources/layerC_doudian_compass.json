@@ -2,14 +2,14 @@
   "source": "抖店罗盘 · 类目概览 (compass.jinritemai.com)",
   "sourceUrl": "https://compass.jinritemai.com/shop/chance/category-overview",
   "loginRequired": true,
-  "loginMethod": "陪跑扫码 · 章鹏潮玩账号",
-  "scrapeMethod": "浏览器自动化 · innerText DOM 抽取",
-  "scrapedAt": "2026-07-16 07:30 CST",
-  "carryForward": true,
-  "carryForwardNote": "本期(2026-07-30周度刷新)抖店罗盘需强登录·陪跑扫码(章鹏账号)，本次为非交互式cron刷新环境，登录态无法验证，故沿用上期2026-07-16采集的近7天(07/09-07/15)快照数据；已通过小Q提醒用户扫码后可现采最新一周数据。看板标注数据日期为2026/07/09-07/15(上期采集·沿用第2周)。",
+  "loginMethod": "夸克浏览器 · 章鹏账号(登录态常驻,本期无需扫码)",
+  "scrapeMethod": "夸克浏览器 · Computer Use 桌面自动化 · 截图逐屏读数",
+  "scrapedAt": "2026-07-30 16:17 CST",
+  "carryForward": false,
+  "carryForwardNote": "本期(2026-07-30周度刷新)已用用户电脑上的夸克浏览器经 Computer Use 现采:章鹏账号登录态仍有效,无需扫码。行业类目切至广口径「智能家居 / 家装建材」两级,时间口径近7天(2026/07/23-07/29),核心数据/子类目/价格带/TOP单品/载体/渠道/搜索榜单均为本期实采值。",
   "coverage": {
     "industry": "智能家居 / 家装建材",
-    "dateRange": "2026/07/09 - 2026/07/15 (上期采集·连续沿用，登录态待扫码刷新)",
+    "dateRange": "2026/07/23 - 2026/07/29 (本期现采·夸克·章鹏号)",
     "granularity": "近7天",
     "subCategoryCount": 30,
     "priceBandCount": 5,
@@ -17,39 +17,39 @@
     "channelCount": 9,
     "carrierCount": 5
   },
-  "note": "【数据日期提示】本区块为2026-07-16采集的近7天(07/09-07/15)快照，本期(07-26)因登录态未验证沿用上期，待用户扫码后现采。抖店罗盘对市场类目只公开数量级区间（如 ¥1亿-¥1.5亿），不显示精确值；文中区间原样保留。较上周期百分比为口径公开的精确 YoW。",
+  "note": "【数据日期提示】本区块为2026-07-30经夸克浏览器现采的近7天(2026/07/23-07/29)数据。抖店罗盘对市场类目只公开数量级区间（如 ¥1亿-¥1.5亿），不显示精确值；文中区间原样保留。较上周期百分比为口径公开的精确 WoW。",
   "coreMetrics": {
     "payGmv": {
       "range": "¥4.5亿 - ¥5亿",
-      "wow": "+1.51%"
+      "wow": "+1.12%"
     },
     "itemsSold": {
-      "range": "1,000万 - 2,500万",
-      "wow": "+5.80%"
+      "range": "750万 - 1,000万",
+      "wow": "+0.57%"
     },
     "buyers": {
       "range": "500万 - 750万",
-      "wow": "+4.89%"
+      "wow": "+5.52%"
     },
     "orders": {
       "range": "750万 - 1,000万",
-      "wow": "+7.00%"
+      "wow": "-0.85%"
     },
     "onlineSku": {
       "range": "7亿 - 7.5亿",
-      "wow": "+0.75%"
+      "wow": "+0.37%"
     },
     "activeSku": {
       "range": "25万 - 50万",
-      "wow": "+1.98%"
+      "wow": "-0.77%"
     },
     "pricePerItem": {
       "range": "¥10 - ¥50",
-      "wow": "+6.91%"
+      "wow": "+1.70%"
     },
     "arpu": {
       "range": "¥50 - ¥100",
-      "wow": "+6.10%"
+      "wow": "-4.17%"
     }
   },
   "subCategories": [
@@ -568,27 +568,27 @@
   "carriers": [
     {
       "name": "直播",
-      "share": 54.8,
+      "share": 54.9,
       "gmvRange": "¥2.5亿-¥3亿"
     },
     {
       "name": "商品卡",
-      "share": 21.87,
+      "share": 21.76,
       "gmvRange": "¥1亿-¥1.5亿"
     },
     {
       "name": "短视频",
-      "share": 19.7,
+      "share": 19.47,
       "gmvRange": "¥7,500万-¥1亿"
     },
     {
       "name": "其他",
-      "share": 3.54,
+      "share": 3.79,
       "gmvRange": "¥1,000万-¥2,500万"
     },
     {
       "name": "图文",
-      "share": 0.1,
+      "share": 0.08,
       "gmvRange": "¥25万-¥50万"
     }
   ],

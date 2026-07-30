@@ -1,0 +1,30 @@
+{
+  "source": "京准通（京东数字营销平台 数据中心-行业分析）",
+  "sourceUrl": "https://jzt.jd.com/custom-report/#/industry/market",
+  "layer": "C",
+  "loginRequired": true,
+  "loginMethod": "本机夸克浏览器扫码登录（京准通APP扫码）",
+  "loginAccount": "jingdongcaiji / 账户ID:99927544734（用户确认为正确账号）",
+  "scrapeMethod": "Windows Computer Use 操作本机夸克浏览器，坐标点击导航",
+  "scrapedAt": "2026-07-30T18:02:00+08:00",
+  "collectionDepth": 0,
+  "status": "阻塞-账号无竞价广告投放，行业分析模块被系统门槛拦截",
+  "carryForward": false,
+  "coverage": {
+    "attempted": [
+      "数据中心 > 行业分析 > 行业大盘 (industry/market)",
+      "数据中心 > 行业分析 > 竞争分析 (industry/compete)",
+      "数据中心 > 行业分析 > 流量解析 (industry/traffic)"
+    ],
+    "result": "全部返回空值（指标卡显示 ---），并弹出系统错误提示"
+  },
+  "blocker": {
+    "systemMessage": "【参数错误】行业分析功能暂只针对有投放竞价广告pin开放，请确保该pin近期有投放竞价广告数据",
+    "rootCause": "京准通是京东自投广告平台，行业分析/竞争分析/流量解析数据仅向『近期实际投放过竞价广告（京东快车等）』的账号开放。当前登录账号 jingdongcaiji 可用余额¥0.00、余额已用完、无在投计划，AI洞察确认2026-07-29账户共花费¥0.00，故行业级与竞品级数据被平台权限门槛拦截，无法取数。",
+    "accountOwnData": "营销概况显示本账号自投花费¥0.00、总订单0、总订单金额¥0.00，自投数据同样为空，无可用本账号投放数据。",
+    "notAutomationIssue": "此为京准通平台权限门槛（entitlement gate），非坐标点击/自动化可绕过；需账号本身近期实际投放竞价广告后才会解锁行业分析数据。"
+  },
+  "verifiedMetrics": [],
+  "note": "严格遵守硬数据规则：本源本期无任何可核实数据，全部置空，不做任何推测或占位填充。京准通行业分析数据须由『有实际竞价广告投放的京东广告主账号』登录方可采集。",
+  "nextAction": "若用户有近期实际投放过京东快车/竞价广告的京东广告主账号，用该账号扫码登录京准通后，进入 数据中心>行业分析>行业大盘/竞争分析，按家居家装二级类目取『展现指数/点击指数/加购指数/点击率/加购率/转化率/成交率』及竞争对比数据。"
+}
