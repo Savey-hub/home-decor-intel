@@ -41,15 +41,27 @@ def api(method, path, body=None):
         return json.loads(r.read().decode())
 
 
-base_sha = git(["rev-parse", "origin/main"]).decode().strip()
+base_sha_local = git(["rev-parse", "origin/main"]).decode().strip()
 head_sha = git(["rev-parse", "HEAD"]).decode().strip()
-base_tree = git(["rev-parse", "origin/main^{tree}"]).decode().strip()
-print("base_commit", base_sha[:8], "head", head_sha[:8], "base_tree", base_tree[:8])
+
+# IMPORTANT:每次 api_push 都会推进"远端 main"，但本地 origin/main 无法 fetch 更新
+# (github.com:443 在本环境被阻断)。若继续用陈旧的本地 origin/main 当 parent，
+# PATCH refs 会报 HTTP 422 non-fast-forward。故始终从 API 取真实远端 HEAD 作为基线。
+remote_ref = api("GET", "/repos/%s/%s/git/refs/heads/main" % (OWNER, REPO))
+base_sha = remote_ref["object"]["sha"]
+remote_commit = api("GET", "/repos/%s/%s/git/commits/%s" % (OWNER, REPO, base_sha))
+base_tree = remote_commit["tree"]["sha"]
+print("remote_base", base_sha[:8], "remote_tree", base_tree[:8],
+      "| local origin/main", base_sha_local[:8], "| local HEAD", head_sha[:8])
 
 # changed files (name + mode) between base and head, NUL-separated for unicode safety
 raw = git(["diff", "--name-only", "-z", "origin/main..HEAD"])
 paths = [p for p in raw.decode("utf-8").split("\0") if p]
 print("changed files:", len(paths))
+
+if not paths:
+    print("NOTHING_TO_PUSH (origin/main..HEAD 无差异)")
+    sys.exit(0)
 
 tree_entries = []
 for rel in paths:
@@ -76,5 +88,7 @@ print("new_commit", commit["sha"][:8])
 
 ref = api("PATCH", "/repos/%s/%s/git/refs/heads/main" % (OWNER, REPO),
           {"sha": commit["sha"], "force": False})
-print("ref updated ->", ref["object"]["sha"][:8])
-print("DONE")
+new_remote_sha = ref["object"]["sha"]
+print("ref updated ->", new_remote_sha[:8])
+# 机器可校验的成功标记：调用方(weekly_refresh.sh / cron agent)必须 grep 到 PUSH_OK 才算发布成功
+print("PUSH_OK remote_main=%s files=%d" % (new_remote_sha, len(paths)))

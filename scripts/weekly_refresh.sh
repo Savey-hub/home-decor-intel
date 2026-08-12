@@ -19,24 +19,36 @@ mkdir -p "$OUTDIR"
 cp "$ROOT/index.html" "$OUTDIR/index.html"
 echo "[$STAMP] copied to $OUTDIR/index.html"
 
-# Optional git commit + push (only if remote origin is configured)
+# ---- Commit + Publish ----
+# 根因修复(2026-08-12)：本环境 github.com:443 被阻断，`git push origin main` 必然失败；
+# 叠加脚本顶部 set -e，push 一失败就整体中断 → 每周刷新的数据烂在本地、线上看板长期陈旧
+# (08-06 那期就是这样积压了13个未提交文件)。现改为：先本地 commit，再走 api.github.com
+# 的 Data API 推送(scripts/api_push.py)，并强制校验 PUSH_OK 标记。
 cd "$ROOT"
-if git remote get-url origin >/dev/null 2>&1; then
-  git add -A
-  if ! git diff --cached --quiet; then
-    git -c user.email=intel@local -c user.name=IntelBot commit -m "chore: weekly refresh $STAMP" >/dev/null
-    git push origin main
-    echo "[$STAMP] pushed to origin"
-  else
-    echo "[$STAMP] no diff to commit"
-  fi
+PY="C:/Users/Savey/.qoderwork/bin/python312/python.exe"
+
+git add -A
+if git diff --cached --quiet; then
+  echo "[$STAMP] no diff to commit"
 else
-  # Local-only commit (no remote yet — GitHub Pages 迁移下周做)
-  git add -A
-  if ! git diff --cached --quiet; then
-    git -c user.email=intel@local -c user.name=IntelBot commit -m "chore: weekly refresh $STAMP" >/dev/null
-    echo "[$STAMP] local commit only (no remote configured yet)"
-  fi
+  git -c user.email=intel@local -c user.name=IntelBot commit -m "chore: weekly refresh $STAMP" >/dev/null
+  echo "[$STAMP] local commit created"
+fi
+
+# 发布(不因失败而中断，改为显式告警，便于 cron agent 捕获并通知用户)
+PUSHLOG="$ROOT/_push_last.log"
+set +e
+"$PY" "$ROOT/scripts/api_push.py" >"$PUSHLOG" 2>&1
+PUSH_RC=$?
+set -e
+if grep -q "PUSH_OK" "$PUSHLOG"; then
+  echo "[$STAMP] PUBLISH_OK $(grep -o 'PUSH_OK.*' "$PUSHLOG" | tail -1)"
+elif grep -q "NOTHING_TO_PUSH" "$PUSHLOG"; then
+  echo "[$STAMP] PUBLISH_SKIPPED 无待发布差异"
+else
+  echo "[$STAMP] PUBLISH_FAILED rc=$PUSH_RC —— 线上看板未更新，请检查 token/网络。日志尾部："
+  tail -15 "$PUSHLOG"
+  echo "[$STAMP] 注意：本地 commit 已保留，修好后重跑 scripts/api_push.py 即可补发。"
 fi
 
 echo "[$STAMP] weekly_refresh done"
