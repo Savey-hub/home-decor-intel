@@ -1,0 +1,340 @@
+探测时间 2026-08-13  共 57 个入口
+判定分布: {'OK': 24, 'JSAPP': 15, 'LOGIN': 9, 'HTTP_302': 2, 'THIN': 3, 'ERR': 2, 'HTTP_412': 1, 'HTTP_567': 1}
+
+id  旧状态     判定       名称                 html    text    title / err
+----------------------------------------------------------------------------------------------------------------------------------
+1   noise   OK       百度首页               593218  222426  百度一下，你就知道
+2   login   JSAPP    蝉妈妈·品牌榜            4252    122     抖音电商品牌大全_抖音电商行业品牌数据查询 - 蝉妈妈数据
+3   login   LOGIN    抖店(放心购)登录          8974    18      抖店 | 分享优价好物 多元电商服务
+4   login   JSAPP    千瓜·工作台             4059    0       
+5   login   JSAPP    飞瓜Plus(mktindex)   14349   3       分析+
+6   covered LOGIN    抖店罗盘·类目概览          63430   24      抖音电商罗盘-抖店商家、达人和机构多视角数据平台
+7   login   LOGIN    京东商家(京麦)           22480   109     京麦商家PC端
+8   login   JSAPP    小红书种草学Pro          18068   18      小红书种草学｜小红书官方营销学习平台
+9   public_ OK       京准通·学堂             188468  96996   
+10  public_ JSAPP    巨量千川·帮助中心          21602   21      undefined
+11  login   HTTP_302 字节飞书wiki-1         565     280     
+12  login   HTTP_302 字节飞书wiki-2         565     280     
+13  public_ OK       中国质量报·家居建材         42440   2505    家居要闻 -中国质量新闻网
+14  public_ JSAPP    网经社·数字零售快讯         2969    8       网经社数字零售台
+15  public_ OK       京东企业博客·零售          90217   5798    JD Retail - JD.com offer over 400 million new products
+16  public_ OK       建材协会·运行监测          95682   6425    行业发展 - 中国建筑材料联合会
+17  public_ LOGIN    百家号作者-1            3415    0       
+18  public_ OK       199IT互联网数据资讯       182103  4977    互联网数据资讯网-199IT | 发现数据的价值-199IT | 中文互联网数据研究资讯中心-199IT
+19  public_ JSAPP    奥维云网AVC            3509    4       奥维云网
+20  covered OK       国家统计局              127827  7171    国家统计局
+21  public_ OK       巨潮资讯网              102337  2948    巨潮资讯网
+22  public_ OK       中国工业新闻网·统计数据       48146   3620    统计数据 - 中国产业经济信息网
+23  public_ THIN     乐居头条               63490   926     在这里读懂智能
+24  public_ OK       新浪家居               64400   3773    装修家居_新浪装修家居网
+25  member_ OK       沙利文Frost行业研究       205960  2168    沙利文中国官网| 投资与企业增长咨询专业服务机构
+26  member_ THIN     阿拉丁照明网             5382    22      滑动验证
+27  public_ ERR      36氪·家居搜索           0       0       UnicodeEncodeError: 'ascii' codec can't encode characters in position 
+28  covered THIN     建筑装饰协会             12965   104     中装新网 - 安全验证
+29  dlp     JSAPP    微信文档·表格            1453    4       域名拦截
+30  login   LOGIN    京东麦头条(mtt)         31903   225     京东-欢迎登录
+31  member_ ERR      三个皮匠报告             0       0       UnicodeEncodeError: 'ascii' codec can't encode characters in position 
+32  public_ OK       发现报告               208690  8765    发现报告 - 专业研报平台丨收录海量行业报告、券商研报丨免费分享行业研报
+33  public_ OK       199IT·报告库          96767   2721    研究报告 | 互联网数据资讯网-199IT | 中文互联网数据研究资讯中心-199IT
+34  public_ LOGIN    百家号作者-2            3969    0       
+35  member_ OK       艾瑞咨询报告             108393  12286   研究报告_艾瑞网
+36  public_ OK       慧博投研资讯             92900   8494    慧博投研资讯-专业的投资研究报告大数据平台-免费的研报分享平台-慧博资讯
+37  public_ JSAPP    顶级研报               15387   48      洞见研报-洞见趋势研判未来 | 专业实时研报分享，行业研究报告，行业分析报告，券商研报，行业智库
+38  public_ HTTP_412 信通院·白皮书            2499    0       
+39  public_ JSAPP    阿里研究院              3523    5       阿里研究院
+40  public_ JSAPP    世界银行数据             198600  1472    World Bank Open Data | Data
+41  public_ HTTP_567 麦肯锡中国              7072    24      
+42  public_ JSAPP    第一财经数据CBNData      66694   1438    CBNData-第一财经商业数据中心
+43  noise   OK       微软研究院              225412  5031    Microsoft Research – Emerging Technology, Computer, &amp; Software Res
+44  noise   OK       英伟达数据中心            310260  18141   Data Centers Built for Advanced AI Reasoning | NVIDIA
+45  public_ OK       东方财富·行业研报          227602  2285    行业研报
+46  public_ OK       QuestMobile        66819   2878    QuestMobile-中国专业的移动互联网商业智能服务平台-QuestMobile
+47  public_ OK       亿欧·消费生活报告          560403  278444  消费生活行业研究报告_报告合集_亿欧
+48  public_ OK       艾媒咨询               150709  10166   艾媒网-全球领先的新经济行业数据分析报告发布平台-报告
+49  public_ OK       沙利文Frost主站         546227  68728   沙利文中国官网| 投资与企业增长咨询专业服务机构
+50  login   JSAPP    巨量算数·算术报告          16967   7       抖音创作者中心
+51  public_ JSAPP    贝壳研究院              23160   1015    房地产行业研究平台_房产数据报告_房产政策解读-贝壳研究院
+52  public_ JSAPP    克而瑞CRIC            4777    0       
+53  public_ OK       抖店大学               329481  3175    学习中心首页-抖音电商官方学习平台
+54  reachab LOGIN    Rune·竞对AI          13675   7       loading
+55  reachab LOGIN    魔镜·竞争管控·行业管控       13675   7       loading
+56  login   OK       千瓜官网               122102  2786    千瓜数据-种草营销数据服务专家-qian-gua.com
+57  reachab LOGIN    FBI·报表(view 4847)  13675   7       loading
+
+
+===== 逐条明细 =====
+
+[1] 百度首页  <https://www.baidu.com/?from=2001a>
+  判定=OK code=200 ms=343 html=593218 text=222426
+  标题: 百度一下，你就知道
+  正文首段: 百度一下，你就知道 style data-for= result type= text/css html{font-size:100px}html body{font-size:.14rem;font-size:14px}body{color:#333;background:#fff;padding:6px 0 0;margin:0;position:relative}body,th,td,.p1,.p2{font-family:ari
+
+[2] 蝉妈妈·品牌榜  <https://www.chanmama.com/brandRank/?keyword=&category_id=-1>
+  判定=JSAPP code=200 ms=225 html=4252 text=122
+  标题: 抖音电商品牌大全_抖音电商行业品牌数据查询 - 蝉妈妈数据
+  正文首段: 抖音电商品牌大全_抖音电商行业品牌数据查询 - 蝉妈妈数据 ，厦门蝉羽网络科技有限公司，All Rights Reserved. 增值电信业务经营许可证： 闽ICP备2025083594号-2 增值电信业务经营许可证：合字B2-20250217
+
+[3] 抖店(放心购)登录  <https://fxg.jinritemai.com/login/common>
+  判定=LOGIN code=200 ms=237 html=8974 text=18
+  标题: 抖店 | 分享优价好物 多元电商服务
+  正文首段: 抖店 | 分享优价好物 多元电商服务
+
+[4] 千瓜·工作台  <https://app.qian-gua.com/#/workbench/red>
+  判定=JSAPP code=200 ms=149 html=4059 text=0
+
+[5] 飞瓜Plus(mktindex)  <https://fenxiplus.mktindex.com/#/>
+  判定=JSAPP code=200 ms=315 html=14349 text=3
+  标题: 分析+
+  正文首段: 分析+
+
+[6] 抖店罗盘·类目概览  <https://compass.jinritemai.com/shop/chance/category-overview>
+  判定=LOGIN code=200 ms=363 html=63430 text=24
+  标题: 抖音电商罗盘-抖店商家、达人和机构多视角数据平台
+  正文首段: 抖音电商罗盘-抖店商家、达人和机构多视角数据平台
+
+[7] 京东商家(京麦)  <https://shop.jd.com/jdm/home>
+  判定=LOGIN code=200 ms=264 html=22480 text=109
+  标题: 京麦商家PC端
+  正文首段: 京麦商家PC端 您使用的浏览器版本过低，为了您的用户体验和数据安全，请升级最新版chrome浏览器，下载地址： https://google.cn/chrome/ 如果您使用的是 360 安全浏览器，请使用极速模式访问
+
+[8] 小红书种草学Pro  <https://xue.xiaohongshu.com/pro?source=PRO>
+  判定=JSAPP code=200 ms=224 html=18068 text=18
+  标题: 小红书种草学｜小红书官方营销学习平台
+  正文首段: 小红书种草学｜小红书官方营销学习平台
+
+[9] 京准通·学堂  <https://jzt.jd.com/school/index>
+  判定=OK code=200 ms=1146 html=188468 text=96996
+  正文首段: �      �iS ٵ(��� �n �}�F� � `�'�O�$z��.$�g�� \{�=q����O��=�w��xv��e >j�l�k�t���" �̏��gϝ�~�\ |>כ�a "���;���H���"����H_[W��ڶ��^�6��J�Fb�DG�'җ8 �MDz�j o���\�������-Q��u!�s"��S�b�bKq�x�؅����RG��T"�>�8GG_�b_����}
+
+[10] 巨量千川·帮助中心  <https://qianchuan.jinritemai.com/support/content/143777>
+  判定=JSAPP code=200 ms=377 html=21602 text=21
+  标题: undefined
+  正文首段: undefined --> --> -->
+
+[11] 字节飞书wiki-1  <https://bytedance.larkoffice.com/wiki/BYUAwOKIfi4sz5kgIzscUlxNnZe>
+  判定=HTTP_302 code=302 ms=11322 html=565 text=280
+  正文首段: Redirecting to https://accounts.feishu.cn/accounts/web/dual_domain/save_cookie?dual_domain_token=11adcb30-38f1-43d9-99c4-46fe755552f5-0220260813114043z08eu_ncf366 redirect_uri=https%3A%2F%2Fbytedance.larkoffice.com%2Fwik
+
+[12] 字节飞书wiki-2  <https://bytedance.larkoffice.com/wiki/UWcKwjIJIiBIu1k1zwVcgFFgnKg>
+  判定=HTTP_302 code=302 ms=10161 html=565 text=280
+  正文首段: Redirecting to https://accounts.feishu.cn/accounts/web/dual_domain/save_cookie?dual_domain_token=4d61c378-70cb-4c76-933b-fbfd3991b064-0220260813114043z08eu_nc65c0 redirect_uri=https%3A%2F%2Fbytedance.larkoffice.com%2Fwik
+
+[13] 中国质量报·家居建材  <https://www.cqn.com.cn/jiajujiancai/node_25713.htm>
+  判定=OK code=200 ms=268 html=42440 text=2505
+  标题: 家居要闻 -中国质量新闻网
+  正文首段: 家居要闻 -中国质量新闻网 您好，欢迎访问家居建材资讯！ 丨 联系我们 丨 投诉建议 丨 加入收藏 丨 行业观察 家居要闻 企业动态 行业人物 监督检查 法规/报告 检测/测评 企业/产品 优质企业 质量典型 专家互动 当前位置 / 家居建材 / 行业观察 / 家居要闻 青海省玉树州开展住宅装饰装修市场专项整治行动 青海省玉树州开展住宅装饰装修市场专项整治行动 2026-08-05 13:16:56 来源：中国质量新闻网 国内全案整装全
+
+[14] 网经社·数字零售快讯  <https://www.100ec.cn/DigitalRetail/#/broadcast>
+  判定=JSAPP code=200 ms=291 html=2969 text=8
+  标题: 网经社数字零售台
+  正文首段: 网经社数字零售台
+
+[15] 京东企业博客·零售  <https://jdcorporateblog.com/category/jd-retail/>
+  判定=OK code=200 ms=605 html=90217 text=5798
+  标题: JD Retail - JD.com offer over 400 million new products
+  正文首段: JD Retail - JD.com offer over 400 million new products Corporate Blog Corporate Site Home Blog Media Resources About About JD For Investor Contact Us Toggle navigation Corporate Blog Home Blog Media Resources About About
+
+[16] 建材协会·运行监测  <https://www.cbmf.org/yxjc/>
+  判定=OK code=200 ms=1158 html=95682 text=6425
+  标题: 行业发展 - 中国建筑材料联合会
+  正文首段: --> --> 行业发展 - 中国建筑材料联合会 首页 关于我们 党的建设 新闻中心 通知公告 行业发展 科技创新 标准质量 国际合作 联合会刊物 会员中心 邮箱登录 OA登录 --> 邮箱登录 OA登录 --> 登录 --> 注册 --> --> --> 退出 --> --> En 中 行业发展 INDUSTRY DEVELOPMENT 一图读懂《水泥玻璃行业产能置换实施办法（2024年本）》 建材行业节能降碳技术取得重大突破 《绿色
+
+[17] 百家号作者-1  <https://author.baidu.com/home?app_id=1666566440492321>
+  判定=LOGIN code=200 ms=180 html=3415 text=0
+
+[18] 199IT互联网数据资讯  <https://www.199it.com/>
+  判定=OK code=200 ms=599 html=182103 text=4977
+  标题: 互联网数据资讯网-199IT | 发现数据的价值-199IT | 中文互联网数据研究资讯中心-199IT
+  正文首段: 互联网数据资讯网-199IT | 发现数据的价值-199IT | 中文互联网数据研究资讯中心-199IT 简洁版 交流群 搜索 大数据导航 企业数据 投稿与合作 项目需求 会议 菜单 Menu 首页 报告 新兴产业 5G产业 人工智能 机器学习 知识图谱 医疗健康 商业地产 新基建 新能源产业 新一代信息技术 智能汽车 高端装备制造 物联网 新材料产业 工业4.0 新能源汽车 节能环保产业 数字创意 金融科技 互联网金融 区块链 共享经
+
+[19] 奥维云网AVC  <https://www.avc-mr.com/home>
+  判定=JSAPP code=200 ms=277 html=3509 text=4
+  标题: 奥维云网
+  正文首段: 奥维云网
+
+[20] 国家统计局  <https://www.stats.gov.cn/>
+  判定=OK code=200 ms=775 html=127827 text=7171
+  标题: 国家统计局
+  正文首段: 国家统计局 --> EN --> 搜索 首页 机构 新闻 时政要闻 统计新闻 数据 公开 服务 互动 知识 专题 --> 习近平同斯洛伐克总统佩列格里尼会谈 习近平同斯洛伐克总统佩列格里尼会谈 习近平同斯洛伐克总统佩列格里尼会谈 习近平会见联合国秘书长古特雷斯 习近平会见联合国秘书长古特雷斯 习近平会见联合国秘书长古特雷斯 习近平会见柬埔寨首相洪玛奈 习近平会见柬埔寨首相洪玛奈 习近平会见柬埔寨首相洪玛奈 习近平会见泰国总理阿努廷 习近
+
+[21] 巨潮资讯网  <http://www.cninfo.com.cn/>
+  判定=OK code=200 ms=4778 html=102337 text=2948
+  标题: 巨潮资讯网
+  正文首段: 巨潮资讯网 首页 公告 深市 深主板 创业板 沪市 沪主板 科创板 北交所 基金 债券 港股 调研 发行上市 摇号抽签 深市问询函 沪市问询函 北交所问询函 深市监管措施 沪市监管措施 北交所监管措施 深市纪律处分 沪市纪律处分 北交所纪律处分 资讯 个股F10 公开信息 融资融券 大宗交易 限售解禁 公司要览 深市日历 终止/退市 预约披露 IPO查询 股权质押 股东数据 股东增减持 高管持股 基金持股 数据 数据平台 数据商城 智能
+
+[22] 中国工业新闻网·统计数据  <https://www.cinic.org.cn/xw/tjsj/>
+  判定=OK code=200 ms=936 html=48146 text=3620
+  标题: 统计数据 - 中国产业经济信息网
+  正文首段: 统计数据 - 中国产业经济信息网 首页 新闻 产经要闻 部委动态 时政新闻 市场环境 统计数据 政策动态 产经评论 产经分析 产经预警 海外产经 快讯 行业 行业要闻 旅游 教育 农业 文化 消费 能源 健康 物流 通信 建筑 轻工 化工 金属 机电 综合 人民党建 区域经济 各地产经 特色之乡 招商 河南 山西 四川 福建 内蒙古 黑龙江 广东 中国制造 企业 新闻 人物 责任 企业文化 营销 扶持 创新 品牌 乡村振兴 京 津 冀 
+
+[23] 乐居头条  <https://toutiao.le365.cc/>
+  判定=THIN code=200 ms=5559 html=63490 text=926
+  标题: 在这里读懂智能
+  正文首段: 在这里读懂智能 隐私政策 用户须知 用户反馈 新闻报料 关于我们 新品评测 订阅杂志 下载APP 2026年08月13日 星期四 下载APP 关闭菜单 首页 市场 观点 产品 方案 产业 评测 专题 首页 市场 观点 产品 方案 产业 评测 专题 即米智家南阳融合店重磅开业 2026“智住好房•赋能未来”论坛暨智能家居服务力（西安）峰会即将启幕 CSHIA×科大讯飞｜共建智能空间出海新生态 王力联手中国电信，共筑智慧家居康养新生态 万蕴
+
+[24] 新浪家居  <https://jiaju.sina.com.cn/>
+  判定=OK code=200 ms=607 html=64400 text=3773
+  标题: 装修家居_新浪装修家居网
+  正文首段: 装修家居_新浪装修家居网 家居首页 新闻中心 设计师 家居直播 看图装修 产品库 登录 注册 [退出] 注销 全国家居，新浪家居 全国 CFGHJ LNPQS TWXYZ C 成都 重庆 承德 F 福州 G 广州 遵义 H 杭州 J 九江 L 临汾 N 南昌 南宁 南京 P 平泉 Q 全国 泉州 青岛 S 上海 深圳 沈阳 苏州 汕头 石家庄 T 天津 W 武汉 乌鲁木齐 乌兰察布 潍坊 无锡 X 许昌 厦门 西安 Y 燕郊 运城 Z 
+
+[25] 沙利文Frost行业研究  <https://www.frostchina.com/content/insight?page=1&query[tag]=INDUSTRY-RESEARCH>
+  判定=OK code=200 ms=494 html=205960 text=2168
+  标题: 沙利文中国官网| 投资与企业增长咨询专业服务机构
+  正文首段: 沙利文中国官网| 投资与企业增长咨询专业服务机构 洞察 行业 数字基础设施 消费电子 双碳新能源 医疗与生命科学 餐饮与新零售 半导体与芯片 智能家居 汽车与出行 公共服务 食品与饮料 科技、媒体和通信 金融科技 地产与物业 矿业冶炼 美容时尚 大数据与人工智能 物流与供应链 建筑科技与装饰装潢 特种新材料 文化娱乐 企业级服务 跨境电商贸易 基础设施建设 环保节能科技 教育与培训 航运及港口 母婴 农林牧渔 园林绿化 商业航空 服务 
+
+[26] 阿拉丁照明网  <https://www.alighting.cn/>
+  判定=THIN code=200 ms=428 html=5382 text=22
+  标题: 滑动验证
+  正文首段: 滑动验证 安全检测能力由 堡塔云WAF 提供
+
+[27] 36氪·家居搜索  <https://36kr.com/search/articles/家居>
+  判定=ERR code=0 ms=0 html=0 text=0
+  异常: UnicodeEncodeError: 'ascii' codec can't encode characters in position 21-22: ordinal not in range(128)
+
+[28] 建筑装饰协会  <http://www.cbda.cn/>
+  判定=THIN code=200 ms=540 html=12965 text=104
+  标题: 中装新网 - 安全验证
+  正文首段: 中装新网 - 安全验证 🛡️ 安全验证 请拖动滑块完成验证，以证明您是真实用户 按住滑块拖动到最右侧 → ✓ 验证成功，正在跳转... 此验证用于防止自动化访问，保护网站资源 验证通过后10分钟内无需再次验证
+
+[29] 微信文档·表格  <https://doc.weixin.qq.com/sheet/e3_AbEAiwYvAKUCN1uZ1JPcFQyyTBq6U>
+  判定=JSAPP code=200 ms=388 html=1453 text=4
+  跳转->https://office-sec.alibaba-inc.com/dialog?hijackSign=912df48b600685fdd145d0737febbd65&hijackTime=1786592444394&host=doc.weixin.qq.com&jumpSign=61c764fec591d50985de48ca4aebaee4&jumpTime=1786592444311&param=https%3A%2F%2Fdoc.weixin.qq.com%2Fsheet%2Fe3_AbEAiwYvAKUCN1uZ1JPcFQyyTBq6U&policyAction=black&policyId=113780&policyVersion=3&procTags=software%3A%3A232&umid=CV26001db68f844bb20213e6c252e8f3a&sk
+  标题: 域名拦截
+  正文首段: 域名拦截
+
+[30] 京东麦头条(mtt)  <https://mtt.jd.com/>
+  判定=LOGIN code=200 ms=740 html=31903 text=225
+  跳转->https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fmtt.jd.com%2F
+  标题: 京东-欢迎登录
+  正文首段: 京东-欢迎登录 登录页面，改进建议 京东APP扫码登录 打开 京东APP 点左上角扫一扫 查看教程 服务器出错 刷新 密码登录 短信登录 大小写锁定已打开 登录 0086 请输入手机号 获取验证码 登录 微信登录 | QQ登录 | 忘记密码 | 立即注册 关于我们 | 联系我们 | 人才招聘 | 商家入驻 | 广告服务 | 手机京东 | 友情链接 | 销售联盟 | 京东社区 | 京东公益 Copyright 2004- 京东JD.com
+
+[31] 三个皮匠报告  <https://www.sgpjbg.com.cn/Search.html?q=家装>
+  判定=ERR code=0 ms=0 html=0 text=0
+  异常: UnicodeEncodeError: 'ascii' codec can't encode characters in position 19-20: ordinal not in range(128)
+
+[32] 发现报告  <https://www.fxbaogao.com/>
+  判定=OK code=200 ms=578 html=208690 text=8765
+  标题: 发现报告 - 专业研报平台丨收录海量行业报告、券商研报丨免费分享行业研报
+  正文首段: 发现报告 - 专业研报平台丨收录海量行业报告、券商研报丨免费分享行业研报 登录 注册 AI 搜索 发现报告 发现数据 发现专题 企业服务 研选报告 付费社群 VIP 权益 已收录 0 , 0 0 0 , 0 0 0 篇行业/公司/宏观研究报告，昨日新增 1,360 篇 发现一下 行业研究 公司研究 宏观策略 财报 招股书 会议纪要 Token 低空经济 十五五 AIGC 大模型 发现报告 日榜 人形机器人产业史：从执行机器迈向物理智能体
+
+[33] 199IT·报告库  <https://www.199it.com/archives/category/report>
+  判定=OK code=200 ms=369 html=96767 text=2721
+  标题: 研究报告 | 互联网数据资讯网-199IT | 中文互联网数据研究资讯中心-199IT
+  正文首段: 研究报告 | 互联网数据资讯网-199IT | 中文互联网数据研究资讯中心-199IT 简洁版 交流群 搜索 大数据导航 企业数据 投稿与合作 项目需求 会议 菜单 Menu 首页 报告 新兴产业 5G产业 人工智能 机器学习 知识图谱 医疗健康 商业地产 新基建 新能源产业 新一代信息技术 智能汽车 高端装备制造 物联网 新材料产业 工业4.0 新能源汽车 节能环保产业 数字创意 金融科技 互联网金融 区块链 共享经济 网约车 共享汽
+
+[34] 百家号作者-2  <https://author.baidu.com/home?app_id=1838493296434206>
+  判定=LOGIN code=200 ms=124 html=3969 text=0
+
+[35] 艾瑞咨询报告  <https://report.iresearch.cn/>
+  判定=OK code=200 ms=629 html=108393 text=12286
+  标题: 研究报告_艾瑞网
+  正文首段: 研究报告_艾瑞网 艾瑞咨询 艾瑞数据 -->| 艾瑞网 | 艾瑞智慧 --> 艾瑞网 --> 首页 热点资讯 专家专栏 研究报告 创投 --> 品牌活动 --> 更多 营销 行业库 专题 图文资讯 品牌活动 --> 搜索 登录 登录 --> 登录 用户注册 我的艾瑞 账户设置 退出 --> 首页 互联网+ 专栏 报告 创投 营销 行业库 专题 图文资讯 品牌活动 --> 首页 --> 热点资讯 互联网 移动互联网 电子商务 网络营销 网
+
+[36] 慧博投研资讯  <http://www.hibor.com.cn/>
+  判定=OK code=200 ms=531 html=92900 text=8494
+  标题: 慧博投研资讯-专业的投资研究报告大数据平台-免费的研报分享平台-慧博资讯
+  正文首段: 慧博投研资讯-专业的投资研究报告大数据平台-免费的研报分享平台-慧博资讯 研究报告 定期财报 公司公告 搜索内容不能为空 热搜： 创新药 半导体 机器人 AI 算力 商业航天 AI应用 人形机器人 首 页 报告分类 宏观经济 投资策略 行业分析 公司调研 债券研究 晨会早刊 机构资讯 新股研究 并购重组 港美研究 金融工程 投资组合 融资融券 期货研究 股指期货 期权研究 基金频道 外汇研究 外文报告 公司公告 定期财报 资讯分类 图片
+
+[37] 顶级研报  <https://www.djyanbao.com/index>
+  判定=JSAPP code=200 ms=413 html=15387 text=48
+  标题: 洞见研报-洞见趋势研判未来 | 专业实时研报分享，行业研究报告，行业分析报告，券商研报，行业智库
+  正文首段: 洞见研报-洞见趋势研判未来 | 专业实时研报分享，行业研究报告，行业分析报告，券商研报，行业智库
+
+[38] 信通院·白皮书  <http://www.caict.ac.cn/kxyj/qwfb/bps/>
+  判定=HTTP_412 code=412 ms=560 html=2499 text=0
+
+[39] 阿里研究院  <http://www.aliresearch.com/cn/index>
+  判定=JSAPP code=200 ms=222 html=3523 text=5
+  标题: 阿里研究院
+  正文首段: 阿里研究院
+
+[40] 世界银行数据  <https://data.worldbank.org.cn/>
+  判定=JSAPP code=200 ms=2573 html=198600 text=1472
+  标题: World Bank Open Data | Data
+  正文首段: World Bank Open Data | Data It seems you are using an older browser. This site is optimized for modern browsers. Please upgrade to a modern browser for the best experience. 数据 主页 经济体 主题 数据与资源 关于 English Español Français 
+
+[41] 麦肯锡中国  <https://www.mckinsey.com.cn/>
+  判定=HTTP_567 code=567 ms=4022 html=7072 text=24
+  正文首段: 567 16534984463382665840
+
+[42] 第一财经数据CBNData  <https://www.cbndata.com/>
+  判定=JSAPP code=200 ms=490 html=66694 text=1438
+  标题: CBNData-第一财经商业数据中心
+  正文首段: CBNData-第一财经商业数据中心 首页 报告 看点 榜单 NEW 活动 CBNDataBox 搜索 消息 注册 | 登录 搜索 # 2024中国消费品牌增长力大调查 # 食品饮料 # 人群研究 # 美妆个护 # Z世代 # 咖啡 # 女性 # 宠物 # 营销 # 新消费 # 电商 # 彩妆 NikeSKIMS开到LV巨轮旁，胜算几何？ Alo天猫店正式上线，将接受中国市场怎样的检验 短期红利消退，新消费“四姐妹”这一年表现如何？ 只
+
+[43] 微软研究院  <https://www.microsoft.com/en-us/research/>
+  判定=OK code=200 ms=3961 html=225412 text=5031
+  标题: Microsoft Research – Emerging Technology, Computer, &amp; Software Research
+  正文首段: Microsoft Research – Emerging Technology, Computer, Software Research Skip to main content Research Publications Code data People Microsoft Research blog Artificial intelligence Audio acoustics Computer vision Graphics m
+
+[44] 英伟达数据中心  <https://www.nvidia.com/en-us/data-center/>
+  判定=OK code=200 ms=595 html=310260 text=18141
+  标题: Data Centers Built for Advanced AI Reasoning | NVIDIA
+  正文首段: Data Centers Built for Advanced AI Reasoning | NVIDIA NVIDIA Home NVIDIA Home Menu Menu icon Menu Menu icon Close Close icon Close Close icon Close Close icon Caret down icon Accordion is closed, click to open. Caret dow
+
+[45] 东方财富·行业研报  <https://data.eastmoney.com/report/industry.jshtml>
+  判定=OK code=200 ms=462 html=227602 text=2285
+  标题: 行业研报
+  正文首段: 行业研报 财经 焦点 股票 新股 期指 期权 行情 数据 全球 美股 港股 期货 外汇 黄金 银行 基金 理财 保险 债券 视频 股吧 基金吧 博客 搜索 数据中心 全球财经快讯 行情中心 Choice数据 妙想大模型 ﻿ 特色 龙虎榜单 融资融券 股权质押 大宗交易 机构调研 期指持仓 公告大全 条件选股 财报 业绩报表 最新预告 分红送配 研报 个股研报 行业研报 盈利预测 新股 新股申购 新股日历 新股上会 资金 大盘资金 个股资
+
+[46] QuestMobile  <https://www.questmobile.com.cn/>
+  判定=OK code=200 ms=478 html=66819 text=2878
+  标题: QuestMobile-中国专业的移动互联网商业智能服务平台-QuestMobile
+  正文首段: QuestMobile-中国专业的移动互联网商业智能服务平台-QuestMobile 首页 产品与服务 研究院 行业影响 关于QuestMobile 联系我们 ｜ 登录 EN 中国移动互联网 中国新能源汽车 TRUTH 标准数据库 INSIGHT 数据洞察服务 GROWTH 数据增长服务 真相，变得如此简单你与数据分析大师只有一屏之隔 流量价值洞察 TRUTH-专业版 超过160个权威指标，全面理解市场趋势和竞争环境 TRUTH-AI感
+
+[47] 亿欧·消费生活报告  <https://www.iyiou.com/reportList/xiaofeishenghuo>
+  判定=OK code=200 ms=669 html=560403 text=278444
+  标题: 消费生活行业研究报告_报告合集_亿欧
+  正文首段: 消费生活行业研究报告_报告合集_亿欧 产业  汽车出行 消费生活 医疗健康 电商零售 金融 文娱传媒 生产制造 能源矿产 出海全球化 教育 科技  人工智能 企业服务 硬件 半导体 新兴技术及应用 航空航天 材料 研究报告  最新报告 全部报告 预发布报告 深度报告 资讯 快讯 产业伙伴 企业会员 数据 服务  榜单 专题 活动 政府服务 出海对接 个人会员 创作中心 搜索  快捷访问  #热搜词# 出海 低空 产业伙伴 A
+
+[48] 艾媒咨询  <https://www.iimedia.cn/c1081>
+  判定=OK code=200 ms=885 html=150709 text=10166
+  标题: 艾媒网-全球领先的新经济行业数据分析报告发布平台-报告
+  正文首段: 艾媒网-全球领先的新经济行业数据分析报告发布平台-报告 联系我们 订阅邮箱 全球领先的新经济产业第三方数据挖掘与分析机构 市场地位 消费洞察 商业趋势 地址： 中国. 广州大学城 总机： 020-8922-4700 数据背书 用数据说话，为增长导航 范围：市场地位/市场份额调研/证明；联合白皮书；专项报告；标杆案例；竞争情报；奖项组织等相关事项咨询 例如：基于大数据的AI认知策略构建，数据/报告的第三方背书用途（品宣方向） 180-22
+
+[49] 沙利文Frost主站  <https://www.frostchina.com/>
+  判定=OK code=200 ms=327 html=546227 text=68728
+  标题: 沙利文中国官网| 投资与企业增长咨询专业服务机构
+  正文首段: 沙利文中国官网| 投资与企业增长咨询专业服务机构 洞察 行业 数字基础设施 消费电子 双碳新能源 医疗与生命科学 餐饮与新零售 半导体与芯片 智能家居 汽车与出行 公共服务 食品与饮料 科技、媒体和通信 金融科技 地产与物业 矿业冶炼 美容时尚 大数据与人工智能 物流与供应链 建筑科技与装饰装潢 特种新材料 文化娱乐 企业级服务 跨境电商贸易 基础设施建设 环保节能科技 教育与培训 航运及港口 母婴 农林牧渔 园林绿化 商业航空 服务 
+
+[50] 巨量算数·算术报告  <https://creator.douyin.com/creator-micro/creator-count/arithmetic-report>
+  判定=JSAPP code=200 ms=359 html=16967 text=7
+  标题: 抖音创作者中心
+  正文首段: 抖音创作者中心
+
+[51] 贝壳研究院  <https://research.ke.com/>
+  判定=JSAPP code=200 ms=825 html=23160 text=1015
+  标题: 房地产行业研究平台_房产数据报告_房产政策解读-贝壳研究院
+  正文首段: 房地产行业研究平台_房产数据报告_房产政策解读-贝壳研究院 首页 研究成果 RealData+ 登录/注册 致力成为 新居住领域领先智库 最新成果 LATEST ACHIEVEMENTS 全部 周期报告 市场研究 其他 周期报告 2023/10/20 2023年三季度中国住房租赁市场发展报告出炉 市场活跃度上升，三季度租金同比下跌，环比先涨后跌 贝壳研究院 贝壳研究院 周期报告 2023/06/28 2023郑州住房租赁市场洞察 202
+
+[52] 克而瑞CRIC  <http://www.cricchina.com/#/home>
+  判定=JSAPP code=200 ms=689 html=4777 text=0
+  跳转->https://www.cric.com/
+
+[53] 抖店大学  <https://school.jinritemai.com/doudian/web/home>
+  判定=OK code=200 ms=996 html=329481 text=3175
+  标题: 学习中心首页-抖音电商官方学习平台
+  正文首段: 学习中心首页-抖音电商官方学习平台 首页 规则中心 功能中心 课程中心 案例中心 最新直播 诚信经营 生态伙伴 立即登录 搜索 历史搜索 清空 新商成长 了解平台 入驻流程 开单攻略 开店指南 商品运营 新品运营 爆款打造 商品管理 商品素材 店铺运营 信息设置 提体验分 账号管理 店铺诊断 流量运营 商城运营 直播运营 短视频运营 搜索运营 营销推广 营销活动 营销工具 千川投放 达人合作 服务履约 客户服务 订单管理 评价管理 物流
+
+[54] Rune·竞对AI  <https://rune.alibaba-inc.com/competeAi>
+  判定=LOGIN code=200 ms=1026 html=13675 text=7
+  跳转->https://login.alibaba-inc.com/preLogin2.htm?APP_NAME=testcook&CLIENT_VERSION=0.3.7&CONTEXT_PATH=%2F&BACK_URL=https%3A%2F%2Frune.alibaba-inc.com%2FsendBucSSOToken.do%3Fredirect%3D%252FcompeteAi
+  标题: loading
+  正文首段: loading
+
+[55] 魔镜·竞争管控·行业管控  <https://mojing.alibaba-inc.com/rival/competitionControl/industryControl>
+  判定=LOGIN code=200 ms=2002 html=13675 text=7
+  跳转->https://login.alibaba-inc.com/preLogin2.htm?APP_NAME=mozi-buc-sso&protocolKey=06a7d3cc0cfda6e757ce34082b064df9&protocol=oauth2&BACK_URL=https%3A%2F%2Fmozi-login.alibaba-inc.com%2Foauth2%2FauthCallback.htm
+  标题: loading
+  正文首段: loading
+
+[56] 千瓜官网  <https://www.qian-gua.com/>
+  判定=OK code=200 ms=262 html=122102 text=2786
+  标题: 千瓜数据-种草营销数据服务专家-qian-gua.com
+  正文首段: 千瓜数据-种草营销数据服务专家-qian-gua.com 账号登录 去注册 用千瓜，成为用户牵挂的产品 我已阅读并接受 保密协议 、 用户协议 和 个人信息保护政策 请勾选同意后再登录 登录 找回密码 账号注册 去登录 用千瓜，成为用户牵挂的产品 一键绑定微信 获取验证码 完成 找回密码 去登录 用千瓜，成为用户牵挂的产品 获取验证码 完成 修改成功 前往登录页 修改失败 前往登录页 手机号错误 您输入的手机号错误，请重新输入 我知道了
+
+[57] FBI·报表(view 4847)  <https://fbi.alibaba-inc.com/fbi/pro/4847/view.htm>
+  判定=LOGIN code=200 ms=1429 html=13675 text=7
+  跳转->https://login.alibaba-inc.com/preLogin2.htm?APP_NAME=quark-report&BACK_URL=https%3A%2F%2Ffbi.alibaba-inc.com%2Ffbi%2Fpro%2F4847%2Fview.htm&CONTEXT_PATH=%2Ffbi
+  标题: loading
+  正文首段: loading
