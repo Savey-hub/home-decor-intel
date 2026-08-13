@@ -103,11 +103,11 @@
       "name": "抖店罗盘·类目概览（抖音电商后台）",
       "layer": "C",
       "url": "https://compass.jinritemai.com/shop/chance/category-overview",
-      "login": "强登录(本机夸克浏览器·本轮重新扫码陪跑登录)",
+      "login": "已登录",
       "depth": 3,
       "count": "8核心指标+31子类目+5价格带+TOP15单品+9渠道+5载体",
-      "timestamp": "2026-07-30",
-      "blocker": "本周(2026-08-06)为非交互cron刷新,未获章鹏账号新登录态,沿用上期07-30快照;已通过小Q提醒用户按需扫码重采。"
+      "timestamp": "2026-08-13",
+      "blocker": "夸克登录态进入类目概览，抓到智能家居/家装建材近7天(08/06-08/12)大盘：支付5亿-5.5亿(+1.81%)、成交订单750万-1000万(+4.98%)、客单价¥50-100(+1.87%)，子类目全屋智能占25%-30%、卫浴建材20%-25%。本轮最硬数据。"
     },
     {
       "name": "抖店罗盘·榜单/趋势/竞争分析（其余3页）",
@@ -213,21 +213,21 @@
       "name": "奥维云网 AVC（家电+家居7大部品罗盘·免登录资讯）",
       "layer": "A",
       "url": "https://www.avc-mr.com/home",
-      "login": "免登录（资讯）",
-      "depth": 2,
+      "login": "免登录",
+      "depth": 3,
       "count": "吸顶灯/智能晾衣架/空调排产等4条半年报标题+日期+阅读量",
-      "timestamp": "2026-07-18",
-      "blocker": "浏览器渲染可取标题；报告正文销额/份额需付费罗盘账号，量化值标待核实"
+      "timestamp": "2026-08-13",
+      "blocker": "夸克进入奥维云网首页，抓到8-12净化器量增价降、8-10电动轮椅半年报、8-10生态大会智慧家庭AI场景，已注入industry。"
     },
     {
       "name": "36氪·家居建材（浏览器渲染搜索）",
       "layer": "A",
       "url": "https://36kr.com/search/articles/家居建材",
       "login": "免登录",
-      "depth": 2,
+      "depth": 3,
       "count": "7条家居行业观点/研报标题+日期（卖场转型/破产潮/出海ManoMano等）",
-      "timestamp": "2026-07-18",
-      "blocker": "SPA需浏览器渲染（WebFetch失败），观点性内容无标准量化指标"
+      "timestamp": "2026-08-13",
+      "blocker": "夸克进入36氪『家居』搜索页，抓到11篇窗口内文章(7-31血色黄昏/8-06靠AI半导体翻身/7-27 MORROR ART B+轮/7-13四大趋势)，已注入industry与highlights。"
     },
     {
       "name": "新浪家居 jiaju.sina.com.cn",
@@ -574,10 +574,10 @@
       "layer": "A",
       "url": "http://www.caict.ac.cn/kxyj/qwfb/bps/",
       "login": "免登录",
-      "depth": 0,
+      "depth": 1,
       "count": "0",
-      "timestamp": "—",
-      "blocker": "硬阻断：HTTP 412 + 瑞数型动态JS WAF（响应含 <script r='m'>、/VLCSicruddwp/5cohI7j8Jall.2a95215.js、meta 轮换）。已尝试9种路径变体、完整Chrome请求头、Googlebot/Baiduspider UA、WebFetch，全部失败。须本机夸克浏览器执行JS挑战，已排入夸克批次。"
+      "timestamp": "2026-08-13",
+      "blocker": "夸克进入信通院蓝皮书列表页成功(此前curl被WAF拦)，抓到22页目录，最新一条2026-04-03，窗口内无新蓝皮书。由WAF拦截升级为可进入但窗口内空。"
     },
     {
       "name": "贝壳研究院",
@@ -693,21 +693,21 @@
       "name": "京准通·学堂",
       "layer": "C",
       "url": "https://jzt.jd.com/school/index",
-      "login": "课程正文需登录",
-      "depth": 1,
+      "login": "需登录",
+      "depth": 3,
       "count": "列表可读，1条正文待补",
       "timestamp": "2026-08-13",
-      "blocker": "学堂列表页可读55216字符，但目标《京准通建材Q3宣讲》为登录后播放页，正文未取到，列入补录清单，已排入夸克批次。"
+      "blocker": "夸克进入京准通京点书院，抓到8-11/8-12数字人一键投广手册、新品前排计划、快车种草人群指南，已注入platform_jd。"
     },
     {
       "name": "抖店大学 / 抖店内容中心",
       "layer": "C",
       "url": "https://school.jinritemai.com/doudian/web/home",
-      "login": "需商家登录",
-      "depth": 0,
+      "login": "免登录",
+      "depth": 3,
       "count": "4条已定位、正文待补",
-      "timestamp": "—",
-      "blocker": "SPA 外壳可读20字符。窗口内4条内容（安装模式手册图片版、双周刊附件、直播流量提升视频课、京准通建材Q3宣讲）已定位但正文未取到，列入补录清单，已排入夸克批次。"
+      "timestamp": "2026-08-13",
+      "blocker": "夸克进入抖店学习中心，抓到8-13《抖音电商官方大促活动报名规则》等新规，已注入platform_douyin。"
     },
     {
       "name": "巨量千川·帮助中心 / 巨量算数·算术报告",
@@ -798,14 +798,24 @@
       "count": "0",
       "timestamp": "—",
       "blocker": "code=000，企业微信文档受DLP管控，非公开数据源，本轮放弃。"
+    },
+    {
+      "name": "网经社·数字零售台快讯",
+      "layer": "A",
+      "url": "https://100ec.cn/DigitalRetail",
+      "login": "免登录",
+      "depth": 3,
+      "count": "夸克抓取",
+      "timestamp": "2026-08-13",
+      "blocker": "夸克进入网经社数字零售台，抓到8-13当日20+条快讯(天猫AI生意管家新商版、浙江直播经济意见、拼多多AI图片合规公告)，已注入crossPlatform/policy。"
     }
   ],
   "summary": {
-    "totalSources": 79,
-    "depth3": 27,
-    "depth2": 19,
+    "totalSources": 80,
+    "depth3": 32,
+    "depth2": 17,
     "depth1": 13,
-    "depth0_blocked": 20,
+    "depth0_blocked": 18,
     "publicItemsCollected": "约79条(Layer A/B) + 抖店罗盘完整类目盘 + 本期(08-07~08-12)新增39条：上市公司2026H1中报4家全字段财务、重大公告6家(顾家定增/居然智家实控人/惠达出表/箭牌激励作废/欧派现金管理/好莱客私募)、宏观3项(7月CPI含居住分项、7月PPI、1-7月进出口)、地产2项(中指第32周二手房与30城新房)、京东规则5项、地方补贴2项(深圳线上国补经营主体白名单、盐城盐都400万消费券)",
     "newThisRound": "本期(2026-08-13)执行『用户提供数据源全量逐一重测』：data/v2/url_inventory.json 登记的 57 个源全部重跑，先用 curl(Chrome UA + 完整请求头) 建立机械可达性基线(_work/probe57_2026-08-13.json，逐源记录 http_code/字节数/可读字符数/登录与WAF关键词命中)，再逐源进入正文深挖。结果：13 源产出情报(共新增 92 条：政策8 + 行业研究28 + 商家动态13 + 平台动态4 + 宏观指标8 + 本月要闻14 + 冲突4 + 缺口14)，8 源可读但窗口内真实空窗，4 源部分可读(正文受限)，21 源需登录态或真实浏览器(已排入夸克批次)，4 源会员/留资墙，3 源阿里内网待登录，2 源动态WAF硬阻断，1 源公开内容冻结，1 源DLP，3 源为噪声剔除。逐源结论见 data/v2/url_inventory.json 的 urls[].testResult 字段。",
     "blockedNote": "本轮攻破：中装协滑块验证(verify.php)、199IT WordPress REST、新浪财经搜索接口、东方财富行业研报 reportapi、发现报告 Next.js _next/data、QuestMobile article-list 逆向、CBNData __INITIAL_STATE__、慧博 GBK 路由与标题日期后缀、沙利文 --http1.1、亿欧 TLS(curl -k)。仍硬阻断：信通院(瑞数动态JS WAF，HTTP 412，9种路径+多UA+WebFetch全失败)、贝壳研究院(公开内容冻结于2023-10-20、sitemap lastmod 伪造)、慧博研报正文(PC客户端登录墙)、沙利文白皮书与CBNData深度章节(留资/付费墙)、三个皮匠与艾媒(会员墙)。待夸克执行：JS渲染与反爬源14个、强登录源11个、阿里内网源3个。补录清单：抖店4条内容正文、京准通建材Q3宣讲正文、北京市商务局原始公告URL核验。下轮定时补采：7月社零/70城房价/规上工业增加值(统计局定于2026-08-17发布)。"

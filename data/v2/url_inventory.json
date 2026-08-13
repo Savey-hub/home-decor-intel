@@ -34,14 +34,14 @@
       "url": "https://www.chanmama.com/brandRank/?keyword=&category_id=-1",
       "name": "蝉妈妈·品牌榜",
       "layer": "C",
-      "status": "login",
+      "status": "ok_empty",
       "note": "抖音电商品牌榜，需会员登录；这就是上期缺的后台深链",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "curl 仅得 4762 字节 SPA 外壳（可读 234 字符），品牌榜数据全部前端异步渲染且需登录态。已排入夸克批次。",
+        "conclusion": "蝉妈妈品牌大全已登录可读,默认全类目榜首为3C(华为/红米/苹果),未见家具建材类目筛选结果;需切『家具建材』带货分类再取数。",
         "probe": {
           "httpCode": "200",
           "bytes": 4762,
@@ -50,7 +50,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -58,14 +60,14 @@
       "url": "https://fxg.jinritemai.com/login/common",
       "name": "抖店(放心购)登录",
       "layer": "C",
-      "status": "login",
+      "status": "ok_empty",
       "note": "抖店商家后台登录页，需章鹏商家号",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "登录页并带 captcha 关键词，后端不可读。需夸克复用已登录态。",
+        "conclusion": "抖店后台首页(自家店铺章鹏潮玩)进入成功,推广概况/搜索周报均为本店0数据,非竞争情报源。",
         "probe": {
           "httpCode": "200",
           "bytes": 9308,
@@ -76,7 +78,9 @@
             "captcha"
           ],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -84,14 +88,14 @@
       "url": "https://app.qian-gua.com/#/workbench/red",
       "name": "千瓜·工作台",
       "layer": "C",
-      "status": "login",
+      "status": "ok_empty",
       "note": "小红书数据，家居家装行业需尊享版会员",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "hash 路由 SPA，可读字符为 0；小红书投放数据需千瓜登录态。已排入夸克批次。",
+        "conclusion": "千瓜红书版工作台已登录可读(8928字),但无家居家装新报告;需在品牌库按家居类目手动检索。",
         "probe": {
           "httpCode": "200",
           "bytes": 4413,
@@ -100,7 +104,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -108,14 +114,14 @@
       "url": "https://fenxiplus.mktindex.com/#/",
       "name": "飞瓜Plus(mktindex)",
       "layer": "C",
-      "status": "login",
+      "status": "need_login_browser",
       "note": "抖音/小红书第三方数据，需登录+会员",
       "testResult": {
         "testedAt": "2026-08-13",
         "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdictLabel": "需已登录会话·夸克当前未登录",
         "yielded": false,
-        "conclusion": "SPA 外壳 109 字符，飞瓜 Plus 需账号登录。已排入夸克批次。",
+        "conclusion": "纷析(fenxiplus/mktindex)夸克跳转到魔镜账户登录页,当前夸克会话未登录,仍需在已登录会话重跑。",
         "probe": {
           "httpCode": "200",
           "bytes": 14531,
@@ -124,7 +130,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -132,14 +140,14 @@
       "url": "https://compass.jinritemai.com/shop/chance/category-overview",
       "name": "抖店罗盘·类目概览",
       "layer": "C",
-      "status": "covered",
+      "status": "ok_yield",
       "note": "已陪跑登录采集，depth3",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
-        "yielded": false,
-        "conclusion": "罗盘类目概览返回 64131 字节但可读 24 字符且命中 captcha，须登录态浏览器。",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克进入成功·有新增情报",
+        "yielded": true,
+        "conclusion": "夸克登录态进入抖音电商罗盘类目概览成功,抓到智能家居/家装建材近7天大盘全量指标+子类目结构,已注入platform_douyin与highlights(本轮最硬数据)。",
         "probe": {
           "httpCode": "200",
           "bytes": 64131,
@@ -150,7 +158,9 @@
             "captcha"
           ],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -158,14 +168,14 @@
       "url": "https://shop.jd.com/jdm/home",
       "name": "京东商家(京麦)",
       "layer": "C",
-      "status": "login",
+      "status": "ok_empty",
       "note": "需POP商家号，买家号被拦截",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "京麦商家后台外壳 109 字符，需商家账号登录。",
+        "conclusion": "京麦shop首页进入成功但内容单薄(自家店后台入口),无行业数据。",
         "probe": {
           "httpCode": "200",
           "bytes": 22682,
@@ -174,7 +184,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -182,14 +194,14 @@
       "url": "https://xue.xiaohongshu.com/pro?source=PRO",
       "name": "小红书种草学Pro",
       "layer": "C",
-      "status": "login",
+      "status": "ok_empty",
       "note": "定性内容曾采depth2，Pro量化数据需商业账号",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "种草学 Pro 外壳 18 字符，需小红书专业号登录。",
+        "conclusion": "小红书专业号学堂进入成功(Savey登录态),课程含『家居家装金三银四营销指南』『家居房产2026春节指南』等但均为常青课,非窗口内新增。",
         "probe": {
           "httpCode": "200",
           "bytes": 18380,
@@ -198,7 +210,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -206,14 +220,14 @@
       "url": "https://jzt.jd.com/school/index",
       "name": "京准通·学堂",
       "layer": "C",
-      "status": "public_todo",
+      "status": "ok_yield",
       "note": "school/学堂板块可能免登录公开，待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "partial",
-        "verdictLabel": "部分可读（列表可读/正文受限）",
-        "yielded": false,
-        "conclusion": "学堂列表页后端可读（55216 字符），但本轮目标《京准通建材 Q3 宣讲》课程正文为登录后播放页，未取到正文，列入补录清单。",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克进入成功·有新增情报",
+        "yielded": true,
+        "conclusion": "夸克进入京准通京点书院成功,抓到8-11/8-12数字人一键投广手册、新品前排计划、快车种草人群指南及7-20整合营销案例,已注入platform_jd。",
         "probe": {
           "httpCode": "200",
           "bytes": 199370,
@@ -222,7 +236,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -230,14 +246,14 @@
       "url": "https://qianchuan.jinritemai.com/support/content/143777",
       "name": "巨量千川·帮助中心",
       "layer": "C",
-      "status": "public_todo",
+      "status": "ok_empty",
       "note": "support帮助文档可能公开，待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_browser",
-        "verdictLabel": "需真实浏览器（JS 渲染或反爬）",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "帮助中心文档正文由 JS 注入，可读 21 字符。已排入夸克批次。",
+        "conclusion": "巨量千川帮助中心进入成功,目标页为退款退费补贴政策(2026-01-05更新),窗口内无更新。",
         "probe": {
           "httpCode": "200",
           "bytes": 21602,
@@ -246,7 +262,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -254,14 +272,14 @@
       "url": "https://bytedance.larkoffice.com/wiki/BYUAwOKIfi4sz5kgIzscUlxNnZe",
       "name": "字节飞书wiki-1",
       "layer": "external",
-      "status": "login",
+      "status": "dead",
       "note": "字节内部租户，需字节账号登录，独立会话无cookie",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "dead",
+        "verdictLabel": "链接失效·已确认",
         "yielded": false,
-        "conclusion": "302 跳登录，字节飞书 wiki 需内部账号。",
+        "conclusion": "飞书wiki BYUAwOKIfi4sz5kgIzscUl 返回『Wiki-404 页面不存在』,链接失效或无权限。",
         "probe": {
           "httpCode": "302",
           "bytes": 887,
@@ -270,7 +288,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": "curl: (47) Maximum (50) redirects followed"
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -278,14 +298,14 @@
       "url": "https://bytedance.larkoffice.com/wiki/UWcKwjIJIiBIu1k1zwVcgFFgnKg",
       "name": "字节飞书wiki-2",
       "layer": "external",
-      "status": "login",
+      "status": "dead",
       "note": "同上",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "dead",
+        "verdictLabel": "链接失效·已确认",
         "yielded": false,
-        "conclusion": "302 跳登录，字节飞书 wiki 需内部账号。",
+        "conclusion": "飞书wiki UWcKwjIJIiBIu1k1zwVcgF 返回『Wiki-404 页面不存在』,链接失效或无权限。",
         "probe": {
           "httpCode": "302",
           "bytes": 887,
@@ -294,7 +314,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": "curl: (47) Maximum (50) redirects followed"
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -326,14 +348,14 @@
       "url": "https://www.100ec.cn/DigitalRetail/#/broadcast",
       "name": "网经社·数字零售快讯",
       "layer": "A",
-      "status": "public_todo",
+      "status": "ok_yield",
       "note": "已用100ec主站，此快讯页待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_browser",
-        "verdictLabel": "需真实浏览器（JS 渲染或反爬）",
-        "yielded": false,
-        "conclusion": "数字零售快讯为 hash 路由 SPA，可读 8 字符。已排入夸克批次。",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克进入成功·有新增情报",
+        "yielded": true,
+        "conclusion": "夸克进入网经社数字零售台成功,抓到8-13当日20+条快讯,含天猫AI生意管家新商版、淘宝安心充电规范、浙江直播经济意见、抖音清理3322违规昵称、拼多多AI图片合规公告,已注入crossPlatform/policy。",
         "probe": {
           "httpCode": "200",
           "bytes": 3069,
@@ -342,7 +364,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -402,14 +426,14 @@
       "url": "https://author.baidu.com/home?app_id=1666566440492321",
       "name": "百家号作者-1",
       "layer": "A",
-      "status": "public_todo",
+      "status": "ok_empty",
       "note": "特定百家号作者，待实测其领域",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_browser",
-        "verdictLabel": "需真实浏览器（JS 渲染或反爬）",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "百家号作者主页为 SPA，可读 0 字符。已排入夸克批次。",
+        "conclusion": "百家号『环球网房产家居』进入成功(认证:环球时报在线),但正文列表未抓到窗口内可引用条目,待展开信息流。",
         "probe": {
           "httpCode": "200",
           "bytes": 3415,
@@ -418,7 +442,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -450,14 +476,14 @@
       "url": "https://www.avc-mr.com/home",
       "name": "奥维云网AVC",
       "layer": "B",
-      "status": "public_todo",
+      "status": "ok_yield",
       "note": "家电/家居权威数据，部分公开部分会员，待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_browser",
-        "verdictLabel": "需真实浏览器（JS 渲染或反爬）",
-        "yielded": false,
-        "conclusion": "奥维云网官网为 SPA 外壳（可读 4 字符），后端完全不可读；本轮奥维数值经 199IT 转载核到，但原始报告页仍须夸克进入复核。",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克进入成功·有新增情报",
+        "yielded": true,
+        "conclusion": "夸克进入奥维云网首页成功,抓到8-12净化器量增价降、8-10电动轮椅半年报、8-10生态大会智慧家庭AI场景等,已注入industry。",
         "probe": {
           "httpCode": "200",
           "bytes": 4075,
@@ -466,7 +492,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -618,14 +646,14 @@
       "url": "https://www.alighting.cn/",
       "name": "阿拉丁照明网",
       "layer": "A",
-      "status": "member_wall",
+      "status": "ok_empty",
       "note": "灯具光源子行业垂直源，公开，待实测（补灯具短板）",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_browser",
-        "verdictLabel": "需真实浏览器（JS 渲染或反爬）",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "code=000 直连失败（照明行业垂直站有反爬），须夸克进入。已排入夸克批次。",
+        "conclusion": "阿拉丁照明网进入成功,内容为照明工程/展会/标准(如AI照明应用技术规范征集),无家装建材大盘或家居家装竞争数据。",
         "probe": {
           "httpCode": "000",
           "bytes": 0,
@@ -634,7 +662,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": "curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_REVOCATION_OFFLINE (0x80092013) - ڵѻ޷"
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -642,14 +672,14 @@
       "url": "https://36kr.com/search/articles/家居",
       "name": "36氪·家居搜索",
       "layer": "A",
-      "status": "public_todo",
+      "status": "ok_yield",
       "note": "公开，待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "blocked_waf",
-        "verdictLabel": "动态 WAF 硬阻断",
-        "yielded": false,
-        "conclusion": "搜索页命中 WAF（安全检测 / wafchallenge），可读 56 字符。须夸克带真实指纹进入。已排入夸克批次。",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克进入成功·有新增情报",
+        "yielded": true,
+        "conclusion": "夸克进入36氪『家居』搜索页,抓到11篇窗口内家居文章(7-31血色黄昏/8-06靠AI半导体翻身/7-27 MORROR ART B+轮/7-13四大趋势等),已注入industry与highlights。",
         "probe": {
           "httpCode": "200",
           "bytes": 17603,
@@ -661,7 +691,9 @@
             "wafchallenge"
           ],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -717,14 +749,14 @@
       "url": "https://mtt.jd.com/",
       "name": "京东麦头条(mtt)",
       "layer": "C",
-      "status": "login",
+      "status": "partial",
       "note": "京东商家资讯，需商家登录，待实测是否有公开页",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "partial",
+        "verdictLabel": "夸克进入成功·口径不足部分可用",
         "yielded": false,
-        "conclusion": "可读 154 字符并命中 vip/captcha，麦头条需京东商家登录态。",
+        "conclusion": "京东麦头条商家论坛进入成功,抓到8-03《AI漫课》商家学习内容与近日问答帖,多为运营答疑,无家居行业量化数据。",
         "probe": {
           "httpCode": "200",
           "bytes": 32127,
@@ -737,7 +769,9 @@
             "captcha"
           ],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -825,14 +859,14 @@
       "url": "https://author.baidu.com/home?app_id=1838493296434206",
       "name": "百家号作者-2",
       "layer": "A",
-      "status": "public_todo",
+      "status": "dead",
       "note": "待实测领域",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_browser",
-        "verdictLabel": "需真实浏览器（JS 渲染或反爬）",
+        "verdict": "dead",
+        "verdictLabel": "链接失效·已确认",
         "yielded": false,
-        "conclusion": "百家号作者主页 SPA，可读 0 字符。已排入夸克批次。",
+        "conclusion": "百家号 app_id=1838493296434206 返回『用户信息不存在』,该源已失效,建议从清单剔除或替换。",
         "probe": {
           "httpCode": "200",
           "bytes": 3415,
@@ -841,7 +875,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -897,14 +933,14 @@
       "url": "https://www.djyanbao.com/index",
       "name": "顶级研报",
       "layer": "B",
-      "status": "public_todo",
+      "status": "ok_empty",
       "note": "研报平台，待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_browser",
-        "verdictLabel": "需真实浏览器（JS 渲染或反爬）",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "SPA 外壳可读 73 字符。已排入夸克批次。",
+        "conclusion": "洞见研报进入成功,窗口内新报告以AI/储能/医药/TikTok出海为主,无家居家装专项研报。",
         "probe": {
           "httpCode": "200",
           "bytes": 15761,
@@ -913,7 +949,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -921,14 +959,14 @@
       "url": "http://www.caict.ac.cn/kxyj/qwfb/bps/",
       "name": "信通院·白皮书",
       "layer": "A",
-      "status": "public_todo",
+      "status": "ok_empty",
       "note": "全屋智能相关白皮书，公开，待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "blocked_waf",
-        "verdictLabel": "动态 WAF 硬阻断",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "硬阻断：412 + 瑞数型动态 JS WAF（响应含 <script r='m'>、/VLCSicruddwp/5cohI7j8Jall.2a95215.js、meta 轮换）。已试 9 种路径变体 + 完整 Chrome 头 + Googlebot/Baiduspider UA + WebFetch，全部失败。必须夸克真实浏览器执行 JS 挑战。已排入夸克批次。",
+        "conclusion": "夸克进入信通院蓝皮书列表页成功(此前curl被WAF拦),抓到22页目录,最新一条2026-04-03《2025集智蓝皮书大礼包》,窗口(07-07~08-13)内无新蓝皮书发布。由blocked_waf升级为ok_empty。",
         "probe": {
           "httpCode": "412",
           "bytes": 2597,
@@ -937,7 +975,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -945,14 +985,14 @@
       "url": "http://www.aliresearch.com/cn/index",
       "name": "阿里研究院",
       "layer": "A",
-      "status": "public_todo",
+      "status": "ok_empty",
       "note": "公开，待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_browser",
-        "verdictLabel": "需真实浏览器（JS 渲染或反爬）",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "阿里研究院首页 SPA，可读 5 字符。已排入夸克批次。",
+        "conclusion": "阿里研究院进入成功,动态资讯停在2025-03,无窗口内新内容。",
         "probe": {
           "httpCode": "200",
           "bytes": 3533,
@@ -961,7 +1001,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1229,14 +1271,14 @@
       "url": "https://creator.douyin.com/creator-micro/creator-count/arithmetic-report",
       "name": "巨量算数·算术报告",
       "layer": "C",
-      "status": "login",
+      "status": "ok_empty",
       "note": "抖音创作者后台，需登录",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "巨量算数报告页可读 7 字符，需抖音创作者/企业号登录态。",
+        "conclusion": "抖音创作者中心巨量算数报告页进入成功但内容单薄,未取到家居行业算数榜单。",
         "probe": {
           "httpCode": "200",
           "bytes": 17221,
@@ -1245,7 +1287,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1253,14 +1297,14 @@
       "url": "https://research.ke.com/",
       "name": "贝壳研究院",
       "layer": "A",
-      "status": "public_ok",
+      "status": "ok_empty",
       "note": "房产/居住数据权威，公开，待实测（高价值）",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "blocked_frozen",
-        "verdictLabel": "公开内容冻结/已停更",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "硬阻断：公开内容冻结在 2023-10-20，sitemap 的 lastmod 为伪造（声称近期更新但正文未变）。新报告在登录墙后。已排入夸克批次尝试登录态。",
+        "conclusion": "夸克进入贝壳研究院成功,『最新成果』卡片停在2023/10/20,站点长期停更而非无法进入。由blocked_frozen确认为ok_empty(停更)。",
         "probe": {
           "httpCode": "200",
           "bytes": 26075,
@@ -1269,7 +1313,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1277,14 +1323,14 @@
       "url": "http://www.cricchina.com/#/home",
       "name": "克而瑞CRIC",
       "layer": "A",
-      "status": "public_todo",
+      "status": "partial",
       "note": "已用克而瑞转载，官网待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "partial",
+        "verdictLabel": "夸克进入成功·口径不足部分可用",
         "yielded": false,
-        "conclusion": "hash 路由 SPA 可读 0 字符且命中 vip/captcha。已排入夸克批次。",
+        "conclusion": "CRIC进入成功,可见2026年07月新房成交37.45万㎡、房企TOP10销售274.42亿元等,但页面未标城市/口径,不直接引用,已记入gaps。",
         "probe": {
           "httpCode": "200",
           "bytes": 4777,
@@ -1297,7 +1343,9 @@
             "captcha"
           ],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1305,14 +1353,14 @@
       "url": "https://school.jinritemai.com/doudian/web/home",
       "name": "抖店大学",
       "layer": "C",
-      "status": "public_todo",
+      "status": "ok_yield",
       "note": "school学习板块可能公开，待实测",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "partial",
-        "verdictLabel": "部分可读（列表可读/正文受限）",
-        "yielded": false,
-        "conclusion": "SPA 外壳可读 20 字符。窗口内 4 条抖店内容（安装模式手册图片版、双周刊附件、直播流量提升视频课、京准通建材 Q3 宣讲）已定位但正文未取到，列入补录清单。已排入夸克批次。",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克进入成功·有新增情报",
+        "yielded": true,
+        "conclusion": "夸克进入抖店学习中心成功,抓到8-13《抖音电商官方大促活动报名规则》等新规,已注入platform_douyin。",
         "probe": {
           "httpCode": "200",
           "bytes": 23909,
@@ -1321,7 +1369,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1329,14 +1379,14 @@
       "url": "https://rune.alibaba-inc.com/competeAi",
       "name": "Rune·竞对AI",
       "layer": "D",
-      "status": "reachable_intranet",
+      "status": "need_login_browser",
       "note": "阿里内网竞对分析工具，需内网+登录，待实测（最高价值）",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "intranet",
-        "verdictLabel": "内网源需登录态",
+        "verdict": "need_login_browser",
+        "verdictLabel": "需已登录会话·夸克当前未登录",
         "yielded": false,
-        "conclusion": "返回内网统一 13715 字节鉴权页（可读 7 字符），须在已登录内网环境的浏览器中打开。等解锁后执行。",
+        "conclusion": "Rune竞对(rune.alibaba-inc.com)夸克跳转到阿里统一登录中心(savey.zp),内网未登录,待已登录会话重跑。",
         "probe": {
           "httpCode": "200",
           "bytes": 13715,
@@ -1345,7 +1395,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1353,14 +1405,14 @@
       "url": "https://mojing.alibaba-inc.com/rival/competitionControl/industryControl",
       "name": "魔镜·竞争管控·行业管控",
       "layer": "D",
-      "status": "reachable_intranet",
+      "status": "need_login_browser",
       "note": "阿里内网行业竞争管控，需内网+登录，待实测（最高价值）",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "intranet",
-        "verdictLabel": "内网源需登录态",
+        "verdict": "need_login_browser",
+        "verdictLabel": "需已登录会话·夸克当前未登录",
         "yielded": false,
-        "conclusion": "返回内网统一 13715 字节鉴权页（可读 7 字符），须在已登录内网环境的浏览器中打开。等解锁后执行。",
+        "conclusion": "魔镜(mojing.alibaba-inc.com)夸克进入后停在魔镜登录/空白,内网未登录,待已登录会话重跑。",
         "probe": {
           "httpCode": "200",
           "bytes": 13715,
@@ -1369,7 +1421,9 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1377,14 +1431,14 @@
       "url": "https://www.qian-gua.com/",
       "name": "千瓜官网",
       "layer": "C",
-      "status": "login",
+      "status": "ok_empty",
       "note": "同千瓜，需会员",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需登录态浏览器",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入成功·窗口内无新增",
         "yielded": false,
-        "conclusion": "官网可读 2871 字符但命中扫码登录/会员/验证码，小红书数据须登录态。已排入夸克批次。",
+        "conclusion": "夸克进入千瓜数据首页/工作台(已登录)成功,但报告列表无本窗口家居专项报告,以美妆/生活方式为主。access ok、window empty。",
         "probe": {
           "httpCode": "200",
           "bytes": 129705,
@@ -1400,7 +1454,9 @@
             "验证码"
           ],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1408,14 +1464,14 @@
       "url": "https://fbi.alibaba-inc.com/fbi/pro/4847/view.htm",
       "name": "FBI·报表(view 4847)",
       "layer": "D",
-      "status": "reachable_intranet",
+      "status": "need_login_browser",
       "note": "阿里内网FBI报表平台，需内网+登录，待实测（最高价值）",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "intranet",
-        "verdictLabel": "内网源需登录态",
+        "verdict": "need_login_browser",
+        "verdictLabel": "需已登录会话·夸克当前未登录",
         "yielded": false,
-        "conclusion": "返回内网统一 13715 字节鉴权页（可读 7 字符），FBI 报表须内网登录态浏览器打开。等解锁后执行。",
+        "conclusion": "FBI行业控比(fbi.alibaba-inc.com/4847)夸克进入后标题为『行业控比』但正文空,内网需登录渲染,待已登录会话重跑。",
         "probe": {
           "httpCode": "200",
           "bytes": 13715,
@@ -1424,26 +1480,28 @@
           "loginHits": [],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 3,
+        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
       }
     }
   ],
   "auditSummary": {
     "testedAt": "2026-08-13",
     "statusCounts": {
-      "need_login_browser": 13,
-      "ok_yield": 10,
-      "need_browser": 8,
-      "ok_empty": 8,
-      "partial": 4,
-      "member_wall": 4,
       "noise": 3,
-      "intranet": 3,
-      "blocked_waf": 2,
+      "ok_empty": 14,
+      "need_login_browser": 4,
+      "ok_yield": 6,
+      "dead": 3,
+      "public_ok": 7,
+      "public_todo": 12,
+      "covered": 2,
+      "member_wall": 3,
       "dlp": 1,
-      "blocked_frozen": 1
+      "partial": 2
     },
-    "note": "2026-08-13 全量 57 源逐一重测。实测方式：先用 curl（Chrome UA + 完整请求头，记录 http_code/size_download/可读字符数/登录与 WAF 关键词命中）建立机械可达性基线（_work/probe57_2026-08-13.json），再对可读源逐个进入正文深挖，对 JS 渲染/登录/内网源改由本机夸克浏览器执行。每源结论见 urls[].testResult。本轮成功攻破：中装协滑块（verify.php）、199IT WordPress REST、新浪财经搜索接口、东方财富 reportapi、发现报告 Next.js _next/data、QuestMobile article-list 逆向、CBNData __INITIAL_STATE__、慧博 GBK 路由与标题日期后缀、沙利文 --http1.1、亿欧 TLS（curl -k）。硬阻断：信通院（瑞数动态 JS WAF）、贝壳研究院（公开内容冻结于 2023-10-20）、慧博正文（PC 客户端墙）、沙利文与 CBNData 深度章节（留资/付费墙）。",
-    "yieldedCount": 13
+    "note": "2026-08-13 全部 57 源逐个复核。第3轮针对 29 个需浏览器/登录源，按用户要求改用本机夸克浏览器(SendInput+扫描码键盘注入，绕过 Chromium 丢弃 keybd_event 的问题)逐个进入抓取，不再用 curl 代替。夸克新增有效情报源：抖音电商罗盘(家装建材近7天大盘硬数据)、36氪家居专题、奥维云网、网经社当日快讯、京准通京点书院、抖店学习中心。access-ok但窗口内无新增：信通院(由WAF拦截升级为可进入)、贝壳研究院(站点停更2023-10)、阿里研究院(停2025-03)、千川帮助中心、洞见研报、阿拉丁、千瓜/蝉妈妈(默认全类目非家居)、小红书学堂(常青课)、抖店/京麦(自家店0数据)、巨量算数(单薄)。partial：CRIC(有7月数但缺城市/口径)、京东麦头条。dead：百家号 app_id=1838493296434206(用户信息不存在)、飞书wiki两篇(Wiki-404)。仍需已登录会话重跑：纷析、魔镜、Rune、FBI 4个阿里内网源。每源明细见 urls[].testResult(round=3)。",
+    "yieldedCount": 19
   }
 }
