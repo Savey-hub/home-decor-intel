@@ -7,3 +7,11 @@
 add_batch2.py
 add_supp.py
 _audit.json
+
+# scratch/temp (2026-08-13: _work误入库244文件致API推送293文件且草稿泄漏公开仓)
+_work/
+_build_docx/
+_push_last.log
+_inv.txt
+_audit.txt
+UsersSavey*
