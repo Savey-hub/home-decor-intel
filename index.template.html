@@ -623,10 +623,12 @@ const policyImpact = it => {
   if(/团标|试点|宣贯|规范|地方/.test(s)) return 'moderate';
   return '';
 };
+// 防御: subIndustry 可能被误写成字符串(2026-08-13曾因此 init 崩溃、半个看板空白), 统一归一化为数组
+const asArr = v => Array.isArray(v) ? v : (typeof v==='string' && v ? v.split(/[\/、,，]/).map(s=>s.trim()).filter(Boolean) : []);
 document.getElementById('policyTL').innerHTML = '<h3 style="color:#f85149;margin:0 0 8px 4px;font-size:13.5px">政策 · 标准</h3>' + (policy.policy||[]).map(p=>`
   <div class="tl-item ${policyImpact(p)}">
     <h3>${p.title}</h3>
-    <div class="meta">${p.issueDate} · ${p.issuer} · ${p.category||''} · ${p.scope||'全国'} ${(p.subIndustry||[]).map(x=>`<span class="cat-chip" data-cat="${x}">${x}</span>`).join('')}</div>
+    <div class="meta">${p.issueDate} · ${p.issuer} · ${p.category||''} · ${p.scope||'全国'} ${asArr(p.subIndustry).map(x=>`<span class="cat-chip" data-cat="${x}">${x}</span>`).join('')}</div>
     <p>${p.summary||''}</p>
     ${p.impact?`<div class="impact">👉 ${p.impact}</div>`:''}
     <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>

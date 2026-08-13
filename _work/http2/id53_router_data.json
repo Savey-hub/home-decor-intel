@@ -1,0 +1,2659 @@
+{
+ "loaderData": {
+  "layout": null,
+  "home/$": {
+   "tdk": {
+    "title": "学习中心首页-抖音电商官方学习平台",
+    "keywords": "抖店,抖音电商,抖音小店,学习中心,运营,技巧,方法,指南,教程,怎么做,收费,办理,注册,流程",
+    "description": "抖音电商学习中心是抖音电商旗下的官方兴趣电商学习平台，致力于为电商商家和抖音达人等生态伙伴提供直播间运营、内容营销、流量获取、店铺运营等方面的教育培训以及官方动态信息，全方位助力用户与抖音电商一同成长。"
+   },
+   "homeResp": {
+    "code": 0,
+    "data": {
+     "module_sort": null,
+     "module_list": [
+      {
+       "module_key": "merchant_stage_course",
+       "module_name": "",
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "sub_module_list": [
+        {
+         "module_key": "",
+         "module_name": "新商-了解平台",
+         "list": [
+          {
+           "title": "💡抖音电商入驻全流程，2分钟搞懂！",
+           "object_id": "vJcUKiheSr41",
+           "object_type": 2,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/7df3f3ef66fb4e44ab4623176973d25b~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2095989841&x-signature=CeG4%2F0Zgms5wVEPbLyFmbEVuZes%3D",
+           "score": "4.7",
+           "view_count": 925134,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcUKiheSr41?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766648395,
+           "is_finished": false
+          },
+          {
+           "title": "再降本增收｜抖音电商2026年全面升级“九大商家扶持政策”",
+           "object_id": "aJco8mrao5nK",
+           "object_type": 1,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/045503ca280d48159edce3c13c54d657~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083209475&x-signature=lMnvj%2Bl6W18Arf7xEhlPyC0WFYI%3D",
+           "score": "4.6",
+           "view_count": 1500749,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJco8mrao5nK?from_school=1&hide_nav_bar=1",
+           "updated_time": 1785493643,
+           "created_time": 1767848925,
+           "is_finished": false
+          },
+          {
+           "title": "【一图读懂】新商权益焕新指南",
+           "object_id": "aJeCWdeSehCW",
+           "object_type": 1,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/15786fb9637d44bda4dad4b3ea60a1d5~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084868009&x-signature=LuLQ5xBDdv528PIzp%2Fm0QTiMTa0%3D",
+           "score": "4.8",
+           "view_count": 211500,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJeCWdeSehCW?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1769507559,
+           "is_finished": false
+          },
+          {
+           "title": "❌高频违规避坑解读，新商必看！",
+           "object_id": "cJcTYWabtoAZ",
+           "object_type": 3,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/05d97e9188334ae2b2ec89349f681cdd~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588313&x-signature=cBEBzvjiexJYSzdQep0gml2dTjA%3D",
+           "lesson_count": 3,
+           "view_count": 250060,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJcTYWabtoAZ?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766672049,
+           "is_finished": false
+          },
+          {
+           "title": "💰低成本学抖店操作，技巧一键会",
+           "object_id": "vJcUKiheTBXw",
+           "object_type": 2,
+           "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/276dd3361211407ead2a8b22d86047a8~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588079&x-signature=NjOICXJ%2FPbksywCuml%2B0IyJZidE%3D",
+           "score": "4.8",
+           "view_count": 432948,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcUKiheTBXw?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766666709,
+           "is_finished": false
+          },
+          {
+           "title": "📈新商发品享体验分！至高 70 分",
+           "object_id": "cJcZP9wGXKQN",
+           "object_type": 3,
+           "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/decec4330b43487ebb48e1e434d25fa7~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588160&x-signature=9mm%2BUaVPipn4tXvshP3F8MDvxnk%3D",
+           "lesson_count": 10,
+           "view_count": 224351,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJcZP9wGXKQN?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766671792,
+           "is_finished": false
+          },
+          {
+           "title": "抖音电商「AI+」系列课｜9步走让生意更简单｜拉到最后有教程",
+           "object_id": "cJdHgW6r2V1C",
+           "object_type": 3,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/82043ad5d03949be8290edf1f317646c~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083312044&x-signature=VZ%2BgxJdSlsoznV%2BXiordlPgxZjc%3D",
+           "lesson_count": 6,
+           "view_count": 180938,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJdHgW6r2V1C?from_school=1&hide_nav_bar=1",
+           "updated_time": 1779097115,
+           "created_time": 1767951588,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": ""
+           }
+          }
+         }
+        },
+        {
+         "module_key": "",
+         "module_name": "新商-开店指南",
+         "list": [
+          {
+           "title": "新商经营动作指南",
+           "object_id": "cJGooZUQhXiA",
+           "object_type": 3,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/ec0efaf64cb943488ab9e6fd75b2559f~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2047884876&x-signature=q9%2B0ZiU66wI%2BrXPCl3UZ2Q%2FAdz0%3D",
+           "lesson_count": 16,
+           "view_count": 278213,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJGooZUQhXiA?from_school=1&hide_nav_bar=1",
+           "updated_time": 1775808595,
+           "created_time": 1732523222,
+           "is_finished": false
+          },
+          {
+           "title": "📖开店基础设置清单，小白必看！",
+           "object_id": "cJcZP9wGXQGr",
+           "object_type": 3,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/16f98a512e634bf3964ce2ff2ae38221~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588339&x-signature=oTE9iEDBqK3oEU5jENx3QU1FRAM%3D",
+           "lesson_count": 6,
+           "view_count": 42380,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJcZP9wGXQGr?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766672461,
+           "is_finished": false
+          },
+          {
+           "title": "【一图讲懂】补发、补寄和重新发货",
+           "object_id": "aJdbUEd7oTMT",
+           "object_type": 1,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/bdf7780b687c48d29d2634c7b6f30445~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084328046&x-signature=tjFzc8XCbBi9sY098aWfcv2IOco%3D",
+           "score": "4.9",
+           "view_count": 7077,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJdbUEd7oTMT?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1768968013,
+           "is_finished": false
+          },
+          {
+           "title": "【一图读懂】新商如何低成本、0门槛发货",
+           "object_id": "aJksF3Y7akyU",
+           "object_type": 1,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/17664416264f4d328f91c82001df59cc~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2096437523&x-signature=UX1I9wsX2BWBRChufZEpQ1EaL%2BI%3D",
+           "view_count": 9182,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJksF3Y7akyU?from_school=1&hide_nav_bar=1",
+           "updated_time": 1781696798,
+           "created_time": 1781075997,
+           "is_finished": false
+          },
+          {
+           "title": "【一图读懂】如何提升商品体验分",
+           "object_id": "aJf3us9iXuK7",
+           "object_type": 1,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/2ad7c1c6a77b4e4485a282effdf2e7d5~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2087350756&x-signature=p9T43Wn4oR2zk4ogmPivZiheMzM%3D",
+           "score": "4.9",
+           "view_count": 4604,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJf3us9iXuK7?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1771990697,
+           "is_finished": false
+          },
+          {
+           "title": "🎯店铺装修+流量分析做对，享流量翻倍",
+           "object_id": "vJcUKiheUByj",
+           "object_type": 2,
+           "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/9364e717745441528b2d532cc19c074a~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588235&x-signature=0KZZM47MFy%2B6vSWzJRbrxdMx0MY%3D",
+           "score": "4.8",
+           "view_count": 9099,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcUKiheUByj?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766668405,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": ""
+           }
+          }
+         }
+        },
+        {
+         "module_key": "",
+         "module_name": "新商-开单攻略",
+         "list": [
+          {
+           "title": "【一图读懂】怎么提高店铺流量💡",
+           "object_id": "aJdJQJT5ft8s",
+           "object_type": 1,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/6ffe065d75324aefa36eccd9d077b438~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083737128&x-signature=0jAKxxY1uagieu6eAEmIPfZQzqk%3D",
+           "score": "4.8",
+           "view_count": 56124,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJdJQJT5ft8s?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1768377102,
+           "is_finished": false
+          },
+          {
+           "title": "【一图读懂】新商家如何找达人带货？",
+           "object_id": "aJerCW3eTZUq",
+           "object_type": 1,
+           "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/eb1f2fc0f738472789f3e8a4ade1bff1~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2086066939&x-signature=d35W4XB2066Hok68z%2BRQ59T%2BYYk%3D",
+           "score": "4.7",
+           "view_count": 22757,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJerCW3eTZUq?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1770706881,
+           "is_finished": false
+          },
+          {
+           "title": "🎁3 种私域渠道，轻松搞定高转化",
+           "object_id": "vJcUKihes7cD",
+           "object_type": 2,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/a26bb99993e141e0b7d1bb6242142def~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2082091636&x-signature=qdLLnqsvE654QGPvZ%2F54Wx1r6tg%3D",
+           "score": "4.7",
+           "view_count": 9477,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcUKihes7cD?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766670047,
+           "is_finished": false
+          },
+          {
+           "title": "💰商品定价难？教你一步定好价",
+           "object_id": "vJcUKiheUSbB",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/5c63f49b1b2347a69fda1c028b1c7675~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588432&x-signature=EqNgy%2BiivxVNIsm%2FGfhi7Jmud%2F0%3D",
+           "score": "4.7",
+           "view_count": 11310,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcUKiheUSbB?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766669245,
+           "is_finished": false
+          },
+          {
+           "title": "🔥4 分钟学会选品找爆款",
+           "object_id": "vJcUKiheUMih",
+           "object_type": 2,
+           "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/937ccd72b11f42f6a35751c5a182eda0~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588288&x-signature=we9CUlqBAhRX3TvR6Xati8nG16s%3D",
+           "score": "4.8",
+           "view_count": 12613,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcUKiheUMih?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766669092,
+           "is_finished": false
+          },
+          {
+           "title": "⚙️商品上架流程拆解，高效不出错",
+           "object_id": "vJcUKiherrzm",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/eea67af7b60540208087dabd3fcced9d~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588263&x-signature=xZDR%2B4s5pGtKTMWjH%2FojqhldC2Y%3D",
+           "score": "4.8",
+           "view_count": 6537,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcUKiherrzm?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766669459,
+           "is_finished": false
+          },
+          {
+           "title": "✅商详 + 资质提交一站式攻略",
+           "object_id": "vJcUKihes2jj",
+           "object_type": 2,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/8a63972643f946b2b4c6977faf6b4bc3~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083587640&x-signature=wt2fg5ao0UiyB2W%2BZXBLTp0sKDk%3D",
+           "score": "4.8",
+           "view_count": 4356,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcUKihes2jj?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766669907,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": ""
+           }
+          }
+         }
+        },
+        {
+         "module_key": "",
+         "module_name": "新商-爆单秘籍",
+         "list": [
+          {
+           "title": "✨0 基础学直播运营，小白也能轻松会",
+           "object_id": "cJcVCqMRW2TP",
+           "object_type": 3,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/376dfc1680d040eca4aa83537dee52cb~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588198&x-signature=%2BLqdHeJWxO101N%2BpkAObnvKMTUA%3D",
+           "lesson_count": 6,
+           "view_count": 26193,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJcVCqMRW2TP?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766673210,
+           "is_finished": false
+          },
+          {
+           "title": "📱短视频入门快速起号必修课",
+           "object_id": "cJcZWvbVTYY1",
+           "object_type": 3,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/58b123ea8e4240bfaa29521a3c8808de~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588363&x-signature=LzRlG13yPnRwnSVOeTzUW5IxV2o%3D",
+           "lesson_count": 6,
+           "view_count": 17123,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJcZWvbVTYY1?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766673776,
+           "is_finished": false
+          },
+          {
+           "title": "🔍做好搜索流量，进店转化不用愁",
+           "object_id": "cJcZX5rHMHhX",
+           "object_type": 3,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/a8be43e4cd3c4f7aa76b6030bc84cca7~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083586307&x-signature=RbwIRcdUruR0fO7%2Fx25X7NDxyGc%3D",
+           "lesson_count": 6,
+           "view_count": 7769,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJcZX5rHMHhX?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766674481,
+           "is_finished": false
+          },
+          {
+           "title": "【一图读懂】商家权益功能操作指南",
+           "object_id": "aJeZewJWcWn1",
+           "object_type": 1,
+           "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/93e12ed91fae44b29b7f01491eb90c80~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2085550106&x-signature=ezgUCuagRd7tVI%2BfzuirvCANM0w%3D",
+           "score": "4.9",
+           "view_count": 3808,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJeZewJWcWn1?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1770190077,
+           "is_finished": false
+          },
+          {
+           "title": "⚙️营销工具+活动技巧，学会直接涨转化",
+           "object_id": "vJcQ3wZzGUkR",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/f6cf9af5061e4aa7b034a9423af208dc~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083587612&x-signature=GnKbALv4Ha%2FWLpRcB4fUBVHUPno%3D",
+           "score": "4.8",
+           "view_count": 4171,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcQ3wZzGUkR?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766670681,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": ""
+           }
+          }
+         }
+        },
+        {
+         "module_key": "",
+         "module_name": "新商-数据复盘",
+         "list": [
+          {
+           "title": "🤝2分钟开通精选联盟，靠达人出爆品",
+           "object_id": "vJcTYWabVTCM",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/db56c5ad3ada42faabff22f982039cae~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083588458&x-signature=sh4lwKctXCnNTcfoC5FKZXmIUL0%3D",
+           "score": "4.8",
+           "view_count": 8318,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcTYWabVTCM?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766670883,
+           "is_finished": false
+          },
+          {
+           "title": "📊达人数据复盘，避90%无效合作",
+           "object_id": "vJcQ3wZzGZcu",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/8f3f213af892425bb83fcab6f5859c21~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083587400&x-signature=9xFXWtV0PdE1vKYG7gfnOS1Bml4%3D",
+           "score": "4.7",
+           "view_count": 6381,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcQ3wZzGZcu?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766671026,
+           "is_finished": false
+          },
+          {
+           "title": "🚀小店随心推投放，低成本快速爆单",
+           "object_id": "vJcZP9wGXEXt",
+           "object_type": 2,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/615150e18b70486a8cf18de7c1b95c8c~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083586335&x-signature=bjv7Buu%2BP1g%2BnuZjuICXlxMXt5Q%3D",
+           "score": "4.9",
+           "view_count": 4324,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcZP9wGXEXt?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766671223,
+           "is_finished": false
+          },
+          {
+           "title": "💸直播投流没效果？学用小店随心推",
+           "object_id": "vJcTYWabVY4q",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/fa4897b04255463c9e95678164ee7be1~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083587353&x-signature=KM0RxtWQif5O7PK802kNOF8qtrI%3D",
+           "score": "4.9",
+           "view_count": 3717,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcTYWabVY4q?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766671348,
+           "is_finished": false
+          },
+          {
+           "title": "💡直播复盘优化攻略，高效提升效果",
+           "object_id": "vJcZZyGdFVe5",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/8dba6f69ba8340cabaa422a327156531~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083587448&x-signature=un1DbZMQeKvxQxcK7a3hB7ZPWTw%3D",
+           "score": "4.9",
+           "view_count": 3599,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJcZZyGdFVe5?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780916338,
+           "created_time": 1766736649,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": ""
+           }
+          }
+         }
+        }
+       ]
+      },
+      {
+       "module_key": "talent_courses_step_one",
+       "module_name": "达人须知",
+       "list": [
+        {
+         "title": "抖音电商带货权限开通 操作指南",
+         "object_id": "101721",
+         "object_type": 1,
+         "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/130bb98eb4a1449484cd8ee4a6d80a3c~tplv-nosaxvqoqg-image.jpeg?x-expires=2013407477&x-signature=t%2Beh9K7bEvZpIk9yrH%2F3C6ev9UU%3D",
+         "score": "4.7",
+         "view_count": 12776514,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/101721?from_school=1&hide_nav_bar=1",
+         "updated_time": 1774959643,
+         "created_time": 1597117211,
+         "is_finished": false
+        },
+        {
+         "title": "抖音电商创作者等级管理规则",
+         "object_id": "aHRbnsP5fSGu",
+         "object_type": 1,
+         "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/66acd8ca834243a5aabf7fd61794ab30~tplv-nosaxvqoqg-image.jpeg?x-expires=1965961707&x-signature=51U8O3p%2BHqqmGGF0zSXfjpesviM%3D",
+         "score": "4.8",
+         "view_count": 2736954,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aHRbnsP5fSGu?from_school=1&hide_nav_bar=1",
+         "updated_time": 1781150269,
+         "created_time": 1647413381,
+         "is_finished": false
+        },
+        {
+         "title": "新达人必知规则",
+         "object_id": "vHttnPqXKuU7",
+         "object_type": 2,
+         "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/7c99ae414ed14d608de5fc69d5a06f0d~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2052711210&x-signature=7cJXcRGAAXN7gQ5n4lAcWiQnf2E%3D",
+         "score": "4.9",
+         "view_count": 460671,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vHttnPqXKuU7?from_school=1&hide_nav_bar=1",
+         "updated_time": 1778224730,
+         "created_time": 1694679628,
+         "is_finished": false
+        },
+        {
+         "title": "行业高频违规白皮书",
+         "object_id": "cJae55Zn4rfy",
+         "object_type": 3,
+         "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/e8bad1301f5049ad96b2475714ab6568~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2085380613&x-signature=h1k2Uf4o1%2BHe6ehI80f%2BqFKgyIA%3D",
+         "score": "4.5",
+         "lesson_count": 1,
+         "view_count": 311217,
+         "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJae55Zn4rfy?from_school=1&hide_nav_bar=1",
+         "updated_time": 1770033464,
+         "created_time": 1763649498,
+         "is_finished": false
+        },
+        {
+         "title": "虚假宣传规则解读白皮书",
+         "object_id": "aJb3vD79JS1W",
+         "object_type": 1,
+         "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/e8c4e327f10949d7a56516e0803c767f~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2095226471&x-signature=9xmWpiFOzlDHVgCiHminYVFK1ZA%3D",
+         "score": "4.8",
+         "view_count": 503840,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJb3vD79JS1W?from_school=1&hide_nav_bar=1",
+         "updated_time": 1785327608,
+         "created_time": 1764157993,
+         "is_finished": false
+        }
+       ],
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       }
+      },
+      {
+       "module_key": "talent_courses_step_two",
+       "module_name": "多体裁经营",
+       "list": [
+        {
+         "title": "新手达人必修课｜直播内容创作技巧",
+         "object_id": "vJdo4qu94oHR",
+         "object_type": 2,
+         "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/bd8999dfa3c94e6596fe6a3fe1c7e848~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084354615&x-signature=uEkO9iXtfok7LFIzNVY%2FM7R6WZA%3D",
+         "score": "4.8",
+         "view_count": 22561,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdo4qu94oHR?from_school=1&hide_nav_bar=1",
+         "updated_time": 1782541903,
+         "created_time": 1768994529,
+         "is_finished": false
+        },
+        {
+         "title": "新手达人必修课｜短视频内容创作技巧",
+         "object_id": "vJdqu6VMF2Sj",
+         "object_type": 2,
+         "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/179579a8be934bcbae59d652ade4a2c1~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084356301&x-signature=KCZrtMjnDFe3L56Zpb%2F8FdkyAKc%3D",
+         "score": "4.7",
+         "view_count": 22592,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdqu6VMF2Sj?from_school=1&hide_nav_bar=1",
+         "updated_time": 1782541917,
+         "created_time": 1768996226,
+         "is_finished": false
+        },
+        {
+         "title": "专题课｜视频内容提优必修课",
+         "object_id": "cJXYxsV7ZM2q",
+         "object_type": 3,
+         "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/0325c8cc0b2a4e32b4ce1dfab70621a9~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2074239628&x-signature=ub3pahFo0H2IGAeTGKiTXTMxFT8%3D",
+         "lesson_count": 3,
+         "view_count": 40239,
+         "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJXYxsV7ZM2q?from_school=1&hide_nav_bar=1",
+         "updated_time": 1775794271,
+         "created_time": 1758183219,
+         "is_finished": false
+        },
+        {
+         "title": "专题课丨短视频提升秘籍",
+         "object_id": "cJRQG5sDKzSN",
+         "object_type": 3,
+         "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/62d6f728d6fa4703a159da0c375dee95~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2063348530&x-signature=T4cQwFdXPgDelnIpEQKwX7e9mnI%3D",
+         "lesson_count": 5,
+         "view_count": 81754,
+         "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJRQG5sDKzSN?from_school=1&hide_nav_bar=1",
+         "updated_time": 1753338468,
+         "created_time": 1747795615,
+         "is_finished": false
+        },
+        {
+         "title": "DOU Case | 好内容的100个好点子 _ 抖音电商好看内容",
+         "object_id": "fdJZeqVnJb6qb",
+         "object_type": 16,
+         "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/d5cf746d73794ad59c749d32053d3915~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2077091680&x-signature=ozITZqIVsdbvKNOfwmNI2dE%2FdzM%3D",
+         "score": "4.9",
+         "view_count": 3004,
+         "to_url": "https://school.jinritemai.com/doudian/wap/lark-doc/fdJZeqVnJb6qb?from_school=1&hide_nav_bar=1",
+         "updated_time": 1761879549,
+         "created_time": 1761730911,
+         "is_finished": false
+        },
+        {
+         "title": "新手达人必修课｜图文内容创作技巧",
+         "object_id": "vJdoJnmBR22j",
+         "object_type": 2,
+         "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/94422a405e6a48c6bc6c3af7d9e77938~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084354971&x-signature=A%2B1XDGjQ2Gko92hV%2Benj1kA0DeA%3D",
+         "score": "4.7",
+         "view_count": 27787,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdoJnmBR22j?from_school=1&hide_nav_bar=1",
+         "updated_time": 1782541851,
+         "created_time": 1768994890,
+         "is_finished": false
+        }
+       ],
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       }
+      },
+      {
+       "module_key": "talent_courses_step_three",
+       "module_name": "选品技巧",
+       "list": [
+        {
+         "title": "🔥达人必看！双佣金合作新玩法",
+         "object_id": "fdJZqcro3HE5d",
+         "object_type": 16,
+         "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/7b3b0aa55290450eb80ab70c30467a34~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2077515802&x-signature=kZyZf88MMFN%2FaFzCrl%2BxUgsRgXI%3D",
+         "score": "4.4",
+         "view_count": 3008,
+         "to_url": "https://school.jinritemai.com/doudian/wap/lark-doc/fdJZqcro3HE5d?from_school=1&hide_nav_bar=1",
+         "updated_time": 1762416246,
+         "created_time": 1762155467,
+         "is_finished": false
+        },
+        {
+         "title": "新手达人必修课｜视频&图文选品技巧",
+         "object_id": "vJdo4qu94Yfy",
+         "object_type": 2,
+         "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/ddc66efdb8b24ff9815d72e5a8551f84~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084353538&x-signature=2VnLEtZ07blW8A8cr2iCq20gQlY%3D",
+         "score": "4.9",
+         "view_count": 34897,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdo4qu94Yfy?from_school=1&hide_nav_bar=1",
+         "updated_time": 1782542180,
+         "created_time": 1768993431,
+         "is_finished": false
+        },
+        {
+         "title": "新手达人必修课｜直播选品技巧",
+         "object_id": "vJdqu6VMErhm",
+         "object_type": 2,
+         "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/a83a4664e4d046a3883f2c3612ea239e~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084353853&x-signature=qwLdu%2FW11d3noQ%2FTgcF9BWOalv8%3D",
+         "score": "4.8",
+         "view_count": 48547,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdqu6VMErhm?from_school=1&hide_nav_bar=1",
+         "updated_time": 1782541892,
+         "created_time": 1768993766,
+         "is_finished": false
+        },
+        {
+         "title": "新手达人必修课｜橱窗选品技巧",
+         "object_id": "vJdqu6VMEmqH",
+         "object_type": 2,
+         "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/db5ebf187d0f465ab4a4297b85e6ad61~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084353208&x-signature=k5QziqXZXtFHQPqc7Tm9ZG14mDA%3D",
+         "score": "4.8",
+         "view_count": 61054,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdqu6VMEmqH?from_school=1&hide_nav_bar=1",
+         "updated_time": 1782541880,
+         "created_time": 1768992957,
+         "is_finished": false
+        }
+       ],
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       }
+      },
+      {
+       "module_key": "talent_courses_step_four",
+       "module_name": "获取流量",
+       "list": [
+        {
+         "title": "新手达人必修课｜直播流量提升技巧",
+         "object_id": "vJdo4qu94dYT",
+         "object_type": 2,
+         "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/3e720b57d0654d299b123cf6947554bc~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084354172&x-signature=uilf%2Fp2%2BkAzhOwZ3p%2BaLN3pG12A%3D",
+         "score": "4.8",
+         "view_count": 25991,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdo4qu94dYT?from_school=1&hide_nav_bar=1",
+         "updated_time": 1782541929,
+         "created_time": 1768994069,
+         "is_finished": false
+        },
+        {
+         "title": "新手达人必修课｜图文&视频流量提升技巧",
+         "object_id": "vJdeGC5i8UTH",
+         "object_type": 2,
+         "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/8ec00c04ae304cab9df15ffd1bc40de3~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084355179&x-signature=Odn1sHPsE5MA%2B6%2FXCiOoOPt42iw%3D",
+         "score": "4.8",
+         "view_count": 11268,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdeGC5i8UTH?from_school=1&hide_nav_bar=1",
+         "updated_time": 1782542165,
+         "created_time": 1768995098,
+         "is_finished": false
+        },
+        {
+         "title": "新手达人必修课｜橱窗流量提升技巧",
+         "object_id": "vJdqu6VMEwaF",
+         "object_type": 2,
+         "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/8a13d8e470504d12bb0014b9226b5f8c~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084355952&x-signature=KynVmFYU9dVzPI06dQkuHU3W8V0%3D",
+         "score": "4.8",
+         "view_count": 111032,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdqu6VMEwaF?from_school=1&hide_nav_bar=1",
+         "updated_time": 1780470920,
+         "created_time": 1768995841,
+         "is_finished": false
+        },
+        {
+         "title": "新手达人必修课｜粉丝增长方法",
+         "object_id": "vJdo4qu94t9u",
+         "object_type": 2,
+         "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/931a1efc3b9548e4bf1711cb758a3f3f~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2084355558&x-signature=sAzPrGalWiSQQqynpQMSuBnCka4%3D",
+         "score": "4.8",
+         "view_count": 119683,
+         "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJdo4qu94t9u?from_school=1&hide_nav_bar=1",
+         "updated_time": 1782541867,
+         "created_time": 1768995480,
+         "is_finished": false
+        }
+       ],
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       }
+      },
+      {
+       "module_key": "talent_courses_step_five",
+       "module_name": "营销工具",
+       "list": [
+        {
+         "title": "解锁双福袋玩法！互动转化齐飞，经营效率翻倍",
+         "object_id": "fdJZeqW3v2XXL",
+         "object_type": 16,
+         "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/991c9121e674489798840e9d404dabb1~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2077169999&x-signature=3rbFbMz1YtYgkqAoK5Ye%2FXtEbB4%3D",
+         "score": "4.7",
+         "view_count": 3010,
+         "to_url": "https://school.jinritemai.com/doudian/wap/lark-doc/fdJZeqW3v2XXL?from_school=1&hide_nav_bar=1",
+         "updated_time": 1762939201,
+         "created_time": 1761809866,
+         "is_finished": false
+        },
+        {
+         "title": "直播间流量获取秘籍_做好短视频Livehead运营",
+         "object_id": "fdJa2iokkJPD2",
+         "object_type": 16,
+         "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/044829fa4d0642d3bff5bfaeb51b0ccc~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2078104633&x-signature=GRksclPkxWZ6AV%2BKB8VExFFbfCw%3D",
+         "score": "4.8",
+         "view_count": 3001,
+         "to_url": "https://school.jinritemai.com/doudian/wap/lark-doc/fdJa2iokkJPD2?from_school=1&hide_nav_bar=1",
+         "updated_time": 1762748848,
+         "created_time": 1762351025,
+         "is_finished": false
+        }
+       ],
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       }
+      },
+      {
+       "module_key": "case_ranking",
+       "module_name": "优质经营案例榜",
+       "list": [
+        {
+         "title": "应季上新品直击用户需求，livehead短视频精准引流推动高转化【中小商家案例】",
+         "object_id": "aJb9xvjXh4CX",
+         "object_type": 1,
+         "cover_image": "https://p26-item.ecombdimg.com/tos-cn-i-5mmsx3fupr/781ab0b30644e92b0545ae9dd0864666~tplv-5mmsx3fupr-origin-png.png",
+         "score": "4.8",
+         "view_count": 322418,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJb9xvjXh4CX?from_school=1&hide_nav_bar=1",
+         "updated_time": 1765888089,
+         "created_time": 1764323550,
+         "is_finished": false
+        },
+        {
+         "title": "热门品类铺货优化商品信息，报名大促及成长任务加速新店生意冷启动【中小商家案例-商家成长】",
+         "object_id": "aJMJV6YyTaru",
+         "object_type": 1,
+         "cover_image": "https://p26-item.ecombdimg.com/tos-cn-i-5mmsx3fupr/0d117b8f05be91e2370646b23bfde3c7~tplv-5mmsx3fupr-origin-png.png",
+         "score": "4.7",
+         "view_count": 102617,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJMJV6YyTaru?from_school=1&hide_nav_bar=1",
+         "updated_time": 1783048930,
+         "created_time": 1740464935,
+         "is_finished": false
+        },
+        {
+         "title": "优化商品货盘精准匹配消费需求，强化直播间信任促成高效转化【中小商家案例】",
+         "object_id": "aJaGhvENJo26",
+         "object_type": 1,
+         "cover_image": "https://p26-item.ecombdimg.com/tos-cn-i-5mmsx3fupr/d628df4be565f12848964c904af9844d~tplv-5mmsx3fupr-origin-png.png",
+         "score": "4.9",
+         "view_count": 388449,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJaGhvENJo26?from_school=1&hide_nav_bar=1",
+         "updated_time": 1783048938,
+         "created_time": 1763113923,
+         "is_finished": false
+        }
+       ],
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       }
+      },
+      {
+       "module_key": "peer_learning_course_ranking",
+       "module_name": "同行们都在学",
+       "list": [
+        {
+         "title": "电商行业实战指南｜用好 AI 工具，大幅提升电商运营效率",
+         "object_id": "fdJofJMRrmsN6",
+         "object_type": 16,
+         "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/a36cfbd7baf14135918cd10835cabd08~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2101347756&x-signature=WCRANWiTsgpN%2FgQOPxJ9W7AHQxU%3D",
+         "view_count": 3001,
+         "to_url": "https://school.jinritemai.com/doudian/wap/lark-doc/fdJofJMRrmsN6?from_school=1&hide_nav_bar=1",
+         "updated_time": 1786021677,
+         "created_time": 1785987655,
+         "is_finished": false
+        },
+        {
+         "title": "售后自动审核助手，提效必备！",
+         "object_id": "fdJikTPY3H4rz",
+         "object_type": 16,
+         "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/178a782b13f94507ae95d2f378c6db3c~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2092812083&x-signature=VPaVZrpjf7BATKGK6kQUQfaJ90Y%3D",
+         "view_count": 3004,
+         "to_url": "https://school.jinritemai.com/doudian/wap/lark-doc/fdJikTPY3H4rz?from_school=1&hide_nav_bar=1",
+         "updated_time": 1778044270,
+         "created_time": 1777451922,
+         "is_finished": false
+        },
+        {
+         "title": "一图看懂｜新版服务分提分攻略",
+         "object_id": "aJoJBpYipz5o",
+         "object_type": 1,
+         "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/f3e98dcbbf574e1a87d4acf976033af9~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2100668971&x-signature=V1iw3VDx1g%2BSMEpVCJy8PS15KAE%3D",
+         "view_count": 3239,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJoJBpYipz5o?from_school=1&hide_nav_bar=1",
+         "updated_time": 1785323197,
+         "created_time": 1785308257,
+         "is_finished": false
+        }
+       ],
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       }
+      },
+      {
+       "module_key": "traffic_acquisition_ranking",
+       "module_name": "流量获取技巧榜",
+       "list": [
+        {
+         "title": "【一图读懂】💡新店起量秘籍",
+         "object_id": "aJdJWYgiqrGj",
+         "object_type": 1,
+         "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/c216d421ad9b43ac9112177003559d78~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083737025&x-signature=ad13pYx6%2BpF8u%2BTImF0qKg8JToo%3D",
+         "score": "4.8",
+         "view_count": 613825,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJdJWYgiqrGj?from_school=1&hide_nav_bar=1",
+         "updated_time": 1776844896,
+         "created_time": 1768376891,
+         "is_finished": false
+        },
+        {
+         "title": "AI智能成片-商家操作指南",
+         "object_id": "aJco8mraoFXH",
+         "object_type": 1,
+         "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/f507390d2af44ecd89a67361a790db7b~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083216286&x-signature=znVO0yS0hZaqqZWOf1DTdqUQStk%3D",
+         "score": "4.8",
+         "view_count": 247034,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJco8mraoFXH?from_school=1&hide_nav_bar=1",
+         "updated_time": 1785985523,
+         "created_time": 1767853622,
+         "is_finished": false
+        },
+        {
+         "title": "巨量千川「全域推商品-全店托管」投放指南",
+         "object_id": "aJdBXwK4D7j9",
+         "object_type": 1,
+         "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/4a203869357040e6ab6bba80c8509ea1~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083728866&x-signature=Zzq73Toi2iTWAsTrq2p1u6TwveE%3D",
+         "score": "4.8",
+         "view_count": 187513,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJdBXwK4D7j9?from_school=1&hide_nav_bar=1",
+         "updated_time": 1776844896,
+         "created_time": 1768368778,
+         "is_finished": false
+        }
+       ],
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       }
+      },
+      {
+       "module_key": "new_rules",
+       "module_name": "新规速递",
+       "list": [
+        {
+         "title": "抖音电商官方大促活动报名规则",
+         "object_id": "aJA7pRua7CeV",
+         "object_type": 1,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJA7pRua7CeV?from_school=1&hide_nav_bar=1",
+         "updated_time": 1786580360,
+         "is_finished": false
+        },
+        {
+         "title": "【滋补保健】行业管理规范",
+         "object_id": "109547",
+         "object_type": 1,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/109547?from_school=1&hide_nav_bar=1",
+         "updated_time": 1786550410,
+         "is_finished": false
+        },
+        {
+         "title": "关于新增部分“禁售品牌”的意见征集通知",
+         "object_id": "aJobai14Fb2J",
+         "object_type": 1,
+         "to_url": "https://school.jinritemai.com/doudian/wap/article/aJobai14Fb2J?from_school=1&hide_nav_bar=1",
+         "updated_time": 1786590006,
+         "is_finished": false
+        }
+       ],
+       "jump_button": {
+        "type": 1,
+        "text": "更多",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": "https://school.jinritemai.com/doudian/web/rules"
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       }
+      },
+      {
+       "module_key": "rule_center_entry",
+       "module_name": "",
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "sub_module_list": [
+        {
+         "module_key": "rule_center_entry_new",
+         "module_name": "新规速递",
+         "list": [
+          {
+           "title": "抖音电商官方大促活动报名规则",
+           "object_id": "aJA7pRua7CeV",
+           "object_type": 1,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJA7pRua7CeV?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786580360,
+           "is_finished": false
+          },
+          {
+           "title": "【滋补保健】行业管理规范",
+           "object_id": "109547",
+           "object_type": 1,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/109547?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786550410,
+           "is_finished": false
+          },
+          {
+           "title": "【母婴图书玩具宠物】行业管理规范",
+           "object_id": "104286",
+           "object_type": 1,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/104286?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786464011,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/rules"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "rule_center_entry_voting",
+         "module_name": "征集中",
+         "list": [
+          {
+           "title": "关于新增部分“禁售品牌”的意见征集通知",
+           "object_id": "aJobai14Fb2J",
+           "object_type": 1,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJobai14Fb2J?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786590006,
+           "is_finished": false,
+           "effect_end": 1787155199
+          },
+          {
+           "title": "关于修订《【母婴图书玩具宠物】行业管理规范》的意见征集通知",
+           "object_id": "aJp39wPPf9io",
+           "object_type": 1,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJp39wPPf9io?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786542125,
+           "is_finished": false,
+           "effect_end": 1787146923
+          },
+          {
+           "title": "关于修订《【商家-发货超时】实施细则》的意见征集通知",
+           "object_id": "aJogtV8C9Bby",
+           "object_type": 1,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJogtV8C9Bby?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786419723,
+           "is_finished": false,
+           "effect_end": 1787024523
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/rules/ruleHouse?tabKey=rules&btm_ppre=a4977.b4369.c0.d0&btm_pre=a4977.b31122.c0.d0&btm_show_id=5eba3a9f-3542-4511-b942-5dc6dca53bef"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "rule_center_entry_public",
+         "module_name": "公示中",
+         "list": [
+          {
+           "title": "关于修订《【酒类】行业管理规范》的公示通知",
+           "object_id": "aJoU3XubYVn9",
+           "object_type": 1,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJoU3XubYVn9?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786512318,
+           "is_finished": false
+          },
+          {
+           "title": "关于修订《商家【拒绝或超时履行开票义务】实施细则》的公示通知",
+           "object_id": "aJojmRVFeooX",
+           "object_type": 1,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJojmRVFeooX?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786438135,
+           "is_finished": false
+          },
+          {
+           "title": "关于废止《【全球购】预售业务管理规则》的公示通知",
+           "object_id": "aJoU3XubYAJD",
+           "object_type": 1,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJoU3XubYAJD?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786418018,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/rules/ruleHouse?tabKey=rules&btm_ppre=a4977.b31122.c0.d0&btm_pre=a4977.b31122.c0.d0&btm_show_id=f32d3611-2468-4479-8340-6db291f4b835"
+           }
+          }
+         }
+        }
+       ]
+      },
+      {
+       "module_key": "collection",
+       "module_name": "我的收藏",
+       "jump_button": {
+        "type": 1,
+        "text": "更多",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": "https://school.jinritemai.com/doudian/web/user"
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "更多",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": "https://school.jinritemai.com/doudian/web/subject"
+         }
+        }
+       }
+      },
+      {
+       "module_key": "recent_study",
+       "module_name": "最近学习",
+       "jump_button": {
+        "type": 1,
+        "text": "更多",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": "https://school.jinritemai.com/doudian/web/my-course"
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "更多",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": "https://school.jinritemai.com/doudian/web/subject"
+         }
+        }
+       }
+      },
+      {
+       "module_key": "ecom_university_popular_content",
+       "module_name": "大家都在学-达人提报",
+       "jump_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "default_button": {
+        "type": 1,
+        "text": "",
+        "action": {
+         "type": 1,
+         "jump_target": {
+          "type": 2,
+          "schema": ""
+         }
+        }
+       },
+       "sub_module_list": [
+        {
+         "module_key": "order_boom_cheats",
+         "module_name": "爆单秘籍",
+         "list": [
+          {
+           "title": "5分钟玩转AIGC，一键生成爆量内容【短视频】",
+           "object_id": "aJjFcXhjd1zB",
+           "object_type": 1,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/0b0752559f9449ff943009b41f2dbe03~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2093694040&x-signature=Hjo7dhRGtBvaxUj1dgiWxGQ03bQ%3D",
+           "view_count": 121475,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJjFcXhjd1zB?from_school=1&hide_nav_bar=1",
+           "updated_time": 1778566416,
+           "created_time": 1778251101,
+           "is_finished": false
+          },
+          {
+           "title": "【一图读懂】新商家流量支持全攻略📖",
+           "object_id": "aJdYcczA2Ufj",
+           "object_type": 1,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/23fe9607fc34437ba1e31ba4072516fc~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2083737324&x-signature=88xW5CsY7r1Kz%2F6F3px7iKlum0s%3D",
+           "score": "4.5",
+           "view_count": 338904,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJdYcczA2Ufj?from_school=1&hide_nav_bar=1",
+           "updated_time": 1776844896,
+           "created_time": 1768377294,
+           "is_finished": false
+          },
+          {
+           "title": "少踩坑、快起量！中小商家自播必学宝典导览",
+           "object_id": "aJjYNyX87TgE",
+           "object_type": 1,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/0d157e14a3454626bac84a895c3f6be8~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2098424668&x-signature=qisoZYAT%2FhCFHEQR6tbehCt%2BZVQ%3D",
+           "view_count": 60302,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJjYNyX87TgE?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783073312,
+           "created_time": 1779174022,
+           "is_finished": false
+          },
+          {
+           "title": "从新品冷启到爆品突围：中小商家高效动销实操指南",
+           "object_id": "aJjnSdTieeyY",
+           "object_type": 1,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/73629b39aaac4a2e8cf77b9ff8800123~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2095758872&x-signature=PHdLY318sJREo29%2FcR38krNclK0%3D",
+           "view_count": 34289,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJjnSdTieeyY?from_school=1&hide_nav_bar=1",
+           "updated_time": 1780467940,
+           "created_time": 1779443133,
+           "is_finished": false
+          },
+          {
+           "title": "中小商家抖店经营『通关攻略』",
+           "object_id": "aJXMjFbD4qsf",
+           "object_type": 1,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/eb0793da9d8e40f4ae050af86de81fe7~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2073366731&x-signature=kEtVplvZfFPP%2Bu%2Bb9lKwDDaAEw4%3D",
+           "score": "4.7",
+           "view_count": 78015,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJXMjFbD4qsf?from_school=1&hide_nav_bar=1",
+           "updated_time": 1758542609,
+           "created_time": 1757926406,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=新商成长&sub_menu_name=爆单秘籍"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "qianchuan_delivery",
+         "module_name": "千川投放",
+         "list": [
+          {
+           "title": "优质素材标准下，各行业商家怎样做好「千川素材」？",
+           "object_id": "cJnEzXyPzqcq",
+           "object_type": 3,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/a18c1bbb8057473eb1436365342c9894~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2098855225&x-signature=Pg2ZB1pCClAN%2F1xijyuyThqYE78%3D",
+           "lesson_count": 2,
+           "view_count": 31073,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJnEzXyPzqcq?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783561209,
+           "created_time": 1783494386,
+           "is_finished": false
+          },
+          {
+           "title": "【中小商家】千川投放提效爆发 商家案例合集",
+           "object_id": "cJnLCP8smTAM",
+           "object_type": 3,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/e679e50a70fb4a29a45f95a1b56dd2dd~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2099272238&x-signature=J7xOvjccmZOHk1MgnUWp%2BGSmQPI%3D",
+           "lesson_count": 3,
+           "view_count": 21291,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJnLCP8smTAM?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783943075,
+           "created_time": 1783677250,
+           "is_finished": false
+          },
+          {
+           "title": "不知道怎么做好投放？手把手带你轻松玩转巨量千川！",
+           "object_id": "cJRCSqPkhJx2",
+           "object_type": 3,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/480ea1f8f4cd4daebbc05792ea294af3~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2087631513&x-signature=8AM%2FqnS3xZKUmLAqI%2BuvEfuqYeQ%3D",
+           "lesson_count": 7,
+           "view_count": 421875,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJRCSqPkhJx2?from_school=1&hide_nav_bar=1",
+           "updated_time": 1782356795,
+           "created_time": 1747128031,
+           "is_finished": false
+          },
+          {
+           "title": "匹配用户优化投放+千川流量扶持，实现投放消耗与成交规模双增长【中小商家案例】",
+           "object_id": "aJnEjzuCsSdW",
+           "object_type": 1,
+           "cover_image": "https://p26-item.ecombdimg.com/tos-cn-i-5mmsx3fupr/2077c4fa1cc78b14402b706ac3d4deb8~tplv-5mmsx3fupr-origin-png.png",
+           "view_count": 4563,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJnEjzuCsSdW?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783478583,
+           "created_time": 1783412006,
+           "is_finished": false
+          },
+          {
+           "title": "巨量千川投放攻略",
+           "object_id": "cHWQL68gmvPg",
+           "object_type": 3,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/8fca86ac7c9b41e5b750f2d3be376d72~tplv-nosaxvqoqg-image.jpeg?x-expires=1971151621&x-signature=DPL%2F9bXM9PEbu17y04gEcEo7SXc%3D",
+           "score": "4.6",
+           "lesson_count": 4,
+           "view_count": 89304,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cHWQL68gmvPg?from_school=1&hide_nav_bar=1",
+           "updated_time": 1655792619,
+           "created_time": 1655791497,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=营销推广&sub_menu_name=千川投放"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "short_video_operation",
+         "module_name": "短视频运营",
+         "list": [
+          {
+           "title": "5分钟玩转AIGC，一键生成爆量内容【短视频】",
+           "object_id": "aJjFcXhjd1zB",
+           "object_type": 1,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/0b0752559f9449ff943009b41f2dbe03~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2093694040&x-signature=Hjo7dhRGtBvaxUj1dgiWxGQ03bQ%3D",
+           "view_count": 121475,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJjFcXhjd1zB?from_school=1&hide_nav_bar=1",
+           "updated_time": 1778566416,
+           "created_time": 1778251101,
+           "is_finished": false
+          },
+          {
+           "title": "短视频运营篇｜如何提升短视频发布数量",
+           "object_id": "cJWYT44FTmVB",
+           "object_type": 3,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/091fd71486704b23a0b3038f259b4927~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075704785&x-signature=rZkDUlIPIFO%2BjRtMHdCoMWzOUJQ%3D",
+           "lesson_count": 1,
+           "view_count": 246025,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJWYT44FTmVB?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045338,
+           "created_time": 1756296025,
+           "is_finished": false
+          },
+          {
+           "title": "一次学懂！中小商家短视频运营全流程秘籍",
+           "object_id": "cJnHgkiHcTKT",
+           "object_type": 3,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/2682c02d7a0543c7b2d97cf78eb7aad3~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2098930400&x-signature=cXmGCqMajEjB0cMnQu4hfwu4YdA%3D",
+           "lesson_count": 4,
+           "view_count": 9208,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJnHgkiHcTKT?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783657830,
+           "created_time": 1783569318,
+           "is_finished": false
+          },
+          {
+           "title": "短视频运营篇｜如何让短视频获取更多流量",
+           "object_id": "cJXKrNoJztZf",
+           "object_type": 3,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/37f4b254a0fa47688a5325eb3eadbcc5~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075705257&x-signature=fVdtuq4Mrd4jlZsBP7SAoVkALUs%3D",
+           "lesson_count": 1,
+           "view_count": 200630,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJXKrNoJztZf?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045475,
+           "created_time": 1757920681,
+           "is_finished": false
+          },
+          {
+           "title": "短视频运营入门必修课",
+           "object_id": "cJRenS18cWZi",
+           "object_type": 3,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/803555fac2e24989af65d58caa066d4f~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2063208118&x-signature=aR1uWCqlLH3j1X5qIwMbdZlUDVo%3D",
+           "lesson_count": 6,
+           "view_count": 236379,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJRenS18cWZi?from_school=1&hide_nav_bar=1",
+           "updated_time": 1751254528,
+           "created_time": 1747847515,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=流量运营&sub_menu_name=短视频运营"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "blockbuster_creation",
+         "module_name": "爆款打造",
+         "list": [
+          {
+           "title": "优质素材标准下，各行业商家怎样做好「千川素材」？",
+           "object_id": "cJnEzXyPzqcq",
+           "object_type": 3,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/a18c1bbb8057473eb1436365342c9894~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2098855225&x-signature=Pg2ZB1pCClAN%2F1xijyuyThqYE78%3D",
+           "lesson_count": 2,
+           "view_count": 31073,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJnEzXyPzqcq?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783561209,
+           "created_time": 1783494386,
+           "is_finished": false
+          },
+          {
+           "title": "【中小商家】实拍短视频突出爆品优势，联盟达人放大+投放拉动投资回报率爆发",
+           "object_id": "aJnmFhugJcaC",
+           "object_type": 1,
+           "cover_image": "https://p26-item.ecombdimg.com/tos-cn-i-5mmsx3fupr/396c31f0878a0b0b58a709f9d6a67521~tplv-5mmsx3fupr-origin-png.png",
+           "view_count": 5840,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJnmFhugJcaC?from_school=1&hide_nav_bar=1",
+           "updated_time": 1784725173,
+           "created_time": 1784638606,
+           "is_finished": false
+          },
+          {
+           "title": "商品优化篇｜如何持续进行商品标题优化",
+           "object_id": "cJWYR2hBzhSP",
+           "object_type": 3,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/db5df0384ff841bf9ee8409b4fd0ab8d~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075707700&x-signature=aqWxHu83MOsZpGXu5BYUdlwFSwU%3D",
+           "lesson_count": 1,
+           "view_count": 206194,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJWYR2hBzhSP?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045539,
+           "created_time": 1756295646,
+           "is_finished": false
+          },
+          {
+           "title": "新商冷启篇｜如何让更多商品实现动销",
+           "object_id": "cJXkSAvLaXtJ",
+           "object_type": 3,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/95716519147d4ea3b466e6099645bcae~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075697378&x-signature=xMRO6T75cjgDrlQilWz1xzIRy2w%3D",
+           "lesson_count": 1,
+           "view_count": 212172,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJXkSAvLaXtJ?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045310,
+           "created_time": 1758533339,
+           "is_finished": false
+          },
+          {
+           "title": "商品运营精准承接用户购买需求，直播运营引爆消费热情推动销量翻番【中小商家案例】",
+           "object_id": "aJa7xfoj4sYv",
+           "object_type": 1,
+           "cover_image": "https://p26-item.ecombdimg.com/tos-cn-i-5mmsx3fupr/4167a59b4dcccc5a6f58b30505e35d02~tplv-5mmsx3fupr-origin-png.png",
+           "score": "4.4",
+           "view_count": 27964,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJa7xfoj4sYv?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783048938,
+           "created_time": 1762528766,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=商品运营&sub_menu_name=爆款打造"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "talent_cooperation",
+         "module_name": "达人合作",
+         "list": [
+          {
+           "title": "新商冷启篇-开通精选联盟并发布商品",
+           "object_id": "vJYLzawBnVJw",
+           "object_type": 2,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/c0eaa2231b0043ceaf381d663640c9dd~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2079332740&x-signature=c49RsDhzT9rEsnch8DbZCaBWqpw%3D",
+           "view_count": 4035,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJYLzawBnVJw?from_school=1&hide_nav_bar=1",
+           "updated_time": 1781531354,
+           "created_time": 1760085407,
+           "is_finished": false
+          },
+          {
+           "title": "精选联盟商家经营指南2024",
+           "object_id": "fdJ9UKwozkSqc",
+           "object_type": 16,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/d15c8df728524325a15fb31173914d0f~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2035197920&x-signature=yEdq%2B%2BxqMxLRQj72kBPeZltk6xI%3D",
+           "score": "4.8",
+           "view_count": 3170,
+           "to_url": "https://school.jinritemai.com/doudian/wap/lark-doc/fdJ9UKwozkSqc?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783327106,
+           "created_time": 1719837843,
+           "is_finished": false
+          },
+          {
+           "title": "🤝双佣金：解锁低佣投流新效率，引爆达人合作增量",
+           "object_id": "aJbDk7r3CVX1",
+           "object_type": 1,
+           "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/17297f0dd1af493e9c212143a1dbe99a~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2080798433&x-signature=0YNJCdRxWspWhBcxdtDOv9RNRvc%3D",
+           "score": "4.6",
+           "view_count": 29748,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJbDk7r3CVX1?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783048939,
+           "created_time": 1764589750,
+           "is_finished": false
+          },
+          {
+           "title": "T+S商单任务商家使用手册",
+           "object_id": "fdJhpQNgq5WQh",
+           "object_type": 16,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/210b6b7dfecc4f6da3a8e077810616f0~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2091169904&x-signature=58uV%2FCE3ZNDiJr77AEJga8XdonE%3D",
+           "view_count": 3003,
+           "to_url": "https://school.jinritemai.com/doudian/wap/lark-doc/fdJhpQNgq5WQh?from_school=1&hide_nav_bar=1",
+           "updated_time": 1775814480,
+           "created_time": 1775809783,
+           "is_finished": false
+          },
+          {
+           "title": "如何让达人来主动给你带货！",
+           "object_id": "cJb3yvkq2WHg",
+           "object_type": 3,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/b5610f02e7ac450d8296ef93f92fc0bc~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2079513538&x-signature=Lv2qgEFEqeAyR3uCR2ILelnJjDQ%3D",
+           "score": "4.3",
+           "lesson_count": 5,
+           "view_count": 346005,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJb3yvkq2WHg?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766126328,
+           "created_time": 1764064908,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=营销推广&sub_menu_name=达人合作"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "live_stream_operation",
+         "module_name": "直播运营",
+         "list": [
+          {
+           "title": "少踩坑、快起量！中小商家自播必学宝典导览",
+           "object_id": "aJjYNyX87TgE",
+           "object_type": 1,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/0d157e14a3454626bac84a895c3f6be8~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2098424668&x-signature=qisoZYAT%2FhCFHEQR6tbehCt%2BZVQ%3D",
+           "view_count": 60302,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJjYNyX87TgE?from_school=1&hide_nav_bar=1",
+           "updated_time": 1783073312,
+           "created_time": 1779174022,
+           "is_finished": false
+          },
+          {
+           "title": "直播运营篇｜ 如何提升直播时长和效果",
+           "object_id": "cJWYPnaWm45V",
+           "object_type": 3,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/6bc04986a4af44b7b5c27c57f1d873b4~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075703660&x-signature=QwQbYVkvEeSy1pEe6P4svUDNtqE%3D",
+           "lesson_count": 1,
+           "view_count": 210744,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJWYPnaWm45V?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045446,
+           "created_time": 1756284219,
+           "is_finished": false
+          },
+          {
+           "title": "直播运营入门必修课",
+           "object_id": "cJRGFPQRKb6E",
+           "object_type": 3,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/c062759723624340b141c83bb0237c0d~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2062589726&x-signature=NqDcZxtD5iyTC6eGmGq16hrOehY%3D",
+           "lesson_count": 6,
+           "view_count": 406013,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJRGFPQRKb6E?from_school=1&hide_nav_bar=1",
+           "updated_time": 1751617422,
+           "created_time": 1747227959,
+           "is_finished": false
+          },
+          {
+           "title": "直播运营进阶课 直播数据诊断优化攻略",
+           "object_id": "cJRy5tAmL5RU",
+           "object_type": 3,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/7e3f14f843ef462ab7d732feeb59d640~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2063782311&x-signature=%2B%2BllQv%2ByjeDu4aO2AONLKy%2Bi7WI%3D",
+           "lesson_count": 1,
+           "view_count": 238693,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJRy5tAmL5RU?from_school=1&hide_nav_bar=1",
+           "updated_time": 1750151046,
+           "created_time": 1748419196,
+           "is_finished": false
+          },
+          {
+           "title": "短视频Livehead运营指南",
+           "object_id": "aJZoovTtk4dF",
+           "object_type": 1,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/9c5e181f718c4de6a3f67606e4270954~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2078105537&x-signature=n9h02fWBJfroXeI1wjLw8zbj%2Fq4%3D",
+           "score": "4.7",
+           "view_count": 39665,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJZoovTtk4dF?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766139489,
+           "created_time": 1762349620,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=流量运营&sub_menu_name=直播运营"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "order_creation_strategy",
+         "module_name": "开单攻略",
+         "list": [
+          {
+           "title": "新商家冷启出单必修课",
+           "object_id": "cJRbRRvro6kx",
+           "object_type": 3,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/797f0992272d40cfb4b66808bd31cf42~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2063159635&x-signature=Ud3A1T4kgUcSLeppLrfKcPAVpB0%3D",
+           "lesson_count": 6,
+           "view_count": 621662,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJRbRRvro6kx?from_school=1&hide_nav_bar=1",
+           "updated_time": 1770712687,
+           "created_time": 1747732124,
+           "is_finished": false
+          },
+          {
+           "title": "【抖店功能上新直播】一键托管，让好商品被看见",
+           "object_id": "lJnad1grXsE2",
+           "object_type": 4,
+           "cover_image": "https://lf3-static.bytednsdoc.com/obj/eden-cn/jpahaz_uhpkbvk_tvjl/ljhwZthlaukjlkulzlp/eschool/eschool_default_h5_cover.png",
+           "view_count": 3276,
+           "to_url": "",
+           "updated_time": 1784189112,
+           "created_time": 1784014922,
+           "is_finished": false
+          },
+          {
+           "title": "高频日播沉淀自然流，“短直”联动+千川投放高效拉升GMV【中小商家案例】",
+           "object_id": "aJmY9jSEHDNg",
+           "object_type": 1,
+           "cover_image": "https://p26-item.ecombdimg.com/tos-cn-i-5mmsx3fupr/f98f32cac5c4c5e74b585f31c0f8606d~tplv-5mmsx3fupr-origin-png.png",
+           "view_count": 4102,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJmY9jSEHDNg?from_school=1&hide_nav_bar=1",
+           "updated_time": 1782442413,
+           "created_time": 1782382402,
+           "is_finished": false
+          },
+          {
+           "title": "新商家抖店经营『通关攻略』",
+           "object_id": "aJYzkpyKyVTf",
+           "object_type": 1,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/fad1cc403066456f90a18a1fa3783837~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075969240&x-signature=9WEGS3WCYr5tUQv62t2yXKAXpEU%3D",
+           "score": "4.8",
+           "view_count": 345469,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJYzkpyKyVTf?from_school=1&hide_nav_bar=1",
+           "updated_time": 1760694292,
+           "created_time": 1760609110,
+           "is_finished": false
+          },
+          {
+           "title": "别再丢分啦！快来领取你的体验分提升攻略【体验分系列课】",
+           "object_id": "cJb9q8TEAckr",
+           "object_type": 3,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/ed534d7177694be0b7785bdeebef172d~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2079930534&x-signature=R6H4HQfDw%2BwAReu0sFbhlKFIjuk%3D",
+           "score": "5.0",
+           "lesson_count": 9,
+           "view_count": 205620,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJb9q8TEAckr?from_school=1&hide_nav_bar=1",
+           "updated_time": 1776256677,
+           "created_time": 1764570507,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=新商成长&sub_menu_name=开单攻略"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "new_product_operation",
+         "module_name": "新品运营",
+         "list": [
+          {
+           "title": "新商冷启篇｜如何在商机中心发布商品",
+           "object_id": "cJXhsGWHWoYT",
+           "object_type": 3,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/25ead3797c744173a424182c50cc0d17~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075697302&x-signature=tKD63pHmh%2BxMTYOPWEIZCG44Ik0%3D",
+           "lesson_count": 1,
+           "view_count": 234063,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJXhsGWHWoYT?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045298,
+           "created_time": 1758533261,
+           "is_finished": false
+          },
+          {
+           "title": "千川自助服饰【新潮新品】推荐标签--运营指南",
+           "object_id": "aJXYLhiEqtoK",
+           "object_type": 1,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/2787ede907114123a85495e0ee8a4e8e~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2086066537&x-signature=nFhRzzrG%2Fz2CAjX8zS7fPoh6wSA%3D",
+           "score": "4.7",
+           "view_count": 294575,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aJXYLhiEqtoK?from_school=1&hide_nav_bar=1",
+           "updated_time": 1776844896,
+           "created_time": 1758081714,
+           "is_finished": false
+          },
+          {
+           "title": "丰富商品篇｜如何上架更多新品",
+           "object_id": "cJWYPnaX5ww1",
+           "object_type": 3,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/b4ddf3d51d1640b9a859e3585787c618~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075706557&x-signature=qRnZRclSc429mpl3ENpJfP7bj1I%3D",
+           "lesson_count": 1,
+           "view_count": 263439,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJWYPnaX5ww1?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045462,
+           "created_time": 1756296636,
+           "is_finished": false
+          },
+          {
+           "title": "如何新增站外主营类目商品",
+           "object_id": "vJbuWpz5enE5",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/b3aa58236685422f9e25c327823c495a~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2081235593&x-signature=YcKAauWn%2FEMPicZIcALiWxKtPa4%3D",
+           "score": "4.8",
+           "view_count": 170587,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJbuWpz5enE5?from_school=1&hide_nav_bar=1",
+           "updated_time": 1765887679,
+           "created_time": 1765875573,
+           "is_finished": false
+          },
+          {
+           "title": "发布商品篇｜如何发布商品",
+           "object_id": "cJXhsNYb31m8",
+           "object_type": 3,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/8db7c3e27dfd4baab53cf365353b2d94~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075696920&x-signature=JeQgwjKCRjneiTrG4vMMf1TsFTg%3D",
+           "lesson_count": 1,
+           "view_count": 399436,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJXhsNYb31m8?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045319,
+           "created_time": 1758532478,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=商品运营&sub_menu_name=新品运营"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "mall_operation",
+         "module_name": "商城运营",
+         "list": [
+          {
+           "title": "商城运营应该怎么做",
+           "object_id": "cHhncbH3UJoL",
+           "object_type": 3,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/d5258b7674c24f288f93bcd87b4352e0~tplv-nosaxvqoqg-image.jpeg?x-expires=1990768761&x-signature=A55F2eWxKI9%2BqBoRfayMHjnKV%2Bg%3D",
+           "lesson_count": 2,
+           "view_count": 230813,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cHhncbH3UJoL?from_school=1&hide_nav_bar=1",
+           "updated_time": 1753082462,
+           "created_time": 1675408606,
+           "is_finished": false
+          },
+          {
+           "title": "商城推荐（猜你喜欢）运营三要素",
+           "object_id": "cHj8Q9DGwZBP",
+           "object_type": 3,
+           "cover_image": "http://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/e6cfce1f1fe842839268719c41911893~tplv-nosaxvqoqg-image.jpeg?x-expires=1993109253&x-signature=30EUkzgJX6YGAT5hPHt3ICw9c5I%3D",
+           "lesson_count": 2,
+           "view_count": 360419,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cHj8Q9DGwZBP?from_school=1&hide_nav_bar=1",
+           "updated_time": 1694665292,
+           "created_time": 1677743856,
+           "is_finished": false
+          },
+          {
+           "title": "货架运营入门必修课",
+           "object_id": "cJTbruihcTQL",
+           "object_type": 3,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/2ac1e7e0d64f493b92e4b6bcff5d4a32~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2066730676&x-signature=C19aAG3c7P2%2BOrJZeH6ipLJ7JDE%3D",
+           "lesson_count": 4,
+           "view_count": 273597,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJTbruihcTQL?from_school=1&hide_nav_bar=1",
+           "updated_time": 1758202567,
+           "created_time": 1751368617,
+           "is_finished": false
+          },
+          {
+           "title": "货架运营进阶课 货架流量优化攻略",
+           "object_id": "cJbuCg7FKW77",
+           "object_type": 3,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/0f749426578942aea5e814805772e609~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2081407887&x-signature=6Wbw5zPUXyPGb5iPOPN2MHK7bqE%3D",
+           "lesson_count": 6,
+           "view_count": 221866,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJbuCg7FKW77?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766049701,
+           "created_time": 1766047861,
+           "is_finished": false
+          },
+          {
+           "title": "商品优化篇｜如何让商品入选猜你喜欢",
+           "object_id": "cJWYT44FSvnf",
+           "object_type": 3,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/0b3619b29bcd467a8181f7a14edb2b19~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075707295&x-signature=VoNphlMSbZvaixv0ClQ3t0Yuy0g%3D",
+           "lesson_count": 1,
+           "view_count": 82267,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJWYT44FSvnf?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045510,
+           "created_time": 1756294582,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=流量运营&sub_menu_name=商城运营"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "marketing_tools",
+         "module_name": "营销工具",
+         "list": [
+          {
+           "title": "新商冷启篇｜如何配置营销工具",
+           "object_id": "cJXhsGWHWU4X",
+           "object_type": 3,
+           "cover_image": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/e171b5f59f5a4789afd9e11798aed4cf~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075697212&x-signature=iiWKc%2Blo69yx6H7jnqRhTPBBQ5k%3D",
+           "lesson_count": 1,
+           "view_count": 267173,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJXhsGWHWU4X?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045294,
+           "created_time": 1758533142,
+           "is_finished": false
+          },
+          {
+           "title": "新商冷启篇｜如何获得商品好评",
+           "object_id": "cJXevBQVwRAi",
+           "object_type": 3,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/afc571040ed34068a4f45418b9ab4b11~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2075697443&x-signature=3nRKYjXWidEghwqA45JFH7kyrQk%3D",
+           "lesson_count": 1,
+           "view_count": 141583,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJXevBQVwRAi?from_school=1&hide_nav_bar=1",
+           "updated_time": 1766045314,
+           "created_time": 1758533461,
+           "is_finished": false
+          },
+          {
+           "title": "如何报名源头好货活动",
+           "object_id": "vJbwUFUAnPeu",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/5793a123cd9c4d44b3de38a068f5b432~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2081235477&x-signature=b84qNpDtd9xQ1FXlkKiVaMMnqAU%3D",
+           "score": "4.8",
+           "view_count": 287054,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJbwUFUAnPeu?from_school=1&hide_nav_bar=1",
+           "updated_time": 1765887365,
+           "created_time": 1765875451,
+           "is_finished": false
+          },
+          {
+           "title": "如何进行长周期活动报名",
+           "object_id": "vJbrt3rrkE4q",
+           "object_type": 2,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/f1e946f00482466f8b8482dfe9a8e0aa~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2081235547&x-signature=ez0tHu45NcbN0iF%2B7V4Kmo%2Ffr8s%3D",
+           "score": "4.8",
+           "view_count": 298265,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJbrt3rrkE4q?from_school=1&hide_nav_bar=1",
+           "updated_time": 1765887370,
+           "created_time": 1765875523,
+           "is_finished": false
+          },
+          {
+           "title": "七夕浪漫来袭，中小达人玩转消费券攻略！",
+           "object_id": "fdJp359r5gr6e",
+           "object_type": 16,
+           "cover_image": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/9f6db04673324cf19f8c08d05269fbc0~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2101882609&x-signature=JQkQyS0PoqXl%2FNGyqVbADJgQf74%3D",
+           "view_count": 3000,
+           "to_url": "https://school.jinritemai.com/doudian/wap/lark-doc/fdJp359r5gr6e?from_school=1&hide_nav_bar=1",
+           "updated_time": 1786591616,
+           "created_time": 1786522404,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=营销推广&sub_menu_name=营销工具"
+           }
+          }
+         }
+        },
+        {
+         "module_key": "search_operation",
+         "module_name": "搜索运营",
+         "list": [
+          {
+           "title": "抖音电商搜索运营三要素，助搜索GMV提升",
+           "object_id": "aHcu2P37hHgK",
+           "object_type": 1,
+           "cover_image": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/baf64ebae7904a879376cab374493fe2~tplv-nosaxvqoqg-image.jpeg?x-expires=1982633455&x-signature=PVCF0ah9e1mbWK2hcXO7Cytri8o%3D",
+           "score": "4.7",
+           "view_count": 478620,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aHcu2P37hHgK?from_school=1&hide_nav_bar=1",
+           "updated_time": 1667275200,
+           "created_time": 1667272899,
+           "is_finished": false
+          },
+          {
+           "title": "一文搞懂\"搜索专区\"玩转搜索",
+           "object_id": "aHc6ahNCzuRG",
+           "object_type": 1,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/746c36b9513f48039b9a1c44bfd50aa5~tplv-nosaxvqoqg-image.jpeg?x-expires=1980999611&x-signature=7x9Bd8sBM2EFkfpQk70OFHLDqrQ%3D",
+           "score": "4.8",
+           "view_count": 343104,
+           "to_url": "https://school.jinritemai.com/doudian/wap/article/aHc6ahNCzuRG?from_school=1&hide_nav_bar=1",
+           "updated_time": 1782964816,
+           "created_time": 1665639334,
+           "is_finished": false
+          },
+          {
+           "title": "电商方法论｜搜索运营五要素",
+           "object_id": "cHrpffcd66vT",
+           "object_type": 3,
+           "cover_image": "http://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/026fb387145743c6892caeea88544b1c~tplv-nosaxvqoqg-image.jpeg?x-expires=2006415493&x-signature=VKs4qp%2FpLYfJYmGfdzWqY3xFSuo%3D",
+           "lesson_count": 1,
+           "view_count": 177128,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cHrpffcd66vT?from_school=1&hide_nav_bar=1",
+           "updated_time": 1752634980,
+           "created_time": 1691054242,
+           "is_finished": false
+          },
+          {
+           "title": "搜索运营入门必修课",
+           "object_id": "cJbrkaixAfCe",
+           "object_type": 3,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/61b980afde8940738bed323503d77247~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2080824724&x-signature=WaYxpIdV1%2FyEHsBomp9YJs3S5Ug%3D",
+           "lesson_count": 6,
+           "view_count": 151849,
+           "to_url": "https://school.jinritemai.com/doudian/wap/course-series/cJbrkaixAfCe?from_school=1&hide_nav_bar=1",
+           "updated_time": 1765768351,
+           "created_time": 1765461440,
+           "is_finished": false
+          },
+          {
+           "title": "优化商品搜索曝光和转化率",
+           "object_id": "vJN7pCf3VfFQ",
+           "object_type": 2,
+           "cover_image": "http://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/6cb3d61c0b914aea91b8d4861dfbf4d3~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2057141582&x-signature=UT9w%2F%2B%2BCBqyq93715fXxEhW7%2FtQ%3D",
+           "score": "4.6",
+           "view_count": 144215,
+           "to_url": "https://school.jinritemai.com/doudian/wap/video-article/vJN7pCf3VfFQ?from_school=1&hide_nav_bar=1",
+           "updated_time": 1744716539,
+           "created_time": 1741781562,
+           "is_finished": false
+          }
+         ],
+         "jump_button": {
+          "type": 1,
+          "text": "查看更多",
+          "action": {
+           "type": 1,
+           "jump_target": {
+            "type": 2,
+            "schema": "https://school.jinritemai.com/doudian/web/navigate?menu_name=流量运营&sub_menu_name=搜索运营"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    "msg": "success"
+   },
+   "menuResp": {
+    "code": 0,
+    "msg": "",
+    "menus_list": [
+     {
+      "name": "新商成长",
+      "sub_menu_list": [
+       {
+        "name": "了解平台",
+        "nav_id": "Ji3HMKqm9uK"
+       },
+       {
+        "name": "入驻流程",
+        "nav_id": "Ji3HMKqmEmo"
+       },
+       {
+        "name": "开单攻略",
+        "nav_id": "Ji3HMKqmKeH"
+       },
+       {
+        "name": "开店指南",
+        "nav_id": "Ji3HMKqmQWm"
+       },
+       {
+        "name": "爆单秘籍",
+        "nav_id": "Ji3HMKqmVPF"
+       },
+       {
+        "name": "同行生意经",
+        "nav_id": "Ji3HMKqmaFj"
+       },
+       {
+        "name": "数据复盘",
+        "nav_id": "Ji3HMKqmf8D"
+       },
+       {
+        "name": "服务保障",
+        "nav_id": "Ji3HMKqmjzh"
+       }
+      ],
+      "recd_list": [
+       {
+        "title": "新手必看：抖音电商入驻全流程指南",
+        "object_id": "109466",
+        "object_type": 1
+       },
+       {
+        "title": "新商快速出单“4+2”实战课程",
+        "object_id": "cHsS9QWS3bHG",
+        "object_type": 3
+       },
+       {
+        "title": "个人店铺可经营类目明细表",
+        "object_id": "101824",
+        "object_type": 1
+       }
+      ],
+      "nav_id": "Ji3HMKqkUwT"
+     },
+     {
+      "name": "商品运营",
+      "sub_menu_list": [
+       {
+        "name": "新品运营",
+        "nav_id": "Ji3HMKqmpsB"
+       },
+       {
+        "name": "爆款打造",
+        "nav_id": "Ji3HMKqmujf"
+       },
+       {
+        "name": "商品管理",
+        "nav_id": "Ji3HMKqmzc9"
+       },
+       {
+        "name": "商品素材",
+        "nav_id": "Ji3HMKqn5Ud"
+       },
+       {
+        "name": "商机中心",
+        "nav_id": "Ji3HMKs33rA"
+       },
+       {
+        "name": "商品诊断",
+        "nav_id": "Ji3HMKs38ie"
+       }
+      ],
+      "recd_list": [
+       {
+        "title": "【服装鞋包】商家泛商城运营白皮书",
+        "object_id": "aHb9JViisd3T",
+        "object_type": 1
+       },
+       {
+        "title": "【抖店】商详装修操作指南",
+        "object_id": "aHMNDfneBibn",
+        "object_type": 1
+       },
+       {
+        "title": "如何快速成功发布精选爆款商品？",
+        "object_id": "aHax3Vyd2NyR",
+        "object_type": 1
+       }
+      ],
+      "nav_id": "Ji3HMKqkZow"
+     },
+     {
+      "name": "店铺运营",
+      "sub_menu_list": [
+       {
+        "name": "信息设置",
+        "nav_id": "Ji3HMKs3Db8"
+       },
+       {
+        "name": "提体验分",
+        "nav_id": "Ji3HMKs3JTc"
+       },
+       {
+        "name": "账号管理",
+        "nav_id": "Ji3HMKs3PL6"
+       },
+       {
+        "name": "店铺诊断",
+        "nav_id": "Ji3HMKs3UCa"
+       },
+       {
+        "name": "店铺装修",
+        "nav_id": "Ji3HMKs3Z54"
+       }
+      ],
+      "recd_list": [
+       {
+        "title": "店铺抖音官方账号绑定店铺功能服务协议（抖音账号端）",
+        "object_id": "110838",
+        "object_type": 1
+       },
+       {
+        "title": "【服装鞋包】商家泛商城运营白皮书",
+        "object_id": "aHb9JViisd3T",
+        "object_type": 1
+       },
+       {
+        "title": "如何修改店铺类型？",
+        "object_id": "101662",
+        "object_type": 1
+       }
+      ],
+      "nav_id": "Ji3HMKqkegR"
+     },
+     {
+      "name": "流量运营",
+      "sub_menu_list": [
+       {
+        "name": "商城运营",
+        "nav_id": "Ji3HMKs3dwY"
+       },
+       {
+        "name": "直播运营",
+        "nav_id": "Ji3HMKs3ip2"
+       },
+       {
+        "name": "短视频运营",
+        "nav_id": "Ji3HMKs3ogW"
+       },
+       {
+        "name": "搜索运营",
+        "nav_id": "Ji3HMKs3tYz"
+       },
+       {
+        "name": "商品卡免佣",
+        "nav_id": "Ji3HMKs3yRU"
+       },
+       {
+        "name": "图文运营",
+        "nav_id": "Ji3HMKs44Hx"
+       }
+      ],
+      "recd_list": [
+       {
+        "title": "一文读懂商品卡&2026免佣政策【已失效】",
+        "object_id": "aHiyhr4djBJC",
+        "object_type": 1
+       },
+       {
+        "title": "【服装鞋包】商家泛商城运营白皮书",
+        "object_id": "aHb9JViisd3T",
+        "object_type": 1
+       },
+       {
+        "title": "发布橱窗“种草内容”，橱窗带货如虎添翼",
+        "object_id": "aHgmpWjb22yW",
+        "object_type": 1
+       }
+      ],
+      "nav_id": "Ji3HMKqkjYu"
+     },
+     {
+      "name": "营销推广",
+      "sub_menu_list": [
+       {
+        "name": "营销活动",
+        "nav_id": "Ji3HMKs49AS"
+       },
+       {
+        "name": "营销工具",
+        "nav_id": "Ji3HMKs4E2v"
+       },
+       {
+        "name": "千川投放",
+        "nav_id": "Ji3HMKs4JuQ"
+       },
+       {
+        "name": "达人合作",
+        "nav_id": "Ji3HMKs4Pmt"
+       },
+       {
+        "name": "私域推广",
+        "nav_id": "Ji3HMKs4UeN"
+       }
+      ],
+      "recd_list": [
+       {
+        "title": "【服装鞋包】商家泛商城运营白皮书",
+        "object_id": "aHb9JViisd3T",
+        "object_type": 1
+       },
+       {
+        "title": "【精选联盟】商家达人合作订单功能上线",
+        "object_id": "aHNTtuK7oy98",
+        "object_type": 1
+       },
+       {
+        "title": "达人合作入门必修课",
+        "object_id": "cJRcGkcZLVd4",
+        "object_type": 3
+       }
+      ],
+      "nav_id": "Ji3HMKqkpRP"
+     },
+     {
+      "name": "服务履约",
+      "sub_menu_list": [
+       {
+        "name": "客户服务",
+        "nav_id": "Ji3HMKs4ZWr"
+       },
+       {
+        "name": "订单管理",
+        "nav_id": "Ji3HMKs4ePL"
+       },
+       {
+        "name": "评价管理",
+        "nav_id": "Ji3KJgJCTr9"
+       },
+       {
+        "name": "物流发货",
+        "nav_id": "Ji3KJgJCYid"
+       },
+       {
+        "name": "电子面单",
+        "nav_id": "Ji3KJgJCdb7"
+       },
+       {
+        "name": "运费险",
+        "nav_id": "Ji3KJgJCiTb"
+       },
+       {
+        "name": "运费模版",
+        "nav_id": "Ji3KJgJCoL5"
+       },
+       {
+        "name": "常见规则",
+        "nav_id": "Ji3KJgJCtCZ"
+       }
+      ],
+      "recd_list": [
+       {
+        "title": "运费模板使用说明",
+        "object_id": "101774",
+        "object_type": 1
+       },
+       {
+        "title": "【服装鞋包】商家泛商城运营白皮书",
+        "object_id": "aHb9JViisd3T",
+        "object_type": 1
+       },
+       {
+        "title": "「抖音电商电子面单」PC端-商家使用说明（25年版）",
+        "object_id": "aHinGuLkqa9u",
+        "object_type": 1
+       }
+      ],
+      "nav_id": "Ji3HMKqkuHs"
+     },
+     {
+      "name": "数据运营",
+      "sub_menu_list": [
+       {
+        "name": "入门攻略",
+        "nav_id": "Ji3KJgJCy53"
+       },
+       {
+        "name": "进阶技巧",
+        "nav_id": "Ji3KJgJD3wX"
+       }
+      ],
+      "recd_list": [
+       {
+        "title": "订单报表导出使用说明",
+        "object_id": "102418",
+        "object_type": 1
+       },
+       {
+        "title": "如何识别店铺潜在爆款及待改进款？",
+        "object_id": "aHMreWE9UUai",
+        "object_type": 1
+       },
+       {
+        "title": "待结算订单使用手册",
+        "object_id": "aHQFLUAktvmq",
+        "object_type": 1
+       }
+      ],
+      "nav_id": "Ji3HMKqkzAM"
+     },
+     {
+      "name": "行业运营",
+      "sub_menu_list": [
+       {
+        "name": "女装男装",
+        "nav_id": "Ji3KJgJD8p1"
+       },
+       {
+        "name": "运动户外",
+        "nav_id": "Ji3KJgJDDgV"
+       },
+       {
+        "name": "家居百货",
+        "nav_id": "Ji3KJgJDJYy"
+       },
+       {
+        "name": "美妆",
+        "nav_id": "Ji3KJgJDPRT"
+       },
+       {
+        "name": "男女鞋",
+        "nav_id": "Ji3KJgJDUHw"
+       },
+       {
+        "name": "内衣裤袜",
+        "nav_id": "Ji3KJgJDZAR"
+       },
+       {
+        "name": "家具家装",
+        "nav_id": "Ji3KJgJDe2u"
+       },
+       {
+        "name": "箱包配件",
+        "nav_id": "Ji3KJgJDiuP"
+       },
+       {
+        "name": "家纺家饰",
+        "nav_id": "Ji3KJgJDoms"
+       },
+       {
+        "name": "汽配摩托",
+        "nav_id": "Ji3KJgJDteM"
+       },
+       {
+        "name": "文化办公",
+        "nav_id": "Ji3KJgJDyWq"
+       },
+       {
+        "name": "数码家电",
+        "nav_id": "Ji3KJgJE4PK"
+       },
+       {
+        "name": "水果生鲜",
+        "nav_id": "Ji3L5ufbm1i"
+       },
+       {
+        "name": "食品保健",
+        "nav_id": "Ji3L5ufbqtC"
+       }
+      ],
+      "recd_list": [
+       {
+        "title": "【服装鞋包】商家泛商城运营白皮书",
+        "object_id": "aHb9JViisd3T",
+        "object_type": 1
+       },
+       {
+        "title": "【生鲜行业】纠纷处理技巧",
+        "object_id": "aHNTtuK7piyU",
+        "object_type": 1
+       },
+       {
+        "title": "定制店铺页装修优秀案例",
+        "object_id": "aHaxQ4ak2pyA",
+        "object_type": 1
+       }
+      ],
+      "nav_id": "Ji3HMKqm52q"
+     }
+    ]
+   },
+   "bannerResp": {
+    "data": [
+     {
+      "imgUrl": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/c75e32bf7eb54ad690c60e810817dc4d~tplv-nosaxvqoqg-image.png?lk3s=22f91421&x-expires=2100619344&x-signature=9AS7ajguUEOCsNISq7wAXlS5yTI%3D",
+      "url": "https://fxg.jinritemai.com/ffa/merchant/parent-campaign-detail?id=7390938114841329970&source=learn_banner&from=learn_banner"
+     },
+     {
+      "imgUrl": "https://p3-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/b3446ad9ad5544fab358f4f7a14820a1~tplv-nosaxvqoqg-image.jpeg?lk3s=22f91421&x-expires=2082036489&x-signature=2CNtxh%2F5I5yiphPqHdrWvzqAxC8%3D",
+      "url": "https://school.jinritemai.com/doudian/web/article/aJSofJhVXGZQ"
+     }
+    ],
+    "code": 200,
+    "msg": "success"
+   },
+   "toolsResp": {
+    "data": [
+     {
+      "icon_url": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/c078bb6e74214aeeb7d146f5c2d56813~tplv-nosaxvqoqg-image.png?lk3s=22f91421&x-expires=2083844147&x-signature=Uqvw8fHAmjXsJopAsAtI6So8g0Y%3D",
+      "name": "AI选品",
+      "to_url": "https://fxg.jinritemai.com/ffa/bu/NewBusinessCenter?dx_send_cui_params=%7B%22action%22%3A%22callback%22%2C%22options%22%3A%7B%22params%22%3A%7B%22text%22%3A%22%E6%99%BA%E8%83%BD%E9%80%89%E5%93%81%22%2C%22agent_code%22%3A%22product_agent%22%2C%22skill_code%22%3A%22chance_recommend_skill%22%2C%22skill_param%22%3A%22%22%2C%22query_source%22%3A6%7D%7D%7D&dx_send_cui_type=newConversationByHelper&source=doudian_homepage&scene_source=commonly_used_tools&strategy_source=ChangYong GongJu_1765461350"
+     },
+     {
+      "icon_url": "https://p9-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/0305825fb63d4d4fb23ab53a0c2a9ee5~tplv-nosaxvqoqg-image.png?lk3s=22f91421&x-expires=2083844156&x-signature=LWS%2FBzQF%2FhiwaPOqVE%2FGssKFouY%3D",
+      "name": "Ai做主图",
+      "to_url": "https://fxg.jinritemai.com/ffa/creative/material-production?scene_source=commonly_used_tools&strategy_source=ChangYong GongJu_1765461350"
+     },
+     {
+      "icon_url": "https://p6-ecom-school-library-sign.ecombdimg.com/tos-cn-i-nosaxvqoqg/bdf0383d15b84418b0c330f78153e584~tplv-nosaxvqoqg-image.png?lk3s=22f91421&x-expires=2083844165&x-signature=maberPSphYcvB7z654LIbTzQfX4%3D",
+      "name": "Ai练播房",
+      "to_url": "https://fxg.jinritemai.com/ffa/content-tool/practice-center?pageType=create&from_source=live_home&btm_ppre=a0.b0.c0.d0&btm_pre=..c0.d0&scene_source=commonly_used_tools&strategy_source=ChangYong GongJu_1765461350"
+     }
+    ],
+    "code": 0,
+    "msg": ""
+   },
+   "debugInfo": {
+    "homeResp": {
+     "url": "https://school.jinritemai.com/api/eschool/v4/home_data?location=1",
+     "logid": "202608131302335E21E90EEED4F13AAADC"
+    },
+    "menuResp": {
+     "url": "https://school.jinritemai.com/api/eschool/menu/list?location=1",
+     "logid": "202608131302335E21E90EEED4F13AAADC"
+    },
+    "bannerResp": {
+     "url": "https://school.jinritemai.com/api/eschool/v1/banner?location=1",
+     "logid": "202608131302335E21E90EEED4F13AAADC"
+    },
+    "toolsResp": {
+     "url": "https://school.jinritemai.com/api/eschool/v1/tools/common",
+     "logid": "202608131302335E21E90EEED4F13AAADC"
+    }
+   }
+  }
+ },
+ "errors": null
+}

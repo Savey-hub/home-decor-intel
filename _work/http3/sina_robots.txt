@@ -1,0 +1,5 @@
+User-agent: *
+allow: /
+Disallow: /yule/
+Disallow: /zixun/
+Sitemap: http://jiaju.sina.com.cn/sitemap.xml
