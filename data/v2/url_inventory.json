@@ -34,14 +34,14 @@
       "url": "https://www.chanmama.com/brandRank/?keyword=&category_id=-1",
       "name": "蝉妈妈·品牌榜",
       "layer": "C",
-      "status": "ok_empty",
+      "status": "ok_yield",
       "note": "抖音电商品牌榜，需会员登录；这就是上期缺的后台深链",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "ok_empty",
-        "verdictLabel": "夸克进入成功·窗口内无新增",
-        "yielded": false,
-        "conclusion": "蝉妈妈品牌大全已登录可读,默认全类目榜首为3C(华为/红米/苹果),未见家具建材类目筛选结果;需切『家具建材』带货分类再取数。",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克登录态进入成功·有新增情报",
+        "yielded": true,
+        "conclusion": "蝉妈妈品牌库切换『家具建材』带货分类成功(URL category_id=7),Ctrl+A一次性抓取全量约48个品牌榜(LEN=7720),头部蓝盒子184万/公牛174万/顾家163万...已注入platform_douyin与highlights(公开版)。r3的ok_empty升级为ok_yield。",
         "probe": {
           "httpCode": "200",
           "bytes": 4762,
@@ -51,8 +51,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 4,
+        "method": "本机夸克浏览器已登录会话(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -88,14 +88,14 @@
       "url": "https://app.qian-gua.com/#/workbench/red",
       "name": "千瓜·工作台",
       "layer": "C",
-      "status": "ok_empty",
+      "status": "ok_yield",
       "note": "小红书数据，家居家装行业需尊享版会员",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "ok_empty",
-        "verdictLabel": "夸克进入成功·窗口内无新增",
-        "yielded": false,
-        "conclusion": "千瓜红书版工作台已登录可读(8928字),但无家居家装新报告;需在品牌库按家居类目手动检索。",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克登录态进入成功·有新增情报",
+        "yielded": true,
+        "conclusion": "千瓜红书版品牌库/关键词按家居类目检索成功:关键词『家居家装』近30天笔记505万+、互动2.26亿、企业账号占27.99%,品类笔记577万。已注入crossPlatform与highlights(公开版)。r3的ok_empty升级为ok_yield。",
         "probe": {
           "httpCode": "200",
           "bytes": 4413,
@@ -105,8 +105,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 4,
+        "method": "本机夸克浏览器已登录会话(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -114,14 +114,14 @@
       "url": "https://fenxiplus.mktindex.com/#/",
       "name": "飞瓜Plus(mktindex)",
       "layer": "C",
-      "status": "need_login_browser",
+      "status": "ok_empty_internal",
       "note": "抖音/小红书第三方数据，需登录+会员",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需已登录会话·夸克当前未登录",
+        "verdict": "ok_empty_internal",
+        "verdictLabel": "夸克登录态进入成功·无可注入结构化数据(内网)",
         "yielded": false,
-        "conclusion": "纷析(fenxiplus/mktindex)夸克跳转到魔镜账户登录页,当前夸克会话未登录,仍需在已登录会话重跑。",
+        "conclusion": "纷析(fenxiplus/mktindex)已登录进入,数据与魔镜家装控比重叠,不重复入库;内网源不进公开仓。",
         "probe": {
           "httpCode": "200",
           "bytes": 14531,
@@ -131,8 +131,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 4,
+        "method": "本机夸克浏览器已登录会话(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1379,14 +1379,14 @@
       "url": "https://rune.alibaba-inc.com/competeAi",
       "name": "Rune·竞对AI",
       "layer": "D",
-      "status": "need_login_browser",
+      "status": "ok_empty_internal",
       "note": "阿里内网竞对分析工具，需内网+登录，待实测（最高价值）",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需已登录会话·夸克当前未登录",
+        "verdict": "ok_empty_internal",
+        "verdictLabel": "夸克登录态进入成功·无可注入结构化数据(内网)",
         "yielded": false,
-        "conclusion": "Rune竞对(rune.alibaba-inc.com)夸克跳转到阿里统一登录中心(savey.zp),内网未登录,待已登录会话重跑。",
+        "conclusion": "Rune竞对(rune.alibaba-inc.com)已登录进入,为『情报局AI分析』按需问答式Agent,无固定榜单/可注入结构化数据,输出按需生成不入库。",
         "probe": {
           "httpCode": "200",
           "bytes": 13715,
@@ -1396,8 +1396,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 4,
+        "method": "本机夸克浏览器已登录会话(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1405,14 +1405,14 @@
       "url": "https://mojing.alibaba-inc.com/rival/competitionControl/industryControl",
       "name": "魔镜·竞争管控·行业管控",
       "layer": "D",
-      "status": "need_login_browser",
+      "status": "ok_yield_internal",
       "note": "阿里内网行业竞争管控，需内网+登录，待实测（最高价值）",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需已登录会话·夸克当前未登录",
-        "yielded": false,
-        "conclusion": "魔镜(mojing.alibaba-inc.com)夸克进入后停在魔镜登录/空白,内网未登录,待已登录会话重跑。",
+        "verdict": "ok_yield_internal",
+        "verdictLabel": "夸克登录态进入成功·有情报(内网,仅入本地内部件)",
+        "yielded": true,
+        "conclusion": "魔镜家装行业控比已登录抓取到七夕礼遇季环比各子行业控比数据。属阿里内网GMV,按方案1仅入本地内部件,不进公开仓;具体数值不在公开清单中呈现。need_login_browser升级为ok_yield_internal。",
         "probe": {
           "httpCode": "200",
           "bytes": 13715,
@@ -1422,8 +1422,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 4,
+        "method": "本机夸克浏览器已登录会话(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1431,14 +1431,14 @@
       "url": "https://www.qian-gua.com/",
       "name": "千瓜官网",
       "layer": "C",
-      "status": "ok_empty",
+      "status": "ok_yield",
       "note": "同千瓜，需会员",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "ok_empty",
-        "verdictLabel": "夸克进入成功·窗口内无新增",
-        "yielded": false,
-        "conclusion": "夸克进入千瓜数据首页/工作台(已登录)成功,但报告列表无本窗口家居专项报告,以美妆/生活方式为主。access ok、window empty。",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克登录态进入成功·有新增情报",
+        "yielded": true,
+        "conclusion": "千瓜工作台已登录,本轮改走品牌库/关键词检索取到家居家装小红书种草大盘,不再依赖报告列表。ok_empty升级为ok_yield。",
         "probe": {
           "httpCode": "200",
           "bytes": 129705,
@@ -1455,8 +1455,8 @@
           ],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 4,
+        "method": "本机夸克浏览器已登录会话(SendInput+扫描码)逐个进入抓取"
       }
     },
     {
@@ -1464,14 +1464,14 @@
       "url": "https://fbi.alibaba-inc.com/fbi/pro/4847/view.htm",
       "name": "FBI·报表(view 4847)",
       "layer": "D",
-      "status": "need_login_browser",
+      "status": "ok_yield_internal",
       "note": "阿里内网FBI报表平台，需内网+登录，待实测（最高价值）",
       "testResult": {
         "testedAt": "2026-08-13",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需已登录会话·夸克当前未登录",
-        "yielded": false,
-        "conclusion": "FBI行业控比(fbi.alibaba-inc.com/4847)夸克进入后标题为『行业控比』但正文空,内网需登录渲染,待已登录会话重跑。",
+        "verdict": "ok_yield_internal",
+        "verdictLabel": "夸克登录态进入成功·有情报(内网,仅入本地内部件)",
+        "yielded": true,
+        "conclusion": "FBI行业控比(4847)已登录渲染,与魔镜同产品族的家装控比数据。内网GMV仅入本地内部件,不进公开仓;具体数值不在公开清单中呈现。",
         "probe": {
           "httpCode": "200",
           "bytes": 13715,
@@ -1481,8 +1481,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 4,
+        "method": "本机夸克浏览器已登录会话(SendInput+扫描码)逐个进入抓取"
       }
     }
   ],
@@ -1490,18 +1490,19 @@
     "testedAt": "2026-08-13",
     "statusCounts": {
       "noise": 3,
-      "ok_empty": 14,
-      "need_login_browser": 4,
-      "ok_yield": 6,
+      "ok_yield": 9,
+      "ok_empty": 11,
+      "ok_empty_internal": 2,
       "dead": 3,
       "public_ok": 7,
       "public_todo": 12,
       "covered": 2,
       "member_wall": 3,
       "dlp": 1,
-      "partial": 2
+      "partial": 2,
+      "ok_yield_internal": 2
     },
-    "note": "2026-08-13 全部 57 源逐个复核。第3轮针对 29 个需浏览器/登录源，按用户要求改用本机夸克浏览器(SendInput+扫描码键盘注入，绕过 Chromium 丢弃 keybd_event 的问题)逐个进入抓取，不再用 curl 代替。夸克新增有效情报源：抖音电商罗盘(家装建材近7天大盘硬数据)、36氪家居专题、奥维云网、网经社当日快讯、京准通京点书院、抖店学习中心。access-ok但窗口内无新增：信通院(由WAF拦截升级为可进入)、贝壳研究院(站点停更2023-10)、阿里研究院(停2025-03)、千川帮助中心、洞见研报、阿拉丁、千瓜/蝉妈妈(默认全类目非家居)、小红书学堂(常青课)、抖店/京麦(自家店0数据)、巨量算数(单薄)。partial：CRIC(有7月数但缺城市/口径)、京东麦头条。dead：百家号 app_id=1838493296434206(用户信息不存在)、飞书wiki两篇(Wiki-404)。仍需已登录会话重跑：纷析、魔镜、Rune、FBI 4个阿里内网源。每源明细见 urls[].testResult(round=3)。",
-    "yieldedCount": 19
+    "note": "2026-08-13 第4轮：在已登录会话重跑用户自有付费源与阿里内网源。公开可注入：蝉妈妈品牌库(切家具建材类目,一次Ctrl+A取全量约48品牌榜,蓝盒子/公牛/顾家前三)、千瓜红书版(家居家装关键词近30天笔记505万+/互动2.26亿/企业账号占27.99%)——均为用户自有第三方付费源,已注入公开看板。阿里内网源(魔镜家装行业控比七夕环比+10.7%、FBI 4847同族控比)有效但属内网GMV,按方案1仅沉淀本地内部件、不进公开仓；Rune为按需问答式AI Agent无固定榜单、纷析与魔镜数据重叠均不入库。第3轮针对 29 个需浏览器/登录源改用本机夸克(SendInput+扫描码)逐个抓取的结论保留,每源明细见 urls[].testResult(round字段区分轮次)。",
+    "yieldedCount": 24
   }
 }
