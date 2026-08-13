@@ -204,7 +204,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   <div class="nav-group">历史存档</div>
   <a class="nav-item" data-target="sec-archive"><span class="ico">🗄</span>往期报告目录</a>
   <div class="nav-group">本月焦点</div>
-  <a class="nav-item" data-target="sec-month"><span class="ico">🔥</span>本月要闻（7月）</a>
+  <a class="nav-item" data-target="sec-month"><span class="ico">🔥</span>本月要闻<span id="navMonthLabel"></span></a>
   <div class="nav-group">核心结论</div>
   <a class="nav-item" data-target="sec-insight"><span class="ico">📌</span>本期核心洞察</a>
   <div class="nav-group">大盘数据</div>
@@ -442,6 +442,14 @@ document.getElementById('archiveList').innerHTML = editions.map(ed=>{
 // ===== 本月要闻 =====
 document.getElementById('monthLabelTip').textContent = highlights.monthLabel || '';
 document.getElementById('monthSummary').textContent = highlights.monthlySummary || '';
+// 导航栏『本月要闻』后的月份标签动态取自 monthLabel，避免手工写死导致月份陈旧
+(function(){
+  var navM = document.getElementById('navMonthLabel');
+  if (navM) {
+    var mm = (highlights.monthLabel || '').match(/(\d{1,2})月/);
+    navM.textContent = mm ? ('（' + mm[1] + '月）') : '';
+  }
+})();
 const mhOrder = [['macro','宏观数据'],['platform','平台大事'],['policy','政策标准'],['merchant','头部商家']];
 const impMap = {'高':'h-high','中':'h-mid','低':''};
 let mhHtml = '';
