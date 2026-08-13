@@ -408,7 +408,10 @@ const yoyClass = v => {
   return isNaN(num) ? 'na' : (num >= 0 ? 'up' : 'dn');
 };
 const yoyText = v => v || '待核实';
-const linkify = (label,url) => url && url !== '待核实' ? `<a href="${url}" target="_blank">${label}</a>` : `<span>${label}</span>`;
+// 数据字段中可能含有真实的尖括号（如反爬说明里的 <script r='m'>、<buildId>），
+// 未转义会被当成标签解析并吞掉后续 DOM，务必对纯文本字段统一走 esc()。
+const esc = v => String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const linkify = (label,url) => url && url !== '待核实' ? `<a href="${esc(url)}" target="_blank">${esc(label)}</a>` : `<span>${esc(label)}</span>`;
 const catColor = c => ({家具:'#e879f9',装修:'#60a5fa',建材:'#f59e0b',卫浴厨房:'#22d3ee',全屋智能:'#a78bfa',全屋定制:'#f472b6',灯具光源:'#fbbf24',电工五金:'#94a3b8',通用:'#8b949e'}[c]||'#8b949e');
 
 // ===== 历史存档目录 =====
@@ -665,8 +668,8 @@ const allConflicts = [
   ...(platform.conflicts||[]).map(x=>'[电商平台] '+normConf(x)),
   ...(policy.conflicts||[]).map(x=>'[政策/商家] '+normConf(x))
 ];
-document.getElementById('gapList').innerHTML = allGaps.map(g=>`<li>${g}</li>`).join('');
-document.getElementById('conflictList').innerHTML = allConflicts.map(c=>`<li>${c}</li>`).join('');
+document.getElementById('gapList').innerHTML = allGaps.map(g=>`<li>${esc(g)}</li>`).join('');
+document.getElementById('conflictList').innerHTML = allConflicts.map(c=>`<li>${esc(c)}</li>`).join('');
 
 // ===== 数据源采集深度 =====
 const sm = sources.summary||{};
@@ -679,10 +682,10 @@ document.getElementById('srcTable').innerHTML =
   (sources.sources||[]).map(s=>`<tr>
     <td>${linkify(s.name, s.url)}</td>
     <td><span class="layer-tag">${s.layer}</span></td>
-    <td>${s.login||'—'}</td>
-    <td><span class="depth-badge depth-${s.depth}">${s.depth}</span></td>
-    <td>${s.count||'—'}<br><span style="color:var(--muted);font-size:11px">${s.timestamp||''}</span></td>
-    <td style="color:var(--muted);max-width:340px">${s.blocker||'无'}</td>
+    <td>${esc(s.login||'—')}</td>
+    <td><span class="depth-badge depth-${esc(s.depth)}">${esc(s.depth)}</span></td>
+    <td>${esc(s.count||'—')}<br><span style="color:var(--muted);font-size:11px">${esc(s.timestamp||'')}</span></td>
+    <td style="color:var(--muted);max-width:340px">${esc(s.blocker||'无')}</td>
   </tr>`).join('') + '</tbody>';
 
 // ===== 目录导航滚动高亮 =====
