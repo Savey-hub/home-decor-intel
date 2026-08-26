@@ -374,6 +374,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
       <div class="tl" id="industryTL"></div>
     </div>
   </div>
+  <div style="margin-top:18px">
+    <div class="section-title" style="font-size:14px">🛒 跨平台电商/广告规则变化 <span class="tip">抖店 · 京准通 · 巨量千川 学习中心/规则中心 · 近30天 · 🔴高相关=直接影响家居家电智能硬件运营</span></div>
+    <div id="platRulesNote" class="dc-note"></div>
+    <div id="platRules"></div>
+  </div>
 </div>
 
 <!-- 商家动态 -->
@@ -724,6 +729,40 @@ document.getElementById('industryTL').innerHTML = '<h3 style="color:#4493f8;marg
     <p>${p.summary||''}</p>
     <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>
   </div>`).join('');
+
+// ===== 跨平台电商/广告规则变化 =====
+(function(){
+  const noteEl = document.getElementById('platRulesNote');
+  if(noteEl) noteEl.textContent = policy.platformRulesNote || '';
+  const rules = policy.platformRules || [];
+  const relRank = {'高':0,'中':1,'弱':2};
+  const relColor = {'高':'#f85149','中':'#d29922','弱':'#8b949e'};
+  const relDot = {'高':'🔴','中':'🟡','弱':'🔵'};
+  // 分平台分组
+  const groups = {};
+  rules.forEach(r=>{ (groups[r.platform] = groups[r.platform] || []).push(r); });
+  const platOrder = ['抖店·抖音电商','京准通·京东广告','巨量千川·抖音广告'];
+  const names = Object.keys(groups).sort((a,b)=>(platOrder.indexOf(a)+99*(platOrder.indexOf(a)<0))-(platOrder.indexOf(b)+99*(platOrder.indexOf(b)<0)));
+  const html = names.map(name=>{
+    const items = groups[name].slice().sort((a,b)=>{
+      const rd = (relRank[a.relevance]??9)-(relRank[b.relevance]??9);
+      if(rd) return rd;
+      return (b.date||'').localeCompare(a.date||'');
+    });
+    const rows = items.map(r=>`
+      <div class="tl-item" style="border-left:3px solid ${relColor[r.relevance]||'#30363d'}">
+        <h3>${relDot[r.relevance]||''} ${esc(r.title)}</h3>
+        <div class="meta">${esc(r.date||'')} · ${esc(r.status||'')} · ${esc(r.scope||'')} <span class="cat-chip" data-cat="${esc(r.relevance||'')}相关">${esc(r.relevance||'')}相关</span></div>
+        <p>${esc(r.summary||'')}</p>
+        <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(r.source||'源', r.url)}</div>
+      </div>`).join('');
+    return `<div style="margin-bottom:14px">
+      <h3 style="color:#e6edf3;margin:0 0 8px 4px;font-size:13px;border-bottom:1px solid #30363d;padding-bottom:4px">${esc(name)} <span style="color:#8b949e;font-weight:400">(${items.length})</span></h3>
+      ${rows}
+    </div>`;
+  }).join('');
+  document.getElementById('platRules').innerHTML = html;
+})();
 
 // ===== merchant =====
 document.getElementById('merchantList').innerHTML = (policy.merchant||[]).map(m=>`
