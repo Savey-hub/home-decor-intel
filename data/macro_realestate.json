@@ -82,6 +82,86 @@
         "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
         "publishDate": "2026-07-15",
         "note": "除汽车以外消费品零售额229034亿元，增长2.8%"
+      },
+      {
+        "metric": "限额以上单位家具类零售额（7月单月）",
+        "period": "2026年7月",
+        "value": "145亿元",
+        "yoy": "-8.8%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965052.html",
+        "publishDate": "2026-08-17",
+        "note": "连续下滑,较6月-6.6%降幅扩大"
+      },
+      {
+        "metric": "限额以上单位家具类零售额（1-7月累计）",
+        "period": "2026年1-7月",
+        "value": "1004亿元",
+        "yoy": "-4.5%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965052.html",
+        "publishDate": "2026-08-17",
+        "note": ""
+      },
+      {
+        "metric": "限额以上单位建筑及装潢材料类零售额（7月单月）",
+        "period": "2026年7月",
+        "value": "94亿元",
+        "yoy": "-14.2%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965052.html",
+        "publishDate": "2026-08-17",
+        "note": "连续多月为家居三品类中最差"
+      },
+      {
+        "metric": "限额以上单位建筑及装潢材料类零售额（1-7月累计）",
+        "period": "2026年1-7月",
+        "value": "690亿元",
+        "yoy": "-9.5%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965052.html",
+        "publishDate": "2026-08-17",
+        "note": ""
+      },
+      {
+        "metric": "限额以上单位家用电器和音像器材类零售额（7月单月）",
+        "period": "2026年7月",
+        "value": "946亿元",
+        "yoy": "-1.9%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965052.html",
+        "publishDate": "2026-08-17",
+        "note": "国补托底,降幅显著好于家具/建材"
+      },
+      {
+        "metric": "限额以上单位家用电器和音像器材类零售额（1-7月累计）",
+        "period": "2026年1-7月",
+        "value": "6372亿元",
+        "yoy": "-6.6%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965052.html",
+        "publishDate": "2026-08-17",
+        "note": ""
+      },
+      {
+        "metric": "社会消费品零售总额（7月单月）",
+        "period": "2026年7月",
+        "value": "39022亿元",
+        "yoy": "+0.6%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965052.html",
+        "publishDate": "2026-08-17",
+        "note": "增速年内最低(6月+1.5%→7月+0.6%)"
+      },
+      {
+        "metric": "社会消费品零售总额（1-7月累计）",
+        "period": "2026年1-7月",
+        "value": "287744亿元",
+        "yoy": "+1.2%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965052.html",
+        "publishDate": "2026-08-17",
+        "note": ""
       }
     ],
     "wholesale": [
@@ -144,6 +224,16 @@
         "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
         "publishDate": "2026-07-15",
         "note": "需查阅国家统计局工业分行业数据库或后续月度公报"
+      },
+      {
+        "metric": "规模以上工业增加值（7月单月）",
+        "period": "2026年7月",
+        "value": "—",
+        "yoy": "+4.5%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965055.html",
+        "publishDate": "2026-08-17",
+        "note": "1-7月累计+5.3%;工业产品销售率7月96.9%(-0.6pp)"
       }
     ],
     "supplyChain": [
@@ -494,6 +584,16 @@
         "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964126.html",
         "publishDate": "2026-07-15",
         "note": "较1-5月降幅可能继续扩大；房地产投资是家装家具行业的先行指标"
+      },
+      {
+        "metric": "全国房地产开发投资（1-7月）",
+        "period": "2026年1-7月",
+        "value": "43009亿元",
+        "yoy": "-19.2%",
+        "source": "国家统计局(2026-08-17)",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965053.html",
+        "publishDate": "2026-08-17",
+        "note": "降幅较1-6月(-18.0%)略扩;销售面积4.50亿㎡(-11.8%)、销售额4.27万亿(-13.1%,降幅收窄0.5pp)"
       }
     ],
     "newStart": [

@@ -277,7 +277,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   <div class="two-col">
     <div class="chart-wrap">
       <h3>零售端 · 家装相关品类同比</h3>
-      <div class="sub">2026年6月单月，限额以上单位商品零售额同比</div>
+      <div class="sub">2026年7月单月，限额以上单位商品零售额同比</div>
       <canvas id="chartRetail" height="220"></canvas>
     </div>
     <div class="chart-wrap">
@@ -517,7 +517,7 @@ document.getElementById('insightBlock').innerHTML =
 
 // ===== macro KPI =====
 const macroKpis = [
-  ...macro.macro.retailSales.filter(x=>x.metric.includes('6月单月')||x.metric.includes('社零')),
+  ...macro.macro.retailSales.filter(x=>x.metric.includes('7月单月')),
   ...macro.macro.wholesale.filter(x=>x.value !== '待核实'),
   ...macro.macro.supplyChain.filter(x=>x.value !== '待核实').slice(0,3)
 ];
@@ -553,7 +553,7 @@ Chart.defaults.borderColor = '#30363d';
 new Chart(document.getElementById('chartRetail'),{
   type:'bar',
   data:{labels:['家具类','建材类','家电类','社零大盘'],
-    datasets:[{label:'2026年6月同比 (%)',data:[-6.6,-10.5,-8.7,1.0],
+    datasets:[{label:'2026年7月同比 (%)',data:[-8.8,-14.2,-1.9,0.6],
       backgroundColor:v=>{const val=v.raw;return val>=0?'#3fb950':'#f85149'}}]},
   options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
 });
