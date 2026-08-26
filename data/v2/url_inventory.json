@@ -274,14 +274,14 @@
       "url": "https://bytedance.larkoffice.com/wiki/BYUAwOKIfi4sz5kgIzscUlxNnZe",
       "name": "字节飞书wiki-1",
       "layer": "external",
-      "status": "dead",
+      "status": "ok_yield",
       "note": "字节内部租户，需字节账号登录，独立会话无cookie",
       "testResult": {
         "testedAt": "2026-08-26",
-        "verdict": "dead",
-        "verdictLabel": "链接失效/域名拦截·已确认",
-        "yielded": false,
-        "conclusion": "字节飞书wiki-1:夸克进入0B,文档已失效/无权限",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克登录态进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "字节飞书wiki-1(抖音电商Q3甄选品牌&靶向商家新商政策·商家版):夸克二次进入渲染成功,抓到约9.9KB(LIGHT运营框架+入驻激励:入驻送5万千川红包/0-180天返千川券最高150万/中重奢首年免佣0.6%),文档明示\"对外对商家使用\",已注入platform_douyin",
         "probe": {
           "httpCode": "302",
           "bytes": 887,
@@ -668,14 +668,14 @@
       "url": "https://www.alighting.cn/",
       "name": "阿拉丁照明网",
       "layer": "A",
-      "status": "need_login_browser",
+      "status": "ok_yield",
       "note": "灯具光源子行业垂直源，公开，待实测（补灯具短板）",
       "testResult": {
         "testedAt": "2026-08-26",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需已登录会话/验证码墙·夸克当前未通过",
-        "yielded": false,
-        "conclusion": "阿拉丁照明网:夸克进入触发滑动验证(约17B),人机验证墙拦截",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克登录态进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "阿拉丁照明网:夸克二次进入过滑动验证后渲染成功,抓到约9.1KB照明行业资讯(含\"两大LED巨头官宣涨价:昕诺飞最高涨15%/洲明科技9月5日起执行\"、2026中国LED照明行业报告、7月照明出口快报),已注入industry(灯具光源)",
         "probe": {
           "httpCode": "000",
           "bytes": 0,
@@ -723,14 +723,14 @@
       "url": "http://www.cbda.cn/",
       "name": "建筑装饰协会",
       "layer": "A",
-      "status": "need_login_browser",
+      "status": "ok_yield",
       "note": "已采depth1(tzgg子路径)",
       "testResult": {
         "testedAt": "2026-08-26",
-        "verdict": "need_login_browser",
-        "verdictLabel": "需已登录会话/验证码墙·夸克当前未通过",
-        "yielded": false,
-        "conclusion": "建筑装饰协会:夸克进入触发安全验证(约64B),验证墙拦截",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克登录态进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "中国建筑装饰协会(中装新网):夸克二次进入过安全验证后渲染成功,抓到约14.8KB行业资讯(含\"关于成立装配式装修工作领导小组的通知\"、住建部上半年新开工城市绿道2450公里、2026年度建筑装饰行业信用评价、金隅天坛联手华为鸿蒙智家全场景智慧家装),已注入policy",
         "probe": {
           "httpCode": "200",
           "bytes": 13682,
@@ -1379,14 +1379,14 @@
       "url": "http://www.cricchina.com/#/home",
       "name": "克而瑞CRIC",
       "layer": "A",
-      "status": "dead",
+      "status": "ok_yield",
       "note": "已用克而瑞转载，官网待实测",
       "testResult": {
         "testedAt": "2026-08-26",
-        "verdict": "dead",
-        "verdictLabel": "链接失效/域名拦截·已确认",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克登录态进入成功·抓到有效内容",
         "yielded": false,
-        "conclusion": "克而瑞CRIC:夸克进入被DLP域名拦截(约35B),企业安全策略阻断",
+        "conclusion": "克而瑞CRIC:夸克二次进入渲染成功,抓到约7.2KB(CRIC2026 AI数据智能体落地页,含新房37.08万㎡/二手14073套/商办6.31亿等指标),但页面为多城市Tab默认口径未标注城市,按数据真实性纪律仅记可达、数值不注入公开仓",
         "probe": {
           "httpCode": "200",
           "bytes": 4777,
@@ -1546,14 +1546,14 @@
     "testedAt": "2026-08-26",
     "statusCounts": {
       "noise": 3,
-      "need_login_browser": 6,
-      "ok_yield": 25,
+      "need_login_browser": 4,
+      "ok_yield": 29,
       "ok_empty": 14,
-      "dead": 5,
+      "dead": 3,
       "partial": 1,
       "ok_empty_internal": 3
     },
-    "note": "2026-08-26 第5轮：应要求把 url_inventory 全部 57 个数据源逐一用本机夸克浏览器(SendInput+扫描码,Ctrl+A剪贴板抓取+向下滚动二次抓)实测进入,不再用 WebSearch/WebFetch 代替。每源结论(含抓取字节量与拦截类型)见 urls[].testResult。有效抓到内容的公开源:千瓜工作台、抖店罗盘、京准通、抖店大学、中国质量报、网经社、京东企业博客、建材协会、199IT、奥维云网、国家统计局、巨潮资讯、36氪家居、京东麦头条、三个皮匠、发现报告、艾瑞咨询、慧博投研、阿里研究院、东方财富研报、亿欧、艾媒咨询、沙利文主站等;其中艾媒《2026-2027中国智能家居行业发展白皮书》(2026-08-25)为本轮新增可注入情报。登录/验证码墙未通过:蝉妈妈榜单、抖店放心购、小红书种草学、阿拉丁照明(滑动验证)、建筑装饰协会(安全验证)、巨量算数;失效或被DLP域名拦截:字节飞书wiki×2、百家号作者×2、微信文档、克而瑞CRIC;内网源(Rune/魔镜/FBI)夸克进入均被重定向统一登录中心,本轮SSO登录态过期未取数,按方案1仅沉淀本地内部件、不进公开仓。",
-    "yieldedCount": 26
+    "note": "2026-08-26 第5轮：应要求把 url_inventory 全部 57 个数据源逐一用本机夸克浏览器(SendInput+扫描码,Ctrl+A剪贴板抓取+向下滚动二次抓)实测进入,不再用 WebSearch/WebFetch 代替。每源结论(含抓取字节量与拦截类型)见 urls[].testResult。有效抓到内容的公开源:千瓜工作台、抖店罗盘、京准通、抖店大学、中国质量报、网经社、京东企业博客、建材协会、199IT、奥维云网、国家统计局、巨潮资讯、36氪家居、京东麦头条、三个皮匠、发现报告、艾瑞咨询、慧博投研、阿里研究院、东方财富研报、亿欧、艾媒咨询、沙利文主站等;其中艾媒《2026-2027中国智能家居行业发展白皮书》(2026-08-25)为本轮新增可注入情报。【二次重试后恢复(共4个)】首轮判失败/拦截、第二次进入夸克后渲染成功:字节飞书wiki-1(抖音电商Q3甄选品牌新商政策·商家版,已注入platform_douyin)、阿拉丁照明网(过滑动验证,含两大LED巨头涨价快讯,已注入industry灯具光源)、中国建筑装饰协会/中装新网(过安全验证,含装配式装修工作领导小组通知,已注入policy)、克而瑞CRIC(落地页可达,但多城市Tab口径未标注,按数据真实性纪律仅记可达、数值不注入)。【仍未通过·需已登录会话(共4个)】蝉妈妈榜单、抖店放心购、小红书种草学、巨量算数——需在夸克内扫码登录后再抓;【确认失效/被DLP拦截(共4个)】字节飞书wiki-2(0B)、百家号作者×2(账号失效/无正文)、微信文档(DLP域名拦截);【噪声源已剔除(共3个)】百度首页、微软研究院、英伟达(英文站与家装无关);内网源(Rune/魔镜/FBI)夸克进入均被重定向统一登录中心,本轮SSO登录态过期未取数,按方案1仅沉淀本地内部件、不进公开仓。",
+    "yieldedCount": 29
   }
 }

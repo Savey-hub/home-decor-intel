@@ -65,10 +65,15 @@ if not paths:
 
 tree_entries = []
 for rel in paths:
+    abspath = os.path.join(ROOT, rel.replace("/", os.sep))
+    if not os.path.exists(abspath):
+        # deleted file: sha=None + base_tree removes the path from the remote tree
+        tree_entries.append({"path": rel, "mode": "100644", "type": "blob", "sha": None})
+        print("delete", rel)
+        continue
     # mode from HEAD tree
     info = git(["ls-tree", "HEAD", rel]).decode("utf-8").strip()
     mode = info.split()[0] if info else "100644"
-    abspath = os.path.join(ROOT, rel.replace("/", os.sep))
     with open(abspath, "rb") as f:
         content = f.read()
     b64 = base64.b64encode(content).decode()
