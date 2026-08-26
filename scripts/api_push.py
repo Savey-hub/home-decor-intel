@@ -3,7 +3,7 @@
 bypassing the blocked github.com:443 git endpoint. Uses Git Data API:
 blobs -> tree (on base_tree) -> commit -> update ref.
 """
-import subprocess, base64, json, os, sys, urllib.request
+import subprocess, base64, json, os, sys, urllib.request, urllib.error
 
 OWNER = "Savey-hub"
 REPO = "home-decor-intel"
@@ -37,8 +37,13 @@ def api(method, path, body=None):
     req.add_header("User-Agent", "qoderwork-api-push")
     if data:
         req.add_header("Content-Type", "application/json")
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.loads(r.read().decode())
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        print("HTTPError %s on %s %s\nRESP: %s" % (e.code, method, path, body), file=sys.stderr)
+        raise
 
 
 base_sha_local = git(["rev-parse", "origin/main"]).decode().strip()
@@ -57,33 +62,37 @@ print("remote_base", base_sha[:8], "remote_tree", base_tree[:8],
 # changed files (name + mode) between base and head, NUL-separated for unicode safety
 raw = git(["diff", "--name-only", "-z", "origin/main..HEAD"])
 paths = [p for p in raw.decode("utf-8").split("\0") if p]
-print("changed files:", len(paths))
+print("changed files (vs local origin/main tracking):", len(paths))
 
 if not paths:
     print("NOTHING_TO_PUSH (origin/main..HEAD 无差异)")
     sys.exit(0)
 
+# Robust push: upload a blob for EVERY file in the HEAD tree, then build the tree
+# from the returned shas (no base_tree). This guarantees every referenced blob
+# exists on the remote even when the local origin/main tracking ref is stale
+# (api_push updates the remote ref via API but not the local tracking ref).
+# Deleted files are naturally absent from `git ls-tree HEAD`.
 tree_entries = []
-for rel in paths:
-    abspath = os.path.join(ROOT, rel.replace("/", os.sep))
-    if not os.path.exists(abspath):
-        # deleted file: sha=None + base_tree removes the path from the remote tree
-        tree_entries.append({"path": rel, "mode": "100644", "type": "blob", "sha": None})
-        print("delete", rel)
+ls = git(["ls-tree", "-r", "-z", "HEAD"]).decode("utf-8")
+entries = [e for e in ls.split("\0") if e]
+print("HEAD tree files to sync:", len(entries))
+for ent in entries:
+    meta, rel = ent.split("\t", 1)
+    mode, typ, _sha = meta.split()
+    if typ != "blob":
         continue
-    # mode from HEAD tree
-    info = git(["ls-tree", "HEAD", rel]).decode("utf-8").strip()
-    mode = info.split()[0] if info else "100644"
+    abspath = os.path.join(ROOT, rel.replace("/", os.sep))
     with open(abspath, "rb") as f:
         content = f.read()
     b64 = base64.b64encode(content).decode()
     blob = api("POST", "/repos/%s/%s/git/blobs" % (OWNER, REPO),
                {"content": b64, "encoding": "base64"})
     tree_entries.append({"path": rel, "mode": mode, "type": "blob", "sha": blob["sha"]})
-    print("blob", blob["sha"][:8], mode, rel)
+print("tree entries:", len(tree_entries))
 
 new_tree = api("POST", "/repos/%s/%s/git/trees" % (OWNER, REPO),
-               {"base_tree": base_tree, "tree": tree_entries})
+               {"tree": tree_entries})
 print("new_tree", new_tree["sha"][:8])
 
 msg = git(["log", "-1", "--pretty=%B", "HEAD"]).decode("utf-8").strip()
