@@ -1,0 +1,35 @@
+{
+  "source": "juliang_suanshu",
+  "source_name": "巨量算数 / 抖音指数 (创作者中心-抖音指数)",
+  "classification": "public_paid_thirdparty",
+  "platform": "douyin",
+  "url": "https://creator.douyin.com/creator-micro/creator-count",
+  "region": "全国",
+  "device_platform": "抖音",
+  "window": "2026-07-19 ~ 2026-08-19 (近30天)",
+  "captured_at": "2026-08-26",
+  "collected_via": "quark_browser_visual_read",
+  "metric_note": "关键词搜索指数=用户主动搜索热度；关键词综合指数=搜索+内容+互动的加权综合热度。均为抖音生态内相对指数，非真实GMV/销量。可比较同期量级与同比/环比方向，不可换算为绝对交易额。",
+  "keywords": [
+    {
+      "keyword": "沙发",
+      "search_index": {"avg": 1387000, "avg_display": "138.7万", "yoy": "+5.28%", "mom": "+4.11%"},
+      "composite_index": {"avg": 572000, "avg_display": "57.2万", "yoy": "+9.96%", "mom": "+5.80%"}
+    },
+    {
+      "keyword": "床垫",
+      "search_index": {"avg": 1162000, "avg_display": "116.2万", "yoy": "+46.46%", "mom": "+95.89%"},
+      "composite_index": {"avg": 416000, "avg_display": "41.6万", "yoy": "+44.07%", "mom": "+88.70%"}
+    },
+    {
+      "keyword": "智能门锁",
+      "search_index": {"avg": 49000, "avg_display": "4.9万", "yoy": "+0.58%", "mom": "+4.14%"},
+      "composite_index": {"avg": 19000, "avg_display": "1.9万", "yoy": "+14.66%", "mom": "+6.83%"}
+    },
+    {
+      "keyword": "摄像头",
+      "search_index": {"avg": 878000, "avg_display": "87.8万", "yoy": "-8.69%", "mom": "+0.99%"},
+      "composite_index": {"avg": 310000, "avg_display": "31.0万", "yoy": "-6.97%", "mom": "+1.68%"}
+    }
+  ]
+}

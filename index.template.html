@@ -213,6 +213,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   <a class="nav-item" data-target="sec-chart"><span class="ico">📊</span>需求 vs 供给</a>
   <div class="nav-group">竞争与内容</div>
   <a class="nav-item" data-target="sec-doudian"><span class="ico">🎯</span>抖店罗盘·社媒竞争</a>
+  <a class="nav-item" data-target="sec-thirdparty"><span class="ico">📈</span>抖音生态·第三方情报</a>
   <a class="nav-item" data-target="sec-platform"><span class="ico">🛒</span>电商平台动态</a>
   <div class="nav-group">政策·商家</div>
   <a class="nav-item" data-target="sec-policy"><span class="ico">📜</span>政策·标准·行业</a>
@@ -316,6 +317,32 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   <div class="insight" id="dcInsights" style="margin-top:16px"></div>
 </div>
 
+<!-- 抖音生态·第三方情报（蝉妈妈 + 巨量算数） -->
+<div class="section" id="sec-thirdparty">
+  <div class="section-title">📈 抖音生态 · 第三方情报（蝉妈妈品牌榜 · 巨量算数关键词） <span class="tip" id="tpCoverageTip"></span></div>
+  <div class="dc-note" id="tpNote"></div>
+  <div class="two-col">
+    <div class="chart-wrap">
+      <h3 id="cmTitle">蝉妈妈 · 家具建材品牌榜 TOP15（销售额指数）</h3>
+      <div class="sub" id="cmSub"></div>
+      <canvas id="chartChanmama" height="260"></canvas>
+    </div>
+    <div class="chart-wrap">
+      <h3 id="jlTitle">巨量算数 · 家装关键词热度（近30天均值）</h3>
+      <div class="sub" id="jlSub"></div>
+      <canvas id="chartJuliang" height="260"></canvas>
+    </div>
+  </div>
+  <div class="chart-wrap" style="margin-top:16px">
+    <h3>蝉妈妈 · 家具建材品牌榜 TOP25（明细）</h3>
+    <div style="overflow-x:auto"><table class="dc-table" id="cmTable"></table></div>
+  </div>
+  <div class="chart-wrap" style="margin-top:16px">
+    <h3>巨量算数 · 家装关键词搜索/综合指数与同环比</h3>
+    <div style="overflow-x:auto"><table class="dc-table" id="jlTable"></table></div>
+  </div>
+</div>
+
 <!-- 电商平台动态 -->
 <div class="section" id="sec-platform">
   <div class="section-title">🛒 电商平台当月动态 <span class="tip" id="platCountTip"></span></div>
@@ -386,6 +413,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 <script id="dataPolicy" type="application/json">__POLICY_JSON__</script>
 <script id="dataHighlights" type="application/json">__HIGHLIGHTS_JSON__</script>
 <script id="dataDoudian" type="application/json">__DOUDIAN_JSON__</script>
+<script id="dataChanmama" type="application/json">__CHANMAMA_JSON__</script>
+<script id="dataJuliang" type="application/json">__JULIANG_JSON__</script>
 <script id="dataSources" type="application/json">__SOURCES_JSON__</script>
 <script id="dataArchive" type="application/json">__ARCHIVE_JSON__</script>
 
@@ -396,6 +425,8 @@ const platform = JSON.parse(document.getElementById('dataPlatform').textContent)
 const policy = JSON.parse(document.getElementById('dataPolicy').textContent);
 const highlights = JSON.parse(document.getElementById('dataHighlights').textContent);
 const doudian = JSON.parse(document.getElementById('dataDoudian').textContent);
+const chanmama = JSON.parse(document.getElementById('dataChanmama').textContent);
+const juliang = JSON.parse(document.getElementById('dataJuliang').textContent);
 const sources = JSON.parse(document.getElementById('dataSources').textContent);
 const archive = JSON.parse(document.getElementById('dataArchive').textContent);
 
@@ -575,6 +606,56 @@ document.getElementById('dcTopProdTable').innerHTML =
 
 document.getElementById('dcInsights').innerHTML =
   '<ol>' + (doudian.insights||[]).map(x=>`<li>${x}</li>`).join('') + '</ol>';
+
+// ===== 抖音生态·第三方情报（蝉妈妈 + 巨量算数） =====
+// 蝉妈妈 品牌榜
+(function(){
+  const cmRank = (chanmama.ranking||[]);
+  document.getElementById('tpCoverageTip').textContent =
+    `${esc(chanmama.category||'')} · ${esc(chanmama.window||'')} · 采集 ${esc(chanmama.captured_at||'')}`;
+  document.getElementById('tpNote').textContent =
+    '⚠ 蝉妈妈：' + (chanmama.metric_note||'') + '　|　巨量算数：' + ((juliang&&juliang.metric_note)||'');
+  document.getElementById('cmSub').textContent =
+    '销售额指数为综合估算指数，仅可同区间横向比大小，不可换算真实GMV/算同环比';
+  // 横向柱图 TOP15
+  const top = cmRank.slice(0,15);
+  new Chart(document.getElementById('chartChanmama'),{
+    type:'bar', indexAxis:'y',
+    data:{labels:top.map(b=>`${b.rank}. ${b.brand}`),
+      datasets:[{label:'销售额指数', data:top.map(b=>b.sales_index),
+        backgroundColor:top.map((b,i)=>i<3?'#e879f9':'#a78bfa')}]},
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'销售额指数 '+c.raw.toLocaleString()}}},
+      scales:{x:{ticks:{callback:v=>(v/10000).toFixed(0)+'w'}}}}
+  });
+  // 明细表 TOP25
+  document.getElementById('cmTable').innerHTML =
+    '<thead><tr><th>#</th><th>品牌</th><th>主营大类</th><th>类目商品数</th><th>类目销量档</th><th>销售额指数</th><th>关联达人</th></tr></thead><tbody>' +
+    cmRank.map(b=>`<tr><td><span class="dc-rank ${b.rank<=3?'top':''}">${b.rank}</span></td><td>${esc(b.brand)}</td><td>${esc(b.main_category||'—')}</td><td>${b.category_items==null?'—':b.category_items}</td><td>${esc(b.category_volume_band||'—')}</td><td>${b.sales_index==null?'—':b.sales_index.toLocaleString()}</td><td>${b.linked_influencers==null?'—':b.linked_influencers}</td></tr>`).join('') +
+    '</tbody>';
+})();
+
+// 巨量算数 关键词
+(function(){
+  const kws = (juliang.keywords||[]);
+  document.getElementById('jlSub').textContent =
+    `${esc(juliang.window||'')} · ${esc(juliang.region||'全国')} · ${esc(juliang.device_platform||'抖音')}（相对指数，非真实销量）`;
+  new Chart(document.getElementById('chartJuliang'),{
+    type:'bar',
+    data:{labels:kws.map(k=>k.keyword),
+      datasets:[
+        {label:'搜索指数(均值)', data:kws.map(k=>k.search_index&&k.search_index.avg||0), backgroundColor:'#4493f8'},
+        {label:'综合指数(均值)', data:kws.map(k=>k.composite_index&&k.composite_index.avg||0), backgroundColor:'#3fb950'}
+      ]},
+    options:{plugins:{legend:{position:'top',labels:{font:{size:10.5},boxWidth:12}}},
+      scales:{y:{ticks:{callback:v=>(v/10000).toFixed(0)+'w'}}}}
+  });
+  document.getElementById('jlTable').innerHTML =
+    '<thead><tr><th>关键词</th><th>搜索指数(均值)</th><th>搜索·同比</th><th>搜索·环比</th><th>综合指数(均值)</th><th>综合·同比</th><th>综合·环比</th></tr></thead><tbody>' +
+    kws.map(k=>{const s=k.search_index||{},c=k.composite_index||{};
+      return `<tr><td>${esc(k.keyword)}</td><td>${esc(s.avg_display||'—')}</td><td class="yoy ${yoyClass(s.yoy)}">${yoyText(s.yoy)}</td><td class="yoy ${yoyClass(s.mom)}">${yoyText(s.mom)}</td><td>${esc(c.avg_display||'—')}</td><td class="yoy ${yoyClass(c.yoy)}">${yoyText(c.yoy)}</td><td class="yoy ${yoyClass(c.mom)}">${yoyText(c.mom)}</td></tr>`;}).join('') +
+    '</tbody>';
+})();
+
 
 // ===== platform tabs =====
 const platMeta = {jd:'京东',douyin:'抖音',pdd:'拼多多',xhs:'小红书',shipinhao:'视频号',kuaishou:'快手',tmall_taobao:'淘宝天猫',cross:'跨平台'};
