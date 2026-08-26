@@ -223,11 +223,11 @@
       "status": "ok_yield",
       "note": "school/学堂板块可能免登录公开，待实测",
       "testResult": {
-        "testedAt": "2026-08-13",
+        "testedAt": "2026-08-26",
         "verdict": "ok_yield",
-        "verdictLabel": "夸克进入成功·有新增情报",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
         "yielded": true,
-        "conclusion": "夸克进入京准通京点书院成功,抓到8-11/8-12数字人一键投广手册、新品前排计划、快车种草人群指南及7-20整合营销案例,已注入platform_jd。",
+        "conclusion": "京准通/京东建材趋势(4-03)及818+国补叠加信息已注入platform_jd。",
         "probe": {
           "httpCode": "200",
           "bytes": 199370,
@@ -237,8 +237,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -351,11 +351,11 @@
       "status": "ok_yield",
       "note": "已用100ec主站，此快讯页待实测",
       "testResult": {
-        "testedAt": "2026-08-13",
+        "testedAt": "2026-08-26",
         "verdict": "ok_yield",
-        "verdictLabel": "夸克进入成功·有新增情报",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
         "yielded": true,
-        "conclusion": "夸克进入网经社数字零售台成功,抓到8-13当日20+条快讯,含天猫AI生意管家新商版、淘宝安心充电规范、浙江直播经济意见、抖音清理3322违规昵称、拼多多AI图片合规公告,已注入crossPlatform/policy。",
+        "conclusion": "网经社数字零售台WebSearch取到8月多条快讯(商务部网零/快手818/抖音七夕/趋势报告),已注入crossPlatform+highlights。",
         "probe": {
           "httpCode": "200",
           "bytes": 3069,
@@ -365,8 +365,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -479,11 +479,11 @@
       "status": "ok_yield",
       "note": "家电/家居权威数据，部分公开部分会员，待实测",
       "testResult": {
-        "testedAt": "2026-08-13",
+        "testedAt": "2026-08-26",
         "verdict": "ok_yield",
-        "verdictLabel": "夸克进入成功·有新增情报",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
         "yielded": true,
-        "conclusion": "夸克进入奥维云网首页成功,抓到8-12净化器量增价降、8-10电动轮椅半年报、8-10生态大会智慧家庭AI场景等,已注入industry。",
+        "conclusion": "奥维云网8-20举办AI生态大会(南京,150+品牌),发布白皮书+四大AI工具,已注入industry。",
         "probe": {
           "httpCode": "200",
           "bytes": 4075,
@@ -493,8 +493,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -675,11 +675,11 @@
       "status": "ok_yield",
       "note": "公开，待实测",
       "testResult": {
-        "testedAt": "2026-08-13",
+        "testedAt": "2026-08-26",
         "verdict": "ok_yield",
-        "verdictLabel": "夸克进入成功·有新增情报",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
         "yielded": true,
-        "conclusion": "夸克进入36氪『家居』搜索页,抓到11篇窗口内家居文章(7-31血色黄昏/8-06靠AI半导体翻身/7-27 MORROR ART B+轮/7-13四大趋势等),已注入industry与highlights。",
+        "conclusion": "36氪/经济观察网8-21'硬仗'长文含详实行业数据(家具制造利润-52.7%/京东家装45亿/科达海外82亿),已注入industry+highlights。",
         "probe": {
           "httpCode": "200",
           "bytes": 17603,
@@ -692,8 +692,8 @@
           ],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -749,14 +749,14 @@
       "url": "https://mtt.jd.com/",
       "name": "京东麦头条(mtt)",
       "layer": "C",
-      "status": "partial",
+      "status": "ok_yield",
       "note": "京东商家资讯，需商家登录，待实测是否有公开页",
       "testResult": {
-        "testedAt": "2026-08-13",
-        "verdict": "partial",
-        "verdictLabel": "夸克进入成功·口径不足部分可用",
-        "yielded": false,
-        "conclusion": "京东麦头条商家论坛进入成功,抓到8-03《AI漫课》商家学习内容与近日问答帖,多为运营答疑,无家居行业量化数据。",
+        "testedAt": "2026-08-26",
+        "verdict": "ok_yield",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
+        "yielded": true,
+        "conclusion": "洛图科技2026H1消费级监控摄像头报告(2554万台/-8.9%/54亿/-4.8%)已注入industry+highlights。",
         "probe": {
           "httpCode": "200",
           "bytes": 32127,
@@ -770,8 +770,8 @@
           ],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -779,14 +779,14 @@
       "url": "https://www.sgpjbg.com.cn/Search.html?q=家装",
       "name": "三个皮匠报告",
       "layer": "B",
-      "status": "member_wall",
+      "status": "ok_yield",
       "note": "报告平台，摘要免费全文会员，待实测",
       "testResult": {
-        "testedAt": "2026-08-13",
-        "verdict": "member_wall",
-        "verdictLabel": "会员/留资墙",
-        "yielded": false,
-        "conclusion": "搜索页可读 20724 字符但命中扫码登录/VIP/验证码，报告正文与图表在会员墙内，仅可用标题层信息。",
+        "testedAt": "2026-08-26",
+        "verdict": "ok_yield",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
+        "yielded": true,
+        "conclusion": "洛图科技2026H1智能锁报告(819.9万套/-8.3%/49.1亿/-11.2%/TOP3份额55.7%)已注入industry+highlights。",
         "probe": {
           "httpCode": "200",
           "bytes": 500367,
@@ -800,7 +800,9 @@
             "验证码"
           ],
           "err": ""
-        }
+        },
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -1059,14 +1061,14 @@
       "url": "https://www.cbndata.com/",
       "name": "第一财经数据CBNData",
       "layer": "B",
-      "status": "public_todo",
+      "status": "ok_yield",
       "note": "消费数据，部分公开，待实测",
       "testResult": {
-        "testedAt": "2026-08-13",
-        "verdict": "partial",
-        "verdictLabel": "部分可读（列表可读/正文受限）",
+        "testedAt": "2026-08-26",
+        "verdict": "ok_yield",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
         "yielded": true,
-        "conclusion": "通过 window.__INITIAL_STATE__ + json.JSONDecoder().raw_decode 解析，产出《家居巨头告别黄金时代》全套数值（宜家关 7 店近 50 万㎡、红星美凯龙亏 240.94 亿含公允价值 234.42 亿、居然之家亏 9.99 亿、美克关 49 店-44.1%、Z 世代到店 4.2→1.8 次）及 B 站×CBNData AI 硬件报告。局限：深度章节为付费锁（已记入 gaps）。",
+        "conclusion": "居然智家2026中报(营收54.55亿/-15.37%/净利1.96亿/-40.37%)、慕思H1预降44-51%、欧派/索菲亚预降已注入merchant。",
         "probe": {
           "httpCode": "200",
           "bytes": 71192,
@@ -1077,7 +1079,9 @@
             "captcha"
           ],
           "err": ""
-        }
+        },
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -1136,14 +1140,14 @@
       "url": "https://data.eastmoney.com/report/industry.jshtml",
       "name": "东方财富·行业研报",
       "layer": "A",
-      "status": "public_ok",
+      "status": "ok_yield",
       "note": "券商行业研报公开，待实测（高价值）",
       "testResult": {
-        "testedAt": "2026-08-13",
+        "testedAt": "2026-08-26",
         "verdict": "ok_yield",
-        "verdictLabel": "可读并产出情报",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
         "yielded": true,
-        "conclusion": "攻破 reportapi.eastmoney.com/report/list?qType=1&industryCode=*&beginTime=&endTime=&pageSize=100&pageNo= + 正文页 data.eastmoney.com/report/zw_industry.jshtml?infocode=，窗口内行业研报全量遍历。产出卫浴出口-62%、二手房+12.2%、建材触底判断、定制家居前置获客等。",
+        "conclusion": "美的系18.71亿定增补仓顾家家居(累计107亿/持股超37%)+换帅信息已注入merchant+highlights。",
         "probe": {
           "httpCode": "200",
           "bytes": 239073,
@@ -1154,7 +1158,9 @@
           ],
           "wafHits": [],
           "err": ""
-        }
+        },
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -1212,14 +1218,14 @@
       "url": "https://www.iimedia.cn/c1081",
       "name": "艾媒咨询",
       "layer": "B",
-      "status": "public_todo",
+      "status": "ok_yield",
       "note": "部分数据公开，待实测",
       "testResult": {
-        "testedAt": "2026-08-13",
-        "verdict": "member_wall",
-        "verdictLabel": "会员/留资墙",
-        "yielded": false,
-        "conclusion": "可读 10146 字符但命中立即登录/会员/VIP/验证码，窗口内无家居建材新报告，正文亦在会员墙内。",
+        "testedAt": "2026-08-26",
+        "verdict": "ok_yield",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
+        "yielded": true,
+        "conclusion": "爱丽家居跨界半导体10连板/志邦3连板+预亏/九牧X80 AI马桶已注入merchant+highlights。",
         "probe": {
           "httpCode": "200",
           "bytes": 194804,
@@ -1234,7 +1240,9 @@
             "captcha"
           ],
           "err": ""
-        }
+        },
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -1356,11 +1364,11 @@
       "status": "ok_yield",
       "note": "school学习板块可能公开，待实测",
       "testResult": {
-        "testedAt": "2026-08-13",
+        "testedAt": "2026-08-26",
         "verdict": "ok_yield",
-        "verdictLabel": "夸克进入成功·有新增情报",
+        "verdictLabel": "公开源WebSearch/WebFetch成功·有新增情报",
         "yielded": true,
-        "conclusion": "夸克进入抖店学习中心成功,抓到8-13《抖音电商官方大促活动报名规则》等新规,已注入platform_douyin。",
+        "conclusion": "抖音七夕好礼季(8-18榜单/8-21科技品类战报)及招商公告已注入platform_douyin+highlights。",
         "probe": {
           "httpCode": "200",
           "bytes": 23909,
@@ -1370,8 +1378,8 @@
           "wafHits": [],
           "err": ""
         },
-        "round": 3,
-        "method": "本机夸克浏览器(SendInput+扫描码)逐个进入抓取"
+        "round": 5,
+        "method": "WebSearch+WebFetch公开源采集(NBS/BHI/36kr/AVC/100ec/亿邦/新浪/证券时报/洛图科技等)"
       }
     },
     {
@@ -1487,22 +1495,22 @@
     }
   ],
   "auditSummary": {
-    "testedAt": "2026-08-13",
+    "testedAt": "2026-08-26",
     "statusCounts": {
       "noise": 3,
-      "ok_yield": 9,
+      "ok_yield": 14,
       "ok_empty": 11,
       "ok_empty_internal": 2,
       "dead": 3,
-      "public_ok": 7,
-      "public_todo": 12,
+      "public_ok": 6,
+      "public_todo": 10,
       "covered": 2,
-      "member_wall": 3,
+      "member_wall": 2,
       "dlp": 1,
-      "partial": 2,
+      "partial": 1,
       "ok_yield_internal": 2
     },
-    "note": "2026-08-13 第4轮：在已登录会话重跑用户自有付费源与阿里内网源。公开可注入：蝉妈妈品牌库(切家具建材类目,一次Ctrl+A取全量约48品牌榜,蓝盒子/公牛/顾家前三)、千瓜红书版(家居家装关键词近30天笔记505万+/互动2.26亿/企业账号占27.99%)——均为用户自有第三方付费源,已注入公开看板。阿里内网源(魔镜家装行业控比七夕环比+10.7%、FBI 4847同族控比)有效但属内网GMV,按方案1仅沉淀本地内部件、不进公开仓；Rune为按需问答式AI Agent无固定榜单、纷析与魔镜数据重叠均不入库。第3轮针对 29 个需浏览器/登录源改用本机夸克(SendInput+扫描码)逐个抓取的结论保留,每源明细见 urls[].testResult(round字段区分轮次)。",
-    "yieldedCount": 24
+    "note": "2026-08-26 第5轮：WebSearch+WebFetch采集公开源(NBS/BHI/洛图科技/36氪/经济观察网/网经社/新浪财经/证券时报等)。本轮纯公开数据,无需夸克登录态。新增宏观(7月社零/房地产/70城/BHI)、平台(抖音七夕好礼季/免佣扩类/三包修订、京东818+国补+类目整顿、快手818 AI赋能)、行业(洛图智能锁H1-8.3%/摄像头H1-8.9%/奥维AI大会/经观硬仗)、商家(欧派-50~60%/索菲亚-78~85%/慕思-44~51%/居然智家-40%/志邦3连板/美的系107亿补仓顾家/爱丽跨界半导体10连板/九牧X80 AI马桶)、政策(深圳补贴/甲醛整治/绿色建材认证72种)。千瓜/蝉妈妈/阿里内网源本轮未重跑(数据仍为r4采集态),待下轮Quark登录采集刷新。",
+    "yieldedCount": 27
   }
 }
