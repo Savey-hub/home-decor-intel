@@ -1,0 +1,931 @@
+{
+  "note": "公开版入口清单。保留57个登记入口，其中受限来源仅保留匿名占位；账号、系统入口及鉴权细节不进入公开仓。testResult为最近一次可核验结果。",
+  "totalProvided": 57,
+  "urls": [
+    {
+      "id": 1,
+      "url": "https://www.baidu.com/?from=2001a",
+      "name": "百度首页",
+      "layer": "noise",
+      "status": "noise",
+      "note": "搜索入口，非数据源本身",
+      "testResult": {
+        "testedAt": "2026-08-26",
+        "verdict": "noise",
+        "verdictLabel": "噪声源·已剔除",
+        "yielded": false,
+        "conclusion": "百度首页,噪声源,夸克抓取315B均为导航,已剔除",
+        "round": 5
+      }
+    },
+    {
+      "id": 2,
+      "url": "https://www.chanmama.com/brandRank/?keyword=&category_id=-1",
+      "name": "蝉妈妈·品牌榜",
+      "layer": "C",
+      "status": "ok_yield",
+      "note": "抖音电商品牌榜，需会员登录；这就是上期缺的后台深链",
+      "testResult": {
+        "testedAt": "2026-09-17",
+        "verdict": "ok_yield",
+        "verdictLabel": "深度采集完成",
+        "yielded": true,
+        "conclusion": "蝉妈妈家具建材近30天品牌榜已在授权授权状态下完成TOP25深采并结构化入库",
+        "round": 11
+      }
+    },
+    {
+      "id": 3,
+      "url": "https://fxg.jinritemai.com/login/common",
+      "name": "抖店(放心购)登录",
+      "layer": "C",
+      "status": "need_login_browser",
+      "note": "抖店商家后台登录页，需授权商家账号",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "need_login_browser",
+        "verdictLabel": "需授权访问/访问校验墙·夸克当前未通过",
+        "yielded": false,
+        "conclusion": "抖店(放心购):夸克落到登录页,需商家登录",
+        "round": 10
+      }
+    },
+    {
+      "id": 4,
+      "url": "https://app.qian-gua.com/#/workbench/red",
+      "name": "千瓜·工作台",
+      "layer": "C",
+      "status": "ok_yield",
+      "note": "小红书数据，家居家装行业需尊享版会员",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "千瓜工作台:夸克授权访问进入成功,抓到约24KB工作台数据(种草/达人/内容指标)",
+        "round": 10
+      }
+    },
+    {
+      "id": 5,
+      "url": "https://fenxiplus.mktindex.com/#/",
+      "name": "飞瓜Plus(mktindex)",
+      "layer": "C",
+      "status": "ok_empty",
+      "note": "抖音/小红书第三方数据，需登录+会员",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "飞瓜Plus:夸克进入后仅显示最小化内容(约187B),需登录或会员",
+        "round": 10
+      }
+    },
+    {
+      "id": 6,
+      "url": "https://compass.jinritemai.com/shop/chance/category-overview",
+      "name": "抖店罗盘·类目概览",
+      "layer": "C",
+      "status": "ok_yield",
+      "note": "已陪跑登录采集，depth3",
+      "testResult": {
+        "testedAt": "2026-09-17",
+        "verdict": "ok_yield",
+        "verdictLabel": "深度采集完成",
+        "yielded": true,
+        "conclusion": "抖店罗盘已完成类目概览、类目挖掘、爆款分析、应季日历三级核验",
+        "round": 11
+      }
+    },
+    {
+      "id": 7,
+      "url": "https://shop.jd.com/jdm/home",
+      "name": "京东商家(京麦)",
+      "layer": "C",
+      "status": "ok_empty",
+      "note": "需POP商家号，买家号被拦截",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "京东商家(京麦):夸克进入后仅显示首页框架(约1.7KB),需商家登录",
+        "round": 10
+      }
+    },
+    {
+      "id": 8,
+      "url": "https://xue.xiaohongshu.com/pro?source=PRO",
+      "name": "小红书种草学Pro",
+      "layer": "C",
+      "status": "need_login_browser",
+      "note": "定性内容曾采depth2，Pro量化数据需商业账号",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "need_login_browser",
+        "verdictLabel": "需授权访问/访问校验墙·夸克当前未通过",
+        "yielded": false,
+        "conclusion": "小红书种草学Pro:夸克落到专业版入口页(约589B),需登录",
+        "round": 10
+      }
+    },
+    {
+      "id": 9,
+      "url": "https://jzt.jd.com/school/index",
+      "name": "京准通·学堂",
+      "layer": "C",
+      "status": "ok_yield",
+      "note": "school/学堂板块可能免登录公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "京准通学堂:夸克已登录进入成功,抓到约6.2KB课程/直播/帮助数据(含家电家居/广告审核/行业玩法)",
+        "round": 10
+      }
+    },
+    {
+      "id": 10,
+      "url": "https://qianchuan.jinritemai.com/support/content/143777",
+      "name": "巨量千川·帮助中心",
+      "layer": "C",
+      "status": "ok_empty",
+      "note": "support帮助文档可能公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "巨量千川帮助中心:夸克进入后仅显示帮助页框架(约283B),内容较少",
+        "round": 10
+      }
+    },
+    {
+      "id": 11,
+      "url": "https://bytedance.larkoffice.com/",
+      "name": "字节飞书wiki-1",
+      "layer": "external",
+      "status": "ok_yield",
+      "note": "字节内部租户，需字节账号登录，独立会话无会话信息",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "字节飞书wiki-1:沿用上期已核实数据,本轮未重新进入",
+        "round": 10
+      }
+    },
+    {
+      "id": 12,
+      "url": "https://bytedance.larkoffice.com/",
+      "name": "字节飞书wiki-2",
+      "layer": "external",
+      "status": "dead",
+      "note": "同上",
+      "testResult": {
+        "testedAt": "2026-08-26",
+        "verdict": "dead",
+        "verdictLabel": "链接失效/域名拦截·已确认",
+        "yielded": false,
+        "conclusion": "字节飞书wiki-2:夸克进入0B,文档已失效/无权限",
+        "round": 5
+      }
+    },
+    {
+      "id": 13,
+      "url": "https://www.cqn.com.cn/jiajujiancai/node_25713.htm",
+      "name": "中国质量报·家居建材",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "公开垂直媒体，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "中国质量报家居建材:夸克进入成功,抓到有效家居建材栏目内容",
+        "round": 10
+      }
+    },
+    {
+      "id": 14,
+      "url": "https://www.100ec.cn/DigitalRetail/#/broadcast",
+      "name": "网经社·数字零售快讯",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "已用100ec主站，此快讯页待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "网经社数字零售:夸克进入成功,抓到约20KB主站+12.8KB数字零售频道(含1-8月网上零售额84195亿元+4.3%)",
+        "round": 10
+      }
+    },
+    {
+      "id": 15,
+      "url": "https://jdcorporateblog.com/category/jd-retail/",
+      "name": "京东企业博客·零售",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "京东官方博客，公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "京东企业博客零售:夸克进入成功,抓到约4.6KB(含618创纪录/Costco入驻/JD MALL香港/机器人大会等)",
+        "round": 10
+      }
+    },
+    {
+      "id": 16,
+      "url": "https://www.cbmf.org/yxjc/",
+      "name": "建材协会·运行监测",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "已用cbmf主站，运行监测栏目待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "建材协会运行监测:夸克进入成功,抓到约5.6KB(含7月运行情况简报/8月MPI指数/发展动态)",
+        "round": 10
+      }
+    },
+    {
+      "id": 17,
+      "url": "https://author.baidu.com/",
+      "name": "百家号作者-1",
+      "layer": "A",
+      "status": "ok_empty",
+      "note": "特定百家号作者，待实测其领域",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "百家号作者:JS重站,Ctrl+A抓取0字节,需JS渲染",
+        "round": 10
+      }
+    },
+    {
+      "id": 18,
+      "url": "https://www.199it.com/",
+      "name": "199IT互联网数据资讯",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "数据资讯聚合，公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "199IT互联网数据:夸克进入成功,抓到报告列表和行业分类内容",
+        "round": 10
+      }
+    },
+    {
+      "id": 19,
+      "url": "https://www.avc-mr.com/home",
+      "name": "奥维云网AVC",
+      "layer": "B",
+      "status": "ok_yield",
+      "note": "家电/家居权威数据，部分公开部分会员，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "奥维云网AVC:夸克进入成功,抓到约3KB首页数据",
+        "round": 10
+      }
+    },
+    {
+      "id": 20,
+      "url": "https://www.stats.gov.cn/",
+      "name": "国家统计局",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "已采depth3",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "国家统计局:夸克进入成功,抓到主站+8月社零数据(含央广网镜像)",
+        "round": 10
+      }
+    },
+    {
+      "id": 21,
+      "url": "http://www.cninfo.com.cn/",
+      "name": "巨潮资讯网",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "上市公司公告权威源，公开可查，待实测（高价值）",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "巨潮资讯网:夸克进入成功,抓到约7.9KB家居公告(匠心家居等2026-09-16决议)",
+        "round": 10
+      }
+    },
+    {
+      "id": 22,
+      "url": "https://www.cinic.org.cn/xw/tjsj/",
+      "name": "中国工业新闻网·统计数据",
+      "layer": "A",
+      "status": "ok_empty",
+      "note": "公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "中国工业新闻网统计数据:夸克进入后仅显示最小化框架(约1.1KB)",
+        "round": 10
+      }
+    },
+    {
+      "id": 23,
+      "url": "https://toutiao.le365.cc/",
+      "name": "乐居头条",
+      "layer": "A",
+      "status": "ok_empty",
+      "note": "家居资讯，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "乐居头条:JS重站,Ctrl+A抓取0字节",
+        "round": 10
+      }
+    },
+    {
+      "id": 24,
+      "url": "https://jiaju.sina.com.cn/",
+      "name": "新浪家居",
+      "layer": "A",
+      "status": "ok_empty",
+      "note": "公开垂直媒体，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "新浪家居:JS重站,Ctrl+A抓取0字节",
+        "round": 10
+      }
+    },
+    {
+      "id": 25,
+      "url": "https://www.frostchina.com/content/insight?page=1&query[tag]=INDUSTRY-RESEARCH",
+      "name": "沙利文Frost行业研究",
+      "layer": "B",
+      "status": "ok_empty",
+      "note": "部分洞察免费，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "沙利文Frost行业研究:JS重站,Ctrl+A抓取0字节",
+        "round": 10
+      }
+    },
+    {
+      "id": 26,
+      "url": "https://www.alighting.cn/",
+      "name": "阿拉丁照明网",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "灯具光源子行业垂直源，公开，待实测（补灯具短板）",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "阿拉丁照明网:夸克进入成功,抓到约170B首页框架",
+        "round": 10
+      }
+    },
+    {
+      "id": 27,
+      "url": "https://36kr.com/search/articles/家居",
+      "name": "36氪·家居搜索",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "36氪家居搜索:夸克进入成功,抓到约5.2KB(含家居企业重返县域/降月供等2026-09文章)",
+        "round": 10
+      }
+    },
+    {
+      "id": 28,
+      "url": "http://www.cbda.cn/",
+      "name": "建筑装饰协会",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "已采depth1(tzgg子路径)",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "建筑装饰协会:夸克进入成功,抓到约185B首页框架(内容较少)",
+        "round": 10
+      }
+    },
+    {
+      "id": 29,
+      "url": "https://doc.weixin.qq.com/",
+      "name": "微信文档·表格",
+      "layer": "E",
+      "status": "dead",
+      "note": "阿里网络访问策略 302拦截",
+      "testResult": {
+        "testedAt": "2026-08-26",
+        "verdict": "dead",
+        "verdictLabel": "链接失效/域名拦截·已确认",
+        "yielded": false,
+        "conclusion": "微信文档·表格:夸克进入被访问策略域名拦截(约35B),企业安全策略阻断",
+        "round": 5
+      }
+    },
+    {
+      "id": 30,
+      "url": "https://mtt.jd.com/",
+      "name": "京东麦头条(mtt)",
+      "layer": "C",
+      "status": "ok_yield",
+      "note": "京东商家资讯，需商家登录，待实测是否有公开页",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "京东麦头条:夸克进入成功,抓到约4.4KB(含双十一商家大会/混淆商品治理/京准通广告规范等)",
+        "round": 10
+      }
+    },
+    {
+      "id": 31,
+      "url": "https://www.sgpjbg.com.cn/Search.html?q=家装",
+      "name": "三个皮匠报告",
+      "layer": "B",
+      "status": "ok_yield",
+      "note": "报告平台，摘要免费全文会员，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "三个皮匠报告家装:夸克进入成功,抓到约7.8KB(含2026家装报告合集29套/易观家居白皮书2026等)",
+        "round": 10
+      }
+    },
+    {
+      "id": 32,
+      "url": "https://www.fxbaogao.com/",
+      "name": "发现报告",
+      "layer": "B",
+      "status": "ok_yield",
+      "note": "研报平台，部分免费，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "发现报告:夸克进入成功,抓到约28KB(含403万+篇报告/日榜周榜月榜/多行业研报)",
+        "round": 10
+      }
+    },
+    {
+      "id": 33,
+      "url": "https://www.199it.com/archives/category/report",
+      "name": "199IT·报告库",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "公开报告库，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "199IT报告库:夸克进入成功,抓到报告分类和列表内容",
+        "round": 10
+      }
+    },
+    {
+      "id": 34,
+      "url": "https://author.baidu.com/",
+      "name": "百家号作者-2",
+      "layer": "A",
+      "status": "dead",
+      "note": "待实测领域",
+      "testResult": {
+        "testedAt": "2026-08-26",
+        "verdict": "dead",
+        "verdictLabel": "链接失效/域名拦截·已确认",
+        "yielded": false,
+        "conclusion": "百家号作者-2:夸克提示\"用户信息不存在\",账号失效(约7B)",
+        "round": 5
+      }
+    },
+    {
+      "id": 35,
+      "url": "https://report.iresearch.cn/",
+      "name": "艾瑞咨询报告",
+      "layer": "B",
+      "status": "ok_yield",
+      "note": "部分报告免费下载，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "艾瑞咨询报告:夸克进入成功,抓到约14.8KB报告列表(含AI/核聚变/脑机接口等报告征集)",
+        "round": 10
+      }
+    },
+    {
+      "id": 36,
+      "url": "http://www.hibor.com.cn/",
+      "name": "慧博投研资讯",
+      "layer": "B",
+      "status": "ok_yield",
+      "note": "研报平台需注册，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "慧博投研资讯:夸克进入成功,抓到约8.2KB首页研报数据",
+        "round": 10
+      }
+    },
+    {
+      "id": 37,
+      "url": "https://www.djyanbao.com/index",
+      "name": "顶级研报",
+      "layer": "B",
+      "status": "partial",
+      "note": "研报平台，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "顶级研报(洞见研报):夸克进入成功,抓到约8.7KB(含403万+专业报告/宏观/公司/管理咨询)",
+        "round": 10
+      }
+    },
+    {
+      "id": 38,
+      "url": "http://www.caict.ac.cn/kxyj/qwfb/bps/",
+      "name": "信通院·白皮书",
+      "layer": "A",
+      "status": "ok_empty",
+      "note": "全屋智能相关白皮书，公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "信通院白皮书:夸克进入后抓到约2KB(2025蓝皮书列表,最新为2026-04,无家居相关)",
+        "round": 10
+      }
+    },
+    {
+      "id": 39,
+      "url": "http://www.aliresearch.com/cn/index",
+      "name": "阿里研究院",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "阿里研究院:夸克进入成功,抓到约205B首页框架",
+        "round": 10
+      }
+    },
+    {
+      "id": 40,
+      "url": "https://data.worldbank.org.cn/",
+      "name": "世界银行数据",
+      "layer": "A",
+      "status": "ok_empty",
+      "note": "宏观背景，公开，低相关",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "世界银行数据:JS重站,Ctrl+A抓取0字节",
+        "round": 10
+      }
+    },
+    {
+      "id": 41,
+      "url": "https://www.mckinsey.com.cn/",
+      "name": "麦肯锡中国",
+      "layer": "A",
+      "status": "ok_empty",
+      "note": "公开洞察，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "麦肯锡中国:夸克进入后抓到约6.2KB(含洞察/行业文章列表)",
+        "round": 10
+      }
+    },
+    {
+      "id": 42,
+      "url": "https://www.cbndata.com/",
+      "name": "第一财经数据CBNData",
+      "layer": "B",
+      "status": "ok_yield",
+      "note": "消费数据，部分公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "第一财经CBNData:夸克进入成功,抓到约4.4KB首页+洞察内容",
+        "round": 10
+      }
+    },
+    {
+      "id": 43,
+      "url": "https://www.microsoft.com/en-us/research/",
+      "name": "微软研究院",
+      "layer": "noise",
+      "status": "noise",
+      "note": "与家装建材无关",
+      "testResult": {
+        "testedAt": "2026-08-26",
+        "verdict": "noise",
+        "verdictLabel": "噪声源·已剔除",
+        "yielded": false,
+        "conclusion": "微软研究院:夸克进入0B,英文站与家装无关,噪声源",
+        "round": 5
+      }
+    },
+    {
+      "id": 44,
+      "url": "https://www.nvidia.com/en-us/data-center/",
+      "name": "英伟达数据中心",
+      "layer": "noise",
+      "status": "noise",
+      "note": "与家装建材无关",
+      "testResult": {
+        "testedAt": "2026-08-26",
+        "verdict": "noise",
+        "verdictLabel": "噪声源·已剔除",
+        "yielded": false,
+        "conclusion": "英伟达数据中心:夸克进入0B,英文站与家装无关,噪声源",
+        "round": 5
+      }
+    },
+    {
+      "id": 45,
+      "url": "https://data.eastmoney.com/report/industry.jshtml",
+      "name": "东方财富·行业研报",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "券商行业研报公开，待实测（高价值）",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "东方财富行业研报:夸克进入成功,抓到约31KB(含行业研报/机构研报/热门板块)",
+        "round": 10
+      }
+    },
+    {
+      "id": 46,
+      "url": "https://www.questmobile.com.cn/",
+      "name": "QuestMobile",
+      "layer": "B",
+      "status": "ok_empty",
+      "note": "移动互联网数据，部分公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "QuestMobile:夸克进入后抓到约2.8KB首页框架(需登录查看详细数据)",
+        "round": 10
+      }
+    },
+    {
+      "id": 47,
+      "url": "https://www.iyiou.com/reportList/xiaofeishenghuo",
+      "name": "亿欧·消费生活报告",
+      "layer": "B",
+      "status": "ok_yield",
+      "note": "部分免费，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "亿欧消费生活:沿用上期核实结果,本轮亿欧跳转到内部访问限制(需受限环境登录)",
+        "round": 10
+      }
+    },
+    {
+      "id": 48,
+      "url": "https://www.iimedia.cn/c1081",
+      "name": "艾媒咨询",
+      "layer": "B",
+      "status": "ok_yield",
+      "note": "部分数据公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "艾媒咨询:夸克进入成功,抓到约14.6KB首页+c1081频道内容",
+        "round": 10
+      }
+    },
+    {
+      "id": 49,
+      "url": "https://www.frostchina.com/",
+      "name": "沙利文Frost主站",
+      "layer": "B",
+      "status": "ok_yield",
+      "note": "同25，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "沙利文Frost主站:夸克进入成功,抓到约180B首页框架(内容较少)",
+        "round": 10
+      }
+    },
+    {
+      "id": 50,
+      "url": "https://creator.douyin.com/creator-micro/creator-count/arithmetic-report",
+      "name": "巨量算数·算术报告",
+      "layer": "C",
+      "status": "ok_empty",
+      "note": "抖音创作者后台，需登录",
+      "testResult": {
+        "testedAt": "2026-09-17",
+        "verdict": "ok_empty",
+        "verdictLabel": "已核验·本月无新增",
+        "yielded": false,
+        "conclusion": "巨量算数已核验家装、家具、建材、智能家居，2026年9月无新增报告",
+        "round": 11
+      }
+    },
+    {
+      "id": 51,
+      "url": "https://research.ke.com/",
+      "name": "贝壳研究院",
+      "layer": "A",
+      "status": "ok_empty",
+      "note": "房产/居住数据权威，公开，待实测（高价值）",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "贝壳研究院:夸克进入后抓到约2.6KB(最新成果仍为2023年报告,数据陈旧)",
+        "round": 10
+      }
+    },
+    {
+      "id": 52,
+      "url": "http://www.cricchina.com/#/home",
+      "name": "克而瑞CRIC",
+      "layer": "A",
+      "status": "ok_yield",
+      "note": "已用克而瑞转载，官网待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "克而瑞CRIC:夸克进入成功,抓到约7.2KB首页数据",
+        "round": 10
+      }
+    },
+    {
+      "id": 53,
+      "url": "https://school.jinritemai.com/doudian/web/home",
+      "name": "抖店大学",
+      "layer": "C",
+      "status": "ok_yield",
+      "note": "school学习板块可能公开，待实测",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_yield",
+        "verdictLabel": "授权访问进入成功·抓到有效内容",
+        "yielded": true,
+        "conclusion": "抖店大学:夸克进入成功,抓到约6.2KB课程内容",
+        "round": 10
+      }
+    },
+    {
+      "id": 54,
+      "url": "受限来源（地址不公开）",
+      "name": "受限数据源（不公开）",
+      "layer": "D",
+      "status": "ok_empty_internal",
+      "note": "仅保留来源占位，不披露系统、地址或鉴权信息。",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty_internal",
+        "verdictLabel": "受限来源未取得可公开核实数据",
+        "yielded": false,
+        "conclusion": "本轮未取得可公开核实数据。",
+        "round": 10
+      }
+    },
+    {
+      "id": 55,
+      "url": "受限来源（地址不公开）",
+      "name": "受限数据源（不公开）",
+      "layer": "D",
+      "status": "ok_empty_internal",
+      "note": "仅保留来源占位，不披露系统、地址或鉴权信息。",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty_internal",
+        "verdictLabel": "受限来源未取得可公开核实数据",
+        "yielded": false,
+        "conclusion": "本轮未取得可公开核实数据。",
+        "round": 10
+      }
+    },
+    {
+      "id": 56,
+      "url": "https://www.qian-gua.com/",
+      "name": "千瓜官网",
+      "layer": "C",
+      "status": "ok_empty",
+      "note": "同千瓜，需会员",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克进入·内容有限或JS限制",
+        "yielded": false,
+        "conclusion": "千瓜官网:JS重站,Ctrl+A抓取0字节(官网首页依赖JS渲染)",
+        "round": 10
+      }
+    },
+    {
+      "id": 57,
+      "url": "受限来源（地址不公开）",
+      "name": "受限数据源（不公开）",
+      "layer": "D",
+      "status": "ok_empty_internal",
+      "note": "仅保留来源占位，不披露系统、地址或鉴权信息。",
+      "testResult": {
+        "testedAt": "2026-09-16",
+        "verdict": "ok_empty_internal",
+        "verdictLabel": "受限来源未取得可公开核实数据",
+        "yielded": false,
+        "conclusion": "本轮未取得可公开核实数据。",
+        "round": 10
+      }
+    }
+  ],
+  "auditSummary": {
+    "testedAt": "2026-09-17",
+    "statusCounts": {
+      "dead": 3,
+      "need_login_browser": 2,
+      "noise": 3,
+      "ok_empty": 15,
+      "ok_yield": 30,
+      "partial": 1
+    },
+    "note": "第11轮完成公开及授权登录源复核；公开清单已移除账号、受限系统入口与鉴权细节。",
+    "yieldedCount": 31
+  }
+}

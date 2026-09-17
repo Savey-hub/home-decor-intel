@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>家装建材家具行业竞争情报看板</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1c232d; --border:#30363d;
+  --text:#e6edf3; --muted:#8b949e; --accent:#4493f8; --accent-2:#3fb950;
+  --warn:#d29922; --danger:#f85149; --info:#a371f7;
+  --tag-jiaju:#e879f9; --tag-zhuangxiu:#60a5fa; --tag-jiancai:#f59e0b;
+  --tag-weiyu:#22d3ee; --tag-zhineng:#a78bfa; --tag-dingzhi:#f472b6;
+  --tag-dengju:#fbbf24; --tag-wujin:#94a3b8;
+  --nav-w:232px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.55;font-size:13.5px}
+/* ===== 左侧目录导航 ===== */
+.sidenav{position:fixed;top:0;left:0;width:var(--nav-w);height:100vh;background:linear-gradient(180deg,#12161d 0%,#0d1117 100%);border-right:1px solid var(--border);padding:20px 0 24px;overflow-y:auto;z-index:200}
+.sidenav::-webkit-scrollbar{width:6px}
+.sidenav::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
+.sidenav .brand{padding:0 18px 16px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.sidenav .brand .logo{font-size:14px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.4}
+.sidenav .brand .sub{font-size:11px;color:var(--muted);margin-top:4px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:9px 18px;color:var(--muted);font-size:13px;cursor:pointer;border-left:3px solid transparent;transition:all .15s;text-decoration:none}
+.nav-item:hover{background:var(--panel);color:var(--text)}
+.nav-item.active{color:var(--accent);border-left-color:var(--accent);background:rgba(68,147,248,.08);font-weight:600}
+.nav-item .ico{font-size:15px;width:18px;text-align:center}
+.nav-group{font-size:10.5px;color:#5c6370;text-transform:uppercase;letter-spacing:.06em;padding:12px 18px 5px;margin-top:4px}
+/* ===== 主体 ===== */
+.main{margin-left:var(--nav-w)}
+.hdr{background:linear-gradient(135deg,#1f2937 0%,#111827 100%);padding:20px 32px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.hdr h1{font-size:21px;font-weight:700;margin-bottom:4px;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hdr .meta{color:var(--muted);font-size:12px;display:flex;gap:16px;flex-wrap:wrap}
+.hdr .meta b{color:#e6edf3}
+.container{max-width:1320px;margin:0 auto;padding:20px 24px 60px}
+.section{margin-bottom:30px;scroll-margin-top:78px}
+.section-title{font-size:16px;font-weight:600;margin-bottom:12px;padding-left:9px;border-left:3px solid var(--accent);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.section-title .tip{color:var(--muted);font-size:12px;font-weight:400;margin-left:auto}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:all .18s}
+.kpi:hover{border-color:var(--accent);transform:translateY(-1px)}
+.kpi .k{font-size:11.5px;color:var(--muted);margin-bottom:6px;line-height:1.3}
+.kpi .v{font-size:22px;font-weight:700;line-height:1.15;margin-bottom:2px}
+.kpi .yoy{font-size:13px;font-weight:600;display:inline-block;padding:1px 8px;border-radius:12px}
+.kpi .yoy.up{color:#3fb950;background:rgba(63,185,80,.13)}
+.kpi .yoy.dn{color:#f85149;background:rgba(248,81,73,.13)}
+.kpi .yoy.na{color:var(--warn);background:rgba(210,153,34,.15)}
+.kpi .n{color:var(--muted);font-size:11.5px;margin-top:6px;line-height:1.4}
+.kpi .src{margin-top:6px;font-size:11px}
+.kpi .src a{color:var(--accent);text-decoration:none}
+.kpi .src a:hover{text-decoration:underline}
+.tabs{display:flex;gap:6px;margin-bottom:14px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.tab{padding:9px 16px;background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:13px;font-weight:500;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab:hover{color:var(--text)}
+.tab .cnt{background:var(--panel-2);color:var(--muted);padding:1px 7px;border-radius:10px;font-size:11px;margin-left:5px}
+.tab.active .cnt{background:var(--accent);color:#fff}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.event-list{display:flex;flex-direction:column;gap:10px}
+.event{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.event:hover{border-color:var(--accent)}
+.event .top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.event .date{color:var(--muted);font-size:12px;font-weight:600;min-width:82px}
+.event .cat-badge{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;color:#fff}
+.event .type-badge{padding:1px 7px;border-radius:4px;font-size:11px;font-weight:500;color:var(--muted);border:1px solid var(--border);background:var(--panel-2)}
+.event h3{font-size:14.5px;font-weight:600;margin-bottom:5px;line-height:1.4}
+.event p{color:var(--muted);font-size:12.5px;line-height:1.55}
+.event .src{margin-top:6px;font-size:11.5px}
+.event .src a{color:var(--accent);text-decoration:none;margin-right:12px}
+.event .src a:hover{text-decoration:underline}
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;padding:10px 12px;background:var(--panel-2);border-radius:8px}
+.filter-bar .lbl{color:var(--muted);font-size:12px;line-height:22px;margin-right:6px}
+.chip{padding:3px 10px;background:var(--panel);border:1px solid var(--border);border-radius:14px;color:var(--muted);font-size:12px;cursor:pointer;user-select:none}
+.chip.active{color:#fff;border-color:transparent}
+.chip.active[data-cat=家具]{background:var(--tag-jiaju)}
+.chip.active[data-cat=装修]{background:var(--tag-zhuangxiu)}
+.chip.active[data-cat=建材]{background:var(--tag-jiancai)}
+.chip.active[data-cat=卫浴厨房]{background:var(--tag-weiyu)}
+.chip.active[data-cat=全屋智能]{background:var(--tag-zhineng)}
+.chip.active[data-cat=全屋定制]{background:var(--tag-dingzhi)}
+.chip.active[data-cat=灯具光源]{background:var(--tag-dengju);color:#111}
+.chip.active[data-cat=电工五金]{background:var(--tag-wujin)}
+.chip.active[data-cat=通用]{background:var(--muted);color:#111}
+.chip.active[data-cat=全部]{background:var(--accent)}
+.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+@media(max-width:1024px){.two-col{grid-template-columns:1fr}}
+.chart-wrap{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px}
+.chart-wrap h3{font-size:13.5px;color:var(--text);margin-bottom:8px}
+.chart-wrap .sub{font-size:11.5px;color:var(--muted);margin-bottom:8px}
+.tl{position:relative;padding-left:22px;border-left:2px solid var(--border)}
+.tl-item{position:relative;margin-bottom:12px;padding:10px 14px;background:var(--panel);border:1px solid var(--border);border-radius:8px}
+.tl-item::before{content:"";position:absolute;left:-30px;top:14px;width:12px;height:12px;background:var(--accent);border-radius:50%;border:3px solid var(--bg)}
+.tl-item.critical::before{background:var(--danger)}
+.tl-item.moderate::before{background:var(--warn)}
+.tl-item h3{font-size:14px;font-weight:600;margin-bottom:4px}
+.tl-item .meta{font-size:11.5px;color:var(--muted);margin-bottom:4px}
+.tl-item p{font-size:12.5px;color:var(--muted);line-height:1.55}
+.tl-item .impact{margin-top:5px;font-size:12px;padding:5px 8px;background:rgba(68,147,248,.08);border-left:2px solid var(--accent);border-radius:0 4px 4px 0}
+.gap-warn{background:rgba(210,153,34,.09);border:1px solid rgba(210,153,34,.35);border-radius:10px;padding:14px 16px;margin-bottom:12px}
+.gap-warn h3{font-size:13.5px;color:var(--warn);margin-bottom:8px}
+.gap-warn ul{list-style:none;padding-left:0}
+.gap-warn li{padding:4px 0 4px 16px;position:relative;font-size:12.5px;color:var(--muted)}
+.gap-warn li::before{content:"○";position:absolute;left:0;color:var(--warn)}
+.gap-warn.conflict{background:rgba(248,81,73,.07);border-color:rgba(248,81,73,.35)}
+.gap-warn.conflict h3{color:var(--danger)}
+.gap-warn.conflict li::before{color:var(--danger)}
+.insight{background:linear-gradient(135deg,rgba(68,147,248,.08),rgba(163,113,247,.06));border:1px solid rgba(68,147,248,.25);border-radius:10px;padding:14px 18px;margin-bottom:8px}
+.insight ol{padding-left:20px}
+.insight ol li{margin-bottom:6px;font-size:13px;line-height:1.6}
+.foot{margin-top:32px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;line-height:1.7;text-align:center}
+.foot a{color:var(--accent);text-decoration:none}
+.cat-chip{display:inline-block;padding:1px 7px;margin-right:4px;border-radius:4px;font-size:11px;color:#fff}
+.cat-chip[data-cat=家具]{background:var(--tag-jiaju)}
+.cat-chip[data-cat=装修]{background:var(--tag-zhuangxiu)}
+.cat-chip[data-cat=建材]{background:var(--tag-jiancai)}
+.cat-chip[data-cat=卫浴厨房]{background:var(--tag-weiyu)}
+.cat-chip[data-cat=全屋智能]{background:var(--tag-zhineng)}
+.cat-chip[data-cat=全屋定制]{background:var(--tag-dingzhi)}
+.cat-chip[data-cat=灯具光源]{background:var(--tag-dengju);color:#111}
+.cat-chip[data-cat=电工五金]{background:var(--tag-wujin)}
+.cat-chip[data-cat=通用]{background:var(--muted);color:#111}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:6px}
+.legend b{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+/* ===== 本月要闻 ===== */
+.month-banner{background:linear-gradient(135deg,#7c2d12 0%,#1c232d 55%);border:1px solid #a3550d;border-radius:12px;padding:16px 20px;margin-bottom:18px}
+.month-banner .mb-label{display:inline-block;background:#f59e0b;color:#111;font-size:11px;font-weight:700;padding:2px 10px;border-radius:12px;margin-bottom:8px}
+.month-banner .mb-title{font-size:15px;font-weight:700;margin-bottom:6px}
+.month-banner .mb-sum{font-size:12.8px;color:#e6c07b;line-height:1.7}
+.mh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.mh-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:13px 15px;border-top:3px solid var(--accent)}
+.mh-card.h-high{border-top-color:var(--danger)}
+.mh-card.h-mid{border-top-color:var(--warn)}
+.mh-card .mh-top{display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap}
+.mh-card .mh-date{font-size:11.5px;color:var(--muted);font-weight:600}
+.mh-card .mh-imp{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:4px}
+.mh-card.h-high .mh-imp{background:rgba(248,81,73,.16);color:#f85149}
+.mh-card.h-mid .mh-imp{background:rgba(210,153,34,.16);color:#d29922}
+.mh-card h3{font-size:13.5px;font-weight:600;margin-bottom:5px;line-height:1.45}
+.mh-card p{font-size:12px;color:var(--muted);line-height:1.55}
+.mh-card .src{margin-top:6px;font-size:11px}
+.mh-card .src a{color:var(--accent);text-decoration:none}
+.mh-sub{font-size:12.5px;color:var(--muted);font-weight:600;margin:14px 0 8px;padding-left:8px;border-left:2px solid var(--muted)}
+/* ===== 抖店罗盘 ===== */
+.dc-note{font-size:11.5px;color:var(--warn);background:rgba(210,153,34,.08);border-radius:6px;padding:7px 10px;margin-bottom:12px;line-height:1.5}
+.dc-table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--panel);border-radius:8px;overflow:hidden}
+.dc-table th{background:var(--panel-2);color:var(--muted);text-align:left;padding:8px 10px;font-weight:600;font-size:11.5px;border-bottom:1px solid var(--border)}
+.dc-table td{padding:7px 10px;border-bottom:1px solid var(--border)}
+.dc-table tr:hover td{background:rgba(68,147,248,.05)}
+.dc-table .up{color:#3fb950}.dc-table .dn{color:#f85149}
+.dc-rank{display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:5px;background:var(--panel-2);font-size:11px;font-weight:700;margin-right:4px}
+.dc-rank.top{background:var(--accent);color:#fff}
+/* ===== 数据源采集深度 ===== */
+.src-table{width:100%;border-collapse:collapse;font-size:12px;background:var(--panel);border-radius:8px;overflow:hidden}
+.src-table th{background:var(--panel-2);color:var(--muted);text-align:left;padding:8px 9px;font-weight:600;font-size:11px;border-bottom:1px solid var(--border)}
+.src-table td{padding:7px 9px;border-bottom:1px solid var(--border);vertical-align:top}
+.src-table a{color:var(--accent);text-decoration:none}
+.depth-badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700}
+.depth-3{background:rgba(63,185,80,.16);color:#3fb950}
+.depth-2{background:rgba(68,147,248,.16);color:#4493f8}
+.depth-1{background:rgba(210,153,34,.16);color:#d29922}
+.depth-0{background:rgba(248,81,73,.16);color:#f85149}
+.layer-tag{display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;border-radius:4px;font-size:10.5px;font-weight:700;background:var(--panel-2);color:var(--muted)}
+.src-summary{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.src-stat{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px}
+.src-stat b{font-size:18px;display:block;color:var(--text)}
+/* ===== 历史存档 ===== */
+.arch-note{font-size:12px;color:var(--muted);background:var(--panel-2);border-radius:8px;padding:10px 14px;margin-bottom:14px;line-height:1.6}
+.arch-list{display:flex;flex-direction:column;gap:12px}
+.arch-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:15px 18px;border-left:4px solid var(--accent);transition:all .18s}
+.arch-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.arch-card.latest{border-left-color:var(--accent-2);background:linear-gradient(135deg,rgba(63,185,80,.06),var(--panel))}
+.arch-card .ac-top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.arch-card .ac-label{font-size:15px;font-weight:700;color:var(--text)}
+.arch-card .ac-type{font-size:11px;font-weight:600;padding:1px 9px;border-radius:12px;background:var(--panel-2);color:var(--muted)}
+.arch-card .ac-latest{font-size:11px;font-weight:700;padding:1px 9px;border-radius:12px;background:rgba(63,185,80,.16);color:var(--accent-2)}
+.arch-card .ac-range{font-size:11.5px;color:var(--muted);margin-left:auto}
+.arch-card .ac-sum{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:8px}
+.arch-card .ac-hl{list-style:none;padding:0;margin:0 0 10px}
+.arch-card .ac-hl li{font-size:12px;color:var(--muted);padding:2px 0 2px 15px;position:relative;line-height:1.5}
+.arch-card .ac-hl li::before{content:"▪";position:absolute;left:0;color:var(--accent)}
+.arch-card .ac-links{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.arch-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:8px;font-size:12.5px;font-weight:600;text-decoration:none;border:1px solid var(--border);transition:all .15s}
+.arch-btn.html{background:rgba(68,147,248,.12);color:var(--accent);border-color:rgba(68,147,248,.35)}
+.arch-btn.html:hover{background:rgba(68,147,248,.22)}
+.arch-btn.doc{background:var(--panel-2);color:var(--text)}
+.arch-btn.doc:hover{border-color:var(--accent)}
+.arch-btn .ico{font-size:14px}
+.arch-card .ac-stat{font-size:11px;color:#5c6370;margin-left:auto}
+@media(max-width:820px){.sidenav{display:none}.main{margin-left:0}}
+</style>
+</head>
+<body>
+
+<!-- ===== 左侧目录导航 ===== -->
+<nav class="sidenav" id="sidenav">
+  <div class="brand">
+    <div class="logo">家装建材家具<br>行业竞争情报看板</div>
+    <div class="sub">天猫行业运营 · 8大子行业</div>
+  </div>
+  <div class="nav-group">本月焦点</div>
+  <a class="nav-item" data-target="sec-month"><span class="ico">🔥</span>本月专区<span id="navMonthLabel"></span></a>
+  <a class="nav-item" data-target="sec-macro"><span class="ico">🌐</span>最新月度指标</a>
+  <a class="nav-item" data-target="sec-chart"><span class="ico">📊</span>需求 vs 供给</a>
+  <div class="nav-group">历史参考</div>
+  <a class="nav-item" data-target="sec-insight"><span class="ico">📌</span>历史核心洞察</a>
+  <a class="nav-item" data-target="sec-realestate"><span class="ico">🏗</span>房地产历史参考</a>
+  <a class="nav-item" data-target="sec-doudian"><span class="ico">🎯</span>抖店罗盘·历史快照</a>
+  <a class="nav-item" data-target="sec-thirdparty"><span class="ico">📈</span>社媒第三方·历史快照</a>
+  <a class="nav-item" data-target="sec-platform"><span class="ico">🛒</span>平台历史动态</a>
+  <a class="nav-item" data-target="sec-policy"><span class="ico">📜</span>政策行业历史动态</a>
+  <a class="nav-item" data-target="sec-merchant"><span class="ico">🏢</span>商家历史动态</a>
+  <div class="nav-group">历史存档</div>
+  <a class="nav-item" data-target="sec-archive"><span class="ico">🗄</span>往期报告目录</a>
+  <div class="nav-group">数据治理</div>
+  <a class="nav-item" data-target="sec-gaps"><span class="ico">⚠️</span>缺口与矛盾</a>
+  <a class="nav-item" data-target="sec-sources"><span class="ico">🗂</span>数据源采集深度</a>
+</nav>
+
+<div class="main">
+<div class="hdr">
+  <h1>家装建材家具行业竞争情报看板</h1>
+  <div class="meta">
+    <span>本月区间：<b id="currentMonthRange"></b></span>
+    <span>滚动窗口：<b id="rollingWindow"></b></span>
+    <span>数据截止：<b id="asOfDate"></b></span>
+    <span>更新：<b>每周三 10:00 前</b></span>
+    <span>子行业：<b>家具·装修·建材·卫浴厨房·全屋智能·全屋定制·灯具光源·电工五金</b></span>
+  </div>
+</div>
+<div class="container">
+
+<!-- 本月独立专区 -->
+<div class="section" id="sec-month">
+  <div class="section-title">🔥 本月独立专区 <span class="tip" id="monthLabelTip"></span></div>
+  <div class="month-banner">
+    <span class="mb-label">本月核心基调</span>
+    <div class="mb-sum" id="monthSummary"></div>
+  </div>
+  <div id="monthHighlights"></div>
+
+  <!-- 最新单月宏观 KPI：数据期不是当前自然月时明确标作历史参考 -->
+  <div class="section" id="sec-macro" style="margin-top:24px">
+    <div class="section-title">🌐 最新单月宏观指标 <span class="tip" id="macroPeriodTip"></span></div>
+    <div class="kpi-grid" id="macroKpis"></div>
+  </div>
+
+  <!-- 图表：动态选择最新可得单月 -->
+  <div class="section" id="sec-chart">
+    <div class="section-title">📊 最新单月需求侧 vs 供给侧 · 同比对比图</div>
+    <div class="two-col">
+      <div class="chart-wrap">
+        <h3>零售端 · 家装相关品类同比</h3>
+        <div class="sub" id="retailChartSub"></div>
+        <canvas id="chartRetail" height="220"></canvas>
+      </div>
+      <div class="chart-wrap">
+        <h3>上游端 · 建材/地产核心指标</h3>
+        <div class="sub" id="upstreamChartSub"></div>
+        <canvas id="chartUpstream" height="220"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 历史核心洞察 -->
+<div class="section" id="sec-insight" data-history-region="insight">
+  <div class="section-title">📌 历史参考 · 核心洞察 <span class="tip">历史口径，仅供趋势对照</span></div>
+  <div class="insight" id="insightBlock"></div>
+</div>
+
+<!-- 房地产历史参考 -->
+<div class="section" id="sec-realestate" data-history-region="realestate">
+  <div class="section-title">🏗 历史参考 · 房地产维度 <span class="tip">已过滤当前月记录</span></div>
+  <div class="kpi-grid" id="realEstateKpis"></div>
+</div>
+
+<!-- 抖店罗盘·社媒竞争历史快照 -->
+<div class="section" id="sec-doudian" data-history-region="doudian">
+  <div class="section-title">🎯 历史参考 · 抖店罗盘社媒竞争快照 <span class="tip" id="dcCoverageTip"></span></div>
+  <div class="dc-note" id="dcNote"></div>
+  <div class="kpi-grid" id="dcCoreMetrics" style="margin-bottom:16px"></div>
+  <div class="two-col">
+    <div class="chart-wrap">
+      <h3>子类目 GMV 结构（TOP10）</h3>
+      <div class="sub">占大盘比例，件单价见表</div>
+      <div style="overflow-x:auto"><table class="dc-table" id="dcSubCatTable"></table></div>
+    </div>
+    <div>
+      <div class="chart-wrap" style="margin-bottom:16px">
+        <h3>带货载体分布</h3>
+        <canvas id="chartCarrier" height="150"></canvas>
+      </div>
+      <div class="chart-wrap">
+        <h3>价格带分布</h3>
+        <canvas id="chartPriceBand" height="150"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="chart-wrap" style="margin-top:16px">
+    <h3>TOP15 热销单品（39元以上价格带）· 与天猫竞品追踪重叠预警</h3>
+    <div style="overflow-x:auto"><table class="dc-table" id="dcTopProdTable"></table></div>
+  </div>
+  <div class="insight" id="dcInsights" style="margin-top:16px"></div>
+</div>
+
+<!-- 抖音生态·第三方情报历史快照（蝉妈妈 + 巨量算数） -->
+<div class="section" id="sec-thirdparty" data-history-region="thirdparty">
+  <div class="section-title">📈 历史参考 · 抖音生态第三方快照（蝉妈妈 · 巨量算数） <span class="tip" id="tpCoverageTip"></span></div>
+  <div class="dc-note" id="tpNote"></div>
+  <div class="two-col">
+    <div class="chart-wrap">
+      <h3 id="cmTitle">蝉妈妈 · 家具建材品牌榜 TOP15（销售额指数）</h3>
+      <div class="sub" id="cmSub"></div>
+      <canvas id="chartChanmama" height="260"></canvas>
+    </div>
+    <div class="chart-wrap">
+      <h3 id="jlTitle">巨量算数 · 家装关键词热度（近30天均值）</h3>
+      <div class="sub" id="jlSub"></div>
+      <canvas id="chartJuliang" height="260"></canvas>
+    </div>
+  </div>
+  <div class="chart-wrap" style="margin-top:16px">
+    <h3>蝉妈妈 · 家具建材品牌榜 TOP25（明细）</h3>
+    <div style="overflow-x:auto"><table class="dc-table" id="cmTable"></table></div>
+  </div>
+  <div class="chart-wrap" style="margin-top:16px">
+    <h3>巨量算数 · 家装关键词搜索/综合指数与同环比</h3>
+    <div style="overflow-x:auto"><table class="dc-table" id="jlTable"></table></div>
+  </div>
+</div>
+
+<!-- 电商平台历史动态 -->
+<div class="section" id="sec-platform" data-history-region="platform">
+  <div class="section-title">🛒 历史参考 · 电商平台动态 <span class="tip" id="platCountTip"></span></div>
+  <div class="tabs" id="platTabs"></div>
+  <div class="filter-bar">
+    <span class="lbl">按子行业筛选：</span>
+    <span class="chip active" data-cat="全部" onclick="filterCat(this)">全部</span>
+    <span class="chip" data-cat="家具" onclick="filterCat(this)">家具</span>
+    <span class="chip" data-cat="装修" onclick="filterCat(this)">装修</span>
+    <span class="chip" data-cat="建材" onclick="filterCat(this)">建材</span>
+    <span class="chip" data-cat="卫浴厨房" onclick="filterCat(this)">卫浴厨房</span>
+    <span class="chip" data-cat="全屋智能" onclick="filterCat(this)">全屋智能</span>
+    <span class="chip" data-cat="全屋定制" onclick="filterCat(this)">全屋定制</span>
+    <span class="chip" data-cat="灯具光源" onclick="filterCat(this)">灯具光源</span>
+    <span class="chip" data-cat="电工五金" onclick="filterCat(this)">电工五金</span>
+    <span class="chip" data-cat="通用" onclick="filterCat(this)">通用/跨类</span>
+  </div>
+  <div id="platPanels"></div>
+</div>
+
+<!-- 政策与标准历史动态 -->
+<div class="section" id="sec-policy" data-history-region="policy">
+  <div class="section-title">📜 历史参考 · 政策/标准/行业动态 <span class="tip">已过滤当前月记录</span></div>
+  <div class="two-col">
+    <div>
+      <div class="tl" id="policyTL"></div>
+    </div>
+    <div>
+      <div class="tl" id="industryTL"></div>
+    </div>
+  </div>
+  <div style="margin-top:18px">
+    <div class="section-title" style="font-size:14px">🛒 历史参考 · 跨平台电商/广告规则 <span class="tip">当前月规则已移至本月专区</span></div>
+    <div id="platRulesNote" class="dc-note"></div>
+    <div id="platRules"></div>
+  </div>
+</div>
+
+<!-- 商家历史动态 -->
+<div class="section" id="sec-merchant" data-history-region="merchant">
+  <div class="section-title">🏢 历史参考 · 头部商家动态 <span class="tip">已过滤当前月记录</span></div>
+  <div class="event-list" id="merchantList"></div>
+</div>
+
+<!-- 历史存档 · 往期报告目录 -->
+<div class="section" id="sec-archive" data-history-region="archive">
+  <div class="section-title">🗄 历史归档 · 往期报告目录 <span class="tip" id="archCountTip"></span></div>
+  <div class="arch-note" id="archNote"></div>
+  <div class="arch-list" id="archiveList"></div>
+</div>
+
+<!-- Gaps + Conflicts -->
+<div class="section" id="sec-gaps">
+  <div class="section-title">⚠️ 数据缺口与需人工核实 <span class="tip">遵循「不编造」原则，透明标注</span></div>
+  <div class="two-col">
+    <div class="gap-warn"><h3>📭 数据缺口（Gaps）</h3><ul id="gapList"></ul></div>
+    <div class="gap-warn conflict"><h3>⚡ 矛盾信息 · 需人工判断（Conflicts）</h3><ul id="conflictList"></ul></div>
+  </div>
+</div>
+
+<!-- 数据源采集深度报告 -->
+<div class="section" id="sec-sources">
+  <div class="section-title">🗂 数据源采集深度报告 <span class="tip">每源披露采集深度/条数/时间戳/阻塞</span></div>
+  <div class="src-summary" id="srcSummary"></div>
+  <div class="dc-note" id="srcNote"></div>
+  <div style="overflow-x:auto"><table class="src-table" id="srcTable"></table></div>
+</div>
+
+<div class="foot">
+  <div>信源分层：<span style="color:#3fb950">■</span> 权威官方 · <span style="color:#4493f8">■</span> 头部媒体 · <span style="color:#d29922">■</span> 待核实　|　采集深度：<span class="depth-badge depth-3">3深层</span> <span class="depth-badge depth-2">2中层</span> <span class="depth-badge depth-1">1浅层</span> <span class="depth-badge depth-0">0阻塞</span></div>
+  <div style="margin-top:6px">公开版仅展示可披露的数据来源、采集深度与核验时间；账号、鉴权和受限系统信息不进入页面。</div>
+</div>
+
+</div><!-- /container -->
+</div><!-- /main -->
+
+<!-- 数据 JSON 内嵌（由 scripts/build_html.sh 构建时注入） -->
+<script id="dataMacro" type="application/json">__MACRO_JSON__</script>
+<script id="dataPlatform" type="application/json">__PLATFORM_JSON__</script>
+<script id="dataPolicy" type="application/json">__POLICY_JSON__</script>
+<script id="dataHighlights" type="application/json">__HIGHLIGHTS_JSON__</script>
+<script id="dataDoudian" type="application/json">__DOUDIAN_JSON__</script>
+<script id="dataChanmama" type="application/json">__CHANMAMA_JSON__</script>
+<script id="dataJuliang" type="application/json">__JULIANG_JSON__</script>
+<script id="dataSources" type="application/json">__SOURCES_JSON__</script>
+<script id="dataArchive" type="application/json">__ARCHIVE_JSON__</script>
+
+<script>
+const CURRENT_MONTH = '2026-09';
+const CURRENT_MONTH_LABEL = '2026年9月（自然月至今）';
+
+function init(){
+const macro = JSON.parse(document.getElementById('dataMacro').textContent);
+const platform = JSON.parse(document.getElementById('dataPlatform').textContent);
+const policy = JSON.parse(document.getElementById('dataPolicy').textContent);
+const highlights = JSON.parse(document.getElementById('dataHighlights').textContent);
+const doudian = JSON.parse(document.getElementById('dataDoudian').textContent);
+const chanmama = JSON.parse(document.getElementById('dataChanmama').textContent);
+const juliang = JSON.parse(document.getElementById('dataJuliang').textContent);
+const sources = JSON.parse(document.getElementById('dataSources').textContent);
+const archive = JSON.parse(document.getElementById('dataArchive').textContent);
+
+// helpers
+const yoyClass = v => {
+  if(!v || v==='待核实') return 'na';
+  const num = parseFloat(String(v).replace(/[^\-\d.]/g,''));
+  return isNaN(num) ? 'na' : (num >= 0 ? 'up' : 'dn');
+};
+const yoyText = v => v || '待核实';
+// 数据字段中可能含有真实的尖括号（如反爬说明里的 <script r='m'>、<buildId>），
+// 未转义会被当成标签解析并吞掉后续 DOM，务必对纯文本字段统一走 esc()。
+const esc = v => String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const linkify = (label,url) => url && url !== '待核实' ? `<a href="${esc(url)}" target="_blank">${esc(label||url)}</a>` : `<span>${esc(label||'')}</span>`;
+const catColor = c => ({家具:'#e879f9',装修:'#60a5fa',建材:'#f59e0b',卫浴厨房:'#22d3ee',全屋智能:'#a78bfa',全屋定制:'#f472b6',灯具光源:'#fbbf24',电工五金:'#94a3b8',通用:'#8b949e'}[c]||'#8b949e');
+const currentMonthNumber = parseInt(CURRENT_MONTH.slice(5),10);
+const currentMonthChinese = `${CURRENT_MONTH.slice(0,4)}年${currentMonthNumber}月`;
+const currentMonthShort = `${currentMonthNumber}月`;
+const normalizeMonth = value => {
+  const m = String(value||'').match(/(20\d{2})(?:[-\/]|年)(\d{1,2})/);
+  return m ? `${m[1]}-${String(parseInt(m[2],10)).padStart(2,'0')}` : '';
+};
+const DATE_FIELDS = ['publishDate','effectiveDate','date','issueDate','captured_at','scrapedAt'];
+const hasCurrentEffectiveText = item => {
+  const text = `${item&&item.title||''} ${item&&item.summary||''}`;
+  const datedText = DATE_FIELDS.map(k=>String(item&&item[k]||'')).join(' ');
+  const textYears = text.match(/20\d{2}/g) || [];
+  const contextYears = textYears.length ? textYears : (datedText.match(/20\d{2}/g) || []);
+  const hasDifferentExplicitYear = contextYears.length>0 && !contextYears.includes(CURRENT_MONTH.slice(0,4));
+  const mentionsCurrentMonth = [CURRENT_MONTH,currentMonthChinese].some(token=>text.includes(token))
+    || (!hasDifferentExplicitYear && text.includes(currentMonthShort));
+  return /生效|实施/.test(text) && mentionsCurrentMonth;
+};
+const itemMonth = (item,effectiveRule=false) => {
+  if(!item || typeof item !== 'object') return '';
+  const bucket = normalizeMonth(item.monthBucket);
+  if(bucket) return bucket;
+  if(effectiveRule){
+    const effective = normalizeMonth(item.effectiveDate);
+    if(effective) return effective;
+    if(hasCurrentEffectiveText(item)) return CURRENT_MONTH;
+  }
+  const fields = effectiveRule ? DATE_FIELDS.filter(k=>k!=='effectiveDate') : DATE_FIELDS;
+  for(const field of fields){
+    const month = normalizeMonth(item[field]);
+    if(month) return month;
+  }
+  return '';
+};
+const isCurrentMonth = (item,effectiveRule=false) => itemMonth(item,effectiveRule) === CURRENT_MONTH;
+const recordDate = item => {
+  const parts = [];
+  if(item.publishDate) parts.push(`发布 ${item.publishDate}`);
+  if(item.effectiveDate && item.effectiveDate!==item.publishDate) parts.push(`生效 ${item.effectiveDate}`);
+  if(item.date && item.date!==item.publishDate && item.date!==item.effectiveDate) parts.push(item.date);
+  if(item.issueDate) parts.push(`印发 ${item.issueDate}`);
+  if(!parts.length && item.captured_at) parts.push(`采集 ${item.captured_at}`);
+  if(!parts.length && item.scrapedAt) parts.push(`采集 ${item.scrapedAt}`);
+  return parts.join(' · ');
+};
+const recordTitle = item => item.title || item.metric || item.brand || item.source_name || item.source || '';
+const recordDetail = item => item.detail || item.summary || item.impact || item.note || item.metric_note || '';
+const recordCategory = item => item.category || item.cat || item.topic || item.type || '通用';
+const keyed = (path,items) => (Array.isArray(items)?items:[]).map((item,index)=>({item,key:`${path}:${index}`,path}));
+const monthAttr = rec => isCurrentMonth(rec.item,rec.path==='policy.platformRules'||rec.path==='policy.policy')
+  ? `data-month-record-key="${esc(rec.key)}"`
+  : `data-history-reference-key="${esc(rec.key)}"`;
+const historyAttr = rec => `data-history-record-key="${esc(rec.key)}"`;
+const renderSource = item => {
+  const date = recordDate(item);
+  const source = item.source || item.source_name || '';
+  const sourceHtml = source || item.url ? linkify(source||item.url,item.url) : '';
+  return sourceHtml || date ? `<div class="src">${sourceHtml}${sourceHtml&&date?' · ':''}${esc(date)}</div>` : '';
+};
+const periodMonthKey = item => {
+  const metric = String(item&&item.metric||'');
+  const period = String(item&&item.period||'');
+  const isSingle = /单月/.test(metric) || /^20\d{2}年\d{1,2}月$/.test(period) || /^20\d{2}-\d{2}$/.test(period);
+  if(!isSingle) return '';
+  const m = `${period} ${metric}`.match(/(20\d{2})年(\d{1,2})月/) || `${period} ${metric}`.match(/(20\d{2})-(\d{2})/);
+  return m ? `${m[1]}-${String(parseInt(m[2],10)).padStart(2,'0')}` : '';
+};
+const monthDisplay = key => key ? `${key.slice(0,4)}年${parseInt(key.slice(5),10)}月` : '';
+const numericMetric = value => {
+  const n = parseFloat(String(value==null?'':value).replace(/[^\-\d.]/g,''));
+  return Number.isFinite(n) ? n : null;
+};
+const shortMetric = metric => String(metric||'')
+  .replace(/^限额以上单位/,'').replace(/零售额/,'').replace(/[（(].*?[）)]/g,'').trim();
+
+const macroRecords = Object.entries(macro.macro||{}).flatMap(([name,items])=>keyed(`macro.macro.${name}`,items));
+const realEstateRecords = Object.entries(macro.realEstate||{}).flatMap(([name,items])=>keyed(`macro.realEstate.${name}`,items));
+const platformRecords = Object.entries(platform.platforms||{}).flatMap(([name,items])=>keyed(`platform.platforms.${name}`,items))
+  .concat(keyed('platform.crossPlatform',platform.crossPlatform));
+const policyRecords = keyed('policy.policy',policy.policy);
+const industryRecords = keyed('policy.industry',policy.industry);
+const merchantRecords = keyed('policy.merchant',policy.merchant);
+const ruleRecords = keyed('policy.platformRules',policy.platformRules);
+const socialRecords = [
+  {item:doudian,key:'social.doudian:0',path:'social.doudian'},
+  {item:chanmama,key:'social.chanmama:0',path:'social.chanmama'},
+  {item:juliang,key:'social.juliang:0',path:'social.juliang'}
+];
+
+const retailRecords = keyed('macro.macro.retailSales',(macro.macro&&macro.macro.retailSales)||[]);
+const retailMonthKeys = retailRecords.map(r=>periodMonthKey(r.item)).filter(Boolean).sort();
+const latestRetailMonth = retailMonthKeys.length ? retailMonthKeys[retailMonthKeys.length-1] : '';
+const latestRetailRecords = retailRecords.filter(r=>periodMonthKey(r.item)===latestRetailMonth);
+const latestRetailKeySet = new Set(latestRetailRecords.map(r=>r.key));
+
+const asOf = macro.asOf || highlights.asOf || '';
+document.getElementById('asOfDate').textContent = asOf;
+document.getElementById('currentMonthRange').textContent = `${CURRENT_MONTH}-01${asOf?' ~ '+asOf:''}`;
+document.getElementById('rollingWindow').textContent = platform.windowStart&&platform.windowEnd
+  ? `近30天（${platform.windowStart} ~ ${platform.windowEnd}）` : '';
+document.getElementById('monthLabelTip').textContent = CURRENT_MONTH_LABEL;
+document.getElementById('monthSummary').textContent = highlights.monthlySummary || highlights.intro || '';
+document.getElementById('navMonthLabel').textContent = `（${currentMonthShort}）`;
+
+// ===== 本月独立专区：源数据按月归桶，curated highlights 仅用于摘要，不重复渲染 =====
+const monthGroups = [
+  ['macro','宏观',macroRecords.filter(r=>!latestRetailKeySet.has(r.key))],
+  ['realestate','房地产',realEstateRecords],
+  ['platform','平台',platformRecords],
+  ['policy','政策',policyRecords],
+  ['industry-merchant','行业 / 商家',industryRecords.concat(merchantRecords)],
+  ['social','社媒',socialRecords],
+  ['rules','平台规则',ruleRecords]
+];
+const impMap = {'高':'h-high','中':'h-mid','低':''};
+const renderMonthCard = rec => {
+  const it = rec.item;
+  const date = recordDate(it);
+  const category = recordCategory(it);
+  const impact = it.impact || it.relevance || '';
+  return `<div class="mh-card ${impMap[impact]||''}" ${monthAttr(rec)}>
+    <div class="mh-top">
+      ${date?`<span class="mh-date">${esc(date)}</span>`:''}
+      ${category?`<span class="cat-chip" data-cat="${esc(category)}">${esc(category)}</span>`:''}
+      ${impact?`<span class="mh-imp">影响：${esc(impact)}</span>`:''}
+    </div>
+    <h3>${esc(recordTitle(it))}</h3>
+    ${recordDetail(it)?`<p>${esc(recordDetail(it))}</p>`:''}
+    ${renderSource(it)}
+  </div>`;
+};
+let mhHtml = '';
+monthGroups.forEach(([key,label,records])=>{
+  const current = records.filter(r=>isCurrentMonth(r.item,key==='policy'||key==='rules'));
+  mhHtml += `<div class="mh-sub" data-month-group="${key}">${label}（${current.length}）</div>`;
+  mhHtml += current.length
+    ? `<div class="mh-grid">${current.map(renderMonthCard).join('')}</div>`
+    : `<div class="arch-note">${label}：本月暂无同时具备可核实日期与来源的新增记录。</div>`;
+});
+document.getElementById('monthHighlights').innerHTML = mhHtml;
+
+// ===== 最新单月宏观 KPI：按数据 period 动态选择，不用发布日期冒充数据月份 =====
+const latestRetailLabel = monthDisplay(latestRetailMonth);
+const retailHistoryNote = latestRetailMonth && latestRetailMonth!==CURRENT_MONTH
+  ? ` · 历史参考（当前无${currentMonthShort}单月官方数据）` : '';
+document.getElementById('macroPeriodTip').textContent = latestRetailLabel ? `${latestRetailLabel}单月${retailHistoryNote}` : '暂无可核实单月数据';
+document.getElementById('macroKpis').innerHTML = latestRetailRecords.length ? latestRetailRecords.map(rec => {
+  const k = rec.item;
+  return `<div class="kpi" ${monthAttr(rec)}>
+    <div class="k">${esc(k.metric)}</div>
+    <div class="v">${esc(k.value)}</div>
+    <div class="yoy ${yoyClass(k.yoy)}">${esc(yoyText(k.yoy))}</div>
+    ${k.note ? `<div class="n">${esc(k.note)}</div>` : ''}
+    ${renderSource(k)}
+  </div>`;
+}).join('') : '<div class="arch-note">暂无可核实单月宏观指标。</div>';
+
+// ===== 历史存档目录：当前 latest 版本不重复出现在旧归档 =====
+const latestEditionId = archive.latest || '';
+const editions = (archive.editions||[]).filter(ed=>ed.id!==latestEditionId)
+  .slice().sort((a,b)=>String(b.id).localeCompare(String(a.id)));
+document.getElementById('archCountTip').textContent = `共 ${editions.length} 期历史版本 · 已排除当前版 ${latestEditionId||'—'}`;
+document.getElementById('archNote').textContent = archive.note || '历史报告仅供回看。';
+document.getElementById('archiveList').innerHTML = editions.map(ed=>{
+  const ss = ed.sourceStats||{};
+  const hl = (ed.highlights||[]).map(h=>`<li>${esc(h)}</li>`).join('');
+  const statTxt = ss.totalSources!=null ? `信源 ${ss.totalSources} · 深层 ${ss.depth3||0} · 阻塞 ${ss.depth0_blocked||0}` : '';
+  const btn = (cls,ico,label,href)=> href ? `<a class="arch-btn ${cls}" href="${esc(href)}" target="_blank"><span class="ico">${ico}</span>${label}</a>` : '';
+  return `<div class="arch-card" data-edition-id="${esc(ed.id)}">
+    <div class="ac-top">
+      <span class="ac-label">${esc(ed.label||ed.id)}</span>
+      ${ed.type?`<span class="ac-type">${esc(ed.type)}</span>`:''}
+      <span class="ac-range">${esc(ed.dataRange||'')}</span>
+    </div>
+    ${ed.summary?`<div class="ac-sum">${esc(ed.summary)}</div>`:''}
+    ${hl?`<ul class="ac-hl">${hl}</ul>`:''}
+    <div class="ac-links">
+      ${btn('html','📊','在线看板',ed.html)}
+      ${btn('doc','📄','汇报稿 Word',ed.brief)}
+      ${btn('doc','📑','详报 Word',ed.detail)}
+      ${statTxt?`<span class="ac-stat">${esc(statTxt)} · 截止 ${esc(ed.asOf||ed.publishDate||'')}</span>`:''}
+    </div>
+  </div>`;
+}).join('');
+
+// ===== 历史参考 =====
+document.getElementById('insightBlock').innerHTML =
+  '<ol>' + (macro.keyInsightsForBoard||[]).map(x => `<li>${esc(x)}</li>`).join('') + '</ol>';
+const historicalRealEstate = realEstateRecords.filter(r=>!isCurrentMonth(r.item)).sort((a,b)=>recordDate(b.item).localeCompare(recordDate(a.item))).slice(0,8);
+document.getElementById('realEstateKpis').innerHTML = historicalRealEstate.map(rec => {
+  const k = rec.item;
+  return `<div class="kpi" ${historyAttr(rec)}>
+    <div class="k">${esc(k.metric||k.title)}</div>
+    <div class="v" style="font-size:${String(k.value||'').length>16?'15px':'22px'}">${esc(k.value)}</div>
+    <div class="yoy ${yoyClass(k.yoy)}">${esc(yoyText(k.yoy))}</div>
+    ${k.note ? `<div class="n">${esc(k.note)}</div>` : ''}
+    ${renderSource(k)}
+  </div>`;
+}).join('');
+
+// ===== charts：均由数据动态生成 =====
+Chart.defaults.color = '#e6edf3';
+Chart.defaults.borderColor = '#30363d';
+const retailChartRecords = latestRetailRecords.filter(r=>numericMetric(r.item.yoy)!=null);
+document.getElementById('retailChartSub').textContent = latestRetailLabel
+  ? `${latestRetailLabel}单月，限额以上单位商品零售额同比${retailHistoryNote}` : '暂无可核实单月数据';
+new Chart(document.getElementById('chartRetail'),{
+  type:'bar',
+  data:{labels:retailChartRecords.map(r=>shortMetric(r.item.metric)),
+    datasets:[{label:`${latestRetailLabel||'最新单月'}同比 (%)`,data:retailChartRecords.map(r=>numericMetric(r.item.yoy)),
+      backgroundColor:v=>v.raw>=0?'#3fb950':'#f85149'}]},
+  options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
+});
+const upstreamCandidates = macroRecords.filter(r=>r.path!=='macro.macro.retailSales').concat(realEstateRecords);
+const upstreamMonthKeys = upstreamCandidates.map(r=>periodMonthKey(r.item)).filter(Boolean).sort();
+const latestUpstreamMonth = upstreamMonthKeys.length ? upstreamMonthKeys[upstreamMonthKeys.length-1] : '';
+const upstreamChartRecords = upstreamCandidates
+  .filter(r=>periodMonthKey(r.item)===latestUpstreamMonth)
+  .map(r=>({rec:r,value:numericMetric(r.item.yoy)})).filter(x=>x.value!=null).slice(0,9);
+const upstreamLabel = monthDisplay(latestUpstreamMonth);
+const upstreamHistoryNote = latestUpstreamMonth && latestUpstreamMonth!==CURRENT_MONTH ? ' · 历史参考' : '';
+document.getElementById('upstreamChartSub').textContent = upstreamLabel
+  ? `${upstreamLabel}最新可得单月指标${upstreamHistoryNote}，红=拖累，绿=支撑` : '暂无可核实单月数据';
+new Chart(document.getElementById('chartUpstream'),{
+  type:'bar',indexAxis:'y',
+  data:{labels:upstreamChartRecords.map(x=>`${shortMetric(x.rec.item.metric||x.rec.item.title)} (${upstreamLabel})`),
+    datasets:[{label:'同比 / 值',data:upstreamChartRecords.map(x=>x.value),
+      backgroundColor:function(ctx){const v=ctx.raw;const l=ctx.chart.data.labels[ctx.dataIndex];if(l.includes('PMI'))return v>=50?'#3fb950':'#d29922';return v>=0?'#3fb950':'#f85149'}}]},
+  options:{plugins:{legend:{display:false}},scales:{x:{ticks:{callback:v=>v}}}}
+});
+
+// ===== 抖店罗盘 =====
+document.getElementById('dcCoverageTip').textContent = `${doudian.coverage.industry} · ${doudian.coverage.dateRange} · ${doudian.coverage.granularity}`;
+document.getElementById('dcNote').textContent = '⚠ ' + doudian.note;
+const cm = doudian.coreMetrics;
+const cmDefs = [
+  ['支付GMV', cm.payGmv],['销量', cm.itemsSold],['支付人数', cm.buyers],['订单数', cm.orders],
+  ['在线商品数', cm.onlineSku],['动销商品数', cm.activeSku],['件单价', cm.pricePerItem],['客单价', cm.arpu]
+];
+document.getElementById('dcCoreMetrics').innerHTML = cmDefs.map(([label,m])=>{
+  if(!m) return '';
+  return `<div class="kpi"><div class="k">${label}</div><div class="v" style="font-size:17px">${m.range||m.value||'—'}</div><div class="yoy ${yoyClass(m.wow)}">较上周期 ${m.wow||'—'}</div></div>`;
+}).join('');
+
+// 子类目 TOP10
+const subs = (doudian.subCategories||[]).slice(0,10);
+document.getElementById('dcSubCatTable').innerHTML =
+  '<thead><tr><th>#</th><th>子类目</th><th>GMV区间</th><th>占比</th><th>件单价</th></tr></thead><tbody>' +
+  subs.map((s,i)=>`<tr><td><span class="dc-rank ${i<3?'top':''}">${i+1}</span></td><td>${esc(s.name)}</td><td>${esc(s.gmvRange||'—')}</td><td>${esc(s.share||'—')}</td><td>${esc(s.unitPrice||s.pricePerItem||'—')}</td></tr>`).join('') +
+  '</tbody>';
+
+// 带货载体饼图
+const carriers = doudian.carriers||[];
+new Chart(document.getElementById('chartCarrier'),{
+  type:'doughnut',
+  data:{labels:carriers.map(c=>c.name),datasets:[{data:carriers.map(c=>parseFloat(String(c.share).replace('%',''))||0),
+    backgroundColor:['#4493f8','#a78bfa','#3fb950','#d29922','#f85149']}]},
+  options:{plugins:{legend:{position:'right',labels:{font:{size:10.5},boxWidth:12}}}}
+});
+// 价格带柱图
+const bands = doudian.priceBands||[];
+new Chart(document.getElementById('chartPriceBand'),{
+  type:'bar',
+  data:{labels:bands.map(b=>b.range),datasets:[{label:'GMV占比',data:bands.map(b=>parseFloat(String(b.share).split('-')[1]||b.share)||0),
+    backgroundColor:'#a78bfa'}]},
+  options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
+});
+
+// TOP15 单品
+const prods = doudian.topProducts_39plusBand||[];
+document.getElementById('dcTopProdTable').innerHTML =
+  '<thead><tr><th>#</th><th>单品</th><th>销售额区间</th></tr></thead><tbody>' +
+  prods.map((p,i)=>`<tr><td><span class="dc-rank ${i<3?'top':''}">${i+1}</span></td><td>${esc(p.title||p.name||'—')}</td><td>${esc(p.gmvRange||p.gmv||'—')}</td></tr>`).join('') +
+  '</tbody>';
+
+document.getElementById('dcInsights').innerHTML =
+  '<ol>' + (doudian.insights||[]).map(x=>`<li>${x}</li>`).join('') + '</ol>';
+
+// ===== 抖音生态·第三方情报（蝉妈妈 + 巨量算数） =====
+// 蝉妈妈 品牌榜
+(function(){
+  const cmRank = (chanmama.ranking||[]);
+  document.getElementById('tpCoverageTip').textContent =
+    `${esc(chanmama.category||'')} · ${esc(chanmama.window||'')} · 采集 ${esc(chanmama.captured_at||'')}`;
+  document.getElementById('tpNote').textContent =
+    '⚠ 蝉妈妈：' + (chanmama.metric_note||'') + '　|　巨量算数：' + ((juliang&&juliang.metric_note)||'');
+  document.getElementById('cmSub').textContent =
+    '销售额指数为综合估算指数，仅可同区间横向比大小，不可换算真实GMV/算同环比';
+  // 横向柱图 TOP15
+  const top = cmRank.slice(0,15);
+  new Chart(document.getElementById('chartChanmama'),{
+    type:'bar', indexAxis:'y',
+    data:{labels:top.map(b=>`${b.rank}. ${b.brand}`),
+      datasets:[{label:'销售额指数', data:top.map(b=>b.sales_index),
+        backgroundColor:top.map((b,i)=>i<3?'#e879f9':'#a78bfa')}]},
+    options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'销售额指数 '+c.raw.toLocaleString()}}},
+      scales:{x:{ticks:{callback:v=>(v/10000).toFixed(0)+'w'}}}}
+  });
+  // 明细表 TOP25
+  document.getElementById('cmTable').innerHTML =
+    '<thead><tr><th>#</th><th>品牌</th><th>主营大类</th><th>类目商品数</th><th>类目销量档</th><th>销售额指数</th><th>关联达人</th></tr></thead><tbody>' +
+    cmRank.map(b=>`<tr><td><span class="dc-rank ${b.rank<=3?'top':''}">${b.rank}</span></td><td>${esc(b.brand)}</td><td>${esc(b.main_category||'—')}</td><td>${b.category_items==null?'—':b.category_items}</td><td>${esc(b.category_volume_band||'—')}</td><td>${b.sales_index==null?'—':b.sales_index.toLocaleString()}</td><td>${b.linked_influencers==null?'—':b.linked_influencers}</td></tr>`).join('') +
+    '</tbody>';
+})();
+
+// 巨量算数 关键词
+(function(){
+  const kws = (juliang.keywords||[]);
+  document.getElementById('jlSub').textContent =
+    `${esc(juliang.window||'')} · ${esc(juliang.region||'全国')} · ${esc(juliang.device_platform||'抖音')}（相对指数，非真实销量）`;
+  new Chart(document.getElementById('chartJuliang'),{
+    type:'bar',
+    data:{labels:kws.map(k=>k.keyword),
+      datasets:[
+        {label:'搜索指数(均值)', data:kws.map(k=>k.search_index&&k.search_index.avg||0), backgroundColor:'#4493f8'},
+        {label:'综合指数(均值)', data:kws.map(k=>k.composite_index&&k.composite_index.avg||0), backgroundColor:'#3fb950'}
+      ]},
+    options:{plugins:{legend:{position:'top',labels:{font:{size:10.5},boxWidth:12}}},
+      scales:{y:{ticks:{callback:v=>(v/10000).toFixed(0)+'w'}}}}
+  });
+  document.getElementById('jlTable').innerHTML =
+    '<thead><tr><th>关键词</th><th>搜索指数(均值)</th><th>搜索·同比</th><th>搜索·环比</th><th>综合指数(均值)</th><th>综合·同比</th><th>综合·环比</th></tr></thead><tbody>' +
+    kws.map(k=>{const s=k.search_index||{},c=k.composite_index||{};
+      return `<tr><td>${esc(k.keyword)}</td><td>${esc(s.avg_display||'—')}</td><td class="yoy ${yoyClass(s.yoy)}">${yoyText(s.yoy)}</td><td class="yoy ${yoyClass(s.mom)}">${yoyText(s.mom)}</td><td>${esc(c.avg_display||'—')}</td><td class="yoy ${yoyClass(c.yoy)}">${yoyText(c.yoy)}</td><td class="yoy ${yoyClass(c.mom)}">${yoyText(c.mom)}</td></tr>`;}).join('') +
+    '</tbody>';
+})();
+
+
+// ===== platform tabs · 历史参考（过滤当前月） =====
+const platMeta = {jd:'京东',douyin:'抖音',pdd:'拼多多',xhs:'小红书',shipinhao:'视频号',kuaishou:'快手',tmall_taobao:'淘宝天猫',cross:'跨平台'};
+const platEntries = Object.entries(platform.platforms||{}).map(([k,v])=>({
+  key:k,name:platMeta[k]||k,items:keyed(`platform.platforms.${k}`,v).filter(r=>!isCurrentMonth(r.item))
+}));
+if(platform.crossPlatform&&platform.crossPlatform.length){
+  platEntries.push({key:'cross',name:'跨平台',items:keyed('platform.crossPlatform',platform.crossPlatform).filter(r=>!isCurrentMonth(r.item))});
+}
+const tabsEl = document.getElementById('platTabs');
+const panelsEl = document.getElementById('platPanels');
+tabsEl.innerHTML = platEntries.map((p,i)=>`<button class="tab ${i===0?'active':''}" data-plat="${esc(p.key)}" onclick="switchPlat('${esc(p.key)}')">${esc(p.name)} <span class="cnt">${p.items.length}</span></button>`).join('');
+document.getElementById('platCountTip').textContent = `历史参考共 ${platEntries.reduce((s,p)=>s+p.items.length,0)} 条 · 当前月已移至本月专区`;
+panelsEl.innerHTML = platEntries.map((p,i)=>`
+  <div class="tab-panel ${i===0?'active':''}" data-plat="${esc(p.key)}">
+    ${p.items.length===0?`<div class="gap-warn"><h3>无历史参考记录</h3><ul><li>${esc(p.name)} 当前没有可展示的非本月记录</li></ul></div>`:`
+    <div class="event-list">
+      ${p.items.map(rec=>{const it=rec.item;return `
+        <div class="event" data-cat="${esc(it.category||'通用')}" ${historyAttr(rec)}>
+          <div class="top">
+            <span class="date">${esc(recordDate(it))}</span>
+            <span class="cat-badge" style="background:${catColor(it.category)}">${esc(it.category||'通用')}</span>
+            <span class="type-badge">${esc(it.type||'')}</span>
+            <h3 style="flex:1 1 100%;margin-top:4px">${esc(it.title||'')}</h3>
+          </div>
+          <p>${esc(it.summary||'')}</p>
+          ${renderSource(it)}
+        </div>`;}).join('')}
+    </div>`}
+  </div>`).join('');
+
+window.switchPlat = k => {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.plat===k));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.dataset.plat===k));
+};
+window.filterCat = el => {
+  document.querySelectorAll('#sec-platform .chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  const cat = el.dataset.cat;
+  document.querySelectorAll('#sec-platform .event').forEach(ev=>{
+    if(cat==='全部') ev.style.display='';
+    else{const arr=(ev.dataset.cat||'').split(/[,，]/).map(s=>s.trim());ev.style.display=arr.includes(cat)?'':'none';}
+  });
+};
+
+// ===== policy timeline =====
+const policyImpact = it => {
+  const s = (it.impact||it.summary||'')+'';
+  if(/强|直接|硬性|正式实施|不合规|停业/.test(s)) return 'critical';
+  if(/团标|试点|宣贯|规范|地方/.test(s)) return 'moderate';
+  return '';
+};
+// 防御: subIndustry 可能被误写成字符串(2026-08-13曾因此 init 崩溃、半个看板空白), 统一归一化为数组
+const asArr = v => Array.isArray(v) ? v : (typeof v==='string' && v ? v.split(/[\/、,，]/).map(s=>s.trim()).filter(Boolean) : []);
+const historicalPolicies = policyRecords.filter(r=>!isCurrentMonth(r.item,true));
+const historicalIndustry = industryRecords.filter(r=>!isCurrentMonth(r.item));
+document.getElementById('policyTL').innerHTML = '<h3 style="color:#f85149;margin:0 0 8px 4px;font-size:13.5px">历史政策 · 标准</h3>' + historicalPolicies.map(rec=>{const p=rec.item;return `
+  <div class="tl-item ${policyImpact(p)}" ${historyAttr(rec)}>
+    <h3>${esc(p.title)}</h3>
+    <div class="meta">${esc(recordDate(p))} · ${esc(p.issuer||'')} · ${esc(p.category||'')} · ${esc(p.scope||'')} ${asArr(p.subIndustry).map(x=>`<span class="cat-chip" data-cat="${esc(x)}">${esc(x)}</span>`).join('')}</div>
+    <p>${esc(p.summary||'')}</p>
+    ${p.impact?`<div class="impact">影响：${esc(p.impact)}</div>`:''}
+    ${renderSource(p)}
+  </div>`;}).join('');
+document.getElementById('industryTL').innerHTML = '<h3 style="color:#4493f8;margin:0 0 8px 4px;font-size:13.5px">历史行业 · 展会 · 协会</h3>' + historicalIndustry.map(rec=>{const p=rec.item;return `
+  <div class="tl-item" ${historyAttr(rec)}>
+    <h3>${esc(p.title)}</h3>
+    <div class="meta">${esc(recordDate(p))} · ${esc(p.issuer||'')} · ${esc(p.topic||'')}</div>
+    <p>${esc(p.summary||p.detail||'')}</p>
+    ${renderSource(p)}
+  </div>`;}).join('');
+
+// ===== 跨平台电商/广告规则变化 · 历史参考（过滤当前月及当月生效规则） =====
+(function(){
+  const noteEl = document.getElementById('platRulesNote');
+  if(noteEl) noteEl.textContent = `历史参考：${policy.platformRulesNote||''}`;
+  const rules = ruleRecords.filter(rec=>!isCurrentMonth(rec.item,true));
+  const relRank = {'高':0,'中':1,'弱':2};
+  const relColor = {'高':'#f85149','中':'#d29922','弱':'#8b949e'};
+  const relDot = {'高':'🔴','中':'🟡','弱':'🔵'};
+  const groups = {};
+  rules.forEach(rec=>{const name=rec.item.platform||'其他';(groups[name]=groups[name]||[]).push(rec);});
+  const platOrder = ['抖店·抖音电商','京准通·京东广告','巨量千川·抖音广告'];
+  const names = Object.keys(groups).sort((a,b)=>(platOrder.indexOf(a)+99*(platOrder.indexOf(a)<0))-(platOrder.indexOf(b)+99*(platOrder.indexOf(b)<0)));
+  const html = names.map(name=>{
+    const items = groups[name].slice().sort((a,b)=>{
+      const rd = (relRank[a.item.relevance]??9)-(relRank[b.item.relevance]??9);
+      if(rd) return rd;
+      return recordDate(b.item).localeCompare(recordDate(a.item));
+    });
+    const rows = items.map(rec=>{const r=rec.item;return `
+      <div class="tl-item" style="border-left:3px solid ${relColor[r.relevance]||'#30363d'}" ${historyAttr(rec)}>
+        <h3>${relDot[r.relevance]||''} ${esc(r.title)}</h3>
+        <div class="meta">${esc(recordDate(r))} · ${esc(r.status||'')} · ${esc(r.scope||'')} <span class="cat-chip" data-cat="${esc(r.relevance||'')}相关">${esc(r.relevance||'')}相关</span></div>
+        <p>${esc(r.summary||'')}</p>
+        ${renderSource(r)}
+      </div>`;}).join('');
+    return `<div style="margin-bottom:14px">
+      <h3 style="color:#e6edf3;margin:0 0 8px 4px;font-size:13px;border-bottom:1px solid #30363d;padding-bottom:4px">${esc(name)} <span style="color:#8b949e;font-weight:400">(${items.length})</span></h3>
+      ${rows}
+    </div>`;
+  }).join('');
+  document.getElementById('platRules').innerHTML = html;
+})();
+
+// ===== merchant · 历史参考（过滤当前月） =====
+document.getElementById('merchantList').innerHTML = merchantRecords.filter(rec=>!isCurrentMonth(rec.item)).map(rec=>{const m=rec.item;return `
+  <div class="event" ${historyAttr(rec)}>
+    <div class="top">
+      <span class="date">${esc(recordDate(m))}</span>
+      <span class="cat-badge" style="background:#4493f8">${esc(m.brand||m.category||'')}</span>
+      <span class="type-badge">${esc(m.type||'')}</span>
+      <h3 style="flex:1 1 100%;margin-top:4px">${esc(m.title||m.summary||'')}</h3>
+    </div>
+    ${m.title&&m.summary?`<p>${esc(m.summary)}</p>`:''}
+    ${renderSource(m)}
+  </div>`;}).join('');
+
+// ===== gaps + conflicts =====
+const normConf = c => typeof c==='string'?c:(c.item?`【${c.item}】${c.detail||''}`:JSON.stringify(c));
+const allGaps = [
+  ...(macro.gaps||[]).map(x=>'[宏观/房产] '+x),
+  ...(platform.gaps||[]).map(x=>'[电商平台] '+x),
+  ...(policy.gaps||[]).map(x=>'[政策/商家] '+x)
+];
+const allConflicts = [
+  ...(macro.conflicts||[]).map(x=>'[宏观/房产] '+normConf(x)),
+  ...(platform.conflicts||[]).map(x=>'[电商平台] '+normConf(x)),
+  ...(policy.conflicts||[]).map(x=>'[政策/商家] '+normConf(x))
+];
+document.getElementById('gapList').innerHTML = allGaps.map(g=>`<li>${esc(g)}</li>`).join('');
+document.getElementById('conflictList').innerHTML = allConflicts.map(c=>`<li>${esc(c)}</li>`).join('');
+
+// ===== 数据源采集深度 =====
+const sm = sources.summary||{};
+document.getElementById('srcSummary').innerHTML = [
+  ['信源总数', sm.totalSources],['深层(3)', sm.depth3],['中层(2)', sm.depth2],['浅层(1)', sm.depth1],['阻塞(0)', sm.depth0_blocked]
+].map(([l,v])=>`<div class="src-stat"><b>${v!=null?v:'—'}</b>${l}</div>`).join('');
+document.getElementById('srcNote').textContent = '说明：' + (sources.note||'');
+const publicSources = (sources.sources||[]).filter(s=>String(s.layer||'').toUpperCase()!=='D');
+document.getElementById('srcTable').innerHTML =
+  '<thead><tr><th>信源</th><th>层</th><th>深度</th><th>已采条数</th><th>核验时间</th></tr></thead><tbody>' +
+  publicSources.map(s=>`<tr>
+    <td>${linkify(s.name, s.url)}</td>
+    <td><span class="layer-tag">${esc(s.layer)}</span></td>
+    <td><span class="depth-badge depth-${esc(s.depth)}">${esc(s.depth)}</span></td>
+    <td>${esc(s.count||'—')}</td>
+    <td><span style="color:var(--muted);font-size:11px">${esc(s.timestamp||'—')}</span></td>
+  </tr>`).join('') + '</tbody>';
+
+// ===== 目录导航滚动高亮 =====
+const navItems = [...document.querySelectorAll('.nav-item')];
+navItems.forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  const el = document.getElementById(a.dataset.target);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+const sections = navItems.map(a=>document.getElementById(a.dataset.target)).filter(Boolean);
+const spy = ()=>{
+  let cur = sections[0];
+  const top = 90;
+  for(const s of sections){ if(s.getBoundingClientRect().top <= top) cur = s; }
+  navItems.forEach(a=>a.classList.toggle('active', a.dataset.target===(cur&&cur.id)));
+};
+window.addEventListener('scroll', spy, {passive:true});
+spy();
+}
+try { init(); } catch(e){ document.body.insertAdjacentHTML('afterbegin','<div style="background:#f85149;color:#fff;padding:10px 16px">加载数据失败: '+e.message+'</div>'); console.error(e); }
+</script>
+</body>
+</html>

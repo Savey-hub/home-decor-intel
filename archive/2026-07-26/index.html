@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>家装建材家具行业竞争情报看板</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel-2:#1c232d; --border:#30363d;
+  --text:#e6edf3; --muted:#8b949e; --accent:#4493f8; --accent-2:#3fb950;
+  --warn:#d29922; --danger:#f85149; --info:#a371f7;
+  --tag-jiaju:#e879f9; --tag-zhuangxiu:#60a5fa; --tag-jiancai:#f59e0b;
+  --tag-weiyu:#22d3ee; --tag-zhineng:#a78bfa; --tag-dingzhi:#f472b6;
+  --tag-dengju:#fbbf24; --tag-wujin:#94a3b8;
+  --nav-w:232px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.55;font-size:13.5px}
+/* ===== 左侧目录导航 ===== */
+.sidenav{position:fixed;top:0;left:0;width:var(--nav-w);height:100vh;background:linear-gradient(180deg,#12161d 0%,#0d1117 100%);border-right:1px solid var(--border);padding:20px 0 24px;overflow-y:auto;z-index:200}
+.sidenav::-webkit-scrollbar{width:6px}
+.sidenav::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
+.sidenav .brand{padding:0 18px 16px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.sidenav .brand .logo{font-size:14px;font-weight:700;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.4}
+.sidenav .brand .sub{font-size:11px;color:var(--muted);margin-top:4px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:9px 18px;color:var(--muted);font-size:13px;cursor:pointer;border-left:3px solid transparent;transition:all .15s;text-decoration:none}
+.nav-item:hover{background:var(--panel);color:var(--text)}
+.nav-item.active{color:var(--accent);border-left-color:var(--accent);background:rgba(68,147,248,.08);font-weight:600}
+.nav-item .ico{font-size:15px;width:18px;text-align:center}
+.nav-group{font-size:10.5px;color:#5c6370;text-transform:uppercase;letter-spacing:.06em;padding:12px 18px 5px;margin-top:4px}
+/* ===== 主体 ===== */
+.main{margin-left:var(--nav-w)}
+.hdr{background:linear-gradient(135deg,#1f2937 0%,#111827 100%);padding:20px 32px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.hdr h1{font-size:21px;font-weight:700;margin-bottom:4px;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hdr .meta{color:var(--muted);font-size:12px;display:flex;gap:16px;flex-wrap:wrap}
+.hdr .meta b{color:#e6edf3}
+.container{max-width:1320px;margin:0 auto;padding:20px 24px 60px}
+.section{margin-bottom:30px;scroll-margin-top:78px}
+.section-title{font-size:16px;font-weight:600;margin-bottom:12px;padding-left:9px;border-left:3px solid var(--accent);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.section-title .tip{color:var(--muted);font-size:12px;font-weight:400;margin-left:auto}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:all .18s}
+.kpi:hover{border-color:var(--accent);transform:translateY(-1px)}
+.kpi .k{font-size:11.5px;color:var(--muted);margin-bottom:6px;line-height:1.3}
+.kpi .v{font-size:22px;font-weight:700;line-height:1.15;margin-bottom:2px}
+.kpi .yoy{font-size:13px;font-weight:600;display:inline-block;padding:1px 8px;border-radius:12px}
+.kpi .yoy.up{color:#3fb950;background:rgba(63,185,80,.13)}
+.kpi .yoy.dn{color:#f85149;background:rgba(248,81,73,.13)}
+.kpi .yoy.na{color:var(--warn);background:rgba(210,153,34,.15)}
+.kpi .n{color:var(--muted);font-size:11.5px;margin-top:6px;line-height:1.4}
+.kpi .src{margin-top:6px;font-size:11px}
+.kpi .src a{color:var(--accent);text-decoration:none}
+.kpi .src a:hover{text-decoration:underline}
+.tabs{display:flex;gap:6px;margin-bottom:14px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.tab{padding:9px 16px;background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:13px;font-weight:500;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab:hover{color:var(--text)}
+.tab .cnt{background:var(--panel-2);color:var(--muted);padding:1px 7px;border-radius:10px;font-size:11px;margin-left:5px}
+.tab.active .cnt{background:var(--accent);color:#fff}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.event-list{display:flex;flex-direction:column;gap:10px}
+.event{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.event:hover{border-color:var(--accent)}
+.event .top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.event .date{color:var(--muted);font-size:12px;font-weight:600;min-width:82px}
+.event .cat-badge{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;color:#fff}
+.event .type-badge{padding:1px 7px;border-radius:4px;font-size:11px;font-weight:500;color:var(--muted);border:1px solid var(--border);background:var(--panel-2)}
+.event h3{font-size:14.5px;font-weight:600;margin-bottom:5px;line-height:1.4}
+.event p{color:var(--muted);font-size:12.5px;line-height:1.55}
+.event .src{margin-top:6px;font-size:11.5px}
+.event .src a{color:var(--accent);text-decoration:none;margin-right:12px}
+.event .src a:hover{text-decoration:underline}
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;padding:10px 12px;background:var(--panel-2);border-radius:8px}
+.filter-bar .lbl{color:var(--muted);font-size:12px;line-height:22px;margin-right:6px}
+.chip{padding:3px 10px;background:var(--panel);border:1px solid var(--border);border-radius:14px;color:var(--muted);font-size:12px;cursor:pointer;user-select:none}
+.chip.active{color:#fff;border-color:transparent}
+.chip.active[data-cat=家具]{background:var(--tag-jiaju)}
+.chip.active[data-cat=装修]{background:var(--tag-zhuangxiu)}
+.chip.active[data-cat=建材]{background:var(--tag-jiancai)}
+.chip.active[data-cat=卫浴厨房]{background:var(--tag-weiyu)}
+.chip.active[data-cat=全屋智能]{background:var(--tag-zhineng)}
+.chip.active[data-cat=全屋定制]{background:var(--tag-dingzhi)}
+.chip.active[data-cat=灯具光源]{background:var(--tag-dengju);color:#111}
+.chip.active[data-cat=电工五金]{background:var(--tag-wujin)}
+.chip.active[data-cat=通用]{background:var(--muted);color:#111}
+.chip.active[data-cat=全部]{background:var(--accent)}
+.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+@media(max-width:1024px){.two-col{grid-template-columns:1fr}}
+.chart-wrap{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px}
+.chart-wrap h3{font-size:13.5px;color:var(--text);margin-bottom:8px}
+.chart-wrap .sub{font-size:11.5px;color:var(--muted);margin-bottom:8px}
+.tl{position:relative;padding-left:22px;border-left:2px solid var(--border)}
+.tl-item{position:relative;margin-bottom:12px;padding:10px 14px;background:var(--panel);border:1px solid var(--border);border-radius:8px}
+.tl-item::before{content:"";position:absolute;left:-30px;top:14px;width:12px;height:12px;background:var(--accent);border-radius:50%;border:3px solid var(--bg)}
+.tl-item.critical::before{background:var(--danger)}
+.tl-item.moderate::before{background:var(--warn)}
+.tl-item h3{font-size:14px;font-weight:600;margin-bottom:4px}
+.tl-item .meta{font-size:11.5px;color:var(--muted);margin-bottom:4px}
+.tl-item p{font-size:12.5px;color:var(--muted);line-height:1.55}
+.tl-item .impact{margin-top:5px;font-size:12px;padding:5px 8px;background:rgba(68,147,248,.08);border-left:2px solid var(--accent);border-radius:0 4px 4px 0}
+.gap-warn{background:rgba(210,153,34,.09);border:1px solid rgba(210,153,34,.35);border-radius:10px;padding:14px 16px;margin-bottom:12px}
+.gap-warn h3{font-size:13.5px;color:var(--warn);margin-bottom:8px}
+.gap-warn ul{list-style:none;padding-left:0}
+.gap-warn li{padding:4px 0 4px 16px;position:relative;font-size:12.5px;color:var(--muted)}
+.gap-warn li::before{content:"○";position:absolute;left:0;color:var(--warn)}
+.gap-warn.conflict{background:rgba(248,81,73,.07);border-color:rgba(248,81,73,.35)}
+.gap-warn.conflict h3{color:var(--danger)}
+.gap-warn.conflict li::before{color:var(--danger)}
+.insight{background:linear-gradient(135deg,rgba(68,147,248,.08),rgba(163,113,247,.06));border:1px solid rgba(68,147,248,.25);border-radius:10px;padding:14px 18px;margin-bottom:8px}
+.insight ol{padding-left:20px}
+.insight ol li{margin-bottom:6px;font-size:13px;line-height:1.6}
+.foot{margin-top:32px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;line-height:1.7;text-align:center}
+.foot a{color:var(--accent);text-decoration:none}
+.cat-chip{display:inline-block;padding:1px 7px;margin-right:4px;border-radius:4px;font-size:11px;color:#fff}
+.cat-chip[data-cat=家具]{background:var(--tag-jiaju)}
+.cat-chip[data-cat=装修]{background:var(--tag-zhuangxiu)}
+.cat-chip[data-cat=建材]{background:var(--tag-jiancai)}
+.cat-chip[data-cat=卫浴厨房]{background:var(--tag-weiyu)}
+.cat-chip[data-cat=全屋智能]{background:var(--tag-zhineng)}
+.cat-chip[data-cat=全屋定制]{background:var(--tag-dingzhi)}
+.cat-chip[data-cat=灯具光源]{background:var(--tag-dengju);color:#111}
+.cat-chip[data-cat=电工五金]{background:var(--tag-wujin)}
+.cat-chip[data-cat=通用]{background:var(--muted);color:#111}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:6px}
+.legend b{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+/* ===== 本月要闻 ===== */
+.month-banner{background:linear-gradient(135deg,#7c2d12 0%,#1c232d 55%);border:1px solid #a3550d;border-radius:12px;padding:16px 20px;margin-bottom:18px}
+.month-banner .mb-label{display:inline-block;background:#f59e0b;color:#111;font-size:11px;font-weight:700;padding:2px 10px;border-radius:12px;margin-bottom:8px}
+.month-banner .mb-title{font-size:15px;font-weight:700;margin-bottom:6px}
+.month-banner .mb-sum{font-size:12.8px;color:#e6c07b;line-height:1.7}
+.mh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.mh-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:13px 15px;border-top:3px solid var(--accent)}
+.mh-card.h-high{border-top-color:var(--danger)}
+.mh-card.h-mid{border-top-color:var(--warn)}
+.mh-card .mh-top{display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap}
+.mh-card .mh-date{font-size:11.5px;color:var(--muted);font-weight:600}
+.mh-card .mh-imp{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:4px}
+.mh-card.h-high .mh-imp{background:rgba(248,81,73,.16);color:#f85149}
+.mh-card.h-mid .mh-imp{background:rgba(210,153,34,.16);color:#d29922}
+.mh-card h3{font-size:13.5px;font-weight:600;margin-bottom:5px;line-height:1.45}
+.mh-card p{font-size:12px;color:var(--muted);line-height:1.55}
+.mh-card .src{margin-top:6px;font-size:11px}
+.mh-card .src a{color:var(--accent);text-decoration:none}
+.mh-sub{font-size:12.5px;color:var(--muted);font-weight:600;margin:14px 0 8px;padding-left:8px;border-left:2px solid var(--muted)}
+/* ===== 抖店罗盘 ===== */
+.dc-note{font-size:11.5px;color:var(--warn);background:rgba(210,153,34,.08);border-radius:6px;padding:7px 10px;margin-bottom:12px;line-height:1.5}
+.dc-table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--panel);border-radius:8px;overflow:hidden}
+.dc-table th{background:var(--panel-2);color:var(--muted);text-align:left;padding:8px 10px;font-weight:600;font-size:11.5px;border-bottom:1px solid var(--border)}
+.dc-table td{padding:7px 10px;border-bottom:1px solid var(--border)}
+.dc-table tr:hover td{background:rgba(68,147,248,.05)}
+.dc-table .up{color:#3fb950}.dc-table .dn{color:#f85149}
+.dc-rank{display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:5px;background:var(--panel-2);font-size:11px;font-weight:700;margin-right:4px}
+.dc-rank.top{background:var(--accent);color:#fff}
+/* ===== 数据源采集深度 ===== */
+.src-table{width:100%;border-collapse:collapse;font-size:12px;background:var(--panel);border-radius:8px;overflow:hidden}
+.src-table th{background:var(--panel-2);color:var(--muted);text-align:left;padding:8px 9px;font-weight:600;font-size:11px;border-bottom:1px solid var(--border)}
+.src-table td{padding:7px 9px;border-bottom:1px solid var(--border);vertical-align:top}
+.src-table a{color:var(--accent);text-decoration:none}
+.depth-badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700}
+.depth-3{background:rgba(63,185,80,.16);color:#3fb950}
+.depth-2{background:rgba(68,147,248,.16);color:#4493f8}
+.depth-1{background:rgba(210,153,34,.16);color:#d29922}
+.depth-0{background:rgba(248,81,73,.16);color:#f85149}
+.layer-tag{display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;border-radius:4px;font-size:10.5px;font-weight:700;background:var(--panel-2);color:var(--muted)}
+.src-summary{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.src-stat{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px}
+.src-stat b{font-size:18px;display:block;color:var(--text)}
+/* ===== 历史存档 ===== */
+.arch-note{font-size:12px;color:var(--muted);background:var(--panel-2);border-radius:8px;padding:10px 14px;margin-bottom:14px;line-height:1.6}
+.arch-list{display:flex;flex-direction:column;gap:12px}
+.arch-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:15px 18px;border-left:4px solid var(--accent);transition:all .18s}
+.arch-card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.arch-card.latest{border-left-color:var(--accent-2);background:linear-gradient(135deg,rgba(63,185,80,.06),var(--panel))}
+.arch-card .ac-top{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.arch-card .ac-label{font-size:15px;font-weight:700;color:var(--text)}
+.arch-card .ac-type{font-size:11px;font-weight:600;padding:1px 9px;border-radius:12px;background:var(--panel-2);color:var(--muted)}
+.arch-card .ac-latest{font-size:11px;font-weight:700;padding:1px 9px;border-radius:12px;background:rgba(63,185,80,.16);color:var(--accent-2)}
+.arch-card .ac-range{font-size:11.5px;color:var(--muted);margin-left:auto}
+.arch-card .ac-sum{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:8px}
+.arch-card .ac-hl{list-style:none;padding:0;margin:0 0 10px}
+.arch-card .ac-hl li{font-size:12px;color:var(--muted);padding:2px 0 2px 15px;position:relative;line-height:1.5}
+.arch-card .ac-hl li::before{content:"▪";position:absolute;left:0;color:var(--accent)}
+.arch-card .ac-links{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.arch-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:8px;font-size:12.5px;font-weight:600;text-decoration:none;border:1px solid var(--border);transition:all .15s}
+.arch-btn.html{background:rgba(68,147,248,.12);color:var(--accent);border-color:rgba(68,147,248,.35)}
+.arch-btn.html:hover{background:rgba(68,147,248,.22)}
+.arch-btn.doc{background:var(--panel-2);color:var(--text)}
+.arch-btn.doc:hover{border-color:var(--accent)}
+.arch-btn .ico{font-size:14px}
+.arch-card .ac-stat{font-size:11px;color:#5c6370;margin-left:auto}
+@media(max-width:820px){.sidenav{display:none}.main{margin-left:0}}
+</style>
+</head>
+<body>
+
+<!-- ===== 左侧目录导航 ===== -->
+<nav class="sidenav" id="sidenav">
+  <div class="brand">
+    <div class="logo">家装建材家具<br>行业竞争情报看板</div>
+    <div class="sub">天猫行业运营 · 8大子行业</div>
+  </div>
+  <div class="nav-group">历史存档</div>
+  <a class="nav-item" data-target="sec-archive"><span class="ico">🗄</span>往期报告目录</a>
+  <div class="nav-group">本月焦点</div>
+  <a class="nav-item" data-target="sec-month"><span class="ico">🔥</span>本月要闻（7月）</a>
+  <div class="nav-group">核心结论</div>
+  <a class="nav-item" data-target="sec-insight"><span class="ico">📌</span>本期核心洞察</a>
+  <div class="nav-group">大盘数据</div>
+  <a class="nav-item" data-target="sec-macro"><span class="ico">🌐</span>宏观维度</a>
+  <a class="nav-item" data-target="sec-realestate"><span class="ico">🏗</span>房地产维度</a>
+  <a class="nav-item" data-target="sec-chart"><span class="ico">📊</span>需求 vs 供给</a>
+  <div class="nav-group">竞争与内容</div>
+  <a class="nav-item" data-target="sec-doudian"><span class="ico">🎯</span>抖店罗盘·社媒竞争</a>
+  <a class="nav-item" data-target="sec-platform"><span class="ico">🛒</span>电商平台动态</a>
+  <div class="nav-group">政策·商家</div>
+  <a class="nav-item" data-target="sec-policy"><span class="ico">📜</span>政策·标准·行业</a>
+  <a class="nav-item" data-target="sec-merchant"><span class="ico">🏢</span>头部商家动态</a>
+  <div class="nav-group">数据治理</div>
+  <a class="nav-item" data-target="sec-gaps"><span class="ico">⚠️</span>缺口与矛盾</a>
+  <a class="nav-item" data-target="sec-sources"><span class="ico">🗂</span>数据源采集深度</a>
+</nav>
+
+<div class="main">
+<div class="hdr">
+  <h1>家装建材家具行业竞争情报看板</h1>
+  <div class="meta">
+    <span>本月区间：<b>2026-07-01 ~ 2026-07-16</b></span>
+    <span>滚动窗口：<b>近30天（06-17~07-16）</b></span>
+    <span>数据截止：<b id="asOfDate">2026-07-16</b></span>
+    <span>更新：<b>每周四 12:00 前</b></span>
+    <span>子行业：<b>家具·装修·建材·卫浴厨房·全屋智能·全屋定制·灯具光源·电工五金</b></span>
+  </div>
+</div>
+<div class="container">
+
+<!-- 历史存档 · 往期报告目录 -->
+<div class="section" id="sec-archive">
+  <div class="section-title">🗄 历史存档 · 往期报告目录 <span class="tip" id="archCountTip"></span></div>
+  <div class="arch-note" id="archNote"></div>
+  <div class="arch-list" id="archiveList"></div>
+</div>
+
+<!-- 本月要闻 -->
+<div class="section" id="sec-month">
+  <div class="section-title">🔥 本月要闻 · 自然月焦点 <span class="tip" id="monthLabelTip"></span></div>
+  <div class="month-banner">
+    <span class="mb-label">本月核心基调</span>
+    <div class="mb-sum" id="monthSummary"></div>
+  </div>
+  <div id="monthHighlights"></div>
+</div>
+
+<!-- 核心洞察 -->
+<div class="section" id="sec-insight">
+  <div class="section-title">📌 本期核心洞察 <span class="tip">基于国家统计局+克而瑞+平台披露交叉验证</span></div>
+  <div class="insight" id="insightBlock"></div>
+</div>
+
+<!-- 宏观维度 -->
+<div class="section" id="sec-macro">
+  <div class="section-title">🌐 宏观维度 · 社零/供给/信心 <span class="tip">来源：国家统计局 · 数据发布日 2026-07-15</span></div>
+  <div class="kpi-grid" id="macroKpis"></div>
+</div>
+
+<!-- 房地产维度 -->
+<div class="section" id="sec-realestate">
+  <div class="section-title">🏗 房地产维度 · 销售/投资/开工/竣工 <span class="tip">竣工端-23.7% 是家装建材需求最关键的负向变量</span></div>
+  <div class="kpi-grid" id="realEstateKpis"></div>
+</div>
+
+<!-- 图表：需求 vs 供给 -->
+<div class="section" id="sec-chart">
+  <div class="section-title">📊 需求侧 vs 供给侧 · 同比对比图</div>
+  <div class="two-col">
+    <div class="chart-wrap">
+      <h3>零售端 · 家装相关品类同比</h3>
+      <div class="sub">2026年6月单月，限额以上单位商品零售额同比</div>
+      <canvas id="chartRetail" height="220"></canvas>
+    </div>
+    <div class="chart-wrap">
+      <h3>上游端 · 建材/地产核心指标</h3>
+      <div class="sub">2026年6月/1-6月同比，红=拖累，绿=支撑</div>
+      <canvas id="chartUpstream" height="220"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- 抖店罗盘·社媒竞争 -->
+<div class="section" id="sec-doudian">
+  <div class="section-title">🎯 抖店罗盘 · 抖音家居家装社媒竞争 <span class="tip" id="dcCoverageTip"></span></div>
+  <div class="dc-note" id="dcNote"></div>
+  <div class="kpi-grid" id="dcCoreMetrics" style="margin-bottom:16px"></div>
+  <div class="two-col">
+    <div class="chart-wrap">
+      <h3>子类目 GMV 结构（TOP10）</h3>
+      <div class="sub">占大盘比例，件单价见表</div>
+      <div style="overflow-x:auto"><table class="dc-table" id="dcSubCatTable"></table></div>
+    </div>
+    <div>
+      <div class="chart-wrap" style="margin-bottom:16px">
+        <h3>带货载体分布</h3>
+        <canvas id="chartCarrier" height="150"></canvas>
+      </div>
+      <div class="chart-wrap">
+        <h3>价格带分布</h3>
+        <canvas id="chartPriceBand" height="150"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="chart-wrap" style="margin-top:16px">
+    <h3>TOP15 热销单品（39元以上价格带）· 与天猫竞品追踪重叠预警</h3>
+    <div style="overflow-x:auto"><table class="dc-table" id="dcTopProdTable"></table></div>
+  </div>
+  <div class="insight" id="dcInsights" style="margin-top:16px"></div>
+</div>
+
+<!-- 电商平台动态 -->
+<div class="section" id="sec-platform">
+  <div class="section-title">🛒 电商平台当月动态 <span class="tip" id="platCountTip"></span></div>
+  <div class="tabs" id="platTabs"></div>
+  <div class="filter-bar">
+    <span class="lbl">按子行业筛选：</span>
+    <span class="chip active" data-cat="全部" onclick="filterCat(this)">全部</span>
+    <span class="chip" data-cat="家具" onclick="filterCat(this)">家具</span>
+    <span class="chip" data-cat="装修" onclick="filterCat(this)">装修</span>
+    <span class="chip" data-cat="建材" onclick="filterCat(this)">建材</span>
+    <span class="chip" data-cat="卫浴厨房" onclick="filterCat(this)">卫浴厨房</span>
+    <span class="chip" data-cat="全屋智能" onclick="filterCat(this)">全屋智能</span>
+    <span class="chip" data-cat="全屋定制" onclick="filterCat(this)">全屋定制</span>
+    <span class="chip" data-cat="灯具光源" onclick="filterCat(this)">灯具光源</span>
+    <span class="chip" data-cat="电工五金" onclick="filterCat(this)">电工五金</span>
+    <span class="chip" data-cat="通用" onclick="filterCat(this)">通用/跨类</span>
+  </div>
+  <div id="platPanels"></div>
+</div>
+
+<!-- 政策与标准 -->
+<div class="section" id="sec-policy">
+  <div class="section-title">📜 政策 · 标准 · 行业动态时间轴 <span class="tip">红点=强影响 · 黄点=中影响 · 蓝点=一般</span></div>
+  <div class="two-col">
+    <div>
+      <div class="tl" id="policyTL"></div>
+    </div>
+    <div>
+      <div class="tl" id="industryTL"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 商家动态 -->
+<div class="section" id="sec-merchant">
+  <div class="section-title">🏢 头部商家当月动态 <span class="tip">上市公司公告 + 头部品牌大事件</span></div>
+  <div class="event-list" id="merchantList"></div>
+</div>
+
+<!-- Gaps + Conflicts -->
+<div class="section" id="sec-gaps">
+  <div class="section-title">⚠️ 数据缺口与需人工核实 <span class="tip">遵循「不编造」原则，透明标注</span></div>
+  <div class="two-col">
+    <div class="gap-warn"><h3>📭 数据缺口（Gaps）</h3><ul id="gapList"></ul></div>
+    <div class="gap-warn conflict"><h3>⚡ 矛盾信息 · 需人工判断（Conflicts）</h3><ul id="conflictList"></ul></div>
+  </div>
+</div>
+
+<!-- 数据源采集深度报告 -->
+<div class="section" id="sec-sources">
+  <div class="section-title">🗂 数据源采集深度报告 <span class="tip">每源披露采集深度/条数/时间戳/阻塞</span></div>
+  <div class="src-summary" id="srcSummary"></div>
+  <div class="dc-note" id="srcNote"></div>
+  <div style="overflow-x:auto"><table class="src-table" id="srcTable"></table></div>
+</div>
+
+<div class="foot">
+  <div>信源分层：<span style="color:#3fb950">■</span> 权威官方 · <span style="color:#4493f8">■</span> 头部媒体 · <span style="color:#d29922">■</span> 待核实　|　采集深度：<span class="depth-badge depth-3">3深层</span> <span class="depth-badge depth-2">2中层</span> <span class="depth-badge depth-1">1浅层</span> <span class="depth-badge depth-0">0阻塞</span></div>
+  <div style="margin-top:6px">生成脚本 · 数据文件 · 本地仓库位于 <code>home-decor-intel/</code>；下周四将迁移至 GitHub Pages 提供公网URL访问</div>
+</div>
+
+</div><!-- /container -->
+</div><!-- /main -->
+
+<!-- 数据 JSON 内嵌（由 scripts/build_html.sh 构建时注入） -->
+<script id="dataMacro" type="application/json">{
+  "asOf": "2026-07-26",
+  "coverage": "近30天(2026-06-27~07-26) + 2026年7月15日发布口径的6月/1-6月数据。本期(07-17~07-26)国家统计局无新的月度数据发布，6月/上半年数据仍为最新官方口径且落在近30天窗口内，故予沿用；下一次月度数据(7月社零/工业增加值)预计2026-08中旬发布。",
+  "macro": {
+    "retailSales": [
+      {
+        "metric": "限额以上单位家具类零售额（6月单月）",
+        "period": "2026年6月",
+        "value": "176亿元",
+        "yoy": "-6.6%",
+        "source": "国家统计局 - 2026年上半年社会消费品零售总额数据",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
+        "publishDate": "2026-07-15",
+        "note": "限额以上单位商品零售额，名义同比"
+      },
+      {
+        "metric": "限额以上单位家具类零售额（1-6月累计）",
+        "period": "2026年1-6月",
+        "value": "870亿元",
+        "yoy": "-3.7%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
+        "publishDate": "2026-07-15",
+        "note": "上半年家具类持续负增长，6月单月降幅扩大"
+      },
+      {
+        "metric": "限额以上单位建筑及装潢材料类零售额（6月单月）",
+        "period": "2026年6月",
+        "value": "114亿元",
+        "yoy": "-10.5%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
+        "publishDate": "2026-07-15",
+        "note": "建材类下滑最深，与地产开工/竣工负增长强相关"
+      },
+      {
+        "metric": "限额以上单位建筑及装潢材料类零售额（1-6月累计）",
+        "period": "2026年1-6月",
+        "value": "609亿元",
+        "yoy": "-8.8%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
+        "publishDate": "2026-07-15",
+        "note": ""
+      },
+      {
+        "metric": "限额以上单位家用电器和音像器材类零售额（6月单月）",
+        "period": "2026年6月",
+        "value": "1249亿元",
+        "yoy": "-8.7%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
+        "publishDate": "2026-07-15",
+        "note": "家电作为家装配套品类，6月转负"
+      },
+      {
+        "metric": "限额以上单位家用电器和音像器材类零售额（1-6月累计）",
+        "period": "2026年1-6月",
+        "value": "5437亿元",
+        "yoy": "-7.4%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
+        "publishDate": "2026-07-15",
+        "note": ""
+      },
+      {
+        "metric": "社会消费品零售总额（6月单月）",
+        "period": "2026年6月",
+        "value": "42691亿元",
+        "yoy": "+1.0%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
+        "publishDate": "2026-07-15",
+        "note": "整体消费大盘温和正增长，但家居家电建材品类明显跑输大盘"
+      },
+      {
+        "metric": "社会消费品零售总额（上半年累计）",
+        "period": "2026年1-6月",
+        "value": "248722亿元",
+        "yoy": "+1.3%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
+        "publishDate": "2026-07-15",
+        "note": "除汽车以外消费品零售额229034亿元，增长2.8%"
+      }
+    ],
+    "wholesale": [
+      {
+        "metric": "规模以上工业增加值（6月单月）",
+        "period": "2026年6月",
+        "value": "—",
+        "yoy": "+5.3%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
+        "publishDate": "2026-07-15",
+        "note": "1-6月累计+5.4%；制造业6月+6.0%，高技术制造业+14.1%"
+      },
+      {
+        "metric": "非金属矿物制品业工业增加值（6月）",
+        "period": "2026年6月",
+        "value": "—",
+        "yoy": "-2.3%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
+        "publishDate": "2026-07-15",
+        "note": "涵盖水泥、玻璃、陶瓷等建材大类；1-6月累计-2.8%"
+      },
+      {
+        "metric": "金属制品业工业增加值（6月）",
+        "period": "2026年6月",
+        "value": "—",
+        "yoy": "+7.8%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
+        "publishDate": "2026-07-15",
+        "note": "涵盖五金、金属结构、金属制家具等；1-6月累计+4.9%"
+      },
+      {
+        "metric": "水泥产量（6月）",
+        "period": "2026年6月",
+        "value": "14423万吨",
+        "yoy": "-5.6%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
+        "publishDate": "2026-07-15",
+        "note": "地产端拖累持续"
+      },
+      {
+        "metric": "平板玻璃产量（6月）",
+        "period": "2026年6月",
+        "value": "7654万重量箱",
+        "yoy": "-5.3%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
+        "publishDate": "2026-07-15",
+        "note": ""
+      },
+      {
+        "metric": "家具制造业工业增加值",
+        "period": "2026年6月/1-6月",
+        "value": "待核实",
+        "yoy": "待核实",
+        "source": "国家统计局6月工业增加值发布分行业表格未单独公开该细分行业",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
+        "publishDate": "2026-07-15",
+        "note": "需查阅国家统计局工业分行业数据库或后续月度公报"
+      }
+    ],
+    "supplyChain": [
+      {
+        "metric": "制造业PMI",
+        "period": "2026年6月",
+        "value": "50.3%",
+        "yoy": "环比+0.3个百分点",
+        "source": "国家统计局服务业调查中心、中国物流与采购联合会",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202606/t20260630_1964032.html",
+        "publishDate": "2026-06-30",
+        "note": "重返扩张区间"
+      },
+      {
+        "metric": "建筑业商务活动指数（非制造业PMI分项）",
+        "period": "2026年6月",
+        "value": "49.0%",
+        "yoy": "环比+0.2个百分点",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202606/t20260630_1964032.html",
+        "publishDate": "2026-06-30",
+        "note": "仍低于荣枯线，建筑业景气度偏弱，与地产投资-18%匹配"
+      },
+      {
+        "metric": "综合PMI产出指数",
+        "period": "2026年6月",
+        "value": "50.6%",
+        "yoy": "环比+0.1个百分点",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202606/t20260630_1964032.html",
+        "publishDate": "2026-06-30",
+        "note": ""
+      },
+      {
+        "metric": "工业企业产品销售率（6月）",
+        "period": "2026年6月",
+        "value": "95.5%",
+        "yoy": "同比+0.8个百分点",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
+        "publishDate": "2026-07-15",
+        "note": ""
+      },
+      {
+        "metric": "工业出口交货值（6月）",
+        "period": "2026年6月",
+        "value": "15592亿元",
+        "yoy": "+14.8%（名义）",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
+        "publishDate": "2026-07-15",
+        "note": "出口对整体工业形成拉动，但家具/建材直接出口口径待补"
+      },
+      {
+        "metric": "中国建材工业景气指数（CBMI）",
+        "period": "2026年6月",
+        "value": "待核实",
+        "yoy": "待核实",
+        "source": "中国建筑材料联合会（CBMF）",
+        "url": "https://www.cbmf.org/yxjc/",
+        "publishDate": "待核实",
+        "note": "2026年6月最新期数未通过公开检索命中，需登录官网/订阅刊物获取"
+      },
+      {
+        "metric": "家居/建材细分行业PMI（CBFA/CNFPIA）",
+        "period": "2026年6月",
+        "value": "待核实",
+        "yoy": "待核实",
+        "source": "行业协会",
+        "url": "待核实",
+        "publishDate": "待核实",
+        "note": "未检索到2026年6月的官方发布"
+      }
+    ],
+    "confidence": [
+      {
+        "metric": "消费者信心指数",
+        "period": "2026年Q2/近30天",
+        "value": "待核实",
+        "yoy": "待核实",
+        "source": "国家统计局月度消费者信心指数",
+        "url": "https://data.stats.gov.cn/",
+        "publishDate": "待核实",
+        "note": "国家统计局月度消费者信心指数近期未在数据发布栏公开推送，需在国家数据库按序列检索；北大国发院也发布消费者信心指数，2026年6月末有相关报告但未见明确数值"
+      }
+    ]
+  },
+  "realEstate": {
+    "sales": [
+      {
+        "metric": "新建商品房销售面积（1-6月）",
+        "period": "2026年1-6月",
+        "value": "40140万平方米",
+        "yoy": "-11.6%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964126.html",
+        "publishDate": "2026-07-15",
+        "note": ""
+      },
+      {
+        "metric": "新建商品房销售额（1-6月）",
+        "period": "2026年1-6月",
+        "value": "37945亿元",
+        "yoy": "-13.6%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964126.html",
+        "publishDate": "2026-07-15",
+        "note": "销售额降幅大于面积，意味着均价小幅走低"
+      },
+      {
+        "metric": "重点100城新建商品住宅成交面积（6月）",
+        "period": "2026年6月",
+        "value": "—",
+        "yoy": "环比+6%，同比-6%",
+        "source": "中指研究院",
+        "url": "https://wap.stockstar.com/detail/IG2026070300009079",
+        "publishDate": "2026-07-03",
+        "note": "上半年100城累计约1.1亿㎡，同比-12%"
+      },
+      {
+        "metric": "百强/典型房企单月权益销售额（6月）",
+        "period": "2026年6月",
+        "value": "2325.4亿元",
+        "yoy": "环比+2.3%",
+        "source": "克而瑞（乐居财经转载）",
+        "url": "https://finance.sina.com.cn/stock/estate/integration/2026-07-01/doc-iniffyta1117203.shtml",
+        "publishDate": "2026-07-01",
+        "note": "6月单月同比%未在公开摘要中列出，需原报告付费下载"
+      },
+      {
+        "metric": "典型房企1-6月累计权益销售金额",
+        "period": "2026年1-6月",
+        "value": "10907.3亿元",
+        "yoy": "待核实",
+        "source": "克而瑞",
+        "url": "https://finance.sina.com.cn/stock/estate/integration/2026-07-01/doc-iniffyta1117203.shtml",
+        "publishDate": "2026-07-01",
+        "note": "累计同比未在公开摘要中列出；中海、华润同比增幅均超9%，龙翔控股+206.8%领跑增幅榜"
+      }
+    ],
+    "investment": [
+      {
+        "metric": "全国房地产开发投资（1-6月）",
+        "period": "2026年1-6月",
+        "value": "38074亿元",
+        "yoy": "-18.0%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964126.html",
+        "publishDate": "2026-07-15",
+        "note": "较1-5月降幅可能继续扩大；房地产投资是家装家具行业的先行指标"
+      }
+    ],
+    "newStart": [
+      {
+        "metric": "房屋新开工面积（1-6月）",
+        "period": "2026年1-6月",
+        "value": "23239万平方米",
+        "yoy": "-23.4%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964126.html",
+        "publishDate": "2026-07-15",
+        "note": "新开工深跌意味着2027-2028年家装家具需求进一步承压"
+      },
+      {
+        "metric": "房屋施工面积（1-6月）",
+        "period": "2026年1-6月",
+        "value": "554049万平方米",
+        "yoy": "-12.5%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964126.html",
+        "publishDate": "2026-07-15",
+        "note": ""
+      },
+      {
+        "metric": "房屋竣工面积（1-6月）",
+        "period": "2026年1-6月",
+        "value": "17221万平方米",
+        "yoy": "-23.7%",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964126.html",
+        "publishDate": "2026-07-15",
+        "note": "竣工端-23.7%直接压制精装家居/软装/建材需求，是家装建材行业最关键的负向变量"
+      }
+    ],
+    "pricing": [
+      {
+        "metric": "70大中城市新建商品住宅价格变动（6月）",
+        "period": "2026年6月",
+        "value": "环比上涨20城/持平1城/下降49城",
+        "yoy": "同比仅上海+3.1%、杭州+1.9%、合肥+0.3%上涨；沈阳持平；66城同比下降",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfbhjd/202607/t20260715_1964115.html",
+        "publishDate": "2026-07-15",
+        "note": "6月新房环比上涨面较5月扩大；上海6月环比+0.3%，杭州+0.3%，深圳+0.3%；徐州、惠州+0.4%涨幅最大"
+      },
+      {
+        "metric": "70大中城市二手住宅价格变动（6月）",
+        "period": "2026年6月",
+        "value": "环比上涨9城/持平1城/下降60城",
+        "yoy": "70城全部同比下降",
+        "source": "国家统计局",
+        "url": "https://www.stats.gov.cn/sj/zxfbhjd/202607/t20260715_1964115.html",
+        "publishDate": "2026-07-15",
+        "note": "二手房环比上涨城市9个（上海+0.4%、广州+0.4%、深圳+0.3%等）；泸州同比-9.3%为最大跌幅"
+      },
+      {
+        "metric": "百城新建住宅均价（6月）",
+        "period": "2026年6月",
+        "value": "17184元/平方米",
+        "yoy": "环比+0.16%，同比+2.00%",
+        "source": "中指研究院",
+        "url": "https://wap.stockstar.com/detail/IG2026070300009079",
+        "publishDate": "2026-07-03",
+        "note": "新房价格结构性抬升，主要由核心城市高端项目拉动"
+      },
+      {
+        "metric": "百城二手住宅均价（6月）",
+        "period": "2026年6月",
+        "value": "12639元/平方米",
+        "yoy": "环比-0.42%，同比-7.68%",
+        "source": "中指研究院",
+        "url": "https://wap.stockstar.com/detail/IG2026070300009079",
+        "publishDate": "2026-07-03",
+        "note": "跌幅较5月扩大0.10个百分点，二手房是二次装修需求主力"
+      }
+    ],
+    "confidence": [
+      {
+        "metric": "克而瑞房企业绩分化",
+        "period": "2026年1-6月",
+        "value": "增幅TOP10中7家同比增幅超100%；央企近4成正增长；地方国企16.7%深度回落超50%",
+        "yoy": "分化加剧",
+        "source": "克而瑞",
+        "url": "https://finance.sina.com.cn/stock/estate/integration/2026-07-01/doc-iniffyta1117203.shtml",
+        "publishDate": "2026-07-01",
+        "note": "行业集中度进一步提升，央企/头部民企逆势增长；家装建材工程渠道选择头部房企风险更可控"
+      },
+      {
+        "metric": "购房者预期/居民置业信心",
+        "period": "2026年Q2",
+        "value": "待核实",
+        "yoy": "待核实",
+        "source": "央行城镇储户问卷 / 贝壳研究院",
+        "url": "https://research.ke.com/",
+        "publishDate": "待核实",
+        "note": "央行2026年Q2城镇储户问卷未在检索中命中，需登录pbc.gov.cn查询"
+      }
+    ]
+  },
+  "gaps": [
+    "本期(2026-07-17~07-26)国家统计局未发布新的月度宏观数据；克而瑞/中指院7月房价与百强销售数据通常于2026-08-01前后发布，本期窗口内暂无7月新增，仍以6月口径为准",
+    "国家统计局2026年6月工业增加值分行业表格未单独披露'家具制造业'与'木材加工业'同比数据，需查国家数据库(data.stats.gov.cn)的月度序列或下载附表xlsx",
+    "中国建材工业景气指数(CBMI)/中国建筑材料联合会2026年6月月报数值未在公开检索命中，需通过CBMF官网订阅或行业刊物获取",
+    "中国家具协会(CNFA)/中国家居家装产业协会的2026年6月家居行业景气指数未检索到公开数据",
+    "国家统计局月度消费者信心指数(2026年5-6月)在最新数据发布栏未见推送，需在data.stats.gov.cn按代码A0G0Q检索原始序列",
+    "央行2026年Q2城镇储户问卷调查(含房价预期、购房意愿)未检索到发布链接，需在pbc.gov.cn查询",
+    "克而瑞1-6月百强房企累计销售同比%(全口径)未在公开摘要中给出具体数字，需付费下载完整版《2026年1-6月中国房地产企业销售TOP200》",
+    "贝壳研究院/我爱我家2026年6月重点城市二手房挂牌量、成交周期等一手数据未拿到公开链接",
+    "工程渠道大宗采购（B端家居建材）近30天订单/招标数据未查到聚合口径"
+  ],
+  "conflicts": [
+    "新房价格信号：国家统计局70城口径显示6月新房环比上涨20城（上涨面扩大），但中指研究院百城口径显示新房均价环比仅+0.16%——两者口径不同（70城为地级/直辖市加权指数vs百城为均价），需人工判断使用场景",
+    "同比方向：国家统计局70城新房同比仅3城正增长(整体仍偏冷)，中指院百城均价同比+2.00%——差异源于中指口径包含核心城市新盘高端化拉动，而70城指数控制了品质因素，家装建材看板建议以国家统计局70城为主口径",
+    "百强房企6月单月同比数据缺口：克而瑞公开摘要仅给出环比+2.3%和典型房企权益销售额2325.4亿元，未给出6月单月同比%（对照2025年6月百强同比-22.8%基数），需人工核实"
+  ],
+  "keyInsightsForBoard": [
+    "家装建材行业需求侧近30天核心信号：家具类零售-6.6%、建材类零售-10.5%、家电类零售-8.7%（6月单月），全部深跌，明显跑输社零大盘+1.0%",
+    "供给侧建材端：非金属矿物制品业工业增加值6月-2.3%、水泥-5.6%、平板玻璃-5.3%，但金属制品业(含五金/金属家具)+7.8%——结构性分化",
+    "上游地产：房地产投资1-6月-18.0%、新开工-23.4%、竣工-23.7%——竣工深跌直接压制精装家居/软装/建材工程需求，是行业最关键的负向变量",
+    "价格信号：70城新房环比上涨面扩至20城，一线新房温和企稳（上海/杭州/深圳/广州环比+0.2%~+0.3%），但二手房70城全部同比下降，二次装修需求承压",
+    "行业集中度：克而瑞显示央企(中海、华润+9%以上)与头部民企(龙翔+206.8%)逆势增长，家装建材B端渠道向头部房企集中"
+  ]
+}</script>
+<script id="dataPlatform" type="application/json">{
+  "asOf": "2026-07-26",
+  "windowStart": "2026-06-27",
+  "windowEnd": "2026-07-26",
+  "windowNote": "本期为近30天滚动窗口(06-27~07-26)。618大促(6月上中旬)战报已滚出窗口，其数据见首期(2026-07-16)归档看板。当前处于618与818之间的传统淡季，平台侧公开可核实的家装家居垂类新动态较少；各平台官方规则页(抖音电商学习中心/微信小店成长中心/淘宝大学)为JS单页应用，WebFetch无法机读发布日期，相关线索列入gaps待浏览器陪跑核实。",
+  "platforms": {
+    "jd": [
+      {
+        "title": "京东零售架构调整：管理层级减少两级，组织扁平化加速",
+        "date": "2026-07-07",
+        "category": "通用",
+        "type": "组织架构",
+        "summary": "京东零售正式撤销原有C4、C5两级管理职级，全部划归C3统筹管理；创新零售业务前中台并入服务端并采用全栈研发，新团队将在Q3上线。涉及家电、家居、家装等大品类协作方式。",
+        "url": "https://news.cheaa.com/2026/0707/656317.shtml",
+        "source": "家电网/中国家电网"
+      },
+      {
+        "title": "京东MALL正式落地南京河西，签约金盛国际家居，全国门店突破30家、向40家迈进",
+        "date": "2026-07-03",
+        "category": "家具",
+        "type": "线下",
+        "summary": "京东MALL与金盛国际家居签约，落地南京河西建邺，激活近3万㎡空间，聚焦3C、智能家居、全屋家居沉浸式体验；截至2026年6月京东MALL全国已开30家，618期间上海、香港首店开出。",
+        "url": "https://www.njjy.gov.cn/jyyw/202607/t20260706_5871656.html",
+        "source": "南京建邺区政府官宣/南京日报"
+      },
+      {
+        "title": "京东自营装修上半年GMV突破25亿元，同比+140%；京东家装整体GMV超45亿元",
+        "date": "2026-07-14",
+        "category": "装修",
+        "type": "战略",
+        "summary": "京东家装2026H1整装GMV约25亿元(+140%YoY)，累计服务1.28万家庭；7家分公司净签破亿，6月部分城市同比增超700%；宣布3年内冲30亿GMV、2026年覆盖30城，将陆续入驻京东MALL。",
+        "url": "https://m.lejucaijing.com/news-7482723588144559603.html",
+        "source": "乐居财经"
+      },
+      {
+        "title": "国补第三批6250亿下达，京东7月家电国补最高单件立减1500元，覆盖29省",
+        "date": "2026-07-15",
+        "category": "全屋智能",
+        "type": "政策",
+        "summary": "2026年国补第三批625亿元下达，京东开通空调/冰箱/洗衣机/电视/热水器等入口，最高单件立减1500元；美的、格力、海尔、海信、TCL、方太、老板等参与，综合让利最高45%，无需强制回收旧机。",
+        "url": "https://finance.sina.com.cn/tech/roll/2026-07-15/doc-inihwrre1243327.shtml",
+        "source": "A5创业网/新浪科技"
+      }
+    ],
+    "douyin": [
+      {
+        "title": "抖音电商发布《商家【主体资质违规】处置细则》修订意见征集及运营类服务商管理规范",
+        "date": "2026-07-16",
+        "category": "通用",
+        "type": "政策",
+        "summary": "7月15-16日抖音电商学习中心密集发布：运营类服务商管理规范、CPS结算分成能力管理规则、以及《商家主体资质违规处置细则》修订意见征集，家居家装商家亦适用。",
+        "url": "https://school.jinritemai.com/doudian/web/article/aJmzRe57GR2d",
+        "source": "抖音电商学习中心"
+      }
+    ],
+    "pdd": [
+      {
+        "title": "待核实：拼多多家居家装类目近30天(06-27~07-26)官方战报/活动缺失",
+        "date": "待核实",
+        "category": "通用",
+        "type": "待核实",
+        "summary": "近30天窗口内未检索到拼多多对家居家装类目单独披露的可核实营销活动/榜单原文。618家电大类战报(06-22)与'百亿补贴'被约谈(06-11)均已滚出窗口。建议后续经拼多多商家后台或权威转载补齐。",
+        "url": "待核实",
+        "source": "—"
+      }
+    ],
+    "xhs": [
+      {
+        "title": "待核实：小红书家装家生活垂类近30天官方运营新政/战报缺失",
+        "date": "待核实",
+        "category": "通用",
+        "type": "待核实",
+        "summary": "近30天窗口内未检索到小红书官方家装/家生活赛道的可核实运营新政或垂类战报原文；《2026小红书年度居住趋势》(04-24)、618品牌案例(06-24)均在窗口外。家装量化流量大盘在千帆/蒲公英后台，需商业产品账号权限。",
+        "url": "待核实",
+        "source": "—"
+      }
+    ],
+    "shipinhao": [
+      {
+        "title": "待核实：视频号/微信小店家居家装类目近30天专项战报或新政",
+        "date": "待核实",
+        "category": "通用",
+        "type": "待核实",
+        "summary": "近30天内未检索到视频号/微信小店对家居家装类目单独披露的战报或政策；微信小店成长中心公告页(store.weixin.qq.com/chengzhang/notice)为SPA，WebFetch无法机读标题与日期，需浏览器陪跑核实。",
+        "url": "https://store.weixin.qq.com/chengzhang/notice",
+        "source": "微信小店成长中心(待核实)"
+      }
+    ],
+    "kuaishou": [
+      {
+        "title": "待核实：快手电商家居家装类目近30天专项战报缺失",
+        "date": "待核实",
+        "category": "通用",
+        "type": "待核实",
+        "summary": "近30天内快手电商未官方披露家居家装类目专项战报；仅有历史消电家居行业背景与2026新商扶持政策的间接信息。建议直接访问快手电商公告或磁力引擎补齐。",
+        "url": "https://www.stcn.com/article/detail/3697082.html",
+        "source": "证券时报网(背景参考)"
+      }
+    ],
+    "tmall_taobao": [
+      {
+        "title": "天猫618全周期家装/家居榜（滚动窗口边缘）：源氏木语实木定制GMV+24%、顾家整家交付周期压缩50%、慕思居首",
+        "date": "2026-06-29",
+        "category": "家具",
+        "type": "营销活动",
+        "summary": "天猫618全周期家装TOP10：源氏木语、顾家家居、芝华仕、NORHOR等；家居TOP10：慕思、水星家纺、富安娜、罗莱、摩肯——睡眠经济突出；家具轻定制GMV+10倍、凉感床品单周超3亿元。(本条为窗口起始边缘的618收官榜，下期将滚出)",
+        "url": "https://smarthome.ofweek.com/2026-06/ART-91009-8420-30692339.html",
+        "source": "OFweek/家居新范式"
+      },
+      {
+        "title": "待核实：天猫/淘宝818暑期家装节2026招商规则",
+        "date": "待核实",
+        "category": "通用",
+        "type": "待核实",
+        "summary": "淘宝大学招商页(daxue.taobao.com)疑含818/暑期家装节招商规则，但detail页为SPA，WebFetch无法核实发布日期；窗口内未检索到'818家装节2026'规则原文，待浏览器陪跑核实。",
+        "url": "https://daxue.taobao.com/information/detail.jhtml?id=1381",
+        "source": "淘宝大学(待核实)"
+      }
+    ]
+  },
+  "crossPlatform": [
+    {
+      "title": "江苏以旧换新加速：南京家电订单7万+、家电类商户以旧换新销售占比达80%",
+      "date": "2026-07-07",
+      "category": "全屋智能",
+      "type": "政策",
+      "summary": "国补+地方+品牌三级叠加下，南京商户以旧换新销售占比约80%；南京家电专项补贴超2亿、6月末已集单7万+；苏宁提供空调换新最高千元补贴+2小时上门；覆盖冰箱、洗衣机、智能家居等品类。",
+      "url": "https://www.js.chinanews.com.cn/news/2026/0707/234388.html",
+      "source": "新华日报/中新社江苏"
+    },
+    {
+      "title": "家电业内冷外热(2026年7月)：京东零售扁平化改革、TCL电子上半年利润预增40-56%",
+      "date": "2026-07-12",
+      "category": "全屋智能",
+      "type": "战略",
+      "summary": "6月国内彩电出货-4%、618彩电销售-13%；冰洗出口两位数增长；海尔搭建三大平台、京东零售管理层扁平化、万和电气'壮士断腕'改革；TCL电子H1利润预增40-56%；带动整个家电家居生态调整。",
+      "url": "https://caifuhao.eastmoney.com/news/20260712203220224254810",
+      "source": "东方财富/家电圈"
+    }
+  ],
+  "keyBrandMoves": [
+    {
+      "brand": "京东家装(自营)",
+      "event": "京东自营全屋定制居京东家装品牌销售榜#1；H1整装GMV 25亿(+140%)，3年冲30亿",
+      "date": "2026-07-14",
+      "url": "https://m.lejucaijing.com/news-7482723588144559603.html"
+    }
+  ],
+  "gaps": [
+    "618大促(6月上中旬)战报已滚出近30天窗口(06-27~07-26)；京东/天猫/抖音/拼多多/小红书618家装家居榜单与破亿品牌数据可回看首期(2026-07-16)归档看板，本期不重复计入",
+    "抖音电商学习中心多条家居家装相关规则(如『2026年第二季度运营类服务商清退公示名单』school.jinritemai.com/doudian/wap/lark-doc/fdJnavSfQtmY9、『家居家电行业管理规范』article/110207、『商城焕新季招商规则』)为JS单页应用，WebFetch仅返回脚本，无法核实发布日期是否落在窗口内，待浏览器陪跑核实",
+    "微信小店成长中心公告页(store.weixin.qq.com/chengzhang/notice)为SPA，无法机读窗口内家居公告标题与日期，待核实",
+    "天猫/淘宝818暑期家装节2026招商规则(daxue.taobao.com detail页SPA)未检索到窗口内可核实原文，待核实",
+    "京东818/超级18家装专项战报、7月下旬新开店动态：窗口内未检索到可核实原文(可核实原文多为3月发布会/6月超级18，均出窗)",
+    "拼多多/快手家居家装类目窗口内营销活动/榜单均未检索到可核实原文",
+    "『整治内卷式竞争』7家平台合计罚款35.97亿元(2026-07-07 sina)系外卖/食品安全案由、与家居家装类目无关，且发布日出窗，本期不计入平台罚单"
+  ],
+  "conflicts": [
+    "平台侧本期无窗口内的家装家居垂类量化战报，暂无新增口径冲突；618相关口径冲突(星图9340亿+4.0% vs 复旦3.2%等)见首期归档看板"
+  ]
+}</script>
+<script id="dataPolicy" type="application/json">{
+  "asOf": "2026-07-26",
+  "windowStart": "2026-06-27",
+  "windowEnd": "2026-07-26",
+  "policy": [
+    {
+      "title": "北京市新增10类『智能家居（含适老化）』以旧换新补贴产品（含智能马桶、智能床）",
+      "issueDate": "2026-07-23",
+      "effectiveDate": "2026-07-23",
+      "issuer": "北京市商务局",
+      "scope": "北京市（线上线下同等力度，经『京通』实名认证领取资格券码）",
+      "category": "国补/以旧换新",
+      "subIndustry": ["全屋智能", "卫浴厨房", "家具"],
+      "summary": "北京市商务局新增10类『智能家居（含适老化）』补贴产品，涵盖智能门锁、智能摄像头、智能马桶(含马桶盖)、智能床(含智能床垫)、全屋智能主机、智能扫地机、具身智能机器人等。补贴为最终销售价15%，每人每类补1件、每件≤1500元，至资金用完为止；要求具统一国标商品编码、能效/水效1级。",
+      "impact": "首次将智能马桶(卫浴)、智能床(家具)等家居品类纳入北京国补范围，直接利好智能卫浴(九牧/箭牌/恒洁)与智能睡眠家具(慕思/喜临门/舒达)零售；一线城市国补扩围形成示范效应。",
+      "url": "https://www.beijing.gov.cn/zhengce/zcjd/202607/t20260723_4780579.html",
+      "source": "北京市人民政府门户网站"
+    },
+    {
+      "title": "福建省2026年智能家居产品购新补贴品类扩围：新增智能吸油烟机/燃气灶/洗碗机/干衣机，智能沙发纳入",
+      "issueDate": "2026-07-22",
+      "effectiveDate": "2026-07-22",
+      "issuer": "福建省商务厅、福建省发展和改革委员会、福建省财政厅",
+      "scope": "福建省（在闽商务规〔2026〕6号实施细则基础上扩围）",
+      "category": "国补/以旧换新",
+      "subIndustry": ["全屋智能", "卫浴厨房", "家具"],
+      "summary": "福建新增数码相机、智能吸油烟机、智能燃气灶(含集成灶)、智能洗碗机、智能干衣机5类，并将智能沙发纳入智能按摩椅品类。补贴为扣除优惠后最终销售价15%，每人每类补1件、每件≤1500元；有效期至2026-12-31（智能沙发与按摩椅不得重复申领）。",
+      "impact": "扩大厨卫电器(老板/方太/华帝)与智能软体家具(顾家/芝华仕)补贴覆盖面，利好集成灶、洗碗机及智能沙发；印证地方国补在7月下旬密集向家居品类扩围。",
+      "url": "https://swt.fujian.gov.cn/xxgk/tzgg/202607/t20260723_7191452.htm",
+      "source": "福建省商务厅"
+    },
+    {
+      "title": "市场监管总局批准发布508项重要国家标准（含建材26项、家用电器9项）",
+      "issueDate": "2026-07-16",
+      "effectiveDate": "待核实（各标准实施日期未在综述报道中列出）",
+      "issuer": "国家市场监督管理总局（国家标准化管理委员会）",
+      "scope": "全国",
+      "category": "质量标准",
+      "subIndustry": ["建材", "灯具光源", "全屋智能"],
+      "summary": "近日批准发布508项重要国家标准。其中含『混凝土路面砖、复层建筑涂料、水泥基胶凝材料、精细陶瓷等26项』建材类国标，以及『加湿器、智能家用电器质量安全风险分类评价指南等9项』家用电器国标。综述报道未给出各单项标准号、全称与实施日期。",
+      "impact": "复层建筑涂料、精细陶瓷、水泥基胶凝材料等标准更新推动新型建材与建筑品质升级；智能家电质量安全分类评价指南影响智能家居质量合规。具体标准号需查SAMR原始公告(std.samr.gov.cn)核实。",
+      "url": "https://www.news.cn/fortune/20260716/399814b184fb4fde9a9ded27cfc111d8/c.html",
+      "source": "新华网（转市场监管总局）"
+    },
+    {
+      "title": "GB 18584-2024落地执法案例：湖南楚荣家具因床头柜甲醛超标召回53件",
+      "issueDate": "2026-07-16",
+      "effectiveDate": "2026-07-15（集中召回期至2026-10-15）",
+      "issuer": "国家市场监督管理总局缺陷产品召回技术中心",
+      "scope": "全国（型号416×395×475mm、生产批号20250801床头柜，共53件）",
+      "category": "质量标准",
+      "subIndustry": ["家具", "建材"],
+      "summary": "因床头柜板材甲醛释放量未达GB 18584—2024《家具中有害物质限量》要求、存在危害消费者健康风险，湖南楚荣家具科技召回53件并提供免费退换货。",
+      "impact": "为GB 18584-2024实施后板式家具甲醛超标召回的典型案例，与GB18580-2025人造板E0级强制标准形成合力，强化对家具板材甲醛合规的监管信号，加速中小板材/板式家具厂出清。",
+      "url": "https://www.samrdprc.org.cn/xfpzh/xfpzhgg/202607/t20260717_115758.html",
+      "source": "国家市场监督管理总局缺陷产品召回技术中心"
+    },
+    {
+      "title": "GB18580-2025《室内装饰装修材料人造板及其制品中甲醛释放限量》正式实施（E0级首次强制入国标）",
+      "issueDate": "2025-05-30",
+      "effectiveDate": "2026-06-01",
+      "issuer": "国家市场监督管理总局、国家标准化管理委员会",
+      "scope": "全国",
+      "category": "环保标准",
+      "subIndustry": ["家具", "装修", "建材", "全屋定制"],
+      "summary": "GB18580-2025于2026年6月1日正式实施，一年过渡期结束，将E0级（甲醛释放限量0.050mg/m³）由企业自愿标准升级为国家强制标准，取代2017版旧国标（旧E1级0.124mg/m³），环保门槛提升超60%。覆盖全屋定制板材、衣柜橱柜基材、木地板、护墙板等所有室内用人造板及制品，不达标产品禁止生产、销售、施工使用。",
+      "impact": "对全屋定制、板材、木门家具企业形成硬性合规压力，头部品牌（欧派、索菲亚、兔宝宝、千年舟）先发受益，中小板材厂加速出清；同时'零甲醛''净醛'营销概念将被规范。",
+      "url": "http://news.subaoxw.com/zx/2026/0603/269866.html",
+      "source": "苏报/相关行业转载（标准文本来源：国家市场监督管理总局）"
+    },
+    {
+      "title": "GB/T 24986.7-2026《家用和类似用途电器可靠性试验及评价 第7部分：电坐便器便座的特殊要求》正式发布",
+      "issueDate": "2026-07-10",
+      "effectiveDate": "2027-02-01",
+      "issuer": "国家标准化管理委员会",
+      "scope": "全国",
+      "category": "质量标准",
+      "subIndustry": ["卫浴厨房"],
+      "summary": "由九牧集团作为第一牵头单位主导编制，是智能卫浴行业首个可靠性国家标准，涵盖参数指标、试验方法、故障判据、数据统计、结果评价等要求，填补国内电坐便器可靠性评价领域标准空白。",
+      "impact": "推动智能马桶行业从'功能竞争'向'可靠性/质量竞争'升级，利好研发投入较高的头部品牌（九牧、恒洁、箭牌、TOTO、松下、科勒），加速中小品牌出清。",
+      "url": "http://www.news.cn/finance/20260710/af2aaf48c2cf4ec690c4455c30bb1cca/c.html",
+      "source": "新华网"
+    },
+    {
+      "title": "T/CREA 056—2026《住宅全案整装服务标准》正式发布并召开宣贯会",
+      "issueDate": "2026-01-05",
+      "publicMeetingDate": "2026-07-06",
+      "issuer": "中国房地产业协会（教育工作委员会、技术工作委员会、人工智能应用分会）",
+      "scope": "全国（首批22家试点单位）",
+      "category": "行业规范",
+      "subIndustry": ["装修", "全屋定制", "家具"],
+      "summary": "国内首部覆盖全案整装全流程的团体服务标准。共14章，涵盖营销/设计/报价/签约/付款/施工/验收/售后。八大亮点：固定总价、银行三方资金存管、360°施工摄像头、合同首页风险提示、产品化样板房、验收工具统一、投诉2小时响应+装修最低质保2年防水5年、二至五星评价体系。首批试点单位含圣都整装、绿城管理确幸家、北京国标建筑科技等。",
+      "impact": "对家装/整装企业的服务、报价、资金安全提出更高要求，利好合规头部整装公司（圣都、爱空间、业之峰、东易日盛），推动腰部装企整合。",
+      "url": "https://news.qq.com/rain/a/20260710A04NCY00",
+      "source": "腾讯新闻（转自中国财富网）"
+    },
+    {
+      "title": "湖南省消费品以旧换新新增10类智能家居家电品类，6月18日起补贴",
+      "issueDate": "2026-06-18",
+      "issuer": "湖南省商务厅（依据《湖南省2026年家电以旧换新、数码和智能产品购新补贴实施细则》）",
+      "scope": "湖南省",
+      "category": "国补/以旧换新",
+      "subIndustry": ["家具", "卫浴厨房", "全屋智能"],
+      "summary": "湖南自2026年6月18日起在原有品类基础上新增10类以旧换新品类：智能服务机器人、智能门锁、智能空气净化器、智能洗碗机、智能吸油烟机灶具、智能马桶、智能净水器、智能电暖桌、智能健康监测产品（血糖仪/血氧仪/血压计）、呼吸机（含制氧机）。按销售价15%补贴，单件≤1500元，每类可补贴1件。活动至2026-12-31或补贴用完。",
+      "impact": "智能马桶（九牧/箭牌/恒洁）、油烟机灶具（老板/方太/华帝）、智能门锁（凯迪仕/德施曼/鹿客/华为）、洗碗机与净水器（美的/海尔/AO史密斯）短期需求受地方国补拉动；预计其他省份跟进。",
+      "url": "https://m.voc.com.cn/xhn/news/202606/32932845.html",
+      "source": "湖南日报·新湖南客户端"
+    },
+    {
+      "title": "关于开展重点行业节能降碳改造攻坚三年行动的通知（发改环资〔2026〕698号）",
+      "issueDate": "2026-05-18",
+      "issuer": "国家发改委、工信部、生态环境部、国务院国资委、国家能源局（CBMF 2026-06-30转载）",
+      "scope": "全国",
+      "category": "环保标准",
+      "subIndustry": ["建材"],
+      "summary": "自2026年起3年内对钢铁、电解铝、水泥、平板玻璃、炼油、乙烯、合成氨、甲醇、煤电9个重点行业推进节能降碳改造，2028年起视情况扩展。要求企业能效碳效'应提尽提'。",
+      "impact": "水泥、平板玻璃作为家居建材上游，将面临产能与工艺升级压力，加剧行业出清；玻璃、水泥价格中期或呈现分化，绿色高端产品溢价上行。",
+      "url": "https://www.cbmf.org/c/2026/06/30/23810.shtml",
+      "source": "中国建材工业协会（CBMF）转载"
+    },
+    {
+      "title": "商务部等7部门《关于提质增效实施2026年消费品以旧换新工作的通知》延续国补，家居/家装厨卫在列",
+      "issueDate": "2026-01-08",
+      "issuer": "商务部、发改委、财政部、住建部、市场监管总局、生态环境部、工信部",
+      "scope": "全国",
+      "category": "国补/以旧换新",
+      "subIndustry": ["家具", "卫浴厨房", "全屋智能", "灯具光源"],
+      "summary": "2026年国补延续家电/家装厨卫/数码智能等品类以旧换新，家装厨卫补贴比例15%、单件上限保持，各省细则陆续落地。政策延续至2026年底。（近30天内多省更新执行细则，如湖南6月18日新增10类智能品类）",
+      "impact": "整体维持全年家居家装以旧换新需求基本盘，但2026上半年高基数导致定制家居头部业绩同比承压（欧派/索菲亚/志邦半年报下滑印证）。",
+      "url": "https://www.ndrc.gov.cn/xwdt/ztzl/tddgmsbgxhxfpyjhx/gzdt/202601/t20260108_1403125.html",
+      "source": "国家发改委"
+    }
+  ],
+  "industry": [
+    {
+      "title": "6月BHI发布：全国建材家居市场『蓄力待发』，1-6月累计销售同比-4.39%",
+      "date": "2026-07-16",
+      "topic": "行业景气指数（BHI）",
+      "issuer": "中国建筑材料流通协会（商务部流通业发展司立项）",
+      "summary": "6月BHI为113.34（环比-16.34、同比-2.80）。6月全国规模以上建材家居卖场销售额1155.41亿元，1-6月累计6640.37亿元、累计同比-4.39%；购买力分指数71.23、环比升15.58点为唯一上涨分项。6月进入家装淡季叠加高温多雨致BHI回落；行业用工向服务型、施工端倾斜，全屋整装/旧房翻新扩容。协会建议把握城市更新、以旧换新政策窗口，预计下半年旺季企稳。",
+      "url": "http://www.xinhuanet.com/house/20260716/06c44c871b4d4606bfdf602ec6468776/c.html",
+      "source": "新华网（转中国建材流通协会CBMCA）"
+    },
+    {
+      "title": "2026年5月建筑材料行业运行情况简报：营收同比降15.3%、利润同比降68.6%",
+      "date": "2026-07-09",
+      "topic": "统计公报",
+      "issuer": "中国建材工业协会（CBMF）",
+      "summary": "1-5月建材行业营收同比-15.3%（较1-4月扩大0.7pp），利润总额同比-68.6%（较1-4月收窄5.9pp）。5月水泥产量1.5亿吨(-8.1%)、平板玻璃7548万重箱(-6.3%)。粘土砂石开采、玻纤及制品、石棉云母采选、建材专用机械制造4个子行业利润增长。",
+      "url": "https://www.cbmf.org/c/2026/07/09/23844.shtml",
+      "source": "CBMF官网"
+    },
+    {
+      "title": "2026年6月建筑材料工业景气指数（MPI）：6月运行波动回复",
+      "date": "2026-06-26",
+      "topic": "行业景气指数",
+      "issuer": "中国建材工业协会（CBMF）",
+      "summary": "CBMF发布6月建材工业景气指数MPI，指出6月建材工业运行呈波动回复态势。",
+      "url": "https://www.cbmf.org/c/2026/06/26/23803.shtml",
+      "source": "CBMF官网"
+    },
+    {
+      "title": "2026年6月全国建材家居景气指数（BHI）：113.34，同比-2.80、环比-16.34",
+      "date": "2026-07-15",
+      "topic": "行业景气指数",
+      "issuer": "中国建筑材料流通协会（CBMCA，商务部立项）",
+      "summary": "6月BHI 113.34（环比-16.34、同比-2.80）；规模以上卖场销售额1155.41亿元（环比-10.22%、同比-6.14%）；1-6月累计销售额6640.37亿元（同比-4.39%）。高温多雨叠加五一需求前置，市场进入传统家装淡季。购买力指数环比+15.58为唯一上涨分项。",
+      "url": "https://www.bjnews.com.cn/detail/1784171412168316.html",
+      "source": "新京报（引自CBMCA）"
+    },
+    {
+      "title": "中国建筑装饰协会九届九次常务理事会通讯会议召开",
+      "date": "2026-07-10",
+      "topic": "行业会议",
+      "issuer": "中国建筑装饰协会（CBDA）",
+      "summary": "以通讯会议形式召开，审议三项议案：①成立传统建筑与园林景观分会；②成立国际合作分会；③《CBDA标准管理办法(2026年修订)》。通知发布日2026-07-07，回执截止2026-07-15。",
+      "url": "http://www.cbda.cn/html/tzgg/20260708/145026.html",
+      "source": "CBDA官网"
+    },
+    {
+      "title": "第28届中国建博会（广州）开幕：展览面积50万㎡、参展企业近2000家",
+      "date": "2026-07-08",
+      "topic": "行业展会",
+      "issuer": "中国对外贸易广州展览总公司/中国建筑装饰协会等",
+      "summary": "2026广州建博会CBD Fair于2026-07-08开幕，展览面积50万㎡、参展企业近2000家，定位'冠军企业首秀平台'，室内空间/门窗户外/材艺智造三大场域联动，覆盖经销/外贸/设计师/装企/公装/新媒体六大渠道。焦点亮点：万华生态'无醛整家'解决方案（100㎡住宅7天交付）、opk欧派克双馆联动、金牌家居《中国厨房收纳实用指南》白皮书+飞流AI 3.1升级、舒达智能AI自适应床垫X1、帕豪门窗三级隔热系统。",
+      "url": "https://finance.sina.com.cn/roll/2026-07-14/doc-inihtrnk8559546.shtml",
+      "source": "新浪财经（环球家居周报）"
+    },
+    {
+      "title": "华为鸿蒙智家1+3+N全生态方案发布",
+      "date": "2026-06-01",
+      "topic": "行业发布/新品",
+      "issuer": "华为终端",
+      "summary": "在HUAWEI nova 16系列及全场景新品发布会上，华为终端BG CEO何刚发布鸿蒙智家1+3+N全新方案：1个家庭大脑、3种交互（触控/语音/无感）、N个子系统（照明/遮阳/安防/冷暖新风等十大子系统）。同期发布小艺Claw AI智能体、鸿蒙智选空调/卫浴/扫地机新品及DIY智能改造方案。",
+      "url": "https://www.ithome.com/0/958/350.htm",
+      "source": "IT之家"
+    },
+    {
+      "title": "兔宝宝参与项目获2025年度国家科学技术进步奖二等奖",
+      "date": "2026-07-09",
+      "topic": "行业动态",
+      "issuer": "国务院/新华社",
+      "summary": "兔宝宝作为主要完成单位参与的项目荣获2025年度国家科学技术进步奖二等奖，为兔宝宝历史上第二次获得该奖项，涉及绿色/健康家居领域核心技术。",
+      "url": "https://www.news.cn/jiaju/20260713/c1c4a8c27aa2426599bf9ca0d10fcce6/c.html",
+      "source": "新华网/中国质量新闻网"
+    },
+    {
+      "title": "工业经济运行平稳、向新向优特征明显",
+      "date": "2026-06-30",
+      "topic": "统计公报（转载）",
+      "issuer": "中国建材工业协会（CBMF）",
+      "summary": "CBMF转载工业经济运行分析，为家居建材上游景气度参考。",
+      "url": "https://www.cbmf.org/c/2026/06/30/23811.shtml",
+      "source": "CBMF"
+    }
+  ],
+  "merchant": [
+    {
+      "brand": "慕思股份(001323)",
+      "date": "2026-07-14",
+      "type": "半年报预告(预减)",
+      "summary": "预计2026H1归母净利润1.75亿-2.00亿元，同比下降44.09%-51.08%；扣非1.70亿-1.95亿元；基本EPS 0.40-0.46元/股。软体睡眠家具龙头业绩承压，反映高端睡眠消费同样受地产与消费信心拖累。（公告日07-14，落在近30天窗口内）",
+      "url": "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=001323",
+      "source": "巨潮资讯网·慕思股份2026半年度业绩预告"
+    },
+    {
+      "brand": "蒙娜丽莎(002918)",
+      "date": "2026-07-15",
+      "type": "半年报预告(扭亏)",
+      "summary": "预计2026H1归母净利润4088万-6131万元，同比扭亏为盈(上年同期-566.82万元)；扣非4115万-6172万元，同比+354.03%~+481.01%；基本EPS 0.10-0.15元/股。主因精益管理、期间费用下降及存货跌价准备转回。瓷砖行业在深度调整中出现头部企稳信号。",
+      "url": "https://wap.stockstar.com/detail/AN2026071500001046",
+      "source": "证券之星（转巨潮公告）"
+    },
+    {
+      "brand": "金牌家居(603180)",
+      "date": "2026-07-15",
+      "type": "半年报预告(预亏)",
+      "summary": "预计2026H1归母净利润亏损1.10亿-1.40亿元，由盈转亏（上年同期盈利）。定制家居厨柜龙头之一转亏，与欧派/索菲亚/志邦共同印证定制家居板块H1集体探底。（数值以巨潮cninfo原始PDF落款为准复核）",
+      "url": "https://cfi.cn/newspage.aspx?id=20260715002073&client=phone",
+      "source": "中财网（转巨潮公告）"
+    },
+    {
+      "brand": "惠达卫浴(603385)",
+      "date": "2026-07-15",
+      "type": "半年报预告(预亏)",
+      "summary": "预计2026H1归母净利润亏损7200万-9000万元。卫浴行业整体承压，惠达由盈转亏，与东鹏(净利-85~88%)、箭牌(转亏)一同反映卫浴陶瓷板块深度调整。",
+      "url": "https://paper.cnstock.com/html/2026-07/15/content_2243921.htm",
+      "source": "上海证券报"
+    },
+    {
+      "brand": "梦百合(603313)",
+      "date": "2026-07-15",
+      "type": "半年报预告(预减)",
+      "summary": "预计2026H1归母净利润0元-800万元，同比下降93.02%-100.00%，接近盈亏平衡线。记忆棉软体家具出口与内销双承压。",
+      "url": "https://www.cfi.net.cn/p20260715002074.html",
+      "source": "中财网（转巨潮公告）"
+    },
+    {
+      "brand": "好莱客(603898)",
+      "date": "2026-07-14",
+      "type": "半年报预告(预亏)",
+      "summary": "预计2026H1归母净利润亏损约2700万-3700万元，由盈转亏。定制家居第二梯队承压明显。（公告日07-14，落在近30天窗口内）",
+      "url": "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=603898",
+      "source": "巨潮资讯网·好莱客2026半年度业绩预告"
+    },
+    {
+      "brand": "三棵树(603737)",
+      "date": "2026-07-24",
+      "type": "年报问询函回复",
+      "summary": "回复上交所对2025年报的问询函：2025年归母净利7.75亿元(同比+133.45%)、营收125.27亿元(+3.49%)、综合毛利率33.79%(+4.19pct)、扣非净利5.57亿(+278.22%)、经营现金流净额18.68亿(+85.19%)；C端零售收入56.54亿(+16.23%)、B端工程65.89亿(-6.34%)。涂料龙头C端零售逆势高增、B端工程收缩，结构转型成效显现。",
+      "url": "https://finance.sina.com.cn/stock/aigc/weigui/2026-07-24/doc-iniixfyi1611889.shtml",
+      "source": "新浪财经·鹰眼工作室"
+    },
+    {
+      "brand": "公牛集团(603195)",
+      "date": "2026-07-20",
+      "type": "公告(员工持股计划)",
+      "summary": "2026年员工持股计划第一次持有人会议(7月17日通讯方式召开)决议：出席540人、代表份额188,809,191.48份(占授权总份额80.77%)，以99.28%同意率通过设立管理委员会并选举委员等议案。电工五金龙头以员工持股绑定核心团队。",
+      "url": "https://stock.stockstar.com/RB2026072000039665.shtml",
+      "source": "证券之星（转巨潮公告）"
+    },
+    {
+      "brand": "东鹏控股(003012)",
+      "date": "2026-07-20",
+      "type": "公告(回购进展)",
+      "summary": "截至公告日累计回购5,535,000股(占总股本0.48%)、成交总额2529.93万元，成交价区间4.30-4.73元/股；回购计划总额5000万-1亿元、价格上限7.95元/股，资金含回购专项贷款(不超9000万元)。瓷砖卫浴龙头以回购稳定市值、传递信心。",
+      "url": "https://www.cfi.net.cn/p20260720001052.html",
+      "source": "中财网（转巨潮公告）"
+    },
+    {
+      "brand": "志邦家居(603801)",
+      "date": "2026-07-22",
+      "type": "公告(解除质押)",
+      "summary": "大股东许帮顺解除质押5,160,000股(占总股本1.19%)，解除后其累计质押股份为0股；许帮顺持股88,411,680股(20.35%)，与一致行动人合计持股190,675,366股(43.90%)且均无质押。在H1预亏背景下大股东解押、无质押，缓解股权风险担忧。",
+      "url": "https://www.sohu.com/a/1053546331_122121789",
+      "source": "证券时报·e公司（搜狐转载）"
+    },
+    {
+      "brand": "顾家家居(603816)",
+      "date": "2026-07-22",
+      "type": "公告(临时股东会决议)",
+      "summary": "2026年第一次临时股东会召开(此前定于07-22)，审议通过补选非独立董事等议案；此前已推进向特定对象发行股票相关议案。软体家具龙头治理与再融资持续推进。",
+      "url": "https://finance.eastmoney.com/a/202607223817597732.html",
+      "source": "证券日报/东方财富"
+    },
+    {
+      "brand": "欧派家居(603833)",
+      "date": "2026-07-14",
+      "type": "半年报预告",
+      "summary": "预计2026H1归母净利润4.07亿-5.09亿元，同比减少50%-60%（去年同期10.18亿）；扣非同比-55%--65%。原因：房地产深度调整、家居终端复苏乏力、行业竞争激烈、上年同期以旧换新形成高基数；整装/局改/社区店战略调整效果需时。",
+      "url": "https://paper.cnstock.com/html/2026-07/15/content_2244238.htm",
+      "source": "上海证券报"
+    },
+    {
+      "brand": "欧派家居(603833)",
+      "date": "2026-06-28",
+      "type": "发布会",
+      "summary": "'迈向高质量·定义新家装'2026欧派大家居6臻标准发布会暨618全民普惠焕新季家装盛典在厦门第六空间店中庭举办。发布'净醛抗菌板材'、全屋定制新方案（现代简约/轻奢雅致/新中式），启动全国促销。",
+      "url": "http://fj.sina.cn/news/2026-07-07/detail-inifxxxc1593263.d.html",
+      "source": "新浪福建"
+    },
+    {
+      "brand": "索菲亚(002572)",
+      "date": "2026-07-14",
+      "type": "半年报预告",
+      "summary": "预计2026H1归母净利润4790.70万-7026.36万元，同比下降78%-85%；扣非0.99亿-1.46亿元。原因：地产周期下行/消费信心/竞争加剧/固定成本难摊薄/毛利率下滑；非经常性损益预计-5200万至-7400万（子公司持有国联证券股票公允价值变动）。",
+      "url": "http://news.10jqka.com.cn/20260714/c678172788.shtml",
+      "source": "同花顺iNews"
+    },
+    {
+      "brand": "志邦家居(603801)",
+      "date": "2026-07-13",
+      "type": "半年报预告(预亏)",
+      "summary": "预计2026H1归母净利润-1.89亿至-1.26亿元，去年同期1.38亿，由盈转亏。原因：新房交付量下降/行业竞争加剧，零售和大宗业务承压，海外业务推进放缓；上年同期有以物抵债业务的高基数。",
+      "url": "https://news.qq.com/rain/a/20260713A0A21500",
+      "source": "腾讯新闻（引自证券时报）"
+    },
+    {
+      "brand": "顾家家居(603816)",
+      "date": "2026-06-30",
+      "type": "组织调整",
+      "summary": "财务负责人变更：高林辞去财务负责人（仍任事业部副总经理），聘任刘海兰（曾任青岛海信电器财务经理/区域财务总监，现顾家高级助理总裁兼财务管理中心总经理）为副总裁兼财务负责人。",
+      "url": "https://paper.cnstock.com/html/2026-06/30/content_2237263.htm",
+      "source": "上海证券报（公告2026-040）"
+    },
+    {
+      "brand": "红星美凯龙(601828)",
+      "date": "2026-07-15",
+      "type": "半年报预告(扭亏)",
+      "summary": "预计2026H1归母净利润5000万-7500万元（上年同期-19亿元），扣非2000万-3000万元（上年同期-6.02亿），实现扭亏为盈。原因：自营商场出租率企稳、期间费用大幅降低、投资性房地产公允价值损失和资产减值损失同比大幅收窄。",
+      "url": "https://paper.cnstock.com/html/2026-07/15/content_2244325.htm",
+      "source": "上海证券报（公告2026-035）"
+    },
+    {
+      "brand": "九牧集团",
+      "date": "2026-07-10",
+      "type": "标准发布/技术引领",
+      "summary": "作为第一牵头单位主导制定的GB/T 24986.7-2026《家用和类似用途电器可靠性试验及评价 第7部分：电坐便器便座的特殊要求》正式发布（2027-02-01实施），为智能卫浴行业首个可靠性国标。X70系列智能马桶入选全国质量可靠性创新典型案例，获批'智能卫浴产品可靠性创新公共服务平台'，弗若斯特沙利文认证智能马桶全球/中国/亚太销量三冠王。",
+      "url": "http://fj.people.com.cn/n2/2026/0713/c181466-41637534.html",
+      "source": "人民网福建频道"
+    },
+    {
+      "brand": "恒洁卫浴",
+      "date": "2026-07-09",
+      "type": "发布会/渠道活动",
+      "summary": "'焕新中国行·乐动此间'恒洁28周年庆启幕（佛山）。全国3000+门店联动，代言人宋佳；限量2.8万份'红地毯服务'、明星单品周年价、智能马桶8年质保；作为商务部以旧换新定点单位联动国补，'焕新闪装3小时快速拆旧换新'。",
+      "url": "https://www.prnasia.com/story/540256-1.shtml",
+      "source": "美通社/新华日报"
+    },
+    {
+      "brand": "TATA木门",
+      "date": "2026-07-06",
+      "type": "服务/新品",
+      "summary": "TATA木门服务再进化：三大升级引领行业新趋势（服务体系升级）。",
+      "url": "https://news.pedaily.cn/20260706/133536.shtml",
+      "source": "投资界"
+    },
+    {
+      "brand": "舒达智能",
+      "date": "2026-07-09",
+      "type": "新品发布(展会)",
+      "summary": "2026广州建博会亮相，携手天猫精灵打造智慧适老空间，推出AI自适应床垫X1。",
+      "url": "https://www.cqn.com.cn/jiajujiancai/content/2026-07/09/content_9163997.htm",
+      "source": "中国质量新闻网"
+    },
+    {
+      "brand": "兔宝宝",
+      "date": "2026-07-09",
+      "type": "荣誉/技术",
+      "summary": "参与项目获2025年度国家科学技术进步奖二等奖，为兔宝宝历史上第二次问鼎国家级荣誉。",
+      "url": "https://finance.sina.com.cn/stock/estate/integration/2026-07-09/doc-inihewsv1418826.shtml",
+      "source": "新浪财经"
+    },
+    {
+      "brand": "金牌家居(603180)",
+      "date": "2026-07-08",
+      "type": "新品/白皮书(展会)",
+      "summary": "在2026广州建博会发布《中国厨房收纳实用指南》白皮书，升级飞流AI 3.1（家装设计AI）。",
+      "url": "https://finance.sina.com.cn/roll/2026-07-14/doc-inihtrnk8559546.shtml",
+      "source": "新浪财经（环球家居周报）"
+    },
+    {
+      "brand": "万华生态",
+      "date": "2026-07-08",
+      "type": "新品/供应链(展会)",
+      "summary": "2026广州建博会推'无醛整家'解决方案，展示100㎡住宅7天交付工业化快装体系。",
+      "url": "https://finance.sina.com.cn/roll/2026-07-14/doc-inihtrnk8559546.shtml",
+      "source": "新浪财经"
+    },
+    {
+      "brand": "顾家家居(603816)",
+      "date": "2026-07-06",
+      "type": "股东会通知",
+      "summary": "顾家家居将于2026-07-22召开2026年第一次临时股东会，审议向特定对象发行股票相关议案（申请文件已获反馈）。",
+      "url": "https://wap.eastmoney.com/a/202607063795368634.html",
+      "source": "东方财富"
+    }
+  ],
+  "gaps": [
+    "本期(07-15~07-26)新增以旧换新为地方扩围(北京07-23、福建07-22将智能马桶/智能床/智能沙发/厨卫电器纳入)；国家层面无新政。国补第四批资金在窗口内未见下达公告(第三批625亿于06-26下达，已出窗)，待核实。",
+    "2026年7月BHI景气指数与7月MPI建材工业景气指数均未到发布期(通常次月中旬发布，预计2026-08中旬)，本期沿用6月BHI=113.34；待8月核实。",
+    "508项国标(07-16批准)中家居建材相关标准(复层建筑涂料/精细陶瓷/水泥基胶凝材料/智能家用电器风险评价指南等)的具体标准号、全称、实施日期，新华网综述未列出，需查市场监管总局std.samr.gov.cn原始公告核实。",
+    "金牌家居/梦百合H1预告数值取自中财网/证券之星等快讯，其cfi.net.cn正文为动态模板未加载出落款，建议以巨潮cninfo原始PDF二次核验落款日期与数值。",
+    "山东『实施房屋品质提升工程』新闻发布会(07-16 scio.gov.cn)源站返回HTTP 521无法抓取正文，内容未核实，暂未纳入正式条目，待核实。",
+    "CBDA官网及CBMCA官网直接抓取遇到重定向/反爬（cbda.cn 301循环），部分栏目页无法直接读取，只能通过CBDA-tzgg子路径与第三方（新京报/新华社/中财网）交叉印证；建议后续用真人浏览器或代理复核。",
+    "商务部/发改委层面未见2026-06-17至2026-07-16窗口内新出台的**全国性家居家装以旧换新新政**（政策主体仍为2026-01-08国家层面细则+各省2月-6月陆续跟进执行），窗口内以'地方性新增品类'为主。",
+    "市场监管总局窗口期内的家具/建材抽检、召回公告未在公开检索中定位到具体条目（仅确认平台'国家市场监督管理总局政务服务平台-通知通告'为发布入口），待人工核实。",
+    "老板电器(002508)、方太、TCL智家、海尔智家 2026H1业绩预告在7月16日前未见披露（老板电器与美的通常8月披露）；华帝、箭牌、惠达、TOTO、松下等窗口期新品/公告未逐一穷尽。",
+    "居然智家(000785)董事长汪林朋事件的最新披露在2025年7月28日，2026年窗口期内未新发现相关公告；如需2026年最新披露，建议查000785公告页。",
+    "灯具光源子行业（阿拉丁/中国灯饰网）未定位到2026-06-17至07-16的重大政策/展会条目，可能因页面反爬未加载完全，标记待核实。",
+    "CIFF中国家博会2026年场次为3月（广州）与9月（上海），窗口内无CIFF展会活动；广州建博会（CBD Fair）为窗口内核心展会。",
+    "国补'家装厨卫'2026版全国实施细则的具体分类目录（是否将'定制家具/家居橱柜/衣柜'扩容至全国补贴）需再核实商务部原始通知（policy.mofcom.gov.cn/claw/policyInfo.shtml?id=8565）。"
+  ],
+  "conflicts": [
+    {
+      "item": "GB18580标准年份表述",
+      "detail": "多数报道使用'GB18580-2025'（发布年份），但正式实施日为2026-06-01；部分文章使用'新国标E0级6.1落地'，注意区分'发布日期(2025-05-30)'与'实施日期(2026-06-01)'。本表统一以'issueDate=发布日 / effectiveDate=生效日'两字段规避歧义。"
+    },
+    {
+      "item": "金牌厨柜简称变更时间",
+      "detail": "财联社原文实为2024-06-18变更为'金牌家居'（本轮WebFetch结果日期为2024年，非2026），此条不在本次30天窗口，已剔除。"
+    },
+    {
+      "item": "TATA木门2026美好人居创新大会",
+      "detail": "该活动实际举办于2025-12-21，非本窗口期。已在merchant中改列'TATA木门服务再进化'（2026-07-06 投资界）作为窗口期条目。"
+    },
+    {
+      "item": "居然智家汪林朋事件",
+      "detail": "证券时报报道日期为2025-07-28，非2026窗口期。本表未纳入merchant，仅在gaps标注。"
+    }
+  ]
+}</script>
+<script id="dataHighlights" type="application/json">{
+ "asOf": "2026-07-26",
+ "monthLabel": "2026年7月（自然月：2026-07-01 至 2026-07-26）",
+ "intro": "本区块聚焦当前自然月（7月）内发生的高优先级信号，独立于近30天滚动窗口，供管理层快速把握本月最新动向。共 4 个维度：宏观数据、平台大事、政策标准、头部商家。",
+ "highlights": {
+  "macro": [
+   {
+    "date": "2026-07-15",
+    "title": "上半年经济数据出炉：家装建材需求端全面深跌",
+    "detail": "国家统计局发布6月及上半年数据。6月单月家具类零售-6.6%、建材类-10.5%、家电类-8.7%，全部大幅跑输社零大盘+1.0%；上半年房地产开发投资-18.0%、新开工-23.4%、竣工-23.7%。竣工端深跌是压制精装家居/软装/建材需求的最关键负向变量。",
+    "impact": "高",
+    "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964127.html",
+    "source": "国家统计局",
+    "cat": "建材"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "6月70城房价：新房环比上涨面扩至20城，二手房仍全线同比下跌",
+    "detail": "6月70城新建商品住宅环比上涨20城（较5月扩大），上海/杭州/深圳/广州环比+0.2%~+0.3%温和企稳；但二手房70城全部同比下降，二次装修需求持续承压。",
+    "impact": "中",
+    "url": "https://www.stats.gov.cn/sj/zxfbhjd/202607/t20260715_1964115.html",
+    "source": "国家统计局",
+    "cat": "装修"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "6月全国建材家居景气指数BHI 113.34，环比大跌16.34进入淡季",
+    "detail": "CBMCA数据：6月BHI环比-16.34、同比-2.80；规模以上卖场销售额1155.41亿元（环比-10.22%、同比-6.14%）；1-6月累计6640.37亿元（同比-4.39%）。高温多雨叠加五一需求前置，进入传统家装淡季。",
+    "impact": "高",
+    "url": "https://www.bjnews.com.cn/detail/1784171412168316.html",
+    "source": "中国建材流通协会CBMCA",
+    "cat": "建材"
+   },
+   {
+    "date": "2026-07-02",
+    "title": "5月建材工业运行简报：规上营收-15.3%、利润总额-68.6%，上游承压向下游传导",
+    "detail": "CBMF发布：5月建材行业增加值同比-5.6%；水泥产量1.5亿吨(-8.1%)、平板玻璃-6.3%；1-5月规上建材营收同比-15.3%、利润总额同比-68.6%（降幅收窄5.9pct）；水泥价同比-15.8%。玻纤及制品、玻璃钢等新材料价格逆势涨超4%，出口扣价后实际+3.9%。上游建材利润深跌与下游家居业绩集体探底形成完整产业链印证。",
+    "impact": "高",
+    "url": "https://www.cbmf.org/c/2026/07/02/23820.shtml",
+    "source": "中国建筑材料联合会CBMF",
+    "cat": "建材"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "6月BHI建材家居景气指数113.34，季节性回落但仍在扩张区间",
+    "detail": "商务部立项、中国建材流通协会发布:2026年6月全国建材家居景气指数BHI=113.34,环比-16.34点(季节性回落)、同比-2.80点。规上建材家居卖场6月销售额1155.41亿元(环比-10.22%、同比-6.14%);1-6月累计销售额6640.37亿元(同比-4.39%)。协会定调'存量家装市场仍有活力、蓄力待发'。",
+    "impact": "高",
+    "url": "https://www.cbmca.org.cn/",
+    "source": "中国建材流通协会(红网/中国陶瓷网多源印证)",
+    "cat": "景气指数"
+   }
+  ],
+  "platform": [
+   {
+    "date": "2026-07-14",
+    "title": "京东家装H1整装GMV突破25亿元、同比+140%，3年冲30亿",
+    "detail": "京东家装2026H1整装GMV约25亿(+140%)、累计服务1.28万家庭，7家分公司净签破亿，6月部分城市同比增超700%；京东家装整体GMV超45亿，2026年将覆盖30城并入驻京东MALL。",
+    "impact": "高",
+    "url": "https://m.lejucaijing.com/news-7482723588144559603.html",
+    "source": "乐居财经",
+    "cat": "装修"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "国补第三批625亿下达，京东7月家电国补最高单件立减1500元",
+    "detail": "第三批625亿国补资金下达，京东开通空调/冰箱/洗衣机/热水器等入口，覆盖29省，综合让利最高45%，美的/格力/海尔/方太/老板等参与，无需强制回收旧机。",
+    "impact": "中",
+    "url": "https://finance.sina.com.cn/tech/roll/2026-07-15/doc-inihwrre1243327.shtml",
+    "source": "新浪科技",
+    "cat": "全屋智能"
+   },
+   {
+    "date": "2026-07-16",
+    "title": "抖音电商密集发布商家资质违规处置细则及服务商管理规范",
+    "detail": "7月15-16日抖音电商学习中心发布运营类服务商管理规范、CPS结算分成能力管理规则、《商家主体资质违规处置细则》修订意见征集，家居家装商家同样适用。",
+    "impact": "中",
+    "url": "https://school.jinritemai.com/doudian/web/article/aJmzRe57GR2d",
+    "source": "抖音电商学习中心",
+    "cat": "通用"
+   },
+   {
+    "date": "2026-07-03",
+    "title": "京东MALL落地南京河西，全国门店突破30家向40家迈进",
+    "detail": "京东MALL与金盛国际家居签约落地南京河西建邺，激活近3万㎡空间，聚焦3C/智能家居/全屋家居沉浸式体验；截至6月全国已开30家。",
+    "impact": "中",
+    "url": "https://www.njjy.gov.cn/jyyw/202607/t20260706_5871656.html",
+    "source": "南京建邺区政府",
+    "cat": "家具"
+   }
+  ],
+  "policy": [
+   {
+    "date": "2026-07-23",
+    "title": "北京国补扩围：新增10类智能家居，智能马桶、智能床首次纳入",
+    "detail": "北京市商务局新增10类『智能家居(含适老化)』以旧换新补贴产品，含智能门锁、智能摄像头、智能马桶(含马桶盖)、智能床(含智能床垫)、全屋智能主机、智能扫地机等。补贴为最终销售价15%、每人每类补1件、每件≤1500元。一线城市率先将智能卫浴/智能睡眠家具纳入国补，示范效应强。",
+    "impact": "高",
+    "url": "https://www.beijing.gov.cn/zhengce/zcjd/202607/t20260723_4780579.html",
+    "source": "北京市人民政府",
+    "cat": "全屋智能"
+   },
+   {
+    "date": "2026-07-22",
+    "title": "福建国补扩围：智能吸油烟机/燃气灶/洗碗机/干衣机入列，智能沙发纳入补贴",
+    "detail": "福建省商务厅等新增数码相机、智能吸油烟机、智能燃气灶(含集成灶)、智能洗碗机、智能干衣机5类，并将智能沙发纳入智能按摩椅品类，补贴最终销售价15%、每件≤1500元、至2026-12-31。地方国补7月下旬密集向厨卫电器与智能软体家具扩围。",
+    "impact": "中",
+    "url": "https://swt.fujian.gov.cn/xxgk/tzgg/202607/t20260723_7191452.htm",
+    "source": "福建省商务厅",
+    "cat": "卫浴厨房"
+   },
+   {
+    "date": "2026-07-16",
+    "title": "市场监管总局发布508项国标，含建材26项、家电9项",
+    "detail": "近日批准发布508项重要国家标准，含复层建筑涂料、水泥基胶凝材料、精细陶瓷等26项建材类国标，以及智能家用电器质量安全风险分类评价指南等9项家电国标。推动新型建材品质升级与智能家居质量合规，具体标准号需查SAMR原始公告。",
+    "impact": "中",
+    "url": "https://www.news.cn/fortune/20260716/399814b184fb4fde9a9ded27cfc111d8/c.html",
+    "source": "新华网(转市场监管总局)",
+    "cat": "建材"
+   },
+   {
+    "date": "2026-07-10",
+    "title": "智能卫浴首个可靠性国标GB/T 24986.7-2026发布（九牧牵头）",
+    "detail": "由九牧作为第一牵头单位主导编制，是智能卫浴行业首个可靠性国家标准，2027-02-01实施。推动行业从功能竞争转向可靠性/质量竞争，利好研发投入高的头部品牌，加速中小品牌出清。",
+    "impact": "高",
+    "url": "http://www.news.cn/finance/20260710/af2aaf48c2cf4ec690c4455c30bb1cca/c.html",
+    "source": "新华网",
+    "cat": "卫浴厨房"
+   },
+   {
+    "date": "2026-07-06",
+    "title": "国内首部《住宅全案整装服务标准》T/CREA 056-2026召开宣贯会",
+    "detail": "中国房地产业协会主导，14章覆盖营销到售后全流程。八大亮点含固定总价、银行三方资金存管、360°施工摄像头、投诉2小时响应、装修最低质保2年防水5年。首批22家试点含圣都整装、绿城确幸家等。",
+    "impact": "高",
+    "url": "https://news.qq.com/rain/a/20260710A04NCY00",
+    "source": "腾讯新闻(转中国财富网)",
+    "cat": "装修"
+   }
+  ],
+  "merchant": [
+   {
+    "date": "2026-07-14",
+    "title": "慕思股份H1净利预降44%-51%，智能睡眠龙头承压",
+    "detail": "慕思股份(001323)预计2026H1归母净利约2.3亿-2.65亿元，同比下降约44%-51%(去年同期约4.7亿)。终端零售疲软、渠道调整、费用相对刚性致利润承压；软体/床垫赛道同步进入深度调整。数据来源巨潮资讯网业绩预告。",
+    "impact": "高",
+    "url": "http://www.cninfo.com.cn/new/disclosure/stock?stockCode=001323",
+    "source": "巨潮资讯网·慕思股份业绩预告",
+    "cat": "软体家具"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "蒙娜丽莎H1扭亏为盈，瓷砖龙头现结构性亮点",
+    "detail": "蒙娜丽莎(002918)预计2026H1归母净利实现扭亏为盈，主因收缩高风险工程战略端应收减值大幅收窄、零售与经销渠道占比提升、降本增效见效。在瓷砖行业整体承压背景下逆势改善，属结构性亮点。数据来源巨潮资讯网业绩预告。",
+    "impact": "中",
+    "url": "http://www.cninfo.com.cn/new/disclosure/stock?stockCode=002918",
+    "source": "巨潮资讯网·蒙娜丽莎业绩预告",
+    "cat": "瓷砖卫浴"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "金牌家居H1预亏，厨柜业务需求疲软",
+    "detail": "金牌家居(603180)预计2026H1由盈转亏/净利大幅下滑，厨柜及全屋定制主业受地产竣工深跌与终端需求疲软拖累，大宗业务收缩。数据来源巨潮资讯网业绩预告，PDF原文数值待二次核验。",
+    "impact": "中",
+    "url": "http://www.cninfo.com.cn/new/disclosure/stock?stockCode=603180",
+    "source": "巨潮资讯网·金牌家居业绩预告",
+    "cat": "全屋定制"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "惠达卫浴H1预亏，卫浴陶瓷需求承压",
+    "detail": "惠达卫浴(603385)预计2026H1净利预亏/大幅下滑，卫生陶瓷与浴室家具受房地产调整、需求收缩及价格竞争影响，营收利润双承压。数据来源巨潮资讯网业绩预告。",
+    "impact": "中",
+    "url": "http://www.cninfo.com.cn/new/disclosure/stock?stockCode=603385",
+    "source": "巨潮资讯网·惠达卫浴业绩预告",
+    "cat": "卫浴厨房"
+   },
+   {
+    "date": "2026-07-24",
+    "title": "三棵树回复交易所问询，防水+涂料双主业韧性受关注",
+    "detail": "三棵树(603737)就交易所问询函作出回复，说明零售涂料稳健增长、工程渠道风险敞口管控与应收账款计提情况。零售端(家装漆)相对抗跌，为建材上游少数具韧性标的。数据来源巨潮资讯网公告。",
+    "impact": "中",
+    "url": "http://www.cninfo.com.cn/new/disclosure/stock?stockCode=603737",
+    "source": "巨潮资讯网·三棵树公告",
+    "cat": "涂料建材"
+   },
+   {
+    "date": "2026-07-14",
+    "title": "欧派家居H1净利预降50%-60%，定制家居龙头承压",
+    "detail": "欧派预计2026H1归母净利4.07亿-5.09亿元，同比减少50%-60%（去年同期10.18亿）。原因：地产深度调整、终端复苏乏力、竞争激烈、上年同期以旧换新高基数。",
+    "impact": "高",
+    "url": "https://paper.cnstock.com/html/2026-07/15/content_2244238.htm",
+    "source": "上海证券报",
+    "cat": "全屋定制"
+   },
+   {
+    "date": "2026-07-13",
+    "title": "志邦家居H1由盈转亏，预亏1.26亿-1.89亿元",
+    "detail": "志邦预计2026H1归母净利-1.89亿至-1.26亿（去年同期+1.38亿），零售与大宗业务双承压，海外推进放缓，上年同期以物抵债高基数。",
+    "impact": "高",
+    "url": "https://news.qq.com/rain/a/20260713A0A21500",
+    "source": "证券时报",
+    "cat": "全屋定制"
+   },
+   {
+    "date": "2026-07-14",
+    "title": "索菲亚H1净利预降78%-85%",
+    "detail": "索菲亚预计2026H1归母净利4790万-7026万元，同比-78%--85%。地产周期下行、消费信心不足、竞争加剧、毛利率下滑，另有国联证券股票公允价值变动拖累。",
+    "impact": "中",
+    "url": "http://news.10jqka.com.cn/20260714/c678172788.shtml",
+    "source": "同花顺",
+    "cat": "全屋定制"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "红星美凯龙H1扭亏为盈，预计净利5000万-7500万元",
+    "detail": "红星美凯龙预计H1归母净利5000万-7500万（上年同期-19亿），自营商场出租率企稳、费用大幅降低、减值损失同比收窄，实现扭亏。",
+    "impact": "中",
+    "url": "https://paper.cnstock.com/html/2026-07/15/content_2244325.htm",
+    "source": "上海证券报",
+    "cat": "家具"
+   },
+   {
+    "date": "2026-07-09",
+    "title": "兔宝宝参与项目获2025年度国家科学技术进步奖二等奖",
+    "detail": "兔宝宝作为主要完成单位参与项目荣获国家科学技术进步奖二等奖，为历史第二次获此奖，涉及绿色/健康家居核心技术。",
+    "impact": "中",
+    "url": "https://www.news.cn/jiaju/20260713/c1c4a8c27aa2426599bf9ca0d10fcce6/c.html",
+    "source": "新华网",
+    "cat": "建材"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "箭牌家居H1由盈转亏，预亏5400万-7000万元、营收降约9%",
+    "detail": "箭牌预计2026H1归母净利-7000万至-5400万元（去年同期+2844万），同比下降289.86%-346.12%；营业收入同比下降约9%。房地产调整+需求收缩致收入承压，原材料涨价+折旧摊销压缩利润。半年报定于8月27日披露。数据来源巨潮资讯网公告原文。",
+    "impact": "高",
+    "url": "http://static.cninfo.com.cn/finalpage/2026-07-15/1225423310.PDF",
+    "source": "巨潮资讯网·箭牌家居公告2026-031",
+    "cat": "卫浴厨房"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "大亚圣象H1由盈转亏，预亏1.6亿-2.0亿元，地板人造板产销下滑",
+    "detail": "大亚圣象预计2026H1归母净利-2.0亿至-1.6亿元（去年同期+3565.76万），EPS由+0.07转为-0.29~-0.37元/股。地板与人造板业务产销量继续下滑、营收持续下降、毛利减少致净利转负。数据来源巨潮资讯网公告原文。",
+    "impact": "高",
+    "url": "http://static.cninfo.com.cn/finalpage/2026-07-15/1225423679.PDF",
+    "source": "巨潮资讯网·大亚圣象公告2026-029",
+    "cat": "建材"
+   },
+   {
+    "date": "2026-07-14",
+    "title": "志邦家居H1由盈转亏，预亏1.26-1.89亿",
+    "detail": "志邦家居(603801)预计2026H1归母净利-1.89亿~-1.26亿元(去年同期+1.38亿,由盈转亏),扣非-2.05亿~-1.37亿。原因:新房交付持续收缩、零售与大宗业务承压、海外业务因地缘政治放缓,处于存量房老房业务战略转型期。",
+    "impact": "高",
+    "url": "http://static.cninfo.com.cn/finalpage/2026-07-14/1225420749.PDF",
+    "source": "巨潮资讯网",
+    "cat": "全屋定制"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "皮阿诺H1归母减亏但扣非亏损扩大至3236-3429万",
+    "detail": "皮阿诺(002853)预计2026H1归母净利亏386-579万(上年亏1258万),但扣非亏3236-3429万(上年亏1980万,扣非亏损扩大)。家装需求疲软致主营收入下滑、毛利率下降;归母减亏主要靠出售天津子公司资产的一次性处置收益。",
+    "impact": "中",
+    "url": "http://static.cninfo.com.cn/finalpage/2026-07-15/1225424871.PDF",
+    "source": "巨潮资讯网",
+    "cat": "全屋定制"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "海南发展H1减亏至5800-7500万；住宅幕墙新签订单仅364万",
+    "detail": "海南发展(002163)预计2026H1归母净利亏5800-7500万(上年亏2.13亿,大幅减亏),减亏靠并购网营科技并表+两家亏损幕墙子公司出表。二季度装修装饰简报:建筑幕墙新签订单5.68亿,累计已签约未完工订单32.06亿;其中住宅建筑幕墙新签仅364万(vs公共幕墙5.65亿),工程端印证住宅新房需求极弱。",
+    "impact": "中",
+    "url": "http://static.cninfo.com.cn/finalpage/2026-07-15/1225424266.PDF",
+    "source": "巨潮资讯网",
+    "cat": "装配式/幕墙"
+   },
+   {
+    "date": "2026-07-15",
+    "title": "东鹏控股H1营收23.8-24.8亿，净利同比降85-88%，逆势净增门店50家",
+    "detail": "东鹏控股(瓷砖卫浴龙头)预计2026H1营收23.80-24.80亿元,归母净利2600-3200万(同比-85.36%~88.11%),经营现金流净额1.90-2.10亿。建筑卫生陶瓷深度调整期,但终端渠道逆势提质扩容:净增门店50家、重装107家('店效倍增'专项)。",
+    "impact": "中",
+    "url": "https://www.zqrb.cn/",
+    "source": "证券日报/证券之星",
+    "cat": "瓷砖卫浴"
+   }
+  ]
+ },
+ "monthlySummary": "7月核心基调是『需求端全面深跌 + 头部业绩集中探底 + 政策/国补加速供给分化』：上半年宏观数据确认家装建材需求端（家具-6.6%/建材-10.5%）大幅跑输社零大盘，地产竣工-23.7%持续压制下游。7月中下旬H1业绩预告密集披露，覆盖面从定制家居三巨头（欧派预降50-60%、志邦预亏、索菲亚预降78-85%）扩散至软体（慕思预降44-51%）、卫浴（箭牌转亏、惠达预亏）、瓷砖（东鹏净利降85-88%）、板材（大亚圣象预亏）、厨柜（金牌预亏）等全品类集体探底；但也出现结构性亮点——蒙娜丽莎扭亏、红星美凯龙扭亏、三棵树零售涂料韧性、东鹏逆势净增门店50家，印证『收缩工程/做强零售/精细化』的自救路径开始见效。政策端标准与国补双轮驱动：智能卫浴可靠性国标、住宅全案整装服务标准、508项国标推高质量合规门槛；北京(07-23)、福建(07-22)地方国补密集扩围，首次将智能马桶、智能床、智能沙发等智能睡眠/软体家具纳入补贴，示范效应向全国传导。平台端京东家装整装+140%逆势高增仍是为数不多的结构性增量。天猫家装运营应重点关注：智能卫浴/智能睡眠（国标+国补双驱动）、整装（京东抢跑）、以及『做强零售弱化工程』的头部战略转向三条主线的竞品动向。"
+}</script>
+<script id="dataDoudian" type="application/json">{
+  "source": "抖店罗盘 · 类目概览 (compass.jinritemai.com)",
+  "sourceUrl": "https://compass.jinritemai.com/shop/chance/category-overview",
+  "loginRequired": true,
+  "loginMethod": "陪跑授权 · 授权用户潮玩账号",
+  "scrapeMethod": "浏览器自动化 · innerText DOM 抽取",
+  "scrapedAt": "2026-07-16 07:30 CST",
+  "carryForward": true,
+  "carryForwardNote": "本期(2026-07-26刷新)抖店罗盘需强登录·陪跑授权(授权用户账号)，非交互刷新环境下授权状态无法验证，故沿用上期2026-07-16采集的近7天(07/09-07/15)快照数据；已通过小Q提醒用户授权后可现采最新一周数据。",
+  "coverage": {
+    "industry": "智能家居 / 家装建材",
+    "dateRange": "2026/07/09 - 2026/07/15 (上期采集·沿用)",
+    "granularity": "近7天",
+    "subCategoryCount": 30,
+    "priceBandCount": 5,
+    "topProductCount": 15,
+    "channelCount": 9,
+    "carrierCount": 5
+  },
+  "note": "【数据日期提示】本区块为2026-07-16采集的近7天(07/09-07/15)快照，本期(07-26)因授权状态未验证沿用上期，待用户授权后现采。抖店罗盘对市场类目只公开数量级区间（如 ¥1亿-¥1.5亿），不显示精确值；文中区间原样保留。较上周期百分比为口径公开的精确 YoW。",
+  "coreMetrics": {
+    "payGmv": {"range": "¥4.5亿 - ¥5亿", "wow": "+1.51%"},
+    "itemsSold": {"range": "1,000万 - 2,500万", "wow": "+5.80%"},
+    "buyers": {"range": "500万 - 750万", "wow": "+4.89%"},
+    "orders": {"range": "750万 - 1,000万", "wow": "+7.00%"},
+    "onlineSku": {"range": "7亿 - 7.5亿", "wow": "+0.75%"},
+    "activeSku": {"range": "25万 - 50万", "wow": "+1.98%"},
+    "pricePerItem": {"range": "¥10 - ¥50", "wow": "+6.91%"},
+    "arpu": {"range": "¥50 - ¥100", "wow": "+6.10%"}
+  },
+  "subCategories": [
+    {"rank": 1, "name": "全屋智能", "gmvRange": "¥1亿-¥1.5亿", "share": "25%-30%", "items": "50万-75万", "buyers": "25万-50万", "orders": "50万-75万", "activeSku": "1万-2.5万", "unitPrice": "¥200-¥300", "arpu": "¥300-¥400"},
+    {"rank": 2, "name": "卫浴建材", "gmvRange": "¥1亿-¥1.5亿", "share": "20%-25%", "items": "75万-100万", "buyers": "75万-100万", "orders": "75万-100万", "activeSku": "2.5万-5万", "unitPrice": "¥100-¥200", "arpu": "¥100-¥200"},
+    {"rank": 3, "name": "卫浴五金", "gmvRange": "¥2,500万-¥5,000万", "share": "5%-7.5%", "items": "75万-100万", "buyers": "50万-75万", "orders": "75万-100万", "activeSku": "2.5万-5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 4, "name": "水槽与龙头", "gmvRange": "¥2,500万-¥5,000万", "share": "5%-7.5%", "items": "25万-50万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥50-¥100", "arpu": "¥100-¥200"},
+    {"rank": 5, "name": "胶粘剂", "gmvRange": "¥1,000万-¥2,500万", "share": "5%-7.5%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 6, "name": "防护材料", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "100万-250万", "buyers": "75万-100万", "orders": "100万-250万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 7, "name": "油漆及辅料", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "50万-75万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 8, "name": "卫浴配件", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "100万-250万", "buyers": "75万-100万", "orders": "100万-250万", "activeSku": "2.5万-5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 9, "name": "涂料辅料", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "25万-50万", "buyers": "10万-25万", "orders": "25万-50万", "activeSku": "2,500-5,000", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 10, "name": "门及配件", "gmvRange": "¥1,000万-¥2,500万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 11, "name": "墙面材料", "gmvRange": "¥1,000万-¥2,500万", "share": "1%-2.5%", "items": "25万-50万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "7,500-1万", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 12, "name": "厨房功能五金", "gmvRange": "¥750万-¥1,000万", "share": "1%-2.5%", "items": "7.5万-10万", "buyers": "5万-7.5万", "orders": "7.5万-10万", "activeSku": "5,000-7,500", "unitPrice": "¥50-¥100", "arpu": "¥100-¥200"},
+    {"rank": 13, "name": "其他家装建材", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "7.5万-10万", "orders": "10万-25万", "activeSku": "7,500-1万", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 14, "name": "家具五金", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "50万-75万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "2.5万-5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 15, "name": "水泥砂石", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "2.5万-5万", "orders": "7.5万-10万", "activeSku": "1,000-2,500", "unitPrice": "¥50-¥100", "arpu": "¥100-¥200"},
+    {"rank": 16, "name": "板材", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "2.5万-5万", "orders": "7.5万-10万", "activeSku": "7,500-1万", "unitPrice": "¥10-¥50", "arpu": "¥100-¥200"},
+    {"rank": 17, "name": "水电管材", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "25万-50万", "buyers": "10万-25万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 18, "name": "隔音保温", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "10万-25万", "buyers": "7.5万-10万", "orders": "10万-25万", "activeSku": "2,500-5,000", "unitPrice": "¥10-¥50", "arpu": "¥50-¥100"},
+    {"rank": 19, "name": "阳台", "gmvRange": "¥250万-¥500万", "share": "0%-1%", "items": "25万-50万", "buyers": "5万-7.5万", "orders": "25万-50万", "activeSku": "2,500-5,000", "unitPrice": "¥0-¥10", "arpu": "¥50-¥100"},
+    {"rank": 20, "name": "窗及配件", "gmvRange": "¥250万-¥500万", "share": "0%-1%", "items": "10万-25万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "1万-2.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 21, "name": "石材", "gmvRange": "¥250万-¥500万", "share": "0%-1%", "items": "1万-2.5万", "buyers": "5,000-7,500", "orders": "1万-2.5万", "activeSku": "2,500-5,000", "unitPrice": "¥100-¥200", "arpu": "¥400-¥500"},
+    {"rank": 22, "name": "地板及附件", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "5万-7.5万", "buyers": "1万-2.5万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥10-¥50", "arpu": "¥100-¥200"},
+    {"rank": 23, "name": "瓷砖/砖", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "5万-7.5万", "buyers": "1万-2.5万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥10-¥50", "arpu": "¥100-¥200"},
+    {"rank": 24, "name": "家用阀门", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "2.5万-5万", "buyers": "1万-2.5万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥50-¥100", "arpu": "¥50-¥100"},
+    {"rank": 25, "name": "水处理", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "7,500-1万", "buyers": "7,500-1万", "orders": "7,500-1万", "activeSku": "500-750", "unitPrice": "¥100-¥200", "arpu": "¥100-¥200"},
+    {"rank": 26, "name": "建筑五金", "gmvRange": "¥100万-¥250万", "share": "0%-1%", "items": "7.5万-10万", "buyers": "2.5万-5万", "orders": "2.5万-5万", "activeSku": "5,000-7,500", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 27, "name": "线条", "gmvRange": "¥75万-¥100万", "share": "0%-1%", "items": "2.5万-5万", "buyers": "2.5万-5万", "orders": "2.5万-5万", "activeSku": "500-750", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 28, "name": "垃圾处理", "gmvRange": "¥50万-¥75万", "share": "0%-1%", "items": "2.5万-5万", "buyers": "1万-2.5万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 29, "name": "玻璃", "gmvRange": "¥25万-¥50万", "share": "0%-1%", "items": "2.5万-5万", "buyers": "7,500-1万", "orders": "1万-2.5万", "activeSku": "1,000-2,500", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 30, "name": "楼梯及配件", "gmvRange": "¥25万-¥50万", "share": "0%-1%", "items": "2,500-5,000", "buyers": "1,000-2,500", "orders": "1,000-2,500", "activeSku": "250-500", "unitPrice": "¥50-¥100", "arpu": "¥200-¥300"},
+    {"rank": 31, "name": "地暖/暖气片/散热器", "gmvRange": "¥10万-¥25万", "share": "0%-1%", "items": "1,000-2,500", "buyers": "500-750", "orders": "750-1,000", "activeSku": "250-500", "unitPrice": "¥100-¥200", "arpu": "¥300-¥400"}
+  ],
+  "priceBands": [
+    {"rank": 1, "band": "39以上", "gmvRange": "¥3.5亿-¥4亿", "share": "75%-80%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "10万-25万", "unitPrice": "¥100-¥200", "arpu": "¥200-¥300"},
+    {"rank": 2, "band": "19-39", "gmvRange": "¥5,000万-¥7,500万", "share": "10%-15%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "5万-7.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 3, "band": "10-19", "gmvRange": "¥2,500万-¥5,000万", "share": "5%-7.5%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "5万-7.5万", "unitPrice": "¥10-¥50", "arpu": "¥10-¥50"},
+    {"rank": 4, "band": "6-10", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "2.5万-5万", "unitPrice": "¥0-¥10", "arpu": "¥10-¥50"},
+    {"rank": 5, "band": "0-6", "gmvRange": "¥500万-¥750万", "share": "1%-2.5%", "items": "100万-250万", "buyers": "100万-250万", "orders": "100万-250万", "activeSku": "5万-7.5万", "unitPrice": "¥0-¥10", "arpu": "¥0-¥10"}
+  ],
+  "topProducts_39plusBand": [
+    {"rank": 1, "title": "科氧仕智能家居设备配件生态小粒径亿级负氧离子发生器净化ED2", "gmvRange": "¥500万-¥750万"},
+    {"rank": 2, "title": "【明星同款】新款掌静脉3D人脸识别远程可视密码锁防盗门家用指纹锁", "gmvRange": "¥250万-¥500万"},
+    {"rank": 3, "title": "步猎鹰【自带网络/1600W超清】4G三画面太阳能全彩夜视摄像旋转对话", "gmvRange": "¥100万-¥250万"},
+    {"rank": 4, "title": "神眸【爆款AI智能监控摄像头】人形检测室内外家用日夜全彩高清BC4", "gmvRange": "¥100万-¥250万"},
+    {"rank": 5, "title": "【升级】阿尔法极光 P14FVR三摄像头无线充电夜视人脸掌静脉智能锁", "gmvRange": "¥100万-¥250万"},
+    {"rank": 6, "title": "Sacon/帅康一体压铸SUS304双滑轨小米粒厨房水槽大单槽", "gmvRange": "¥100万-¥250万"},
+    {"rank": 7, "title": "【因硕】R8双子星密码锁双摄版猫眼大屏3D人脸识别掌静脉智能门锁", "gmvRange": "¥100万-¥250万"},
+    {"rank": 8, "title": "JOMOW卫浴淋浴花洒套装智能恒温钢琴增压沐浴器全铜浴室洗澡淋浴", "gmvRange": "¥100万-¥250万"},
+    {"rank": 9, "title": "【斯麦特】2026新款4G免流量监控摄像头家用360旋转全彩夜视彩彩彩", "gmvRange": "¥100万-¥250万"},
+    {"rank": 10, "title": "九牧万家用坐便器全功能顶配智能马桶有翻盖泡沫盾无水压限制语音", "gmvRange": "¥100万-¥250万"},
+    {"rank": 11, "title": "AUX/奥克斯2026新款4G免流量家用高清监控摄像头360旋转全彩夜视", "gmvRange": "¥100万-¥250万"},
+    {"rank": 12, "title": "Blaupunkt/蓝宝T9 全智能马桶自动翻盖静音虹吸无水压加热座圈", "gmvRange": "¥100万-¥250万"},
+    {"rank": 13, "title": "【1号】沃特浦顶不漏防水涂料屋顶防水胶雨季漏水补漏耐晒新型材料", "gmvRange": "¥100万-¥250万"},
+    {"rank": 14, "title": "【免费安装】联想新品人脸识别T30pro智能锁灵电不断电家用门锁", "gmvRange": "¥100万-¥250万"},
+    {"rank": 15, "title": "HOTATA/好太太小天舱晾衣超薄折叠家用电动阳台晾衣架", "gmvRange": "¥100万-¥250万"}
+  ],
+  "carriers": [
+    {"name": "直播", "share": 54.80, "gmvRange": "¥2.5亿-¥3亿"},
+    {"name": "商品卡", "share": 21.87, "gmvRange": "¥1亿-¥1.5亿"},
+    {"name": "短视频", "share": 19.70, "gmvRange": "¥7,500万-¥1亿"},
+    {"name": "其他", "share": 3.54, "gmvRange": "¥1,000万-¥2,500万"},
+    {"name": "图文", "share": 0.10, "gmvRange": "¥25万-¥50万"}
+  ],
+  "channels": [
+    {"name": "短视频引流", "gmvRange": "¥7,500万-¥1亿", "share": "25%-30%", "items": "75万-100万", "buyers": "50万-75万", "orders": "50万-75万", "activeSku": "7,500-1万", "unitPrice": "¥50-¥100", "arpu": "¥100-¥200"},
+    {"name": "直播推荐", "gmvRange": "¥5,000万-¥7,500万", "share": "20%-25%", "items": "25万-50万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥100-¥200", "arpu": "¥100-¥200"},
+    {"name": "搜索", "gmvRange": "¥2,500万-¥5,000万", "share": "15%-20%", "items": "25万-50万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "1万-2.5万", "unitPrice": "¥100-¥200", "arpu": "¥200-¥300"},
+    {"name": "其他", "gmvRange": "¥2,500万-¥5,000万", "share": "10%-15%", "items": "25万-50万", "buyers": "25万-50万", "orders": "25万-50万", "activeSku": "1万-2.5万", "unitPrice": "¥50-¥100", "arpu": "¥50-¥100"},
+    {"name": "抖音商城推荐", "gmvRange": "¥1,000万-¥2,500万", "share": "7.5%-10%", "items": "10万-25万", "buyers": "10万-25万", "orders": "10万-25万", "activeSku": "1万-2.5万", "unitPrice": "¥100-¥200", "arpu": "¥100-¥200"},
+    {"name": "个人主页&店铺&橱窗", "gmvRange": "¥1,000万-¥2,500万", "share": "2.5%-5%", "items": "2.5万-5万", "buyers": "2.5万-5万", "orders": "2.5万-5万", "activeSku": "7,500-1万", "unitPrice": "¥200-¥300", "arpu": "¥300-¥400"},
+    {"name": "关注来源", "gmvRange": "¥750万-¥1,000万", "share": "2.5%-5%", "items": "2.5万-5万", "buyers": "2.5万-5万", "orders": "2.5万-5万", "activeSku": "5,000-7,500", "unitPrice": "¥200-¥300", "arpu": "¥300-¥400"},
+    {"name": "头条西瓜", "gmvRange": "¥500万-¥750万", "share": "2.5%-5%", "items": "7.5万-10万", "buyers": "7.5万-10万", "orders": "7.5万-10万", "activeSku": "5,000-7,500", "unitPrice": "¥50-¥100", "arpu": "¥50-¥100"},
+    {"name": "活动页", "gmvRange": "¥10万-¥25万", "share": "0%-1%", "items": "500-750", "buyers": "500-750", "orders": "500-750", "activeSku": "250-500", "unitPrice": "¥200-¥300", "arpu": "¥200-¥300"}
+  ],
+  "insights": [
+    "抖音家装建材大盘 7/9-7/15 GMV ¥4.5-5亿，环比+1.5%；订单+7%、买家+4.9%，说明客单价（¥50-100 区间上端）在拉动，非纯流量红利。",
+    "TOP2 子类目 全屋智能(25-30%) + 卫浴建材(20-25%) 合计 ~50% 大盘，注意全屋智能件单价¥200-300 vs 卫浴建材¥100-200：智能硬件在抖音已进入高价心智，卫浴走走量。",
+    "价格带极度头重脚轻：¥39以上占 75-80% GMV，说明抖音家装建材不再是低价白牌天下，中高端已跑起来。",
+    "载体：直播 54.8% + 商品卡 21.87% + 短视频 19.7% = 96.4%，图文仅 0.1%——图文种草模型在这个类目失效，直播和货架是主战场。",
+    "渠道 TOP3：短视频引流(25-30%) + 直播推荐(20-25%) + 搜索(15-20%) = 60-70% GMV，搜索占比不低，说明用户\"抖音搜家装\"心智已成型。",
+    "TOP15 单品中，智能锁 4 席（掌静脉/掌静脉/双子星/联想T30pro）、监控摄像头 4 席（步猎鹰/神眸/斯麦特/AUX），共 8 席，与用户跟的 AI 锁/AI 监控摄像头 2 大赛道高度重叠——这些品牌应立即加入天猫竞品追踪清单。"
+  ]
+}</script>
+<script id="dataSources" type="application/json">{
+ "asOf": "2026-07-26 12:00",
+ "note": "本表逐源披露采集深度、条数、时间戳与阻塞原因，遵循『不编造、可追溯、阻塞透明』原则。采集深度分级：0=未取到/阻塞，1=浅层（仅标题/目录），2=中层（关键指标/结构化摘要），3=深层（完整明细/多页/可下载表）。",
+ "layers": {
+  "A": "免登录公开源（政府/协会/上市公司公告/权威媒体）",
+  "B": "免费注册可读源",
+  "C": "强登录·陪跑采集源（平台商家/营销后台）",
+  "D": "受限来源",
+  "E": "微信/腾讯文档类源"
+ },
+ "sources": [
+  {
+   "name": "国家统计局（社零/工业增加值/房地产/70城房价/PMI）",
+   "layer": "A",
+   "url": "https://www.stats.gov.cn/sj/zxfb/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "24项指标",
+   "timestamp": "2026-07-16",
+   "blocker": "无。家具制造业分行业工业增加值未单独公开，已标待核实"
+  },
+  {
+   "name": "中指研究院（百城房价/成交）",
+   "layer": "A",
+   "url": "https://wap.stockstar.com/detail/IG2026070300009079",
+   "login": "免登录",
+   "depth": 2,
+   "count": "4项指标",
+   "timestamp": "2026-07-16",
+   "blocker": "完整月报需付费下载，公开摘要已取核心均价与同环比"
+  },
+  {
+   "name": "克而瑞（百强房企销售榜）",
+   "layer": "A",
+   "url": "https://finance.sina.com.cn/stock/estate/integration/2026-07-01/doc-iniffyta1117203.shtml",
+   "login": "免登录",
+   "depth": 1,
+   "count": "5项指标",
+   "timestamp": "2026-07-16",
+   "blocker": "浏览器二次渲染成功但首页数值全0占位,真实数据需登录CRIC系统;内容以房地产为主,家装相关性低"
+  },
+  {
+   "name": "中国建材工业协会 CBMF（建材运行/MPI景气）",
+   "layer": "A",
+   "url": "https://www.cbmf.org/",
+   "login": "免登录",
+   "depth": 2,
+   "count": "4条",
+   "timestamp": "2026-07-16",
+   "blocker": "CBMI具体数值需订阅刊物；MPI仅公开定性描述"
+  },
+  {
+   "name": "中国建材流通协会 CBMCA（BHI建材家居景气指数）",
+   "layer": "A",
+   "url": "https://www.bjnews.com.cn/detail/1784171412168316.html",
+   "login": "免登录",
+   "depth": 3,
+   "count": "6月BHI 113.34等5项",
+   "timestamp": "2026-07-16",
+   "blocker": "已通过浏览器搜索+红网/中国陶瓷网多源交叉印证获取6月BHI=113.34及卖场销售额全套数据"
+  },
+  {
+   "name": "中国建筑装饰协会 CBDA（行业会议/展会）",
+   "layer": "A",
+   "url": "http://www.cbda.cn/html/tzgg/",
+   "login": "免登录",
+   "depth": 1,
+   "count": "2条",
+   "timestamp": "2026-07-16",
+   "blocker": "cbda.cn 主域301重定向循环，仅tzgg子路径可读，其余靠第三方印证"
+  },
+  {
+   "name": "权威媒体门户（新华网/央广网/乐居/搜狐焦点/OFweek等）",
+   "layer": "A",
+   "url": "https://www.100ec.cn/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "35条平台/品牌动态",
+   "timestamp": "2026-07-16",
+   "blocker": "无"
+  },
+  {
+   "name": "研究与财经源（上证报/同花顺/东方财富/新浪财经上市公司公告）",
+   "layer": "A",
+   "url": "https://paper.cnstock.com/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "22条（含14条商家公告）",
+   "timestamp": "2026-07-16",
+   "blocker": "无"
+  },
+  {
+   "name": "Layer B 免费注册源探测（网经社/星图/艾瑞等）",
+   "layer": "B",
+   "url": "https://www.100ec.cn/",
+   "login": "免费注册",
+   "depth": 2,
+   "count": "探测记录若干",
+   "timestamp": "2026-07-16",
+   "blocker": "部分报告需付费会员，已取公开引用部分"
+  },
+  {
+   "name": "抖店罗盘·类目概览（抖音电商后台）",
+   "layer": "C",
+   "url": "https://compass.jinritemai.com/shop/chance/category-overview",
+   "login": "强登录（已陪跑登录）",
+   "depth": 3,
+   "count": "8核心指标+31子类目+5价格带+TOP15单品+9渠道+5载体",
+   "timestamp": "2026-07-16 近7天(07/09-07/15)",
+   "blocker": "罗盘对市场类目仅公开数量级区间（如¥1亿-1.5亿），不显示精确值，区间已原样保留"
+  },
+  {
+   "name": "抖店罗盘·榜单/趋势/竞争分析（其余3页）",
+   "layer": "C",
+   "url": "https://compass.jinritemai.com/shop/chance/",
+   "login": "强登录（已登录）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "本期时间所限未展开，下期补采（能力可达）"
+  },
+  {
+   "name": "小红书种草学（官方营销学习平台）",
+   "layer": "C",
+   "url": "https://xue.xiaohongshu.com/home",
+   "login": "强登录（已陪跑登录）",
+   "depth": 2,
+   "count": "定性：行业分类/讲师/直播/方法论6+项",
+   "timestamp": "2026-07-16",
+   "blocker": "家居家装量化流量大盘在千帆/蒲公英后台，需对应商业产品账号权限，未开通"
+  },
+  {
+   "name": "千瓜数据·行业流量大盘（小红书第三方）",
+   "layer": "C",
+   "url": "https://app.qian-gua.com/#/data/category",
+   "login": "强登录（已登录授权账号）",
+   "depth": 0,
+   "count": "0（家居家装）",
+   "timestamp": "—",
+   "blocker": "切换『家居家装』行业为尊享版会员功能（会员墙），当前账号仅默认展示护肤大盘，家装数据未取，已跳过"
+  },
+  {
+   "name": "京麦（京东商家后台·商智）",
+   "layer": "C",
+   "url": "https://jmw.jd.com/",
+   "login": "强登录（阻塞）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "授权为买家号 jd_LVopFIdFlDaa，提示『该账号暂不支持开店』，需POP商家账号，待用户换号授权"
+  },
+  {
+   "name": "京准通（京东数字营销平台）",
+   "layer": "C",
+   "url": "https://jzt.jd.com/",
+   "login": "强登录（阻塞）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "会话未登录（code=-3011），需京东广告主/商家账号登录，待用户授权"
+  },
+  {
+   "name": "蝉妈妈（抖音电商第三方榜单）",
+   "layer": "C",
+   "url": "https://www.chanmama.com/",
+   "login": "强登录（待入口）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "chanmama.com 为营销页，真实后台榜单入口需点『立即使用』且要求会员登录，待用户提供其后台书签URL或在夸克打开后截图陪跑"
+  },
+  {
+   "name": "微信文档（家装行业协作文档，如有）",
+   "layer": "E",
+   "url": "https://doc.weixin.qq.com/",
+   "login": "强登录（阻塞）",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "—",
+   "blocker": "公司网络访问策略拦截：doc.weixin.qq.com 302跳转 受限内部入口，需用手机/非阿里网络访问"
+  },
+  {
+   "name": "内部竞争数据源（不公开）",
+   "layer": "D",
+   "url": "内部源（地址不公开）",
+   "login": "受限环境已登录",
+   "depth": 3,
+   "count": "小红书家装/全屋定制/卫浴/灯具4大领域趋势+高增长关键词表",
+   "timestamp": "2026-07-18",
+   "blocker": "回退口径：请求近一月(6/18-7/18)但该窗口数据稀疏，agent自动取库内最新完整窗口2026-02-18~03-28，已如实标注；受限来源外部不可校验，属TOP互动抽样"
+  },
+  {
+   "name": "巨潮资讯网 CNINFO（深交所法定披露平台·上市公司业绩预告）",
+   "layer": "A",
+   "url": "http://www.cninfo.com.cn/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "欧派/索菲亚/箭牌/大亚圣象4家2026半年度业绩预告原文数值+另4家已披露待补",
+   "timestamp": "2026-07-18",
+   "blocker": "无。API检索+PDF原文提取，每条附公告直链可校验"
+  },
+  {
+   "name": "中国建筑材料联合会 CBMF·2026年5月运行简报（正文深钻）",
+   "layer": "A",
+   "url": "https://www.cbmf.org/c/2026/07/02/23820.shtml",
+   "login": "免登录",
+   "depth": 3,
+   "count": "14项运行指标（增加值/水泥玻璃产量/出厂价/营收利润/固投/进出口）",
+   "timestamp": "2026-07-18",
+   "blocker": "无。正文页静态可读，本期已从depth2升级至depth3"
+  },
+  {
+   "name": "奥维云网 AVC（家电+家居7大部品罗盘·免登录资讯）",
+   "layer": "A",
+   "url": "https://www.avc-mr.com/home",
+   "login": "免登录（资讯）",
+   "depth": 2,
+   "count": "吸顶灯/智能晾衣架/空调排产等4条半年报标题+日期+阅读量",
+   "timestamp": "2026-07-18",
+   "blocker": "浏览器渲染可取标题；报告正文销额/份额需付费罗盘账号，量化值标待核实"
+  },
+  {
+   "name": "36氪·家居建材（浏览器渲染搜索）",
+   "layer": "A",
+   "url": "https://36kr.com/search/articles/家居建材",
+   "login": "免登录",
+   "depth": 2,
+   "count": "7条家居行业观点/研报标题+日期（卖场转型/破产潮/出海ManoMano等）",
+   "timestamp": "2026-07-18",
+   "blocker": "SPA需浏览器渲染（WebFetch失败），观点性内容无标准量化指标"
+  },
+  {
+   "name": "新浪家居 jiaju.sina.com.cn",
+   "layer": "A",
+   "url": "https://jiaju.sina.com.cn/",
+   "login": "免登录",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "2026-07-18",
+   "blocker": "确认死站:HTTP204 No Content,浏览器访问301跳阿拉丁,域名疑停运,永久剔除"
+  },
+  {
+   "name": "阿拉丁照明网 alighting.cn（灯具专业源）",
+   "layer": "A",
+   "url": "https://www.alighting.cn/",
+   "login": "免登录",
+   "depth": 0,
+   "count": "0",
+   "timestamp": "2026-07-18",
+   "blocker": "本轮站点恢复但被堡塔云WAF滑块验证拦截,需人工过访问校验,暂无法自动采集"
+  },
+  {
+   "name": "巨潮资讯网cninfo(第二批:志邦/海南发展/皮阿诺业绩预告)",
+   "layer": "B",
+   "url": "http://www.cninfo.com.cn/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "3家+1份装修装饰经营简报",
+   "timestamp": "2026-07-19",
+   "blocker": "无。志邦转亏/皮阿诺扣非亏损扩大/海南发展减亏,均附PDF直链可核验"
+  },
+  {
+   "name": "浏览器搜索补采(BHI景气指数+东鹏控股业绩)",
+   "layer": "A/B",
+   "url": "https://www.baidu.com/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "2项(BHI全套+东鹏H1业绩)",
+   "timestamp": "2026-07-19",
+   "blocker": "无。BHI经3家权威媒体一致转载印证,东鹏为证券日报披露"
+  },
+  {
+   "name": "巨潮资讯网cninfo(第三批:慕思/蒙娜丽莎/金牌/惠达/三棵树 07月中下旬披露)",
+   "layer": "A",
+   "url": "http://www.cninfo.com.cn/",
+   "login": "免登录",
+   "depth": 2,
+   "count": "5家上市公司(慕思预降44-51%/蒙娜丽莎扭亏/金牌预亏/惠达预亏/三棵树问询回复)",
+   "timestamp": "2026-07-26",
+   "blocker": "本轮为业绩预告披露季补采,均附个股披露页直链;慕思/金牌具体PDF数值区间待二次核验,已在gaps标注"
+  },
+  {
+   "name": "北京市人民政府/北京市商务局(国补扩围·智能家居10类)",
+   "layer": "A",
+   "url": "https://www.beijing.gov.cn/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "1项政策(新增10类智能家居含智能马桶/智能床)",
+   "timestamp": "2026-07-26",
+   "blocker": "无。政策原文页可读,补贴口径(15%/≤1500元/每类1件)完整"
+  },
+  {
+   "name": "福建省商务厅(国补扩围·厨卫电器+智能沙发)",
+   "layer": "A",
+   "url": "https://swt.fujian.gov.cn/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "1项政策(新增智能吸油烟机/燃气灶/洗碗机/干衣机5类+智能沙发)",
+   "timestamp": "2026-07-26",
+   "blocker": "无。省商务厅通知原文可读"
+  },
+  {
+   "name": "市场监管总局/新华网(508项国标+GB18584床头柜召回)",
+   "layer": "A",
+   "url": "https://www.samr.gov.cn/",
+   "login": "免登录",
+   "depth": 2,
+   "count": "508项国标(建材26/家电9)+床头柜召回1项",
+   "timestamp": "2026-07-26",
+   "blocker": "国标总数与分类经新华网转载确认,26项建材/9项家电的逐项标准号待SAMR原始公告核验,已在gaps标注"
+  },
+  {
+   "name": "券商媒体(上证报/证券时报/同花顺/证券日报)H1业绩预告与公司动态",
+   "layer": "A",
+   "url": "https://paper.cnstock.com/",
+   "login": "免登录",
+   "depth": 3,
+   "count": "本轮商家条目11条(慕思/蒙娜丽莎/金牌/惠达/三棵树/公牛/东鹏回购/志邦解质押/顾家股东会等)交叉印证",
+   "timestamp": "2026-07-26",
+   "blocker": "无。均附权威财经媒体直链"
+  }
+ ],
+ "summary": {
+  "totalSources": 31,
+  "depth3": 13,
+  "depth2": 9,
+  "depth1": 1,
+  "depth0_blocked": 7,
+  "publicItemsCollected": "约79条(Layer A/B) + 抖店罗盘完整类目盘 + 本次新增：巨潮第三批5家上市公司H1业绩预告、北京/福建地方国补扩围2项、508项国标+床头柜召回、券商媒体商家动态11条",
+  "newThisRound": "本轮(2026-07-17~07-26)周度刷新补采：①巨潮资讯网第三批H1业绩预告(慕思预降44-51%/蒙娜丽莎扭亏/金牌预亏/惠达预亏/三棵树问询回复) ②北京(07-23)/福建(07-22)地方国补密集扩围,首次纳入智能马桶/智能床/智能沙发 ③市场监管总局508项国标(建材26/家电9)+GB18584床头柜召回 ④券商媒体交叉印证11条商家动态。宏观(NBS 6月/H1数据)与抖店罗盘沿用上期(NBS下期约8月中发布,罗盘授权状态见gaps)。",
+  "blockedNote": "国家统计局本窗口(07-17~07-26)无新月度数据发布,7月BHI/MPI未到发布期,均沿用6月最新口径并标注;508国标逐项标准号、慕思/金牌PDF数值待二次核验(已入gaps);抖店罗盘、受限环境FBI/魔镜、4个强登录源(蝉妈妈/千瓜尊享/京麦/京准通)仍待用户授权访问,按『阻塞透明』规则标注,非采集能力问题。"
+ }
+}</script>
+<script id="dataArchive" type="application/json">{
+  "note": "历史存档索引：每次刷新（每周四/每自然月）由 scripts/archive_snapshot.sh 自动追加一期。每期冻结当期在线看板 HTML 与两份 Word（汇报稿/详报），可随时回看，永不覆盖。",
+  "latest": "2026-07-26",
+  "editions": [
+    {
+      "id": "2026-07-26",
+      "label": "2026年7月 · 第2期",
+      "type": "周报",
+      "dataRange": "近30天(06-27~07-26)",
+      "asOf": "2026-07-26",
+      "publishDate": "2026-07-26",
+      "html": "archive/2026-07-26/index.html",
+      "brief": "archive/2026-07-26/汇报稿.docx",
+      "detail": "archive/2026-07-26/详报.docx",
+      "summary": "本周(07-17~07-26)聚焦H1业绩预告密集披露季：全品类集体探底(慕思预降44-51%/箭牌转亏/东鹏净利降85-88%/大亚圣象预亏)但现结构性亮点(蒙娜丽莎扭亏/红星扭亏/三棵树零售韧性);政策端北京(07-23)、福建(07-22)地方国补密集扩围,首次纳入智能马桶/智能床/智能沙发;508项国标推高质量门槛。宏观(NBS 6月/H1)与抖店罗盘沿用上期口径。",
+      "highlights": [
+        "H1业绩预告披露季：全品类探底——慕思预降44-51%、箭牌转亏、东鹏净利降85-88%、大亚圣象/金牌/惠达预亏",
+        "结构性亮点：蒙娜丽莎扭亏、红星美凯龙扭亏、三棵树零售涂料韧性、东鹏逆势净增门店50家",
+        "政策：北京(07-23)、福建(07-22)地方国补密集扩围，首次纳入智能马桶/智能床/智能沙发；508项国标(建材26/家电9)",
+        "宏观：6月家具-6.6%/建材-10.5%、竣工1-6月-23.7%(沿用上期NBS口径)；平台端京东家装整装+140%仍为结构性增量"
+      ],
+      "sourceStats": {
+        "totalSources": 31,
+        "depth3": 13,
+        "depth2": 9,
+        "depth1": 1,
+        "depth0_blocked": 7
+      }
+    },
+    {
+      "id": "2026-07-16",
+      "label": "2026年7月 · 首期（v2）",
+      "type": "月报",
+      "dataRange": "本月 2026-07-01~07-16 · 滚动窗口 近30天(06-17~07-16)",
+      "asOf": "2026-07-16",
+      "publishDate": "2026-07-16",
+      "html": "archive/2026-07-16/index.html",
+      "brief": "archive/2026-07-16/汇报稿.docx",
+      "detail": "archive/2026-07-16/详报.docx",
+      "summary": "v2 首期：新增左侧目录导航、本月要闻、抖店罗盘社媒竞争、数据源采集深度报告。竣工端-23.7% 为最关键负向变量；欧派/索菲亚/志邦上半年业绩预降，红星美凯龙扭亏；京东家装25亿+140%；国补625亿；智能卫浴国标 GB/T 24986.7 落地。",
+      "highlights": [
+        "宏观：社零大盘 +1.0%，家具类 -6.6%、建材类 -10.5%，竣工面积 1-6月 -23.7%",
+        "抖音大盘：支付GMV ¥4.5-5亿 周环比 +1.51%，直播带货占比 54.8%",
+        "头部商家：欧派预降50-60%、索菲亚预降78-85%、志邦预亏、红星美凯龙扭亏",
+        "政策：智能卫浴国标 GB/T 24986.7、住宅全案整装标准；国补累计 625 亿"
+      ],
+      "sourceStats": {
+        "totalSources": 17,
+        "depth3": 6,
+        "depth2": 5,
+        "depth1": 1,
+        "depth0_blocked": 5
+      }
+    }
+  ]
+}</script>
+
+<script>
+function init(){
+const macro = JSON.parse(document.getElementById('dataMacro').textContent);
+const platform = JSON.parse(document.getElementById('dataPlatform').textContent);
+const policy = JSON.parse(document.getElementById('dataPolicy').textContent);
+const highlights = JSON.parse(document.getElementById('dataHighlights').textContent);
+const doudian = JSON.parse(document.getElementById('dataDoudian').textContent);
+const sources = JSON.parse(document.getElementById('dataSources').textContent);
+const archive = JSON.parse(document.getElementById('dataArchive').textContent);
+
+document.getElementById('asOfDate').textContent = macro.asOf || '2026-07-16';
+
+// helpers
+const yoyClass = v => {
+  if(!v || v==='待核实') return 'na';
+  const num = parseFloat(String(v).replace(/[^\-\d.]/g,''));
+  return isNaN(num) ? 'na' : (num >= 0 ? 'up' : 'dn');
+};
+const yoyText = v => v || '待核实';
+const linkify = (label,url) => url && url !== '待核实' ? `<a href="${url}" target="_blank">${label}</a>` : `<span>${label}</span>`;
+const catColor = c => ({家具:'#e879f9',装修:'#60a5fa',建材:'#f59e0b',卫浴厨房:'#22d3ee',全屋智能:'#a78bfa',全屋定制:'#f472b6',灯具光源:'#fbbf24',电工五金:'#94a3b8',通用:'#8b949e'}[c]||'#8b949e');
+
+// ===== 历史存档目录 =====
+const editions = (archive.editions||[]).slice().sort((a,b)=>String(b.id).localeCompare(String(a.id)));
+document.getElementById('archCountTip').textContent = `共 ${editions.length} 期 · 最新 ${archive.latest||(editions[0]&&editions[0].id)||'—'}`;
+document.getElementById('archNote').textContent = archive.note || '每期报告归档保留，可随时回看，永不覆盖。';
+document.getElementById('archiveList').innerHTML = editions.map(ed=>{
+  const isLatest = ed.id === (archive.latest||editions[0].id);
+  const ss = ed.sourceStats||{};
+  const hl = (ed.highlights||[]).map(h=>`<li>${h}</li>`).join('');
+  const statTxt = ss.totalSources!=null ? `信源 ${ss.totalSources} · 深层 ${ss.depth3||0} · 阻塞 ${ss.depth0_blocked||0}` : '';
+  const btn = (cls,ico,label,href)=> href ? `<a class="arch-btn ${cls}" href="${href}" target="_blank"><span class="ico">${ico}</span>${label}</a>` : '';
+  return `<div class="arch-card ${isLatest?'latest':''}">
+    <div class="ac-top">
+      <span class="ac-label">${ed.label||ed.id}</span>
+      ${ed.type?`<span class="ac-type">${ed.type}</span>`:''}
+      ${isLatest?'<span class="ac-latest">最新</span>':''}
+      <span class="ac-range">${ed.dataRange||''}</span>
+    </div>
+    ${ed.summary?`<div class="ac-sum">${ed.summary}</div>`:''}
+    ${hl?`<ul class="ac-hl">${hl}</ul>`:''}
+    <div class="ac-links">
+      ${btn('html','📊','在线看板',ed.html)}
+      ${btn('doc','📄','汇报稿 Word',ed.brief)}
+      ${btn('doc','📑','详报 Word',ed.detail)}
+      ${statTxt?`<span class="ac-stat">${statTxt} · 截止 ${ed.asOf||ed.publishDate||''}</span>`:''}
+    </div>
+  </div>`;
+}).join('');
+
+// ===== 本月要闻 =====
+document.getElementById('monthLabelTip').textContent = highlights.monthLabel || '';
+document.getElementById('monthSummary').textContent = highlights.monthlySummary || '';
+const mhOrder = [['macro','宏观数据'],['platform','平台大事'],['policy','政策标准'],['merchant','头部商家']];
+const impMap = {'高':'h-high','中':'h-mid','低':''};
+let mhHtml = '';
+mhOrder.forEach(([key,label])=>{
+  const arr = (highlights.highlights&&highlights.highlights[key])||[];
+  if(!arr.length) return;
+  mhHtml += `<div class="mh-sub">${label}（${arr.length}）</div><div class="mh-grid">`;
+  mhHtml += arr.map(it=>`
+    <div class="mh-card ${impMap[it.impact]||''}">
+      <div class="mh-top">
+        <span class="mh-date">${it.date}</span>
+        <span class="cat-chip" data-cat="${it.cat||'通用'}">${it.cat||'通用'}</span>
+        <span class="mh-imp">影响：${it.impact||'—'}</span>
+      </div>
+      <h3>${it.title}</h3>
+      <p>${it.detail}</p>
+      <div class="src">${linkify(it.source||'源', it.url)}</div>
+    </div>`).join('');
+  mhHtml += `</div>`;
+});
+document.getElementById('monthHighlights').innerHTML = mhHtml;
+
+// ===== insights =====
+document.getElementById('insightBlock').innerHTML =
+  '<ol>' + (macro.keyInsightsForBoard||[]).map(x => `<li>${x}</li>`).join('') + '</ol>';
+
+// ===== macro KPI =====
+const macroKpis = [
+  ...macro.macro.retailSales.filter(x=>x.metric.includes('6月单月')||x.metric.includes('社零')),
+  ...macro.macro.wholesale.filter(x=>x.value !== '待核实'),
+  ...macro.macro.supplyChain.filter(x=>x.value !== '待核实').slice(0,3)
+];
+document.getElementById('macroKpis').innerHTML = macroKpis.map(k => `
+  <div class="kpi">
+    <div class="k">${k.metric}</div>
+    <div class="v">${k.value}</div>
+    <div class="yoy ${yoyClass(k.yoy)}">${yoyText(k.yoy)}</div>
+    ${k.note ? `<div class="n">${k.note}</div>` : ''}
+    <div class="src">${linkify(k.source, k.url)}  · ${k.publishDate||''}</div>
+  </div>`).join('');
+
+// ===== real estate KPI =====
+const reKpis = [
+  ...macro.realEstate.sales.slice(0,3),
+  ...macro.realEstate.investment,
+  ...macro.realEstate.newStart,
+  macro.realEstate.pricing[0],
+  macro.realEstate.pricing[1]
+].filter(Boolean);
+document.getElementById('realEstateKpis').innerHTML = reKpis.map(k => `
+  <div class="kpi">
+    <div class="k">${k.metric}</div>
+    <div class="v" style="font-size:${(k.value||'').length>16?'15px':'22px'}">${k.value}</div>
+    <div class="yoy ${yoyClass(k.yoy)}">${yoyText(k.yoy)}</div>
+    ${k.note ? `<div class="n">${k.note}</div>` : ''}
+    <div class="src">${linkify(k.source, k.url)}  · ${k.publishDate||''}</div>
+  </div>`).join('');
+
+// ===== charts =====
+Chart.defaults.color = '#e6edf3';
+Chart.defaults.borderColor = '#30363d';
+new Chart(document.getElementById('chartRetail'),{
+  type:'bar',
+  data:{labels:['家具类','建材类','家电类','社零大盘'],
+    datasets:[{label:'2026年6月同比 (%)',data:[-6.6,-10.5,-8.7,1.0],
+      backgroundColor:v=>{const val=v.raw;return val>=0?'#3fb950':'#f85149'}}]},
+  options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
+});
+new Chart(document.getElementById('chartUpstream'),{
+  type:'bar',indexAxis:'y',
+  data:{labels:['非金属矿物制品业(6月)','金属制品业(6月)','水泥产量(6月)','平板玻璃(6月)','制造业PMI(6月)','建筑业PMI(6月)','房地产投资(1-6月)','新开工面积(1-6月)','竣工面积(1-6月)'],
+    datasets:[{label:'同比 / 值',data:[-2.3,7.8,-5.6,-5.3,50.3,49.0,-18.0,-23.4,-23.7],
+      backgroundColor:function(ctx){const v=ctx.raw;const l=ctx.chart.data.labels[ctx.dataIndex];if(l.includes('PMI'))return v>=50?'#3fb950':'#d29922';return v>=0?'#3fb950':'#f85149'}}]},
+  options:{plugins:{legend:{display:false}},scales:{x:{ticks:{callback:v=>v}}}}
+});
+
+// ===== 抖店罗盘 =====
+document.getElementById('dcCoverageTip').textContent = `${doudian.coverage.industry} · ${doudian.coverage.dateRange} · ${doudian.coverage.granularity}`;
+document.getElementById('dcNote').textContent = '⚠ ' + doudian.note;
+const cm = doudian.coreMetrics;
+const cmDefs = [
+  ['支付GMV', cm.payGmv],['销量', cm.itemsSold],['支付人数', cm.buyers],['订单数', cm.orders],
+  ['在线商品数', cm.onlineSku],['动销商品数', cm.activeSku],['件单价', cm.pricePerItem],['客单价', cm.arpu]
+];
+document.getElementById('dcCoreMetrics').innerHTML = cmDefs.map(([label,m])=>{
+  if(!m) return '';
+  return `<div class="kpi"><div class="k">${label}</div><div class="v" style="font-size:17px">${m.range||m.value||'—'}</div><div class="yoy ${yoyClass(m.wow)}">较上周期 ${m.wow||'—'}</div></div>`;
+}).join('');
+
+// 子类目 TOP10
+const subs = (doudian.subCategories||[]).slice(0,10);
+document.getElementById('dcSubCatTable').innerHTML =
+  '<thead><tr><th>#</th><th>子类目</th><th>GMV区间</th><th>占比</th><th>件单价</th></tr></thead><tbody>' +
+  subs.map((s,i)=>`<tr><td><span class="dc-rank ${i<3?'top':''}">${i+1}</span></td><td>${s.name}</td><td>${s.gmvRange||'—'}</td><td>${s.share||'—'}</td><td>${s.pricePerItem||'—'}</td></tr>`).join('') +
+  '</tbody>';
+
+// 带货载体饼图
+const carriers = doudian.carriers||[];
+new Chart(document.getElementById('chartCarrier'),{
+  type:'doughnut',
+  data:{labels:carriers.map(c=>c.name),datasets:[{data:carriers.map(c=>parseFloat(String(c.share).replace('%',''))||0),
+    backgroundColor:['#4493f8','#a78bfa','#3fb950','#d29922','#f85149']}]},
+  options:{plugins:{legend:{position:'right',labels:{font:{size:10.5},boxWidth:12}}}}
+});
+// 价格带柱图
+const bands = doudian.priceBands||[];
+new Chart(document.getElementById('chartPriceBand'),{
+  type:'bar',
+  data:{labels:bands.map(b=>b.range),datasets:[{label:'GMV占比',data:bands.map(b=>parseFloat(String(b.share).split('-')[1]||b.share)||0),
+    backgroundColor:'#a78bfa'}]},
+  options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'}}}}
+});
+
+// TOP15 单品
+const prods = doudian.topProducts_39plusBand||[];
+document.getElementById('dcTopProdTable').innerHTML =
+  '<thead><tr><th>#</th><th>单品</th><th>销售额区间</th></tr></thead><tbody>' +
+  prods.map((p,i)=>`<tr><td><span class="dc-rank ${i<3?'top':''}">${i+1}</span></td><td>${p.name}</td><td>${p.gmvRange||p.gmv||'—'}</td></tr>`).join('') +
+  '</tbody>';
+
+document.getElementById('dcInsights').innerHTML =
+  '<ol>' + (doudian.insights||[]).map(x=>`<li>${x}</li>`).join('') + '</ol>';
+
+// ===== platform tabs =====
+const platMeta = {jd:'京东',douyin:'抖音',pdd:'拼多多',xhs:'小红书',shipinhao:'视频号',kuaishou:'快手',tmall_taobao:'淘宝天猫',cross:'跨平台'};
+const platEntries = Object.entries(platform.platforms).map(([k,v])=>({key:k,name:platMeta[k]||k,items:Array.isArray(v)?v:[]}));
+// 追加 crossPlatform
+if(platform.crossPlatform&&platform.crossPlatform.length){
+  platEntries.push({key:'cross',name:'跨平台',items:platform.crossPlatform});
+}
+const tabsEl = document.getElementById('platTabs');
+const panelsEl = document.getElementById('platPanels');
+tabsEl.innerHTML = platEntries.map((p,i)=>`<button class="tab ${i===0?'active':''}" data-plat="${p.key}" onclick="switchPlat('${p.key}')">${p.name} <span class="cnt">${p.items.length}</span></button>`).join('');
+document.getElementById('platCountTip').textContent = `共 ${platEntries.reduce((s,p)=>s+p.items.length,0)} 条·来自 ${platEntries.filter(p=>p.items.length>0).length} 个平台`;
+panelsEl.innerHTML = platEntries.map((p,i)=>`
+  <div class="tab-panel ${i===0?'active':''}" data-plat="${p.key}">
+    ${p.items.length===0?`<div class="gap-warn"><h3>暂无近30天数据</h3><ul><li>${p.name} 平台在窗口内未获取到可公开链接的家装建材家具品类动态；下期扩展信源</li></ul></div>`:`
+    <div class="event-list">
+      ${p.items.map(it=>`
+        <div class="event" data-cat="${it.category||'通用'}">
+          <div class="top">
+            <span class="date">${it.date||''}</span>
+            <span class="cat-badge" style="background:${catColor(it.category)}">${it.category||'通用'}</span>
+            <span class="type-badge">${it.type||''}</span>
+            <h3 style="flex:1 1 100%;margin-top:4px">${it.title||''}</h3>
+          </div>
+          <p>${it.summary||''}</p>
+          <div class="src">${linkify(it.source||'链接', it.url)}</div>
+        </div>`).join('')}
+    </div>`}
+  </div>`).join('');
+
+window.switchPlat = k => {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.plat===k));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.dataset.plat===k));
+};
+window.filterCat = el => {
+  document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  const cat = el.dataset.cat;
+  document.querySelectorAll('.event').forEach(ev=>{
+    if(cat==='全部') ev.style.display='';
+    else{const arr=(ev.dataset.cat||'').split(/[,，]/).map(s=>s.trim());ev.style.display=arr.includes(cat)?'':'none';}
+  });
+};
+
+// ===== policy timeline =====
+const policyImpact = it => {
+  const s = (it.impact||it.summary||'')+'';
+  if(/强|直接|硬性|正式实施|不合规|停业/.test(s)) return 'critical';
+  if(/团标|试点|宣贯|规范|地方/.test(s)) return 'moderate';
+  return '';
+};
+document.getElementById('policyTL').innerHTML = '<h3 style="color:#f85149;margin:0 0 8px 4px;font-size:13.5px">政策 · 标准</h3>' + (policy.policy||[]).map(p=>`
+  <div class="tl-item ${policyImpact(p)}">
+    <h3>${p.title}</h3>
+    <div class="meta">${p.issueDate} · ${p.issuer} · ${p.category||''} · ${p.scope||'全国'} ${(p.subIndustry||[]).map(x=>`<span class="cat-chip" data-cat="${x}">${x}</span>`).join('')}</div>
+    <p>${p.summary||''}</p>
+    ${p.impact?`<div class="impact">👉 ${p.impact}</div>`:''}
+    <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>
+  </div>`).join('');
+document.getElementById('industryTL').innerHTML = '<h3 style="color:#4493f8;margin:0 0 8px 4px;font-size:13.5px">行业 · 展会 · 协会</h3>' + (policy.industry||[]).map(p=>`
+  <div class="tl-item">
+    <h3>${p.title}</h3>
+    <div class="meta">${p.date} · ${p.issuer} · ${p.topic||''}</div>
+    <p>${p.summary||''}</p>
+    <div class="src" style="margin-top:6px;font-size:11.5px">${linkify(p.source||'源', p.url)}</div>
+  </div>`).join('');
+
+// ===== merchant =====
+document.getElementById('merchantList').innerHTML = (policy.merchant||[]).map(m=>`
+  <div class="event">
+    <div class="top">
+      <span class="date">${m.date||''}</span>
+      <span class="cat-badge" style="background:#4493f8">${m.brand||''}</span>
+      <span class="type-badge">${m.type||''}</span>
+      <h3 style="flex:1 1 100%;margin-top:4px">${m.summary||''}</h3>
+    </div>
+    <div class="src">${linkify(m.source||'源', m.url)}</div>
+  </div>`).join('');
+
+// ===== gaps + conflicts =====
+const normConf = c => typeof c==='string'?c:(c.item?`【${c.item}】${c.detail||''}`:JSON.stringify(c));
+const allGaps = [
+  ...(macro.gaps||[]).map(x=>'[宏观/房产] '+x),
+  ...(platform.gaps||[]).map(x=>'[电商平台] '+x),
+  ...(policy.gaps||[]).map(x=>'[政策/商家] '+x)
+];
+const allConflicts = [
+  ...(macro.conflicts||[]).map(x=>'[宏观/房产] '+normConf(x)),
+  ...(platform.conflicts||[]).map(x=>'[电商平台] '+normConf(x)),
+  ...(policy.conflicts||[]).map(x=>'[政策/商家] '+normConf(x))
+];
+document.getElementById('gapList').innerHTML = allGaps.map(g=>`<li>${g}</li>`).join('');
+document.getElementById('conflictList').innerHTML = allConflicts.map(c=>`<li>${c}</li>`).join('');
+
+// ===== 数据源采集深度 =====
+const sm = sources.summary||{};
+document.getElementById('srcSummary').innerHTML = [
+  ['信源总数', sm.totalSources],['深层(3)', sm.depth3],['中层(2)', sm.depth2],['浅层(1)', sm.depth1],['阻塞(0)', sm.depth0_blocked]
+].map(([l,v])=>`<div class="src-stat"><b>${v!=null?v:'—'}</b>${l}</div>`).join('');
+document.getElementById('srcNote').textContent = '说明：' + (sources.note||'');
+document.getElementById('srcTable').innerHTML =
+  '<thead><tr><th>信源</th><th>层</th><th>登录</th><th>深度</th><th>已采条数/时间戳</th><th>阻塞原因</th></tr></thead><tbody>' +
+  (sources.sources||[]).map(s=>`<tr>
+    <td>${linkify(s.name, s.url)}</td>
+    <td><span class="layer-tag">${s.layer}</span></td>
+    <td>${s.login||'—'}</td>
+    <td><span class="depth-badge depth-${s.depth}">${s.depth}</span></td>
+    <td>${s.count||'—'}<br><span style="color:var(--muted);font-size:11px">${s.timestamp||''}</span></td>
+    <td style="color:var(--muted);max-width:340px">${s.blocker||'无'}</td>
+  </tr>`).join('') + '</tbody>';
+
+// ===== 目录导航滚动高亮 =====
+const navItems = [...document.querySelectorAll('.nav-item')];
+navItems.forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  const el = document.getElementById(a.dataset.target);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+const sections = navItems.map(a=>document.getElementById(a.dataset.target)).filter(Boolean);
+const spy = ()=>{
+  let cur = sections[0];
+  const top = 90;
+  for(const s of sections){ if(s.getBoundingClientRect().top <= top) cur = s; }
+  navItems.forEach(a=>a.classList.toggle('active', a.dataset.target===(cur&&cur.id)));
+};
+window.addEventListener('scroll', spy, {passive:true});
+spy();
+}
+try { init(); } catch(e){ document.body.insertAdjacentHTML('afterbegin','<div style="background:#f85149;color:#fff;padding:10px 16px">加载数据失败: '+e.message+'</div>'); console.error(e); }
+</script>
+</body>
+</html>

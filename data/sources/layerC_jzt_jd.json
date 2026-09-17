@@ -1,0 +1,24 @@
+{
+  "source": "京准通（京东数字营销平台 数据中心-行业分析）",
+  "sourceUrl": "https://jzt.jd.com/custom-report/#/industry/market",
+  "layer": "C",
+  "loginRequired": true,
+  "scrapedAt": "2026-07-30T18:02:00+08:00",
+  "collectionDepth": 0,
+  "status": "阻塞-权限条件未满足，行业分析模块被系统门槛拦截",
+  "carryForward": false,
+  "coverage": {
+    "attempted": [
+      "数据中心 > 行业分析 > 行业大盘 (industry/market)",
+      "数据中心 > 行业分析 > 竞争分析 (industry/compete)",
+      "数据中心 > 行业分析 > 流量解析 (industry/traffic)"
+    ],
+    "result": "全部返回空值（指标卡显示 ---），并弹出系统错误提示"
+  },
+  "blocker": {
+    "systemMessage": "【参数错误】行业分析功能暂只针对有投放竞价广告pin开放，请确保该pin近期有投放竞价广告数据",
+    "rootCause": "京准通是京东自投广告平台，行业分析/竞争分析/流量解析数据仅向『近期实际投放过竞价广告（京东快车等）』的账号开放。当前授权账号 授权账号 可用余额¥0.00、余额已用完、无在投计划，AI洞察确认2026-07-29账户共花费¥0.00，故行业级与竞品级数据被平台权限门槛拦截，无法取数。"
+  },
+  "verifiedMetrics": [],
+  "note": "严格遵守硬数据规则：本源本期无任何可核实数据，全部置空，不做任何推测或占位填充。京准通行业分析数据须由『有实际竞价广告投放的京东广告主账号』登录方可采集。"
+}

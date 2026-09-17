@@ -1,0 +1,274 @@
+{
+  "source": "https://www.chanmama.com/brandRank/?category_id=7",
+  "source_name": "蝉妈妈-品牌库",
+  "classification": "public_paid_thirdparty",
+  "platform": "douyin",
+  "category": "家具建材 (category_id=7)",
+  "window": "近30天（截至2026-09-17）",
+  "captured_at": "2026-09-17",
+  "metric_note": "销售额指数为蝉妈妈综合估算指数，非真实GMV；仅可在同一采集窗口横向比较，不可直接计算同比或环比。类目销量与销售额区间按页面原样记录。",
+  "columns": [
+    "rank",
+    "brand",
+    "main_category",
+    "category_items",
+    "category_volume_band",
+    "category_volume_est",
+    "sales_index",
+    "linked_influencers"
+  ],
+  "ranking": [
+    {
+      "rank": 1,
+      "brand": "全友家居",
+      "main_category": "家具建材",
+      "category_items": 2208,
+      "category_volume_band": "5w~10w",
+      "category_volume_est": 12278,
+      "sales_index": 11565068,
+      "linked_influencers": 60
+    },
+    {
+      "rank": 2,
+      "brand": "YESWOOD/源氏木语",
+      "main_category": "家具建材",
+      "category_items": 1567,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 9034,
+      "sales_index": 9198939,
+      "linked_influencers": 33
+    },
+    {
+      "rank": 3,
+      "brand": "KUKa/顾家家居",
+      "main_category": "家具建材",
+      "category_items": 765,
+      "category_volume_band": "5w~10w",
+      "category_volume_est": 11703,
+      "sales_index": 7682337,
+      "linked_influencers": 167
+    },
+    {
+      "rank": 4,
+      "brand": "BULL/公牛",
+      "main_category": "家具建材",
+      "category_items": 5173,
+      "category_volume_band": "100w+",
+      "category_volume_est": 209156,
+      "sales_index": 7388269,
+      "linked_influencers": 2634
+    },
+    {
+      "rank": 5,
+      "brand": "JOMOO/九牧",
+      "main_category": "家具建材",
+      "category_items": 939,
+      "category_volume_band": "5w~10w",
+      "category_volume_est": 16698,
+      "sales_index": 6283037,
+      "linked_influencers": 115
+    },
+    {
+      "rank": 6,
+      "brand": "蓝盒子",
+      "main_category": "家具建材",
+      "category_items": 55,
+      "category_volume_band": "5w~10w",
+      "category_volume_est": 17524,
+      "sales_index": 6006187,
+      "linked_influencers": 99
+    },
+    {
+      "rank": 7,
+      "brand": "林氏家居",
+      "main_category": "家具建材",
+      "category_items": 2268,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 6103,
+      "sales_index": 5596347,
+      "linked_influencers": 53
+    },
+    {
+      "rank": 8,
+      "brand": "爱果乐",
+      "main_category": "家具建材",
+      "category_items": 242,
+      "category_volume_band": "5w~10w",
+      "category_volume_est": 16094,
+      "sales_index": 5310788,
+      "linked_influencers": 289
+    },
+    {
+      "rank": 9,
+      "brand": "DESSMANN/德施曼",
+      "main_category": "家具建材",
+      "category_items": 189,
+      "category_volume_band": "5w~10w",
+      "category_volume_est": 11749,
+      "sales_index": 4165646,
+      "linked_influencers": 29
+    },
+    {
+      "rank": 10,
+      "brand": "DeRUCCI/慕思",
+      "main_category": "家具建材",
+      "category_items": 528,
+      "category_volume_band": "5000~1w",
+      "category_volume_est": 1868,
+      "sales_index": 4153266,
+      "linked_influencers": 70
+    },
+    {
+      "rank": 11,
+      "brand": "V/雅鹿",
+      "main_category": "服饰内衣",
+      "category_items": 477,
+      "category_volume_band": "25w~50w",
+      "category_volume_est": 56032,
+      "sales_index": 4146049,
+      "linked_influencers": 6010
+    },
+    {
+      "rank": 12,
+      "brand": "CHEERS/芝华仕",
+      "main_category": "家具建材",
+      "category_items": 546,
+      "category_volume_band": "5000~1w",
+      "category_volume_est": 2137,
+      "sales_index": 4122367,
+      "linked_influencers": 22
+    },
+    {
+      "rank": 13,
+      "brand": "SLEEMON/喜临门",
+      "main_category": "家具建材",
+      "category_items": 268,
+      "category_volume_band": "1w~2.5w",
+      "category_volume_est": 4310,
+      "sales_index": 4068357,
+      "linked_influencers": 38
+    },
+    {
+      "rank": 14,
+      "brand": "AUX/奥克斯",
+      "main_category": "厨卫家电",
+      "category_items": 367,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 5573,
+      "sales_index": 4015963,
+      "linked_influencers": 5894
+    },
+    {
+      "rank": 15,
+      "brand": "Micoe/四季沐歌",
+      "main_category": "家具建材",
+      "category_items": 613,
+      "category_volume_band": "25w~50w",
+      "category_volume_est": 53386,
+      "sales_index": 3955063,
+      "linked_influencers": 725
+    },
+    {
+      "rank": 16,
+      "brand": "MONA LISA/蒙娜丽莎",
+      "main_category": "家具建材",
+      "category_items": 266,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 6161,
+      "sales_index": 3454752,
+      "linked_influencers": 59
+    },
+    {
+      "rank": 17,
+      "brand": "城市爱情",
+      "main_category": "家具建材",
+      "category_items": 44,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 6225,
+      "sales_index": 3424334,
+      "linked_influencers": 40
+    },
+    {
+      "rank": 18,
+      "brand": "HP/惠普",
+      "main_category": "3C数码",
+      "category_items": 954,
+      "category_volume_band": "10w~25w",
+      "category_volume_est": 30121,
+      "sales_index": 3417510,
+      "linked_influencers": 1225
+    },
+    {
+      "rank": 19,
+      "brand": "狄普",
+      "main_category": "家具建材",
+      "category_items": 442,
+      "category_volume_band": "1w~2.5w",
+      "category_volume_est": 3475,
+      "sales_index": 3372389,
+      "linked_influencers": 14
+    },
+    {
+      "rank": 20,
+      "brand": "SIHOO/西昊",
+      "main_category": "家具建材",
+      "category_items": 97,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 8590,
+      "sales_index": 3304100,
+      "linked_influencers": 42
+    },
+    {
+      "rank": 21,
+      "brand": "Hbada/黑白调",
+      "main_category": "家具建材",
+      "category_items": 102,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 7131,
+      "sales_index": 3097640,
+      "linked_influencers": 73
+    },
+    {
+      "rank": 22,
+      "brand": "大满贯",
+      "main_category": "家具建材",
+      "category_items": 150,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 6814,
+      "sales_index": 3082742,
+      "linked_influencers": 123
+    },
+    {
+      "rank": 23,
+      "brand": "MLILY/梦百合",
+      "main_category": "家具建材",
+      "category_items": 149,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 5609,
+      "sales_index": 3066011,
+      "linked_influencers": 302
+    },
+    {
+      "rank": 24,
+      "brand": "Tongboshi/童博士",
+      "main_category": "家具建材",
+      "category_items": 34,
+      "category_volume_band": "2.5w~5w",
+      "category_volume_est": 5971,
+      "sales_index": 3021051,
+      "linked_influencers": 49
+    },
+    {
+      "rank": 25,
+      "brand": "OPPEIN/欧派",
+      "main_category": "家具建材",
+      "category_items": 277,
+      "category_volume_band": "5w~10w",
+      "category_volume_est": 11545,
+      "sales_index": 2940308,
+      "linked_influencers": 270
+    }
+  ],
+  "monthBucket": "2026-09",
+  "summary": "2026-09-17复核家具建材近30天品牌榜；全友家居、源氏木语、顾家家居位列前三。销售额指数仅用于同区间横向比较。"
+}
