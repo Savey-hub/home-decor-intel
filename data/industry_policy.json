@@ -1,7 +1,7 @@
 {
-  "asOf": "2026-09-17",
-  "windowStart": "2026-08-18",
-  "windowEnd": "2026-09-17",
+  "asOf": "2026-09-23",
+  "windowStart": "2026-08-25",
+  "windowEnd": "2026-09-23",
   "policy": [
     {
       "title": "南平市扩大2026年智能家居购新补贴品类：新增油烟机/燃气灶/洗碗机/干衣机等5类，『智能沙发』并入按摩椅不得重复申领",
@@ -1340,6 +1340,47 @@
       "subIndustry": [
         "建材"
       ]
+    },
+    {
+      "title": "2026年9月建筑材料工业景气指数（MPI）发布",
+      "date": "2026-09-22",
+      "publishDate": "2026-09-22",
+      "topic": "建材行业景气",
+      "issuer": "中国建筑材料联合会",
+      "summary": "9月份MPI指数发布，显示建筑材料工业运行呈现恢复态势。",
+      "source": "建材协会·运行监测",
+      "url": "https://www.cbmf.org/yxjc/",
+      "subIndustry": [
+        "建材"
+      ]
+    },
+    {
+      "title": "36氪：两大家居龙头集体布局厨电领域",
+      "date": "2026-09-20",
+      "publishDate": "2026-09-20",
+      "topic": "行业转型",
+      "issuer": "36氪",
+      "summary": "探讨家居企业跨界竞争厨电领域，寻找存量市场下的转型突破点。",
+      "source": "36氪·家居",
+      "url": "https://36kr.com/search/articles/家居",
+      "subIndustry": [
+        "家具",
+        "厨卫"
+      ]
+    },
+    {
+      "title": "国务院修订《住房公积金管理条例》正式施行",
+      "date": "2026-09-20",
+      "publishDate": "2026-09-20",
+      "topic": "住房政策",
+      "issuer": "国务院",
+      "summary": "涉及多项核心条款修订，旨在利好居住消费与民生保障。",
+      "source": "发现报告",
+      "url": "https://www.fxbaogao.com/",
+      "subIndustry": [
+        "房地产",
+        "家居"
+      ]
     }
   ],
   "merchant": [
@@ -2101,6 +2142,32 @@
       "impact": "县域市场成为家居企业增量争夺的新战场。",
       "source": "36氪",
       "url": "https://36kr.com/search/articles/家居",
+      "firsthand": false
+    },
+    {
+      "title": "蝉妈妈抖音家居建材品牌榜：全友、源氏、顾家位列前三",
+      "date": "2026-09-23",
+      "publishDate": "2026-09-23",
+      "category": "品牌榜",
+      "type": "榜单",
+      "brand": "全友家居, 源氏木语, 顾家家居",
+      "summary": "近30天品牌榜显示头部品牌GMV均突破1000万元，细分赛道九牧、公牛表现强劲。",
+      "impact": "头部品牌地位稳固，直播电商仍是核心增量场。",
+      "source": "蝉妈妈·品牌榜",
+      "url": "https://www.chanmama.com/brandRank/",
+      "firsthand": false
+    },
+    {
+      "title": "以旧换新补贴政策落地效果及业绩预期解析",
+      "date": "2026-09-22",
+      "publishDate": "2026-09-22",
+      "category": "行业研究",
+      "type": "深度解析",
+      "brand": "多机构",
+      "summary": "针对家居行业补贴政策效果及三季度业绩预期进行深度剖析。",
+      "impact": "政策驱动下，四季度业绩修复预期增强。",
+      "source": "东方财富·行业研报",
+      "url": "https://data.eastmoney.com/report/industry.jshtml",
       "firsthand": false
     }
   ],

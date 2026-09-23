@@ -1,7 +1,7 @@
 {
-  "asOf": "2026-09-17",
-  "windowStart": "2026-08-18",
-  "windowEnd": "2026-09-17",
+  "asOf": "2026-09-23",
+  "windowStart": "2026-08-25",
+  "windowEnd": "2026-09-23",
   "windowNote": "近30天公开动态窗口：2026-08-18至2026-09-16；登录源无法核实新值时沿用上期并披露。",
   "platforms": {
     "jd": [
@@ -338,6 +338,39 @@
         "source": "京东麦头条(mtt.jd.com)",
         "url": "https://mtt.jd.com/",
         "firsthand": true
+      },
+      {
+        "title": "2026京东商家大会：发布“自营与POP协同”等四大升级举措",
+        "date": "2026-09-23",
+        "publishDate": "2026-09-23",
+        "category": "零售/战略",
+        "type": "商家大会",
+        "summary": "京东发布四大升级举措，旨在通过AI驱动业务确定性增长，强化自营与POP协同。",
+        "source": "京东商家大会（mtt.jd.com）",
+        "url": "https://mtt.jd.com/",
+        "firsthand": true
+      },
+      {
+        "title": "京东正式发布《2026年京东11.11商家营销指南》",
+        "date": "2026-09-22",
+        "publishDate": "2026-09-22",
+        "category": "大促",
+        "type": "营销指南",
+        "summary": "涵盖品牌广告焕新、AI全域追击等核心资源玩法，助力商家备战双十一。",
+        "source": "京东·京准通",
+        "url": "https://jzt.jd.com/school/index",
+        "firsthand": true
+      },
+      {
+        "title": "JD.com Launches CHEFRESH, Bringing AI Meal Planning into the Home",
+        "date": "2026-09-16",
+        "publishDate": "2026-09-16",
+        "category": "智能家居",
+        "type": "产品发布",
+        "summary": "京东推出CHEFRESH，将AI饮食规划与机器人烹饪带入家庭场景。",
+        "source": "JD Corporate Blog",
+        "url": "https://jdcorporateblog.com/category/jd-retail/",
+        "firsthand": true
       }
     ],
     "douyin": [
@@ -589,6 +622,28 @@
         "source": "网经社数字零售快讯",
         "url": "https://www.100ec.cn/DigitalRetail/#/broadcast",
         "firsthand": false
+      },
+      {
+        "title": "抖店罗盘：智能家居/五金工具行业支付金额近7天达3-3.5亿",
+        "date": "2026-09-23",
+        "publishDate": "2026-09-23",
+        "category": "行业数据",
+        "type": "经营看板",
+        "summary": "近7天支付金额同比增长7.42%，商品卡渠道占比32.17%成为首要入口。",
+        "source": "抖店罗盘·类目概览",
+        "url": "https://compass.jinritemai.com/shop/chance/category-overview",
+        "firsthand": true
+      },
+      {
+        "title": "巨量千川发布新版个人店准入规范",
+        "date": "2026-09-22",
+        "publishDate": "2026-09-22",
+        "category": "推广规范",
+        "type": "政策更新",
+        "summary": "发布新版个人店准入规范，同时加强宠物生活及资质规避类商品管理。",
+        "source": "抖音电商学习中心",
+        "url": "https://school.jinritemai.com/doudian/web/home",
+        "firsthand": true
       }
     ],
     "pdd": [

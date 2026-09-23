@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-09-17",
-  "coverage": "近30天公开信息窗口：2026-08-18至2026-09-16；宏观统计采用最新可得官方月份。",
+  "asOf": "2026-09-23",
+  "coverage": "近30天公开信息窗口：2026-08-25至2026-09-23；包含最新社零、用电量及物流数据。",
   "macro": {
     "retailSales": [
       {
@@ -324,6 +324,26 @@
         "publishDate": "2026-09-08",
         "url": "https://www.cbmf.org/yxjc/",
         "note": "7月建筑材料行业运行情况简报，9月8日发布。"
+      },
+      {
+        "metric": "8月全社会用电量",
+        "period": "2026年8月",
+        "value": "1.03万亿千瓦时",
+        "yoy": "+1.7%",
+        "source": "中国工业新闻网",
+        "publishDate": "2026-09-23",
+        "url": "https://www.cinic.org.cn/xw/tjsj/",
+        "note": "全社会用电量创历史新高，反映生产经营活力。"
+      },
+      {
+        "metric": "1-8月快递业务量",
+        "period": "2026年1-8月",
+        "value": "1340.6亿件",
+        "yoy": "+4.6%",
+        "source": "中国工业新闻网",
+        "publishDate": "2026-09-22",
+        "url": "https://www.cinic.org.cn/xw/tjsj/",
+        "note": "快递业务量累计保持增长，支撑消费物流流转。"
       }
     ],
     "supplyChain": [
