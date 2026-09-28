@@ -194,9 +194,13 @@ def page_break(doc):
 # =========================================================
 #  SHARED CONTENT PIECES
 # =========================================================
-ASOF = macro.get("asOf", "2026-09-16")
-WINDOW_START = plat.get("windowStart", "2026-08-18")
-WINDOW_END = plat.get("windowEnd", ASOF)
+ASOF = macro.get("asOf") or plat.get("asOf") or mh.get("asOf")
+if not ASOF:
+    raise ValueError("数据文件缺少 asOf，无法生成带可靠截止日期的报告")
+WINDOW_START = plat.get("windowStart")
+WINDOW_END = plat.get("windowEnd") or ASOF
+if not WINDOW_START:
+    raise ValueError("platform_dynamics.json 缺少 windowStart")
 WINDOW = f"近30天（{WINDOW_START} 至 {WINDOW_END}）"
 MONTH_LABEL = f"{CURRENT_MONTH_CN}（自然月至今）"
 
@@ -505,7 +509,7 @@ def section_social(doc, detail=False):
 # ---- explicitly separated historical reference ----
 def section_doudian(doc, detail=False):
     h1(doc, "八、历史参考（非2026年9月新增）")
-    para(doc, "本章只读取数据文件中明确保存的历史快照；9月17日新数据不在此重复展示。", indent=False,
+    para(doc, f"本章只读取数据文件中明确保存的历史快照；截至{ASOF}的9月新增数据不在此重复展示。", indent=False,
          color=RGBColor(0x8A, 0x00, 0x00), bold=True)
     history = (dd.get("historySnapshots") or [{}])[0]
     coverage = history.get("coverage", {})
@@ -678,11 +682,11 @@ def section_conclusion(doc):
 
     h2(doc, "10.2　对天猫家装运营的行动建议")
     actions = [
-        ("守住需求基本盘", "9月发布的8月数据表明社零总额同比增长0.4%，家具类同比下降7.9%，建筑及装潢材料类同比下降11.8%；资源配置应优先面向可验证的存量需求。"),
-        ("承接智能家居政策", "商务部等8部门行动方案覆盖全屋智能体验、互联互通、补贴和送新收旧，平台可据此检查商品池、体验场景与履约链路。"),
-        ("前置双11经营", "抖音与快手已在9月启动双11招商，京东也推进双十一商家大会；应按已核实节奏跟踪竞品招商与商家资源变化。"),
-        ("完成信息描述合规校准", "家居产品与家装建材电商信息描述国家标准9月1日起实施，需校准商品字段、素材与宣称一致性。"),
-        ("不以旧数据冒充新增", "本月房地产仍无新增可核实记录；社媒与经营情报仅采用9月17日已核验结果，历史快照只用于对照，不参与9月新增判断。"),
+        ("守住需求基本盘", "9月发布的8月数据表明社零总额同比增长0.4%，家具类同比下降7.9%，建筑及装潢材料类同比下降11.8%；全国规上工业利润改善也不能外推为家居制造业修复。"),
+        ("承接全屋智能场景", "米家线下体验店与小红书AI生活内容都指向从单品参数转向空间体验、真实生活场景与成套交付，平台可据此重组商品与内容表达。"),
+        ("前置双11经营", "各平台已进入双11准备期，京准通又统一报表入口并加入AI查数与诊断；应同步升级竞品招商跟踪、投放复盘与异常诊断。"),
+        ("治理低价商品风险", "直播低价家具案例提示质量、售后与供应链责任需前置核验，但单一案例不可外推为行业整体质量问题。"),
+        ("不以旧数据冒充新增", f"截至{ASOF}仍无新的全国可比房地产指标；社媒与经营情报只采用9月已核验记录，历史快照仅用于对照。"),
     ]
     for name, text in actions:
         para(doc, f"● {name}：{text}", size=11, indent=False)
@@ -731,8 +735,8 @@ def build_detail(path):
     cover(doc, "详报（完整版）")
     h1(doc, "报告摘要（Executive Summary）")
     para(doc, mh.get("monthlySummary", ""), indent=True)
-    para(doc, "本报告按2026年9月与历史参考严格分区。9月专区覆盖宏观、房地产、平台、政策、行业/商家、社媒、平台规则七类；"
-              "抖店罗盘与蝉妈妈采用9月17日已核验数据，巨量算数记录9月报告检索结果而不复用旧指数；8月及更早快照只进入历史参考。"
+    para(doc, f"本报告按2026年9月与历史参考严格分区。9月专区覆盖宏观、房地产、平台、政策、行业/商家、社媒、平台规则七类；"
+              f"社媒与经营数据采用截至{ASOF}已核验记录，巨量算数仅记录9月报告检索结果而不复用旧指数；8月及更早快照只进入历史参考。"
               "每张数据表后均附自然语言解读，所有数据保留来源与日期，不可核实项标『待核实』。", indent=True)
     page_break(doc)
     section_monthly(doc, detail=True)

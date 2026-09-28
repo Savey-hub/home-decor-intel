@@ -1,7 +1,21 @@
 {
   "note": "历史存档索引：每次刷新（每周四/每自然月）由 scripts/archive_snapshot.sh 自动追加一期。每期冻结当期在线看板 HTML 与两份 Word（汇报稿/详报），可随时回看，永不覆盖。",
-  "latest": "2026-09-23",
+  "latest": "2026-09-28",
   "editions": [
+    {
+      "id": "2026-09-28",
+      "label": "2026年9月28日 Round 13",
+      "type": "周报",
+      "dataRange": "2026-08-30至2026-09-28",
+      "asOf": "2026-09-28",
+      "publishDate": "2026-09-28",
+      "html": "archive/2026-09-28/index.html",
+      "brief": "archive/2026-09-28/汇报稿.docx",
+      "detail": "archive/2026-09-28/详报.docx",
+      "summary": "全源复核：工业利润、京准通AI升级、小红书AI生活、全屋智能体验与直播品控风险",
+      "highlights": [],
+      "sourceStats": {}
+    },
     {
       "id": "2026-09-23",
       "label": "Round 12 刷新",
