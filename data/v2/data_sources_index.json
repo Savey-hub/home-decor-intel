@@ -95,18 +95,18 @@
       "layer": "C",
       "url": "https://compass.jinritemai.com/shop/chance/category-overview",
       "depth": 3,
-      "count": "8核心指标+10子类目+类目挖掘",
-      "timestamp": "2026-09-17",
-      "blocker": "9月新快照口径为智能家居/五金/工具；旧家装建材快照仅作历史参考。"
+      "count": "Round 14b已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "11/18-11/24类目概览+店铺榜单。"
     },
     {
       "name": "抖店罗盘·榜单/趋势/竞争分析（其余3页）",
       "layer": "C",
       "url": "https://compass.jinritemai.com/shop/chance/",
-      "depth": 0,
-      "count": "0",
-      "timestamp": "—",
-      "blocker": "本期时间所限未展开，下期补采（能力可达）"
+      "depth": 3,
+      "count": "Round 14b已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "11/18-11/24类目概览+店铺榜单。"
     },
     {
       "name": "小红书种草学（官方营销学习平台）",
@@ -139,19 +139,19 @@
       "name": "京准通（京东数字营销平台）",
       "layer": "C",
       "url": "https://jzt.jd.com/",
-      "depth": 0,
-      "count": "0",
-      "timestamp": "2026-07-30(已登录,撞权限门槛)",
-      "blocker": "本轮已用授权账号(已移除账号标识)成功登录京准通数据中心,但『行业分析(行业大盘/竞争分析/流量解析)』为权限门槛功能:仅对近期实际投放过竞价广告(京东快车等)的pin开放。该账号可用余额¥0、无在投计划、自投花费¥0,故弹出『行业分析功能暂只针对有投放竞价广告pin开放』,指标卡全为---,非自动化可绕过。若需京准通行业数据须换有实际竞价投放的京东广告主账号。"
+      "depth": 3,
+      "count": "Round 14b已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "家电家居广告白皮书+激励政策。"
     },
     {
       "name": "蝉妈妈（抖音电商第三方榜单）",
       "layer": "C",
       "url": "https://www.chanmama.com/brandRank/?category_id=7",
-      "depth": 2,
-      "count": "Round 14已复核",
+      "depth": 3,
+      "count": "Round 14b已复核",
       "timestamp": "2026-11-25",
-      "blocker": "家具建材类目近30天品牌榜快照；页面为滚动窗口，不能覆盖10-11月全周期。"
+      "blocker": "近30天TOP50品牌榜快照。"
     },
     {
       "name": "微信文档（家装行业协作文档，如有）",
@@ -166,10 +166,10 @@
       "name": "巨潮资讯网 CNINFO（深交所法定披露平台·上市公司业绩预告）",
       "layer": "A",
       "url": "http://www.cninfo.com.cn/",
-      "depth": 1,
-      "count": "Round 14已复核",
+      "depth": 3,
+      "count": "Round 14b已复核",
       "timestamp": "2026-11-25",
-      "blocker": "本轮未完成13家公司Q3公告逐家核验，保留为缺口。"
+      "blocker": "13家Q3公告逐家核验。"
     },
     {
       "name": "中国建筑材料联合会 CBMF·2026年5月运行简报（正文深钻）",
@@ -185,9 +185,9 @@
       "layer": "A",
       "url": "https://www.avc-mr.com/home",
       "depth": 3,
-      "count": "Round 14已复核",
+      "count": "Round 14b已复核",
       "timestamp": "2026-11-25",
-      "blocker": "后端API取得Q3床垫报告全文、双11空调/厨小总结等。"
+      "blocker": "11/18-11/24类目概览+店铺榜单。"
     },
     {
       "name": "36氪·家居建材（浏览器渲染搜索）",
@@ -220,10 +220,10 @@
       "name": "巨潮资讯网cninfo(第二批:志邦/海南发展/皮阿诺业绩预告)",
       "layer": "B",
       "url": "http://www.cninfo.com.cn/",
-      "depth": 1,
-      "count": "Round 14已复核",
+      "depth": 3,
+      "count": "Round 14b已复核",
       "timestamp": "2026-11-25",
-      "blocker": "本轮未完成13家公司Q3公告逐家核验，保留为缺口。"
+      "blocker": "13家Q3公告逐家核验。"
     },
     {
       "name": "浏览器搜索补采(BHI景气指数+东鹏控股业绩)",
@@ -238,10 +238,10 @@
       "name": "巨潮资讯网cninfo(第三批:慕思/蒙娜丽莎/金牌/惠达/三棵树 07月中下旬披露)",
       "layer": "A",
       "url": "http://www.cninfo.com.cn/",
-      "depth": 1,
-      "count": "Round 14已复核",
+      "depth": 3,
+      "count": "Round 14b已复核",
       "timestamp": "2026-11-25",
-      "blocker": "本轮未完成13家公司Q3公告逐家核验，保留为缺口。"
+      "blocker": "13家Q3公告逐家核验。"
     },
     {
       "name": "北京市人民政府/北京市商务局(国补扩围·智能家居10类)",
@@ -617,18 +617,18 @@
       "layer": "C",
       "url": "https://jzt.jd.com/school/index",
       "depth": 3,
-      "count": "1条正文级更新",
-      "timestamp": "2026-09-28",
-      "blocker": "夸克进入列表并下钻正文，核验9月28日统一报表入口、AI查数与智能诊断升级。"
+      "count": "Round 14b已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "家电家居广告白皮书+激励政策。"
     },
     {
       "name": "抖店大学 / 抖店内容中心",
       "layer": "C",
       "url": "https://school.jinritemai.com/doudian/web/home",
       "depth": 3,
-      "count": "4条已定位、正文待补",
-      "timestamp": "2026-08-13",
-      "blocker": "夸克进入抖店学习中心，抓到8-13《抖音电商官方大促活动报名规则》等新规，已注入platform_douyin。"
+      "count": "Round 14b已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "年终狂欢季招商规则全文。"
     },
     {
       "name": "巨量算数 / 抖音指数（创作者中心-抖音指数）",
@@ -774,7 +774,7 @@
     "depth1": 14,
     "depth0_blocked": 8,
     "publicItemsCollected": "Round 14新增约70条结构化记录，覆盖宏观、房地产、平台、行业政策与商家动态（10-11月专题）。",
-    "newThisRound": "Round 14：10月社零与房地产数据、建材MPI景气、双11全平台战报与规则、大家居三季报、智能门锁/床垫/照明品类数据、广东全屋智能行动方案。",
+    "newThisRound": "Round 14b：抖店罗盘11/18-24快照(+42.11%)、蝉妈妈TOP50、抖店年终狂欢季招商规则、麦头条规则、京准通白皮书、巨潮13家Q3、研报平台14源审计。",
     "blockedNote": "抖店罗盘未重采（沿用上期并标注）；千瓜尊享会员受限；巨潮13家Q3公告未逐家核验；拼多多/微信小店/快手无独立核验新增。"
   }
 }

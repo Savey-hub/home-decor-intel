@@ -125,6 +125,28 @@
         "source": "JD Corporate Blog（京东官方企业博客），作者Vivian Yang",
         "url": "https://jdcorporateblog.com/jd-com-joins-world-retail-congress-first-world-retail-lab-asia-in-hong-kong/",
         "firsthand": false
+      },
+      {
+        "title": "京准通学堂（京点书院）+家电家居频道课程",
+        "date": "2026-11-25（查询日；课程时间以页面标注为准）",
+        "publishDate": "2026-11-25（查询日；课程时间以页面标注为准）",
+        "category": "京东/平台",
+        "type": "规则与工具",
+        "summary": "未登录可完整浏览。家电家居频道含《2026年11.11大促家电家居广告白皮书》（2026-09-29，1,935人学习）；热门文章含11月多条新规与激励政策（最新：广告服务商违规管理规范2026-11-23）。",
+        "source": "京准通 jzt.jd.com",
+        "url": "https://jzt.jd.com/school/index",
+        "firsthand": false
+      },
+      {
+        "title": "京东麦头条-京东规则动态一览（2026年11月16日-11月22日）",
+        "date": "2026-11-24（发布日，标注'昨天'）",
+        "publishDate": "2026-11-24（发布日，标注'昨天'）",
+        "category": "京东/平台",
+        "type": "规则与工具",
+        "summary": "已登录可读。本周京东规则五大变化：店铺星级改按三维度评定（默认赋星11/25生效）；商标全失效品牌分批清退；售后服务新增上门换新/上门检修（11/23生效）；违规管理总则新增第25条；保证金质保期按类目执行（表外默认90天）。另附营养保健/传统滋补11-12月激励（新商返50%-100%服务费）。",
+        "source": "京东麦头条 mtt.jd.com",
+        "url": "https://mtt.jd.com/article/articleView/a161a23d-4891-453e-b2f3-f0fda45f987f.action",
+        "firsthand": false
       }
     ],
     "douyin": [
@@ -171,10 +193,66 @@
         "source": "199IT(台账18/33)·洛图科技",
         "url": "https://www.199it.com/archives/1861094.html",
         "firsthand": false
+      },
+      {
+        "title": "蝉妈妈抖音电商品牌榜·家具建材类目·近30天",
+        "date": "2026-11-25（查询日，数据窗口近30天）",
+        "publishDate": "2026-11-25（查询日，数据窗口近30天）",
+        "category": "抖音/平台",
+        "type": "规则与数据",
+        "summary": "家具建材类目近30天品牌销售额榜（已切类目chip+近30天）：TOP10为顾家家居28,872,847、全友家居28,162,489、源氏木语20,172,419、林氏家居16,838,901、九牧11,485,529、芝华仕9,225,090、喜临门8,195,060、慕思7,430,534、奥普7,287,502、公牛7,082,177（均为'总GMV1000w+'档）。",
+        "source": "蝉妈妈 chanmama.com",
+        "url": "https://www.chanmama.com/brandRank/?category_id=7",
+        "firsthand": false
+      },
+      {
+        "title": "抖店罗盘·市场排行-店铺榜单（抖音店铺TOP200·总榜）",
+        "date": "2026-11-25（查询日，数据窗口2026/11/18-11/24近7天）",
+        "publishDate": "2026-11-25（查询日，数据窗口2026/11/18-11/24近7天）",
+        "category": "抖音/平台",
+        "type": "规则与数据",
+        "summary": "已登录可访问。行业类目默认为本店所在'智能家居/五金/工具'，近7天总榜TOP：绿林官方旗舰店、绿骑士官方旗舰店、绿林电动工具旗舰店、GREENER绿林工具旗舰店（均用户支付金额¥100万-¥250万）。",
+        "source": "抖店电商罗盘 compass.jinritemai.com",
+        "url": "https://compass.jinritemai.com/shop/chance/rank-shop",
+        "firsthand": false
+      },
+      {
+        "title": "抖店大学（抖音电商学习中心）首页+2026年抖音商城年终狂欢季招商规则",
+        "date": "2026-11-24（规则更新时间）",
+        "publishDate": "2026-11-24（规则更新时间）",
+        "category": "抖音/平台",
+        "type": "规则与数据",
+        "summary": "2026年抖音商城年终狂欢季招商规则（更新2026-11-24，阅读量6,424）：报名2026/11/12 14:00-12/31 23:59:59，活动2026/12/05-12/31；立减折扣所有类目均为15%（商家出资）；商家准入要求体验分近7日均值≥70分。",
+        "source": "抖店大学 school.jinritemai.com",
+        "url": "https://school.jinritemai.com/doudian/web/article/aJtUYLoiKivE",
+        "firsthand": false
+      },
+      {
+        "title": "巨量千川规则中心-巨量千川退款退费补贴政策（正文被权限校验拦截）",
+        "date": "2026-11-25（查询日）",
+        "publishDate": "2026-11-25（查询日）",
+        "category": "抖音/平台",
+        "type": "规则与数据",
+        "summary": "入口可达，页面框架与标题正常加载（巨量千川退款退费补贴政策），但正文区域显示'文档权限校验失败，请刷新页面重试'，刷新后仍失败，无法采集正文内容。",
+        "source": "巨量千川帮助 qianchuan.jinritemai.com",
+        "url": "https://qianchuan.jinritemai.com/support/content/143777?mappingType=2&pageId=229&spaceId=295",
+        "firsthand": false
       }
     ],
     "pdd": [],
-    "xhs": [],
+    "xhs": [
+      {
+        "title": "小红书种草学（home+专业号学堂/pro）双11课程与认证体系",
+        "date": "2026-11-25（查询日；课程时间以页面标注为准）",
+        "publishDate": "2026-11-25（查询日；课程时间以页面标注为准）",
+        "category": "小红书",
+        "type": "内容生态",
+        "summary": "未登录可浏览全部课程。最近直播区含5场双11主题直播（2026-09-24，均可看回放）；认证讲师中6位标注'家居家装'领域；专业号学堂课程按商业产品/聚光Lite/私信通等分类。",
+        "source": "小红书种草学 xue.xiaohongshu.com",
+        "url": "https://xue.xiaohongshu.com/pro?source=PRO",
+        "firsthand": false
+      }
+    ],
     "shipinhao": [],
     "kuaishou": [],
     "tmall_taobao": [
