@@ -1,8 +1,8 @@
 {
-  "asOf": "2026-09-28",
-  "windowStart": "2026-08-30",
-  "windowEnd": "2026-09-28",
-  "windowNote": "近30天公开动态窗口：2026-08-30至2026-09-28；仅采用已核验标题、摘要或正文，登录源无新增时不沿用旧值冒充本轮更新。",
+  "asOf": "2026-11-25",
+  "windowStart": "2026-10-01",
+  "windowEnd": "2026-11-25",
+  "windowNote": "10—11月专题窗口：2026-10-01至2026-11-25；双11为本窗口核心事件；GMV口径分歧与转述数据均已标注。",
   "platforms": {
     "jd": [
       {
@@ -382,6 +382,127 @@
         "source": "京准通·京点书院",
         "url": "https://jzt.jd.com/school/course/detail?contentId=19430",
         "firsthand": true
+      },
+      {
+        "title": "第18个双11收官：综合电商GMV增速回落至个位数，AI与服务成新主线",
+        "date": "2026-11-12",
+        "publishDate": "2026-11-12",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "星图数据显示本届双11首轮综合电商GMV同比仅增长2.4%（去年同期14.2%）；天猫、京东连续五年不披露全周期总交易额；天猫Token品类开售首日成交额环比暴涨450%，京东AI产品卖出超5000万件，京东前半程产生1.5亿个服务订单，家政服务销售额同比增长超240%。",
+        "source": "网经社（100ec.cn）【电商快评】",
+        "url": "https://www.100ec.cn/detail--6665709.html",
+        "firsthand": false
+      },
+      {
+        "title": "京东11.11家电家居战报：超2000品牌成交额翻倍，送装一体单量增200%",
+        "date": "2026-11-12",
+        "publishDate": "2026-11-12",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "京东家电家居完成全渠道整合后的首个11.11：超2000个家电家居品牌成交额同比增长100%，海尔、美的、海信、TCL、格力、小米、石头成交额破10亿元，苏泊尔、容声、方太、九牧破亿元；带送装一体服务商品成交单量同比增200%。",
+        "source": "网经社（100ec.cn）数字零售台",
+        "url": "https://www.100ec.cn/detail--6665690.html",
+        "firsthand": false
+      },
+      {
+        "title": "双11数据战报之家电3C数码篇：家电以2675亿元居综合电商第一大品类，国补撬动比1:10.3",
+        "date": "2026-11-13",
+        "publishDate": "2026-11-13",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "星图数据：家用电器以2675亿元、15.9%占比稳居综合电商第一大品类（去年同期16.1%），手机数码以14.3%次之，合计近三成大盘权重。全国2500亿元超长期特别国债以旧换新资金已全部下达，补贴资金撬动比达1:10.3，纳入补贴的6类家电和4类数码产品整体销售增3.4%。",
+        "source": "网经社（100ec.cn）",
+        "url": "https://www.100ec.cn/detail--6665759.html",
+        "firsthand": false
+      },
+      {
+        "title": "星图数据发布《2026年双11全网销售数据解读报告》",
+        "date": "2026-11-13",
+        "publishDate": "2026-11-13",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "报告概述：天猫将跨店满减改为官方立减，京东主打现货直发与官方直降，抖音推立减折扣、一件直降；即时零售进一步融入大促（美团闪购、淘宝闪购、京东秒送）；AI从商家经营工具延伸至消费决策与商品形态。",
+        "source": "网经社（100ec.cn）转引星图数据",
+        "url": "https://www.100ec.cn/detail--6665730.html",
+        "firsthand": false
+      },
+      {
+        "title": "京东家电家居携手美的超品日收官：全渠道成交额45.4亿元",
+        "date": "2026-11-18",
+        "publishDate": "2026-11-18",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "京东家电家居×美的全渠道超级品牌日全渠道成交额45.4亿元，跨品类套购率突破36%；线下加盟渠道零售额4.8亿元；品牌新增消费者同比增23%，美的品牌会员总量突破3030万。",
+        "source": "网经社（100ec.cn）数字零售台",
+        "url": "https://www.100ec.cn/detail--6665924.html",
+        "firsthand": false
+      },
+      {
+        "title": "京东平台规则更新：单品资质管控上线、智能马桶质保期明确、售后新增上门换新检修",
+        "date": "2026-11-17",
+        "publishDate": "2026-11-17",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "京东于2026年11月12日上线单品资质管控功能（新发品及老品编辑均触发资质校验，资质不全不允许发品）；保证金规则11月6日修订、11月13日生效，其中厨房卫浴下智能马桶类目质保期明确；店铺星级评定维度由四个调整为'商品质量、物流履约、咨询售后'三个。",
+        "source": "京东麦头条（mtt.jd.com）商家学习中心【W.46/W.47一周先知道】",
+        "url": "https://mtt.jd.com/article/articleView/49709982-7f91-4767-b05b-bfa50ba6f850.action",
+        "firsthand": false
+      },
+      {
+        "title": "京东2026双11：AI商品、家居服务与线下全渠道共同拉动消费",
+        "date": "2026-11-12",
+        "publishDate": "2026-11-12",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "京东官方双11复盘显示，平台正把AI购物、商品销售、到家服务和线下体验纳入同一零售体系。家居相关亮点包括多次上门保洁套餐交易额同比增长超过550%、搬家服务进入12个城市且订单接近增长300%、超过2000个家电家居品牌交易额同比翻倍。线下JD MALL等网点承担展示与专业服务枢纽作用，报告到访超过1340万人次。以上均为京东自报口径，不能视为全行业增速，也不是家具建材单独GMV。",
+        "source": "JD Corporate Blog（京东官方企业博客），作者Yuchuan Wang",
+        "url": "https://jdcorporateblog.com/jd-coms-2026-singles-day-grand-promotion-ai-services-and-omnichannel-retail/",
+        "firsthand": false
+      },
+      {
+        "title": "京东双11 AI应用：商家运营工具、数字人直播与联网硬件",
+        "date": "2026-11-12",
+        "publishDate": "2026-11-12",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "官方文章补充了双11背后的AI工具体系：京麦AI商家运营中心覆盖选品、上架、营销、履约和售后；京点点设计Agent与数字人直播降低内容生产门槛；JoyInside把AI能力接入硬件并覆盖超过100万家庭。其家居关联在于商品表达、导购、常态直播及智能硬件体验。工具效率和直播GMV均为平台自报，文章未公开实验设计，不能作为所有家具商家的确定收益。",
+        "source": "JD Corporate Blog（京东官方企业博客），作者Yuchuan Wang",
+        "url": "https://jdcorporateblog.com/from-tokens-to-ai-powered-shopping-how-jd-com-brings-ai-into-singles-day-2026/",
+        "firsthand": false
+      },
+      {
+        "title": "京东在World Retail Lab Asia强调physical AI与零售全价值链",
+        "date": "2026-10-16",
+        "publishDate": "2026-10-16",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "京东首席经济学家在香港World Retail Lab Asia提出，零售下一轮增长应来自AI对整个价值链的重塑，而非单纯增加流量或商品。文章将physical AI解释为进入门店、仓库、配送网络与服务的现实执行能力，并结合香港JD MALL、Kai Bo门店与京东物流说明线上线下一体化。它提供平台战略语境，不提供家居行业增长或投资回报数据。",
+        "source": "JD Corporate Blog（京东官方企业博客），作者Vivian Yang",
+        "url": "https://jdcorporateblog.com/jd-com-joins-world-retail-congress-first-world-retail-lab-asia-in-hong-kong/",
+        "firsthand": false
+      },
+      {
+        "title": "京东黑五China Haul营销：东南亚部分家具及大家电可跨境配送",
+        "date": "2026-11-20",
+        "publishDate": "2026-11-20",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "京东用China Haul社交内容趋势连接黑五营销、入境游客购物与海外直邮。家具直接相关内容是新加坡、马来西亚、泰国、越南的部分家具和大家电支持跨境配送，合资格商品可获得包装加固及运输损坏保障。文章同时公布部分商品五折起、合资格商品免运费等活动，不宜把优惠门槛当作家具全量促销或实际成交战报。",
+        "source": "JD Corporate Blog（京东官方企业博客），作者Vivian Yang",
+        "url": "https://jdcorporateblog.com/black-friday-meets-china-haul-discover-more-with-jd-com-wherever-you-are/",
+        "firsthand": false
+      },
+      {
+        "title": "京东官方博客确认11月17日发布2026年第三季度业绩，财务表未完成核验",
+        "date": "2026-11-17",
+        "publishDate": "2026-11-17",
+        "category": "双11/平台动态",
+        "type": "平台战报/规则",
+        "summary": "京东官方博客确认11月17日发布2026年第三季度未经审计业绩，并提供官方IR full report链接。博客主体以信息图为主，在线文本不包含财务数据表；访问IR全文时浏览器导航结果未确认，截图亦失败。因此本条仅记录可靠日期的披露事件，不填收入、利润、分部利润率或家居业绩。",
+        "source": "JD Corporate Blog（京东官方企业博客），作者Vivian Yang；链接至京东IR官方业绩全文",
+        "url": "https://jdcorporateblog.com/jd-com-announces-third-quarter-2026-financial-results/",
+        "firsthand": false
       }
     ],
     "douyin": [
@@ -655,6 +776,50 @@
         "source": "抖音电商学习中心",
         "url": "https://school.jinritemai.com/doudian/web/home",
         "firsthand": true
+      },
+      {
+        "title": "洛图科技：2026年双11中国智能门锁线上全渠道零售量112万套，同比下降5.3%，零售额11.8亿元，同比下降12.6%",
+        "date": "2026-11-23",
+        "publishDate": "2026-11-23",
+        "category": "抖音电商",
+        "type": "品类数据/趋势",
+        "summary": "双11智能门锁线上零售量112万套(-5.3%)、零售额11.8亿元(-12.6%)，均价1052元(-7.7%)，头部集中度提升",
+        "source": "199IT(台账18/33)·洛图科技",
+        "url": "https://www.199it.com/archives/1865446.html",
+        "firsthand": false
+      },
+      {
+        "title": "洛图科技：2026年Q3中国扫地机器人线上零售量91.8万套，同比增长2.4%；零售额27.2亿元，同比下降8.7%",
+        "date": "2026-11-11",
+        "publishDate": "2026-11-11",
+        "category": "抖音电商",
+        "type": "品类数据/趋势",
+        "summary": "Q3扫地机器人量增额降：零售量+2.4%、零售额-8.7%，价格战/结构下移",
+        "source": "199IT(台账18/33)·洛图科技",
+        "url": "https://www.199it.com/archives/1862648.html",
+        "firsthand": false
+      },
+      {
+        "title": "洛图科技：2026年Q3中国智能门锁全渠道销量361.0万套，同比下降9.4%",
+        "date": "2026-11-09",
+        "publishDate": "2026-11-09",
+        "category": "抖音电商",
+        "type": "品类数据/趋势",
+        "summary": "Q3智能门锁全渠道销量361万套，同比-9.4%",
+        "source": "199IT(台账18/33)·洛图科技",
+        "url": "https://www.199it.com/archives/1862304.html",
+        "firsthand": false
+      },
+      {
+        "title": "洛图科技：2026年Q3中国智能投影市场（不含激光电视）销量82.9万台，同比下降26.2%；销售额12.3亿元，同比下降27.1%",
+        "date": "2026-11-08",
+        "publishDate": "2026-11-08",
+        "category": "抖音电商",
+        "type": "品类数据/趋势",
+        "summary": "Q3智能投影量额双降约26-27%",
+        "source": "199IT(台账18/33)·洛图科技",
+        "url": "https://www.199it.com/archives/1861094.html",
+        "firsthand": false
       }
     ],
     "pdd": [
@@ -773,6 +938,50 @@
         "summary": "乐居头条（智能头条）报道天猫精灵发布全屋智能『人家生活』框架。注：日期取自乐居 WordPress REST API date 字段（该站正文内无可信内联日期），阿里官方原始发布口径与具体框架内容待核实后补录。",
         "url": "https://toutiao.le365.cc/266677.html",
         "source": "乐居头条（转载媒体，非一手官方稿）",
+        "firsthand": false
+      },
+      {
+        "title": "艾媒咨询：2026年中国家居服务平台发展白皮书",
+        "date": "2026-11-25",
+        "publishDate": "2026-11-25",
+        "category": "天猫/小红书",
+        "type": "趋势报告",
+        "summary": "家居消费重心向服务体验转移；家居售后服务平台成产业链末端基础设施；下沉县域乡镇市场为中长期增长主线",
+        "source": "艾媒咨询(台账48)·艾媒家居产业研究院",
+        "url": "https://www.iimedia.cn/c400/120742.html",
+        "firsthand": false
+      },
+      {
+        "title": "艾媒咨询：智能适配 风随人异——2026年AI空调行业消费者认知研究报告",
+        "date": "2026-11-22",
+        "publishDate": "2026-11-22",
+        "category": "天猫/小红书",
+        "type": "趋势报告",
+        "summary": "中国智能家居市场规模2025年8154亿元，预计2026年9980亿元、2030年破1.8万亿元；空调从被动调温向主动适配转型",
+        "source": "艾媒咨询(台账48)",
+        "url": "https://www.iimedia.cn/c400/120512.html",
+        "firsthand": false
+      },
+      {
+        "title": "艾媒咨询：2026年中国电商“双十一”消费大数据监测报告",
+        "date": "2026-11-12",
+        "publishDate": "2026-11-12",
+        "category": "天猫/小红书",
+        "type": "趋势报告",
+        "summary": "双11结构性迭代：现货立减为主、预售退为大件/定制商品补充模式；AI贯通供需两端；质价比主导、服务类商品需求崛起",
+        "source": "艾媒咨询(台账48)",
+        "url": "https://www.iimedia.cn/c400/120074.html",
+        "firsthand": false
+      },
+      {
+        "title": "家的友好高度：2026天猫居家适老化趋势报告",
+        "date": "2026-10-16",
+        "publishDate": "2026-10-16",
+        "category": "天猫/小红书",
+        "type": "趋势报告",
+        "summary": "天猫“黄扶手计划”2026聚焦“全屋高度适配”，系统拆解居家尺度失配，探索适老化从单品创新到系统升级路径",
+        "source": "CBNData(台账42)·天猫×第一财经商业数据中心",
+        "url": "https://www.cbndata.com/report/3368/detail",
         "firsthand": false
       }
     ]
@@ -924,7 +1133,8 @@
     "巨量千川帮助中心（id10）：/support/backend/content/keyWord 接口已逆出并全量翻页（有效 spaceId=6/9/10），15 个家装关键词共 231 条去重，但『卫浴/灯具/涂料/地板/厨卫』total=0，227 条时间戳早于 2026-06，窗口内 3 条且全属 TikTok Shop 跨境与城市站培训 → 该源本窗口对国内家装赛道无新增内容（非抓取失败）。两条《大家装/大家居类目选品指南》isPremium=1，正文需登录。",
     "京东企业博客（id15）：/category/jd-retail/page/2/ 与 /2026/07/、/2026/08/ 三个 URL 返回逐字节相同的 88KB 页面，WordPress 分页与月归档实际失效，无法翻至第2页，不能排除存在未列出文章；已用 ?s= 站内搜索（home appliance/trade-in/furniture/smart home）兜底，窗口内家装相关仅 Carrier 一篇。",
     "抖店大学 4 条家装关键内容正文取不到（标题/日期/URL/阅读量已确认）：家具&家装「安装模式」操作手册（07-21，纯图片）、「家具&家装行业」经营双周刊第1期（07-28，附件）、家具家装行业直播流量提升策略（07-06创建/07-08更新，视频课）、京准通建材Q3站外广告宣讲（08-10，直播卡片）→ 待夸克浏览器补正文/附件。",
-    "Round 13（2026-09-28）已核验拼多多、微信小店/视频号、快手与淘宝天猫相关入口，未取得可独立核验的家装家居垂类新增；9月24日双11条目仅作为跨平台标题与日期层线索，不推断具体条款。"
+    "Round 13（2026-09-28）已核验拼多多、微信小店/视频号、快手与淘宝天猫相关入口，未取得可独立核验的家装家居垂类新增；9月24日双11条目仅作为跨平台标题与日期层线索，不推断具体条款。",
+    "Round 14：拼多多、微信小店/视频号、快手未取得可独立核验的家装垂类10-11月新增；蝉妈妈为近30天滚动窗口非10-11月全周期；京东双11战报数字多为平台自报口径。"
   ],
   "conflicts": [
     "平台侧本期无窗口内的家装家居垂类量化战报，暂无新增口径冲突；618相关口径冲突(星图9340亿+4.0% vs 复旦3.2%等)见首期归档看板",

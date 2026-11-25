@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-28",
+  "asOf": "2026-11-25",
   "note": "本表逐源披露采集深度、条数、时间戳与阻塞原因，遵循『不编造、可追溯、阻塞透明』原则。采集深度分级：0=未取到/阻塞，1=浅层（仅标题/目录），2=中层（关键指标/结构化摘要），3=深层（完整明细/多页/可下载表）。",
   "layers": {
     "A": "免登录公开源（政府/协会/上市公司公告/权威媒体）",
@@ -14,9 +14,9 @@
       "layer": "A",
       "url": "https://www.stats.gov.cn/sj/zxfb/",
       "depth": 3,
-      "count": "本轮已复核",
-      "timestamp": "2026-09-28",
-      "blocker": "新增1—8月全国规模以上工业企业利润同比增速；房地产页未发现口径完整的新全国指标。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "取得10月社零/工业/固投/房地产/70城房价/生产资料价格正文及附表，含家具与建材分项。"
     },
     {
       "name": "中指研究院（百城房价/成交）",
@@ -59,9 +59,9 @@
       "layer": "A",
       "url": "http://www.cbda.cn/html/tzgg/",
       "depth": 3,
-      "count": "5条(47号/44号/52号/46号文件+百强榜五类)",
-      "timestamp": "2026-08-13",
-      "blocker": "本轮攻破滑块验证：请求 verify.php?set_verified=1&_t=<时间戳> 返回 {status:ok} 并下发 sl-session/VS 会话信息，携带 会话信息 jar 后正文完全可读。产出中装协〔2026〕47号/44号/52号/46号文件与百强榜五类共5条，均为一手正文。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "取得1-10月房地产开发数据与21家上市装企H1业绩两篇正文（转载类已标注待核）。"
     },
     {
       "name": "权威媒体门户（新华网/央广网/乐居/搜狐焦点/OFweek等）",
@@ -85,10 +85,10 @@
       "name": "Layer B 免费注册源探测（网经社/星图/艾瑞等）",
       "layer": "B",
       "url": "https://www.100ec.cn/",
-      "depth": 2,
-      "count": "探测记录若干",
-      "timestamp": "2026-07-16",
-      "blocker": "部分报告需付费会员，已取公开引用部分"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "双11专题5篇正文：星图首轮GMV+2.4%、家电2675亿居首、京东双11战报等。"
     },
     {
       "name": "抖店罗盘·类目概览（抖音电商后台）",
@@ -148,10 +148,10 @@
       "name": "蝉妈妈（抖音电商第三方榜单）",
       "layer": "C",
       "url": "https://www.chanmama.com/brandRank/?category_id=7",
-      "depth": 3,
-      "count": "家具建材近30天TOP25品牌",
-      "timestamp": "2026-09-17",
-      "blocker": "销售额指数仅可同窗口横向比较，不可换算真实GMV。"
+      "depth": 2,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "家具建材类目近30天品牌榜快照；页面为滚动窗口，不能覆盖10-11月全周期。"
     },
     {
       "name": "微信文档（家装行业协作文档，如有）",
@@ -166,64 +166,64 @@
       "name": "巨潮资讯网 CNINFO（深交所法定披露平台·上市公司业绩预告）",
       "layer": "A",
       "url": "http://www.cninfo.com.cn/",
-      "depth": 3,
-      "count": "欧派/索菲亚/箭牌/大亚圣象4家2026半年度业绩预告原文数值+另4家已披露待补",
-      "timestamp": "2026-07-18",
-      "blocker": "无。API检索+PDF原文提取，每条附公告直链可校验"
+      "depth": 1,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "本轮未完成13家公司Q3公告逐家核验，保留为缺口。"
     },
     {
       "name": "中国建筑材料联合会 CBMF·2026年5月运行简报（正文深钻）",
       "layer": "A",
       "url": "https://www.cbmf.org/c/2026/07/02/23820.shtml",
       "depth": 3,
-      "count": "14项运行指标（增加值/水泥玻璃产量/出厂价/营收利润/固投/进出口）",
-      "timestamp": "2026-07-18",
-      "blocker": "无。正文页静态可读，本期已从depth2升级至depth3"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "下钻运行监测5篇正文：10月MPI 97.3、11月MPI 98.5、1-9月行业运行简报、绿色建材报告。"
     },
     {
       "name": "奥维云网 AVC（家电+家居7大部品罗盘·免登录资讯）",
       "layer": "A",
       "url": "https://www.avc-mr.com/home",
       "depth": 3,
-      "count": "本轮已复核",
-      "timestamp": "2026-09-28",
-      "blocker": "夸克复核官网资讯流；Round 13新增仅采用标题、日期层证据，不推断报告数值。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "后端API取得Q3床垫报告全文、双11空调/厨小总结等。"
     },
     {
       "name": "36氪·家居建材（浏览器渲染搜索）",
       "layer": "A",
       "url": "https://36kr.com/search/articles/家居建材",
-      "depth": 3,
-      "count": "7条家居行业观点/研报标题+日期（卖场转型/破产潮/出海ManoMano等）",
-      "timestamp": "2026-08-13",
-      "blocker": "夸克进入36氪『家居』搜索页，抓到11篇窗口内文章(7-31血色黄昏/8-06靠AI半导体翻身/7-27 MORROR ART B+轮/7-13四大趋势)，已注入industry与highlights。"
+      "depth": 2,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "索菲亚出口、机构托管存量房等2篇（自媒体投稿，转述待核）。"
     },
     {
       "name": "新浪家居 jiaju.sina.com.cn",
       "layer": "A",
       "url": "https://jiaju.sina.com.cn/",
-      "depth": 2,
-      "count": "本轮已复核",
-      "timestamp": "2026-09-28",
-      "blocker": "夸克核验页面与可见资讯，取得9月28日家居行业案例线索；无可比量化指标。"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "BHEE卖场数据、大家居三季报、顾家万格丽等3篇原创正文。"
     },
     {
       "name": "阿拉丁照明网 alighting.cn（灯具专业源）",
       "layer": "A",
       "url": "https://www.alighting.cn/ ; https://www.alighting.cn/news/",
-      "depth": 2,
-      "count": "照明/灯具光源行业资讯(2026-07-29~30):上半年出口+17家上市公司H1业绩预告+木林森净利6-7亿+多条道路/景观照明大额标讯+每周光点NO.246",
-      "timestamp": "2026-07-30 18:22(现采)",
-      "blocker": "首访触发堡塔云WAF人机滑块,经Computer Use drag一次通过;此后主域访问不再拦截。/news.htm为无效路径(404),正确门户首页www.alighting.cn、新闻中心www.alighting.cn/news/。内容为B端行业口径,非天猫C端成交。"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "通过WAF滑块后取得照明产业链三季报与AI照明技术规范（公牛牵头）。"
     },
     {
       "name": "巨潮资讯网cninfo(第二批:志邦/海南发展/皮阿诺业绩预告)",
       "layer": "B",
       "url": "http://www.cninfo.com.cn/",
-      "depth": 3,
-      "count": "3家+1份装修装饰经营简报",
-      "timestamp": "2026-07-19",
-      "blocker": "无。志邦转亏/皮阿诺扣非亏损扩大/海南发展减亏,均附PDF直链可核验"
+      "depth": 1,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "本轮未完成13家公司Q3公告逐家核验，保留为缺口。"
     },
     {
       "name": "浏览器搜索补采(BHI景气指数+东鹏控股业绩)",
@@ -238,10 +238,10 @@
       "name": "巨潮资讯网cninfo(第三批:慕思/蒙娜丽莎/金牌/惠达/三棵树 07月中下旬披露)",
       "layer": "A",
       "url": "http://www.cninfo.com.cn/",
-      "depth": 2,
-      "count": "5家上市公司(慕思预降44-51%/蒙娜丽莎扭亏/金牌预亏/惠达预亏/三棵树问询回复)",
-      "timestamp": "2026-07-26",
-      "blocker": "本轮为业绩预告披露季补采,均附个股披露页直链;慕思/金牌具体PDF数值区间待二次核验,已在gaps标注"
+      "depth": 1,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "本轮未完成13家公司Q3公告逐家核验，保留为缺口。"
     },
     {
       "name": "北京市人民政府/北京市商务局(国补扩围·智能家居10类)",
@@ -410,45 +410,45 @@
       "layer": "A",
       "url": "https://www.cabee.org/ ; http://www.cbda.cn/",
       "depth": 3,
-      "count": "辐射隔热涂料团标+CBDA标准管理办法",
-      "timestamp": "2026-08-13",
-      "blocker": "无。CABEE 辐射隔热涂料团标与 CBDA 标准管理办法均取自协会官网正文；CBDA 侧滑块验证已于本轮攻破(见上方 CBDA 行说明)。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "取得1-10月房地产开发数据与21家上市装企H1业绩两篇正文（转载类已标注待核）。"
     },
     {
       "name": "中国建筑材料联合会 CBMF·2026年6月运行简报（正文深钻）",
       "layer": "A",
       "url": "https://www.cbmf.org/yxjc/",
       "depth": 3,
-      "count": "9项指标",
-      "timestamp": "2026-08-13",
-      "blocker": "无。上半年建材增加值-2.8%、营收-13.9%、利润总额-71.9%，瓷质砖/陶质砖产量降幅超10%，卫生陶瓷价格环比上涨，均取自简报正文。局限：窗口内无陶瓷、涂料单独子行业专报，已入gaps。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "下钻运行监测5篇正文：10月MPI 97.3、11月MPI 98.5、1-9月行业运行简报、绿色建材报告。"
     },
     {
       "name": "199IT 互联网数据资讯（WordPress REST 全量遍历）",
       "layer": "A",
       "url": "https://www.199it.com/wp-json/wp/v2/posts",
       "depth": 3,
-      "count": "窗口内全量文章",
-      "timestamp": "2026-08-13",
-      "blocker": "无。攻破 /wp-json/wp/v2/posts?after=&before=&per_page=&page= 接口：无 X-WP-Total 响应头，以 HTTP 400 rest_post_invalid_page_number 为翻页终止条件，按3天子窗口切分规避 HTTP 500 限流。产出洛图智能锁全渠道821.9万套/-8.3%、奥维线上智能锁345万套/-13.3%、奥维摄像头1518.7万台/-4.9%、赛迪智能家居8880.1亿→11432.8亿、宠物智能喂养器49万台/+12.8%等。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "双11智能门锁洛图数据等多条10-11月条目。"
     },
     {
       "name": "新浪财经全站搜索接口（替代已停更的新浪家居频道）",
       "layer": "A",
       "url": "https://interface.sina.cn/homepage/search.d.json",
       "depth": 3,
-      "count": "窗口内全量命中",
-      "timestamp": "2026-08-13",
-      "blocker": "新浪家居频道 jiaju.sina.com.cn 末条更新早于窗口起点、已实质停更；改用 search.d.json?q=&size=50&page= 按关键词全量遍历。产出京东家电家居新设线下事业部（210家MALL/1.8万县域专卖店）、曲美抖音费率5%、多家中报。原频道停更已入gaps。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "BHEE卖场数据、大家居三季报、顾家万格丽等3篇原创正文。"
     },
     {
       "name": "东方财富·行业研报 API（reportapi + 正文页）",
       "layer": "A",
       "url": "https://reportapi.eastmoney.com/report/list",
       "depth": 3,
-      "count": "窗口内行业研报全量",
-      "timestamp": "2026-08-13",
-      "blocker": "无。攻破 report/list?qType=1&industryCode=*&beginTime=&endTime=&pageSize=100&pageNo= 列表接口 + data.eastmoney.com/report/zw_industry.jshtml?infocode= 正文页。产出太平洋证券卫浴出口-62%、7月重点城市二手房+12.2%、中邮消费建材触底、定制家居前置获客等。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "研报API按6行业代码拉取10-01至11-25条目17条；正文PDF未下载。"
     },
     {
       "name": "发现报告（Next.js 数据接口）",
@@ -472,10 +472,10 @@
       "name": "第一财经数据 CBNData（__INITIAL_STATE__ 解析）",
       "layer": "B",
       "url": "https://www.cbndata.com/",
-      "depth": 2,
-      "count": "本轮已复核",
-      "timestamp": "2026-09-28",
-      "blocker": "夸克核验报告与看点列表；窗口内未发现9月24日至28日新增家装主题内容。"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "10月天猫适老化趋势报告、贝壳Q3家装净收入33亿元(-22.9%)等看点。"
     },
     {
       "name": "慧博投研资讯（研报索引）",
@@ -508,19 +508,19 @@
       "name": "信通院·白皮书栏目",
       "layer": "A",
       "url": "http://www.caict.ac.cn/kxyj/qwfb/bps/",
-      "depth": 1,
-      "count": "0",
-      "timestamp": "2026-08-13",
-      "blocker": "夸克进入信通院蓝皮书列表页成功(此前curl被WAF拦)，抓到22页目录，最新一条2026-04-03，窗口内无新蓝皮书。由WAF拦截升级为可进入但窗口内空。"
+      "depth": 2,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "取得《端侧智能产业发展报告(2026.10)》含智慧家庭章节；全屋智能专项白皮书无10-11月新增。"
     },
     {
       "name": "贝壳研究院",
       "layer": "A",
       "url": "https://research.ke.com/",
-      "depth": 0,
-      "count": "0",
-      "timestamp": "—",
-      "blocker": "硬阻断：公开内容冻结在2023-10-20，sitemap 的 lastmod 声称近期更新但正文未变（伪造时间戳）。新报告在登录墙后，已排入夸克批次。"
+      "depth": 1,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "公开成果最新停留在2023-10；完整列表需登录，窗口内无可入库公开内容。"
     },
     {
       "name": "三个皮匠报告",
@@ -535,19 +535,19 @@
       "name": "艾媒咨询",
       "layer": "B",
       "url": "https://www.iimedia.cn/c1081",
-      "depth": 2,
-      "count": "本轮已复核",
-      "timestamp": "2026-09-28",
-      "blocker": "夸克核验报告列表与公开摘要；空气能白皮书为邻近领域信息，未作为核心家装新增。"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "双十一消费监测、AI空调、家居服务平台白皮书。"
     },
     {
       "name": "艾瑞咨询报告库",
       "layer": "B",
       "url": "https://report.iresearch.cn/",
       "depth": 2,
-      "count": "本轮已复核",
-      "timestamp": "2026-09-28",
-      "blocker": "夸克核验报告列表及公开摘要；窗口内未发现9月24日至28日新增家装主题报告。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "10-11月无家居专项新报告；9月AI化白皮书作背景线索。"
     },
     {
       "name": "亿欧·消费生活报告库",
@@ -562,10 +562,10 @@
       "name": "199IT·报告库分类页",
       "layer": "A",
       "url": "https://www.199it.com/archives/category/report",
-      "depth": 1,
-      "count": "0（真实空窗）",
-      "timestamp": "2026-08-13",
-      "blocker": "分类页可读2738字符，窗口内无家居建材/智能家居相关报告，属真实空窗，已入gaps。（同站资讯流已通过 REST 接口全量采集）"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "双11智能门锁洛图数据等多条10-11月条目。"
     },
     {
       "name": "世界银行数据",
@@ -589,19 +589,19 @@
       "name": "中国工业新闻网·统计数据栏目",
       "layer": "A",
       "url": "https://www.cinic.org.cn/xw/tjsj/",
-      "depth": 1,
-      "count": "0（口径不匹配）",
-      "timestamp": "2026-08-13",
-      "blocker": "栏目可读3709字符但内容为宏观转载；家居建材口径应改用 /hy/qg/ 与 /hy/jz/ 两个栏目，已入gaps，下轮切换路径。"
+      "depth": 2,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "10月国民经济与11月LPR正文；统计数据栏目实为新闻聚合。"
     },
     {
       "name": "京东企业博客·零售分类",
       "layer": "A",
       "url": "https://jdcorporateblog.com/category/jd-retail/",
-      "depth": 1,
-      "count": "0（未检出）",
-      "timestamp": "2026-08-13",
-      "blocker": "分类页可读5881字符，本轮未检出窗口内家居家电相关新博文；京东线下事业部调整改由新浪财经转载核到。"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "双11复盘、AI商家运营、全渠道战略等5条官方记录，翻页至9月23日。"
     },
     {
       "name": "乐居头条",
@@ -644,45 +644,45 @@
       "layer": "B",
       "url": "http://www.cricchina.com/",
       "depth": 1,
-      "count": "标题/索引级核验",
-      "timestamp": "2026-09-28",
-      "blocker": "夸克核验首页可见数据，但城市与统计口径缺失，未纳入正式指标。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "官网重定向至SaaS产品页，轮播数字无城市与统计口径，不采用。"
     },
     {
       "name": "顶级研报 / 阿里研究院 / 网经社数字零售快讯 / 百家号作者页",
       "layer": "B",
       "url": "https://www.djyanbao.com/index",
-      "depth": 0,
-      "count": "0",
-      "timestamp": "—",
-      "blocker": "四源均为纯前端渲染 SPA，curl 可读字符分别为73/5/8/0，后端完全取不到内容，已全部排入夸克批次。"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "双11专题5篇正文：星图首轮GMV+2.4%、家电2675亿居首、京东双11战报等。"
     },
     {
       "name": "阿拉丁照明网（灯具垂直源）",
       "layer": "A",
       "url": "https://www.alighting.cn/",
-      "depth": 0,
-      "count": "0",
-      "timestamp": "—",
-      "blocker": "本轮直连 code=000（垂直站反爬），须夸克进入，已排入夸克批次。（07-30 曾现采到 depth2 数据）"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "通过WAF滑块后取得照明产业链三季报与AI照明技术规范（公牛牵头）。"
     },
     {
       "name": "36氪·家居搜索",
       "layer": "A",
       "url": "https://36kr.com/search/articles/",
-      "depth": 0,
-      "count": "0",
-      "timestamp": "—",
-      "blocker": "搜索页命中 WAF（安全检测 / wafchallenge），可读56字符，须夸克带真实浏览器指纹进入，已排入夸克批次。"
+      "depth": 2,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "索菲亚出口、机构托管存量房等2篇（自媒体投稿，转述待核）。"
     },
     {
       "name": "奥维云网 AVC 官网原始报告页",
       "layer": "A",
       "url": "https://www.avc-mr.com/home",
-      "depth": 1,
-      "count": "标题/索引级核验",
-      "timestamp": "2026-09-28",
-      "blocker": "夸克核验9月24日高端建材渠道家电趋势与智能安防峰会议程标题；未获得可公开引用的报告数值或议程正文。"
+      "depth": 3,
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "后端API取得Q3床垫报告全文、双11空调/厨小总结等。"
     },
     {
       "name": "微信文档·表格（协作文档）",
@@ -698,9 +698,9 @@
       "layer": "A",
       "url": "https://100ec.cn/DigitalRetail",
       "depth": 3,
-      "count": "夸克抓取",
-      "timestamp": "2026-08-13",
-      "blocker": "夸克进入网经社数字零售台，抓到8-13当日20+条快讯(天猫AI生意管家新商版、浙江直播经济意见、拼多多AI图片合规公告)，已注入crossPlatform/policy。"
+      "count": "Round 14已复核",
+      "timestamp": "2026-11-25",
+      "blocker": "双11专题5篇正文：星图首轮GMV+2.4%、家电2675亿居首、京东双11战报等。"
     },
     {
       "name": "2026-09-09近30天公开源增量（住建部/商务部/市场监管总局/平台与行业媒体）",
@@ -769,12 +769,12 @@
   ],
   "summary": {
     "totalSources": 84,
-    "depth3": 36,
-    "depth2": 21,
-    "depth1": 15,
-    "depth0_blocked": 12,
-    "publicItemsCollected": "Round 13新增9条结构化记录，覆盖宏观、平台、行业与商家动态；其余板块均完成本轮核验。",
-    "newThisRound": "Round 13：1—8月规上工业企业利润、京准通报表与AI查数升级、小红书AI生活趋势、米家全屋智能体验店、整装S2B2C模式与直播电商低价品控风险。",
-    "blockedNote": "拼多多、微信小店、快手、淘宝天猫未取得可独立核验的家装垂类新增；CRIC首页数据因城市与统计口径缺失未采用。"
+    "depth3": 42,
+    "depth2": 20,
+    "depth1": 14,
+    "depth0_blocked": 8,
+    "publicItemsCollected": "Round 14新增约70条结构化记录，覆盖宏观、房地产、平台、行业政策与商家动态（10-11月专题）。",
+    "newThisRound": "Round 14：10月社零与房地产数据、建材MPI景气、双11全平台战报与规则、大家居三季报、智能门锁/床垫/照明品类数据、广东全屋智能行动方案。",
+    "blockedNote": "抖店罗盘未重采（沿用上期并标注）；千瓜尊享会员受限；巨潮13家Q3公告未逐家核验；拼多多/微信小店/快手无独立核验新增。"
   }
 }

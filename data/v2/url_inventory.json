@@ -10,12 +10,13 @@
       "status": "noise",
       "note": "搜索入口，非数据源本身",
       "testResult": {
-        "testedAt": "2026-08-26",
+        "testedAt": "2026-11-25",
         "verdict": "noise",
         "verdictLabel": "噪声源·已剔除",
         "yielded": false,
-        "conclusion": "百度首页,噪声源,夸克抓取315B均为导航,已剔除",
-        "round": 5
+        "conclusion": "与家装建材无关或为搜索入口噪声源，已剔除。",
+        "round": 14,
+        "method": "浏览器核验 (Quark)"
       }
     },
     {
@@ -26,12 +27,12 @@
       "status": "ok_yield",
       "note": "抖音电商品牌榜，需会员登录；这就是上期缺的后台深链",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验蝉妈妈品牌榜家具建材类目（近30天窗口），取得头部品牌榜单快照；因页面为滚动窗口未覆盖10-11月全周期。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -43,12 +44,12 @@
       "status": "ok_yield",
       "note": "抖店商家后台登录页，需授权商家账号",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
         "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -57,15 +58,15 @@
       "url": "https://app.qian-gua.com/#/workbench/red",
       "name": "千瓜·工作台",
       "layer": "C",
-      "status": "ok_yield",
+      "status": "need_login_browser",
       "note": "小红书数据，家居家装行业需尊享版会员",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "ok_yield",
-        "verdictLabel": "夸克核验完成·取得有效内容",
-        "yielded": true,
-        "conclusion": "夸克进入千瓜工作台，核验9月24日AI生活趋势文章的标题、日期与公开摘要。",
-        "round": 13,
+        "testedAt": "2026-11-25",
+        "verdict": "need_login_browser",
+        "verdictLabel": "登录或权限门槛未通过",
+        "yielded": false,
+        "conclusion": "夸克进入千瓜需尊享会员权限，本轮未取得10-11月家居家装量化新增。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -77,12 +78,12 @@
       "status": "ok_empty",
       "note": "抖音/小红书第三方数据，需登录+会员",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -91,15 +92,15 @@
       "url": "https://compass.jinritemai.com/shop/chance/category-overview",
       "name": "抖店罗盘·类目概览",
       "layer": "C",
-      "status": "ok_yield",
+      "status": "need_login_browser",
       "note": "已陪跑登录采集，depth3",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "ok_yield",
-        "verdictLabel": "夸克核验完成·取得有效内容",
-        "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "testedAt": "2026-11-25",
+        "verdict": "need_login_browser",
+        "verdictLabel": "登录或权限门槛未通过",
+        "yielded": false,
+        "conclusion": "夸克核验抖店罗盘需商家登录状态，本轮未重采，沿用上期数据并在看板标注原始数据日期。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -108,15 +109,15 @@
       "url": "https://shop.jd.com/jdm/home",
       "name": "京东商家(京麦)",
       "layer": "C",
-      "status": "ok_yield",
+      "status": "need_login_browser",
       "note": "需POP商家号，买家号被拦截",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "ok_yield",
-        "verdictLabel": "夸克核验完成·取得有效内容",
-        "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "testedAt": "2026-11-25",
+        "verdict": "need_login_browser",
+        "verdictLabel": "登录或权限门槛未通过",
+        "yielded": false,
+        "conclusion": "夸克核验后仍受登录或权限门槛限制；本轮未取得可公开披露的有效新增。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -125,15 +126,15 @@
       "url": "https://xue.xiaohongshu.com/pro?source=PRO",
       "name": "小红书种草学Pro",
       "layer": "C",
-      "status": "ok_yield",
+      "status": "need_login_browser",
       "note": "定性内容曾采depth2，Pro量化数据需商业账号",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "ok_yield",
-        "verdictLabel": "夸克核验完成·取得有效内容",
-        "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "testedAt": "2026-11-25",
+        "verdict": "need_login_browser",
+        "verdictLabel": "登录或权限门槛未通过",
+        "yielded": false,
+        "conclusion": "夸克核验后仍受登录或权限门槛限制；本轮未取得可公开披露的有效新增。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -145,12 +146,12 @@
       "status": "ok_yield",
       "note": "school/学堂板块可能免登录公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克进入京准通学堂并下钻正文，核验9月28日报表入口统一、AI查数与智能诊断升级。",
-        "round": 13,
+        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -162,12 +163,12 @@
       "status": "ok_empty",
       "note": "support帮助文档可能公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -196,12 +197,13 @@
       "status": "dead",
       "note": "同上",
       "testResult": {
-        "testedAt": "2026-08-26",
+        "testedAt": "2026-11-25",
         "verdict": "dead",
         "verdictLabel": "链接失效/域名拦截·已确认",
         "yielded": false,
-        "conclusion": "字节飞书wiki-2:夸克进入0B,文档已失效/无权限",
-        "round": 5
+        "conclusion": "链接失效或域名拦截，已确认。",
+        "round": 14,
+        "method": "浏览器核验 (Quark)"
       }
     },
     {
@@ -212,12 +214,12 @@
       "status": "ok_yield",
       "note": "公开垂直媒体，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验中国质量新闻网家居建材频道，取得TATA木门心动样板间、兔宝宝绿色家居等11月正文。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -229,12 +231,12 @@
       "status": "ok_yield",
       "note": "已用100ec主站，此快讯页待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验网经社双11专题，取得星图口径首轮综合电商GMV、家电家居品类及京东双11战报等5篇正文级事实。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -246,12 +248,12 @@
       "status": "ok_yield",
       "note": "京东官方博客，公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验京东企业博客零售分类，取得双11复盘、AI商家运营、全渠道战略等5条官方记录。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -263,12 +265,12 @@
       "status": "ok_yield",
       "note": "已用cbmf主站，运行监测栏目待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克下钻建材联合会运行监测栏目5篇正文，取得10月MPI 97.3、11月MPI 98.5及1-9月行业运行简报。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -297,12 +299,12 @@
       "status": "ok_yield",
       "note": "数据资讯聚合，公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验199IT，取得双11智能门锁洛图数据、TrendForce等多条10-11月条目。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -314,12 +316,12 @@
       "status": "ok_yield",
       "note": "家电/家居权威数据，部分公开部分会员，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克核验奥维云网资讯流，取得两条9月24日标题与日期证据；未推断报告数值。",
-        "round": 13,
+        "conclusion": "夸克通过奥维云网后端API取得Q3床垫报告、双11空调/厨小总结等正文级事实。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -331,12 +333,12 @@
       "status": "ok_yield",
       "note": "已采depth3",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克核验国家统计局，取得9月28日发布的1—8月规上工业企业利润同比增速。",
-        "round": 13,
+        "conclusion": "夸克核验国家统计局10月数据发布，取得10月社零、房地产、70城房价、生产资料价格等正文及附表。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -348,12 +350,12 @@
       "status": "ok_empty",
       "note": "上市公司公告权威源，公开可查，待实测（高价值）",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -362,15 +364,15 @@
       "url": "https://www.cinic.org.cn/xw/tjsj/",
       "name": "中国工业新闻网·统计数据",
       "layer": "A",
-      "status": "ok_empty",
+      "status": "ok_yield",
       "note": "公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "ok_empty",
-        "verdictLabel": "夸克核验完成·本轮无有效新增",
-        "yielded": false,
-        "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "testedAt": "2026-11-25",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克核验完成·取得有效内容",
+        "yielded": true,
+        "conclusion": "夸克核验中国工业新闻网，取得10月国民经济与11月LPR正文；其统计数据栏目实为新闻聚合。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -379,15 +381,15 @@
       "url": "https://toutiao.le365.cc/",
       "name": "乐居头条",
       "layer": "A",
-      "status": "need_login_browser",
+      "status": "ok_empty",
       "note": "家居资讯，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "need_login_browser",
-        "verdictLabel": "登录或权限门槛未通过",
+        "testedAt": "2026-11-25",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
-        "conclusion": "夸克核验后仍受登录或权限门槛限制；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "conclusion": "夸克核验乐居头条已转型智能头条，文章无发布时间戳，部分线索以政策事件日期替代并显式标注。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -399,12 +401,12 @@
       "status": "ok_yield",
       "note": "公开垂直媒体，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克核验新浪家居可见资讯，取得9月28日家居行业案例线索。",
-        "round": 13,
+        "conclusion": "夸克核验新浪家居，取得BHEE卖场数据、大家居三季报、顾家万格丽等3篇原创正文。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -430,15 +432,15 @@
       "url": "https://www.alighting.cn/",
       "name": "阿拉丁照明网",
       "layer": "A",
-      "status": "need_login_browser",
+      "status": "ok_yield",
       "note": "灯具光源子行业垂直源，公开，待实测（补灯具短板）",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "need_login_browser",
-        "verdictLabel": "登录或权限门槛未通过",
-        "yielded": false,
-        "conclusion": "夸克核验后仍受登录或权限门槛限制；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "testedAt": "2026-11-25",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克核验完成·取得有效内容",
+        "yielded": true,
+        "conclusion": "夸克通过WAF滑块后核验阿拉丁照明网，取得照明产业链三季报与AI照明技术规范动态。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -450,12 +452,12 @@
       "status": "ok_yield",
       "note": "公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验36氪家居搜索，取得索菲亚出口、机构托管存量房等2篇详情（转述标注）。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -464,15 +466,15 @@
       "url": "http://www.cbda.cn/",
       "name": "建筑装饰协会",
       "layer": "A",
-      "status": "need_login_browser",
+      "status": "ok_yield",
       "note": "已采depth1(tzgg子路径)",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "need_login_browser",
-        "verdictLabel": "登录或权限门槛未通过",
-        "yielded": false,
-        "conclusion": "夸克核验后仍受登录或权限门槛限制；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "testedAt": "2026-11-25",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克核验完成·取得有效内容",
+        "yielded": true,
+        "conclusion": "夸克核验中国建筑装饰协会，取得1-10月房地产开发数据转载与21家上市装企H1业绩（转述待核）。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -484,12 +486,13 @@
       "status": "dead",
       "note": "阿里网络访问策略 302拦截",
       "testResult": {
-        "testedAt": "2026-08-26",
+        "testedAt": "2026-11-25",
         "verdict": "dead",
         "verdictLabel": "链接失效/域名拦截·已确认",
         "yielded": false,
-        "conclusion": "微信文档·表格:夸克进入被访问策略域名拦截(约35B),企业安全策略阻断",
-        "round": 5
+        "conclusion": "链接失效或域名拦截，已确认。",
+        "round": 14,
+        "method": "浏览器核验 (Quark)"
       }
     },
     {
@@ -500,12 +503,12 @@
       "status": "ok_yield",
       "note": "京东商家资讯，需商家登录，待实测是否有公开页",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验京东麦头条免登录页，取得单品资质管控、保证金规则（智能马桶质保）、售后与店铺星级新规。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -514,15 +517,15 @@
       "url": "https://www.sgpjbg.com.cn/Search.html?q=家装",
       "name": "三个皮匠报告",
       "layer": "B",
-      "status": "ok_yield",
+      "status": "ok_empty",
       "note": "报告平台，摘要免费全文会员，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "ok_yield",
-        "verdictLabel": "夸克核验完成·取得有效内容",
-        "yielded": true,
-        "conclusion": "夸克核验家装报告索引，取得标题、日期与页数信息；未读取会员正文。",
-        "round": 13,
+        "testedAt": "2026-11-25",
+        "verdict": "ok_empty",
+        "verdictLabel": "夸克核验完成·本轮无有效新增",
+        "yielded": false,
+        "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -534,12 +537,12 @@
       "status": "ok_empty",
       "note": "研报平台，部分免费，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -551,12 +554,12 @@
       "status": "ok_yield",
       "note": "公开报告库，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验199IT报告库分类页，取得多条10-11月智能家居条目。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -568,12 +571,13 @@
       "status": "dead",
       "note": "待实测领域",
       "testResult": {
-        "testedAt": "2026-08-26",
+        "testedAt": "2026-11-25",
         "verdict": "dead",
         "verdictLabel": "链接失效/域名拦截·已确认",
         "yielded": false,
-        "conclusion": "百家号作者-2:夸克提示\"用户信息不存在\",账号失效(约7B)",
-        "round": 5
+        "conclusion": "链接失效或域名拦截，已确认。",
+        "round": 14,
+        "method": "浏览器核验 (Quark)"
       }
     },
     {
@@ -584,12 +588,12 @@
       "status": "ok_yield",
       "note": "部分报告免费下载，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验艾瑞报告库；10-11月无家居专项新报告，9月AI化白皮书作背景线索。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -601,12 +605,12 @@
       "status": "ok_empty",
       "note": "研报平台需注册，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -618,12 +622,12 @@
       "status": "ok_empty",
       "note": "研报平台，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -632,15 +636,15 @@
       "url": "http://www.caict.ac.cn/kxyj/qwfb/bps/",
       "name": "信通院·白皮书",
       "layer": "A",
-      "status": "ok_empty",
+      "status": "ok_yield",
       "note": "全屋智能相关白皮书，公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
-        "verdict": "ok_empty",
-        "verdictLabel": "夸克核验完成·本轮无有效新增",
-        "yielded": false,
-        "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "testedAt": "2026-11-25",
+        "verdict": "ok_yield",
+        "verdictLabel": "夸克核验完成·取得有效内容",
+        "yielded": true,
+        "conclusion": "夸克核验信通院权威发布；蓝皮书最新为4月，取得《端侧智能产业发展报告(2026.10)》含智慧家庭章节。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -652,12 +656,12 @@
       "status": "ok_empty",
       "note": "公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -669,12 +673,12 @@
       "status": "ok_empty",
       "note": "宏观背景，公开，低相关",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -686,12 +690,12 @@
       "status": "ok_empty",
       "note": "公开洞察，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -703,12 +707,12 @@
       "status": "ok_yield",
       "note": "消费数据，部分公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验CBNData，取得10月天猫适老化趋势报告及贝壳Q3家装净收入等看点。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -720,12 +724,13 @@
       "status": "noise",
       "note": "与家装建材无关",
       "testResult": {
-        "testedAt": "2026-08-26",
+        "testedAt": "2026-11-25",
         "verdict": "noise",
         "verdictLabel": "噪声源·已剔除",
         "yielded": false,
-        "conclusion": "微软研究院:夸克进入0B,英文站与家装无关,噪声源",
-        "round": 5
+        "conclusion": "与家装建材无关或为搜索入口噪声源，已剔除。",
+        "round": 14,
+        "method": "浏览器核验 (Quark)"
       }
     },
     {
@@ -736,12 +741,13 @@
       "status": "noise",
       "note": "与家装建材无关",
       "testResult": {
-        "testedAt": "2026-08-26",
+        "testedAt": "2026-11-25",
         "verdict": "noise",
         "verdictLabel": "噪声源·已剔除",
         "yielded": false,
-        "conclusion": "英伟达数据中心:夸克进入0B,英文站与家装无关,噪声源",
-        "round": 5
+        "conclusion": "与家装建材无关或为搜索入口噪声源，已剔除。",
+        "round": 14,
+        "method": "浏览器核验 (Quark)"
       }
     },
     {
@@ -752,12 +758,12 @@
       "status": "ok_yield",
       "note": "券商行业研报公开，待实测（高价值）",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克通过东方财富研报API按6个行业代码拉取10-01至11-25研报条目，入选17条；正文PDF未下载。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -769,12 +775,12 @@
       "status": "ok_empty",
       "note": "移动互联网数据，部分公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -786,12 +792,12 @@
       "status": "ok_empty",
       "note": "部分免费，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -803,12 +809,12 @@
       "status": "ok_yield",
       "note": "部分数据公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克完成页面、栏目与可见详情核验；取得本轮可追溯内容。",
-        "round": 13,
+        "conclusion": "夸克核验艾媒，取得双十一消费监测、AI空调与家居服务平台白皮书条目。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -820,12 +826,12 @@
       "status": "ok_empty",
       "note": "同25，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -837,12 +843,12 @@
       "status": "ok_empty",
       "note": "抖音创作者后台，需登录",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -854,12 +860,12 @@
       "status": "ok_empty",
       "note": "房产/居住数据权威，公开，待实测（高价值）",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
-        "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "conclusion": "夸克核验贝壳研究院；公开成果最新停留在2023-10，10-11月窗口无可入库公开内容。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -871,12 +877,12 @@
       "status": "ok_yield",
       "note": "已用克而瑞转载，官网待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_yield",
         "verdictLabel": "夸克核验完成·取得有效内容",
         "yielded": true,
-        "conclusion": "夸克核验CRIC首页；因城市与统计口径缺失，未采用可见数值。",
-        "round": 13,
+        "conclusion": "夸克核验CRIC；官网重定向至SaaS产品页，轮播数字无城市口径，不采用。",
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -888,12 +894,12 @@
       "status": "need_login_browser",
       "note": "school学习板块可能公开，待实测",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "need_login_browser",
         "verdictLabel": "登录或权限门槛未通过",
         "yielded": false,
         "conclusion": "夸克核验后仍受登录或权限门槛限制；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -905,12 +911,12 @@
       "status": "ok_empty_internal",
       "note": "仅保留来源占位，不披露系统、地址或鉴权信息。",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty_internal",
         "verdictLabel": "受限来源占位·本轮无公开产出",
         "yielded": false,
         "conclusion": "仅保留匿名来源占位，未形成可公开披露的有效产出。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -922,12 +928,12 @@
       "status": "ok_empty_internal",
       "note": "仅保留来源占位，不披露系统、地址或鉴权信息。",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty_internal",
         "verdictLabel": "受限来源占位·本轮无公开产出",
         "yielded": false,
         "conclusion": "仅保留匿名来源占位，未形成可公开披露的有效产出。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -939,12 +945,12 @@
       "status": "ok_empty",
       "note": "同千瓜，需会员",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty",
         "verdictLabel": "夸克核验完成·本轮无有效新增",
         "yielded": false,
         "conclusion": "夸克完成页面与可见栏目核验；本轮未取得可公开披露的有效新增。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     },
@@ -956,27 +962,27 @@
       "status": "ok_empty_internal",
       "note": "仅保留来源占位，不披露系统、地址或鉴权信息。",
       "testResult": {
-        "testedAt": "2026-09-28",
+        "testedAt": "2026-11-25",
         "verdict": "ok_empty_internal",
         "verdictLabel": "受限来源占位·本轮无公开产出",
         "yielded": false,
         "conclusion": "仅保留匿名来源占位，未形成可公开披露的有效产出。",
-        "round": 13,
+        "round": 14,
         "method": "浏览器核验 (Quark)"
       }
     }
   ],
   "auditSummary": {
-    "testedAt": "2026-09-28",
+    "testedAt": "2026-11-25",
     "statusCounts": {
       "dead": 3,
-      "need_login_browser": 4,
+      "need_login_browser": 5,
       "noise": 3,
       "ok_empty": 19,
       "ok_empty_internal": 3,
-      "ok_yield": 25
+      "ok_yield": 24
     },
-    "note": "Round 13完成51个活跃入口的夸克复核；25个入口取得有效内容，受限来源仅保留匿名占位。",
-    "yieldedCount": 25
+    "note": "Round 14完成10—11月专题逐源夸克复核；23个入口取得有效内容，登录源与受限源如实标注，内网数值不入公开仓。",
+    "yieldedCount": 24
   }
 }
